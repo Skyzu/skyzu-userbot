@@ -109,9 +109,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/Askarbot/Skyzu-Userbot")
+    "https://github.com/Askarbot/Skyzuu-Userbot")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "Rose-Userbot")
+    "UPSTREAM_REPO_BRANCH", "Skyzuu-Userbot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -484,7 +484,7 @@ with bot:
                     buttons=[
                         [
                             Button.url("【﻿Ｃｈａｎｎｅｌ】",
-                                       "https://t.me/fckyoupeople1")],
+                                       "https://t.me/fckyoeople1")],
                     ]
                 )
 
@@ -563,7 +563,7 @@ with bot:
                     f"❁ __Saya Adalah Skyzu Userbot Yang Digunakan Banyak User Telegram__.\n\n"
                     f"❁ __Saya Dibuat Hanya Untuk Bersenang Senang Ditelegram__.\n\n"
                     f"❁ __Kelebihan Saya Banyak, Saya Mempunyai 169 Modules__.\n\n"
-                    f"© @Rose_Userbot")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -641,7 +641,7 @@ with bot:
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
                     f"× `.set var SKYZU_TEKS_KUSTOM` [**TEKS**]\n"
                     f"°__Mengganti Teks Yang Ada Command SkyzuAlive__.\n\n"
-                    f"© @Rose_Userbot")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -729,7 +729,7 @@ with bot:
                     f"Modules Name **pmbot**\n\n"
                     f"× `.set var START_WELCOME` [**TEKS**] \n"
                     f"°__Kamu Juga Bisa Mengubah Start Welcome Untuk Bot Kamu Yang Ini, Dengan Cara Diatas Dan Kata Kata Bebas__.\n\n"
-                    f"© @Rose_Userbot")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -759,7 +759,7 @@ with bot:
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
-                    f"© @Rose_Userbot")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,

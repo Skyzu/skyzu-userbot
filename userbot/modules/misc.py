@@ -87,7 +87,7 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "Here's Something for You to Read :\n"
-        "\n[⚡ Skyzu-UserBot Repo](https://github.com/Askarbot/Skyzu-Userbot/blob/Skyzu-UserBot/README.md)"
+        "\n[⚡ Skyzu-UserBot Repo](https://github.com/Askarbot/Skyzuu-Userbot/blob/Skyzuu-UserBot/README.md)"
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
         "\n[Special - Note](https://telegra.ph/Special-Note-11-02)")
 
@@ -111,9 +111,9 @@ async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
         "⚡Sƙყȥυ-υʂҽɾႦσƚ⚡ \n"
-        "✰ **Repo Userbot :** [Github](https://github.com/Askarbot/Skyzu-Userbot)\n"
+        "✰ **Repo Userbot :** [Github](https://github.com/Askarbot/Skyzuu-Userbot)\n"
         "✰ **Owner Bot :** [Skyzu](t.me/skyzuuuu)\n"
-        "✰ 𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/Askarbot/Skyzu-Userbot/blob/Skyzu-Userbot/LICENSE)"
+        "✰ 𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/Askarbot/Skyzu-Userbot/blob/Skyzuu-Userbot/LICENSE)"
     )
 
 

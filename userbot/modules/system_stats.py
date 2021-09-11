@@ -229,7 +229,7 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"丂Ҝㄚ乙ㄩ 卂ㄥ丨ᐯ乇\n\n"
-        f"\n__**{ROSE_TEKS_KUSTOM}**__\n\n\n"
+        f"\n__**{SKYZU_TEKS_KUSTOM}**__\n\n\n"
         f"╭✠╼━━━━━━━━━━━━━━━✠╮\n"
         f"➥ **Name** : `{DEFAULTUSER}` \n"
         f"➥ **Username** : @{user.username} \n"
@@ -238,7 +238,7 @@ async def amireallyalive(alive):
         f"➥ **Bot Ver**  : `{BOT_VER}` \n"
         f"➥ **Modules**  : `{len(modules)}` \n"
         f"╰✠╼━━━━━━━━━━━━━━━✠╯\n"
-        f"[ɢʀᴏᴜᴘꜱ](https://t.me/GroupVirtualMusic) | [ʙᴏᴛᴏꜰ](https://t.me/{user.username}) | [ɢɪᴛʜᴜʙ](https://github.com/Askarbot/Skyzu-Userbot)")
+        f"[ɢʀᴏᴜᴘꜱ](https://t.me/GroupVirtualMusic) | [ʙᴏᴛᴏꜰ](https://t.me/{user.username}) | [ɢɪᴛʜᴜʙ](https://github.com/Askarbot/Skyzuu-Userbot)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -314,7 +314,7 @@ async def redis(alive):
         f"┃✧ **Branch   :** {UPSTREAM_REPO_BRANCH} \n"
         f"┃✧ **Bot Ver  :** {BOT_VER} \n"
         f"┃✧ **Modules  :** {len(modules)} Modules \n"
-        f"┃✧ **GitHub   :** [Sƙȥυ](https://github.com/Askarbot/Skyzu-Userbot) \n"
+        f"┃✧ **GitHub   :** [Sƙȥυ](https://github.com/Askarbot/Skyzuu-Userbot) \n"
         f"┃✧ **Groups   :** [Groups](https://t.me/GroupVirtualMusic) \n"
         f"┃✧ **Owner    :** [Skyzu](https://t.me/skyzuuuu) \n"
         f"╰✠╼━━━━━━━━━━━━━━━━━━━✠╯")

@@ -158,5 +158,5 @@ async def samereply(event):
 CMD_HELP.update({
     "echo":
     "`.addecho` ; `.delecho` ; `.echolist`\
-    \nUsage: Untuk Menambahkan Followers Chat Kamu || © @Rose_Userbot."
+    \nUsage: Untuk Menambahkan Followers Chat Kamu."
 })

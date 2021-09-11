@@ -56,6 +56,7 @@ async def typewriter(typew):
 
 CMD_HELP.update({
     "familygeez":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.skyzu` / `.adudin`\
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `skyzu` / `Audy`\
     \n↳ : Untuk Ngatain Skyzu."
+    \n↳ : Untuk Ngatain Audy
 })

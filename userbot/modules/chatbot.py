@@ -16,6 +16,7 @@ aktifnya_chat_bot = []
 
 url = "https://api-tede.herokuapp.com/api/chatbot?message={message}"
 
+
 async def ngapain_rep(message):
     hayulo_link_apa = url.format(
         message=message
@@ -25,8 +26,8 @@ async def ngapain_rep(message):
         if data.status_code == 200:
             return (data.json())["msg"]
         else:
-             LOGS.info("ERROR: API chatbot sedang down, report ke @tedesupport.")
-    except Exception as e:
+            LOGS.info("ERROR: API chatbot sedang down, report ke @tedesupport.")
+    except Exception:
         LOGS.info("ERROR: {str(e)}")
 
 
@@ -68,7 +69,7 @@ async def tede_chatbot(event):
 
 CMD_HELP.update(
     {
-      "chatbot": "**Plugin : **`chatbot`\
+        "chatbot": "**Plugin : **`chatbot`\
       \n\n  •  **Syntax :** `.chatbot` <on/off>\
       \n  •  **Function :** Ya chatbot\
       "

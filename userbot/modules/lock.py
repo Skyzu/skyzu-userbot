@@ -157,7 +157,7 @@ async def rem_locks(event):
         what = "Semuanya"
     else:
         if not input_str:
-            await event.edit("`MOHON MAAF, APA YANG HARUS GUA BUKA?\nBAJU OWNER KAH??`")
+            await event.edit("`MOHON MAAF, APA YANG HARUS GUA BUKA?\nBAJU OWNER KAH?`")
             return
         else:
             await event.edit(f"`MOHON MAAF, KUNCI YANG MAU LU BUKA, GA VALID, MENDING LU BUKA BAJU OWNER.` `{input_str}`")

@@ -37,12 +37,12 @@ async def chat_bot_toggle(db, event):
         if chat_id not in db:
             db.append(chat_id)
             return await edit_or_reply(event, "ChatBot Diaktifkan!")
-        await edit_or_reply(event, "ChatBot Sudah Diaktifkan.")
+        await edit_or_reply(event, "ChatBot Sudah Diaktifkan!")
     elif status == "off":
         if chat_id in db:
             db.remove(chat_id)
             return await edit_or_reply(event, "ChatBot Dinonaktifkan!")
-        await edit_or_reply(event, "ChatBot Sudah Dinonaktifkan.")
+        await edit_or_reply(event, "ChatBot Sudah Dinonaktifkan!")
     else:
         await edit_or_reply(event, "**Usage:**\n.chatbot <on/off>")
 

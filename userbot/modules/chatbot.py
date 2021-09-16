@@ -2,10 +2,11 @@
 # ⚠️ Do not remove credits
 
 import requests
+from googletrans import Translator
 from telethon import events
 from telethon.tl.types import User
-from googletrans import Translator
-from userbot import LOGS, CMD_HELP, bot
+
+from userbot import CMD_HELP, LOGS, bot
 from userbot.events import register
 from userbot.utils import edit_or_reply
 
@@ -18,9 +19,7 @@ url = "https://api-tede.herokuapp.com/api/chatbot?message={message}"
 
 
 async def ngapain_rep(message):
-    hayulo_link_apa = url.format(
-        message=message
-    )
+    hayulo_link_apa = url.format(message=message)
     try:
         data = requests.get(hayulo_link_apa)
         if data.status_code == 200:

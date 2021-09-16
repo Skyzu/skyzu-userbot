@@ -69,7 +69,7 @@ async def locks(event):
         what = "Semuanya"
     else:
         if not input_str:
-            await event.edit("`MOHON MAAF, APA YG MAU GUA KUNCI? MULUT OWNER KAH?")
+            await event.edit("`MOHON MAAF, APA YG MAU GUA KUNCI? MULUT OWNER KAH?`")
             return
         else:
             await event.edit(f"`MOHON MAAF, LU MAU NGUNCI APAAN SI TOLOL, KAGA NGARTI GUA BABI!` `{input_str}`")

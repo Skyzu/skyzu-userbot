@@ -361,7 +361,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "**⚡Sƙყȥυ-υʂҽɾႦσƚ⚡ Berhasil Dideploy...**\n━━━━━━━━━━━━━━━\n❃ **Branch :** `Skyzu-Userbot`\n❃ **Handlers :** `Titik`\n━━━━━━━━━━━━━━━\n❃ **Support :** @GroupVirtualMusic\n━━━━━━━━━━━━━━━")
+    await bot.send_message(BOTLOG_CHATID, "**⚡Sƙყȥυ-υʂҽɾႦσƚ⚡ Berhasil Dideploy...**"
     return
 
 with bot:

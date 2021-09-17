@@ -1,20 +1,3 @@
-# Copyright (C) 2020 Adek Maulana
-#
-# SPDX-License-Identifier: GPL-3.0-or-later
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-
 import re
 import hashlib
 import asyncio
@@ -22,17 +5,12 @@ import shlex
 import os
 from os.path import basename
 import os.path
-from hachoir.metadata import extractMetadata
-from hachoir.parser import createParser
 from html_telegraph_poster import TelegraphPoster
 from typing import Optional, Union
 from userbot import bot, LOGS
-from PIL import Image
-from typing import Optional
 
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator, DocumentAttributeFilename
-from userbot import SUDO_USERS
 
 
 async def md5(fname: str) -> str:
@@ -41,26 +19,6 @@ async def md5(fname: str) -> str:
         for chunk in iter(lambda: f.read(4096), b""):
             hash_md5.update(chunk)
     return hash_md5.hexdigest()
-
-
-def media_type(message):
-    if message and message.photo:
-        return "Photo"
-    if message and message.audio:
-        return "Audio"
-    if message and message.voice:
-        return "Voice"
-    if message and message.video_note:
-        return "Round Video"
-    if message and message.gif:
-        return "Gif"
-    if message and message.sticker:
-        return "Sticker"
-    if message and message.video:
-        return "Video"
-    if message and message.document:
-        return "Document"
-    return None
 
 
 def humanbytes(size: Union[int, float]) -> str:
@@ -112,9 +70,13 @@ async def is_admin(chat_id, user_id):
         user_id=user_id
     ))
     chat_participant = req_jo.participant
-    return isinstance(
-        chat_participant, (ChannelParticipantCreator, ChannelParticipantAdmin)
-    )
+    if isinstance(
+            chat_participant,
+            ChannelParticipantCreator) or isinstance(
+            chat_participant,
+            ChannelParticipantAdmin):
+        return True
+    return False
 
 
 async def runcmd(cmd: str) -> tuple[str, str, int, int]:
@@ -215,27 +177,28 @@ async def edit_or_reply(
 
 
 async def check_media(reply_message):
-    if not reply_message or not reply_message.media:
-        return False
-
-    if reply_message.photo:
-        data = reply_message.photo
-    elif reply_message.document:
-        if (
-            DocumentAttributeFilename(file_name="AnimatedSticker.tgs")
-            in reply_message.media.document.attributes
-        ):
+    if reply_message and reply_message.media:
+        if reply_message.photo:
+            data = reply_message.photo
+        elif reply_message.document:
+            if (
+                DocumentAttributeFilename(file_name="AnimatedSticker.tgs")
+                in reply_message.media.document.attributes
+            ):
+                return False
+            if (
+                reply_message.gif
+                or reply_message.video
+                or reply_message.audio
+                or reply_message.voice
+            ):
+                return False
+            data = reply_message.media.document
+        else:
             return False
-        if (
-            reply_message.gif
-            or reply_message.video
-            or reply_message.audio
-            or reply_message.voice
-        ):
-            return False
-        data = reply_message.media.document
     else:
         return False
+
     if not data or data is None:
         return False
     else:
@@ -256,8 +219,8 @@ async def run_cmd(cmd: list) -> tuple[bytes, bytes]:
 
 def post_to_telegraph(title, html_format_content):
     post_client = TelegraphPoster(use_api=True)
-    auth_name = "Skyzuu-Userbot"
-    auth_url = "https://github.com/Askarbot/Skyzuu-Userbot"
+    auth_name = "Geez-UserBot"
+    auth_url = "https://github.com/vckyou/Geez-UserBot"
     post_client.create_api_token(auth_name)
     post_page = post_client.post(
         title=title,
@@ -287,38 +250,3 @@ async def edit_delete(event, text, time=None, parse_mode=None, link_preview=None
         )
     await asyncio.sleep(time)
     return await newevent.delete()
-
-
-async def media_to_pic(event, reply):
-    mediatype = media_type(reply)
-    if mediatype not in ["Photo", "Round Video", "Gif", "Sticker", "Video"]:
-        await edit_delete(
-            event,
-            "**Saya tidak dapat mengekstrak gambar untuk memproses lebih lanjut ke media yang tepat**",
-        )
-        return None
-    media = await reply.download_media(file="./temp")
-    event = await edit_or_reply(event, f"`Transfiguration Time! Converting....`")
-    file = os.path.join("./temp/", "meme.png")
-    if mediatype == "Sticker":
-        if media.endswith(".tgs"):
-            await runcmd(
-                f"lottie_convert.py --frame 0 -if lottie -of png '{media}' '{file}'"
-            )
-        elif media.endswith(".webp"):
-            im = Image.open(media)
-            im.save(file)
-    elif mediatype in ["Round Video", "Video", "Gif"]:
-        extractMetadata(createParser(media))
-        await runcmd(f"rm -rf '{file}'")
-        await take_screen_shot(media, 0, file)
-        if not os.path.exists(file):
-            await edit_delete(
-                event, f"**Maaf. Saya tidak dapat mengekstrak gambar dari ini {mediatype}**"
-            )
-            return None
-    else:
-        im = Image.open(media)
-        im.save(file)
-    await runcmd(f"rm -rf '{media}'")
-    return [event, file, mediatype]

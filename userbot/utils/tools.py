@@ -219,8 +219,8 @@ async def run_cmd(cmd: list) -> tuple[bytes, bytes]:
 
 def post_to_telegraph(title, html_format_content):
     post_client = TelegraphPoster(use_api=True)
-    auth_name = "Geez-UserBot"
-    auth_url = "https://github.com/vckyou/Geez-UserBot"
+    auth_name = "Skyzuu-Userbot"
+    auth_url = "https://github.com/Askarbot/Skyzuu-Userbot"
     post_client.create_api_token(auth_name)
     post_page = post_client.post(
         title=title,

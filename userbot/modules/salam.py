@@ -34,13 +34,13 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^K(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**HAI PERKENALKAN NAMA SAYA GAK TAU LUPA!!**")
+    await typew.edit("**KONTOLLU ITEM GAUSAH SOK NGAJAKIN VCS GOBLOK!!**")
 
 
 @register(outgoing=True, pattern='^N(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**GIMANA KABAR KAMU SAYANG??APAKAH BAIK?**")
+    await typew.edit("**NGENTOTTTTTTT**")
 
 
 @register(outgoing=True, pattern='^B(?: |$)(.*)')

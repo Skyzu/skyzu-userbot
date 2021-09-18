@@ -8,6 +8,8 @@ from userbot import CMD_HELP
 # rama ganteng bgt kan?
 # Port By @VckyouuBitch From GeezProject
 # Perkontolan Dengan Hapus Credits
+
+
 @register(outgoing=True, pattern="^.allout(?: |$)(.*)")
 async def testing(event):
     nikal = await event.get_chat()

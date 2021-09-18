@@ -40,13 +40,13 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^N(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**NGENTOTTTTTTT**")
+    await typew.edit("**𝐍𝐆𝐄𝐍𝐓𝐎𝐓𝐓𝐓𝐓**")
 
 
 @register(outgoing=True, pattern='^B(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**BHAHAHAHAHAHA**")
+    await typew.edit("**𝐁𝐇𝐀𝐇𝐀𝐇𝐀𝐇𝐀𝐇**")
 
 
 @register(outgoing=True, pattern='^M(?: |$)(.*)')

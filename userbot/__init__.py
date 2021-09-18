@@ -483,8 +483,8 @@ with bot:
                     f"➠ **Atau** Kalian Bisa Klik /notes Dibawah Jika Ada\n",
                     buttons=[
                         [
-                            Button.url("【﻿Ｃｈａｎｎｅｌ】",
-                                       "https://t.me/fckyoeople1")],
+                            Button.url("【🧑‍💻﻿Develoved】",
+                                       "https://t.me/skyzuuuu")],
                     ]
                 )
 
@@ -671,7 +671,7 @@ with bot:
                     f"°__Mengaktifkan Pmpermit Kalian Atau Disebut Pesan Otomatis__.\n\n"
                     f"× `.set pm_msg` [**REPLYCHAT**]\n"
                     f"°__Mengganti Teks Pmpermit Selera Kamu__.\n\n"
-                    f"© @Rose_Userbot")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -755,7 +755,7 @@ with bot:
             if event.query.user_id == uid:
                 text = (
                     f"Modules Name **Pembaruan**\n\n"
-                    f"× **Pembaruan Data Untuk Skyzu Userbot, Command Untuk Pembaruan**.\n"
+                    f"× **Pembaruan Data Untuk Skyzu-Userbot, Command Untuk Pembaruan**.\n"
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
@@ -902,13 +902,13 @@ with bot:
                         [
                             custom.Button.url(
                                 "SKYZU",
-                                "https://github.com/Askarbot/Skyzu-Userbot"),
+                                "https://github.com/Askarbot/Skyzuu-Userbot"),
                             custom.Button.url(
                                 "SUPPORT",
                                 "t.me/GroupVirtualMusic")],
                         [custom.Button.url(
                             "LICENSE",
-                            "https://github.com/Askarbot/Skyzu-Userbot/LICENSE")],
+                            "https://github.com/Askarbot/Skyzuu-Userbot/LICENSE")],
                     ],
                     link_preview=False,
                 )

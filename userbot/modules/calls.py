@@ -10,7 +10,6 @@ from telethon.tl.functions.phone import DiscardGroupCallRequest as stopvc
 from telethon.tl.functions.phone import GetGroupCallRequest as getvc
 from telethon.tl.functions.phone import InviteToGroupCallRequest as invitetovc
 
-from telethon.tl.types import ChatAdminRights
 from userbot import CMD_HELP
 from userbot.events import register
 
@@ -25,57 +24,55 @@ async def get_call(event):
 
 def user_list(l, n):
     for i in range(0, len(l), n):
-        yield l[i: i + n]
+        yield l[i : i + n]
 
 
 @register(outgoing=True, pattern=r"^\.startvc$", groups_only=True)
-async def _(e):
-    chat = await e.get_chat()
+async def start_voice(td):
+    chat = await td.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
 
     if not admin and not creator:
-        return await e.edit(NO_ADMIN)
-    new_rights = ChatAdminRights(invite_users=True)
+        return await td.edit(NO_ADMIN)
     try:
-        await e.client(startvc(e.chat_id))
-        await e.edit("`Obrolan Suara dimulai on cam lu goblok`")
+        await td.client(startvc(td.chat_id))
+        await td.edit("`Obrolan Suara dimulai on cam lu goblok`")
     except Exception as ex:
-        await e.edit(f"`{str(ex)}`")
+        await td.edit(f"`{str(ex)}`")
 
 
 @register(outgoing=True, pattern=r"^\.stopvc$", groups_only=True)
-async def _(e):
-    chat = await e.get_chat()
+async def stop_voice(td):
+    chat = await td.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
 
     if not admin and not creator:
-        return await e.edit(NO_ADMIN)
-    new_rights = ChatAdminRights(invite_users=True)
+        return await td.edit(NO_ADMIN)
     try:
-        await e.client(stopvc(await get_call(e)))
-        await e.edit("`Mengakhiri Obrolan Suara typing aja la goblok!`")
+        await td.client(stopvc(await get_call(td)))
+        await td.edit("`Mengakhiri Obrolan Suara typing aja la goblok!`")
     except Exception as ex:
-        await e.edit(f"`{str(ex)}`")
+        await td.edit(f"`{str(ex)}`")
 
 
 @register(outgoing=True, pattern=r"^\.vcinvite", groups_only=True)
-async def _(e):
-    await e.edit("`Sedang Mengivinte Member...`")
+async def vc_invite(td):
+    await td.edit("`Sedang Mengivinte Member...`")
     users = []
     z = 0
-    async for x in e.client.iter_participants(e.chat_id):
+    async for x in td.client.iter_participants(td.chat_id):
         if not x.bot:
             users.append(x.id)
     hmm = list(user_list(users, 6))
     for p in hmm:
         try:
-            await e.client(invitetovc(call=await get_call(e), users=p))
+            await td.client(invitetovc(call=await get_call(td), users=p))
             z += 6
         except BaseException:
             pass
-    await e.edit(f"`Invited {z} users`")
+    await td.edit(f"`Invited {z} users`")
 
 
 CMD_HELP.update(

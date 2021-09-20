@@ -488,7 +488,7 @@ with bot:
         @ tgbot.on(events.CallbackQuery(data=b"start"))
         async def starte(event):
             text = (
-                f"Join Groups Support @Rose_Userbot")
+                f"Join Groups Support @fourBrothersgroup")
             await event.edit(
                 text,
                 link_preview=True,

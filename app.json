@@ -9,9 +9,9 @@
     "modular",
     "productivity"
 ],
-  "repository": "https://github.com/Askarbot/Skyzuu-UserBot",
-  "telegram": "https://t.me/skyzuuuu",
-  "success_url": "https://t.me/fourBrothersgroup",
+  "repository": "https://github.com/superbebek/bekk-userbot",
+  "telegram": "https://t.me/superbekk",
+  "success_url": "https://t.me/GirlHd",
   "stack": "container",
   "env": {
     "API_KEY": {
@@ -171,9 +171,9 @@
       "description": "Nama untuk menunjukan pesan .alive",
       "required": true
     },
-    "SKYZU_TEKS_KUSTOM": {
+    "ROSE_TEKS_KUSTOM": {
       "description": "Kustom Pesan Alive Mu Untuk Perintah .rosealive (Isi Terserah)",
-      "required": false 
+      "required": true 
     },
     "S_PACK_NAME": {
       "description": "Nama Sticker Pack Mu",
@@ -233,11 +233,6 @@
     "BOT_USERNAME": {
       "description": "Username Bot Kamu Di @BotFather, Tanpa @",
       "value": "BotFather",
-      "required": true
-    },
-    "BOT_USERYOU": {
-      "description": "Masukan Username Bot Kamu Di @BotFather,Menggunakan Link Contoh t.me/rose_01_bot",
-      "value": "t.me/(username bot kamu)",
       "required": true
     }
   },

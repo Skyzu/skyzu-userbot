@@ -9,9 +9,9 @@
     "modular",
     "productivity"
 ],
-  "repository": "https://github.com/SendiAp/Rose-UserBot",
-  "telegram": "https://t.me/pikyus1",
-  "success_url": "https://t.me/UserbotSupport1",
+  "repository": "https://github.com/Askarbot/Skyzuu-UserBot",
+  "telegram": "https://t.me/skyzuuuu",
+  "success_url": "https://t.me/fourBrothersgroup",
   "stack": "container",
   "env": {
     "API_KEY": {
@@ -171,9 +171,9 @@
       "description": "Nama untuk menunjukan pesan .alive",
       "required": true
     },
-    "ROSE_TEKS_KUSTOM": {
+    "SKYZU_TEKS_KUSTOM": {
       "description": "Kustom Pesan Alive Mu Untuk Perintah .rosealive (Isi Terserah)",
-      "required": true 
+      "required": false 
     },
     "S_PACK_NAME": {
       "description": "Nama Sticker Pack Mu",

@@ -896,10 +896,11 @@ with bot:
                     buttons=buttons,
                 )
             elif query.startswith("tb_btn"):
-                result = builder.article("Bantuan Dari ⚡Sƙყȥυ - υʂҽɾႦσƚ⚡,
-                                         text="Daftar Plugins",
-                                         buttons=[],
-                                         link_preview=True)
+                result = builder.article(
+                    "Bantuan Dari ⚡Sƙყȥυ-υʂҽɾႦσƚ⚡",
+                    text="Daftar Plugins",
+                    buttons=[],
+                    link_preview=True)
             else:
                 result = builder.article(
                     " ⚡Sƙყȥυ-υʂҽɾႦσƚ⚡",
@@ -907,12 +908,12 @@ with bot:
                     buttons=[
                         [
                             custom.Button.url(
-                                "KYY",
-                                "https://github.com/Askarbot/Skyzuu-Userbot"),
+                                "SKYZU",
+                                "https://github.com/Askarbot/Skyzuy-Userbot"),
 
                             custom.Button.url(
                                 "SUPPORT",
-                                "t.me/GroupVirtualMusic")],
+                                "t.me/fourBrothersgroup")],
                         [custom.Button.url(
                             "LICENSE",
                             "https://github.com/Askarbot/Skyzuu-Userbot/LICENSE")],

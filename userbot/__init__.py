@@ -212,7 +212,7 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive Logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/4937705c1c6f82bdda486.jpg"
+    "ALIVE_LOGO") or "https://telegra.ph/file/91de67eba77db75cad2ff.jpg"
 
 # Default .helpme Logo
 INLINE_PIC = os.environ.get(
@@ -953,7 +953,7 @@ with bot:
                     buttons=[
                         [
                             Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈",
-                                       "t.me/GfourBrothersgroup"),
+                                       "t.me/fourBrothersgroup"),
                             Button.url("❈ᴄʜᴀɴɴᴇʟ❈",
                                        "t.me/VirtualMusicChannel")],
                         [custom.Button.inline(

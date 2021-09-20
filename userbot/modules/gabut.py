@@ -61,34 +61,6 @@ async def typewriter(typew):
     await typew.edit("`⚡ Cuma Skyzu Yang Paling Waras, Baik Hati, Dan Tidak Sombong :v`")
 # King Userbot Support
 
-
-@register(outgoing=True, pattern="^.la(?: |$)(.*)")
-async def typewriter(typew):
-    typew.pattern_match.group(1)
-    await typew.edit("☑️ `askar Owner baik hati`")
-    sleep(1)
-    await typew.edit("✅ `askar Owner baik hati`")
-    sleep(2)
-    await typew.edit("☑️ `putra Gila`")
-    sleep(1)
-    await typew.edit("✅ `putra Gila`")
-    sleep(2)
-    await typew.edit("☑️ `fajar Babi`")
-    sleep(1)
-    await typew.edit("✅ `fajar Babi`")
-    sleep(2)
-    await typew.edit("☑️ `ken kentot`")
-    sleep(1)
-    await typew.edit("✅ `ken kentot`")
-    sleep(2)
-    await typew.edit("☑️ `duta Gaje`")
-    sleep(1)
-    await typew.edit("✅ `duta Gaje`")
-    sleep(2)
-    await typew.edit("✨ `Cuma syzu Yang Paling Sopan, Baik Hati, Dan Tidak Sombong :v`")
-# Luar Angkasa
-
-
 @register(outgoing=True, pattern="^.istigfar(?: |$)(.*)")
 async def perkenalan(event):
     event.pattern_match.group(1)
@@ -143,8 +115,6 @@ CMD_HELP.update(
         \nUsage : Memperkenalkan Diri\
         \n\n Cmd : `.alay`\
         \nUsage : ngeledek orang baru pasang bot\
-        \n\n Cmd : `.la`\
-        \nUsage : Luar Angkasa\
         \n\n Cmd : `.g`\
         \nUsage : Member Goblok\
         \n\n Cmd : `.kenalin`\

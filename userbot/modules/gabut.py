@@ -142,6 +142,7 @@ CMD_HELP.update(
         \n\n Cmd : `.perkenalan`\
         \nUsage : Memperkenalkan Diri\
         \n\n Cmd : `.alay`\
+        \nUsage : ngeledek orang baru pasang bot\
         \n\n Cmd : `.la`\
         \nUsage : Luar Angkasa\
         \n\n Cmd : `.g`\

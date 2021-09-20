@@ -461,8 +461,8 @@ with bot:
                     f"➠ **Atau** Kalian Bisa Klik /notes Dibawah Jika Ada\n",
                     buttons=[
                         [
-                            Button.url("【﻿Ｃｈａｎｎｅｌ】",
-                                       "https://t.me/fckyoupeople1")],
+                            Button.url("【🧑‍💻Develoved",
+                                       "https://t.me/skyzuuuu")],
                     ]
                 )
 
@@ -527,15 +527,15 @@ with bot:
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
                 await event.reply(
-                    f"👹♗  Ř𝓞ˢᵉ υşέ𝕣ᗷ𝑜т  💎🐤\n",
+                    f"⚡Sƙყȥυ-υʂҽɾႦσƚ⚡\n",
                     buttons=[
                         [
                             Button.url("ʀᴇᴘᴏ",
-                                       "https://github.com/SendiAp/Rose-Userbot"),
+                                       "https://github.com/Askarbot/Skyzuu-Userbot"),
                             Button.url("ʟɪᴄᴇɴꜱᴇ",
-                                       "https://github.com/SendiAp/Rose-Userbot/blob/Rose-Userbot/LICENSE")],
+                                       "https://github.com/Askarbot/Skyzuu-Userbot/blob/Skyzuu-Userbot/LICENSE")],
                         [Button.url("ɢʀᴏᴜᴘꜱ",
-                                    "t.me/Rose_Userbot")],
+                                    "t.me/fourBrothersgroup")],
                     ]
                 )
 
@@ -549,7 +549,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"🌹འօʂҽ-Աʂҽɾҍօէ🌹\n\n**🅼🅰🅸🅽 🅼🅴🅽🆄**\n\n❥ **Bᴏᴛ Oғ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)} "
+                text = f"⚡Sƙყȥυ-υʂҽɾႦσƚ⚡\n\n**🅼🅰🅸🅽 🅼🅴🅽🆄**\n\n❥ **Bᴏᴛ Oғ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)} "
                 await event.edit(text,
                                  file=roselogo,
                                  buttons=buttons,
@@ -601,11 +601,11 @@ with bot:
                             Button.inline("ᴏᴡɴᴇʀ ᴛᴏᴏʟꜱ ✨", data="owner_tools"),
                             Button.inline("ᴄᴏᴍᴍᴀɴᴅ ʙᴏᴛ ⚙️", data="pmon_pmof"),
                         ],
-                        [Button.inline("🌹 ʀᴏꜱᴇ ᴜꜱᴇʀʙᴏᴛ 🌹", data="userbot_support")],
+                        [Button.inline("⚡ Sƙყȥυ-υʂҽɾႦσƚ ⚡", data="fourBrothersgroup")],
                     ]
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nHanya {DEFAULTUSER}Yang Bisa Menekan Tombol Ini, Deploy Rose Userbot Untuk Mengetahui Fitur Nya."
+                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nHanya {DEFAULTUSER}Yang Bisa Menekan Tombol Ini, Deploy Skyzu Userbot Untuk Mengetahui Fitur Nya."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
 # ====================================RoseUserbot===================================== #
@@ -638,7 +638,7 @@ with bot:
                     ]
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nHanya {DEFAULTUSER} Yang Bisa Menekan Tombol Ini, Deploy Rose Userbot Untuk Mengetahui Fitur Nya."
+                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nHanya {DEFAULTUSER} Yang Bisa Menekan Tombol Ini, Deploy Skyzu Userbot Untuk Mengetahui Fitur Nya."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
@@ -653,7 +653,7 @@ with bot:
                     f"__Kamu Dapat Mengubah Pesan Welcome Ketika Start Dibot.__\n\n"
                     f"✘ **SetVars :**\n"
                     f"`.set var WELCOME PIC` <link>\n"
-                    f"© @Rose_Userbot")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -661,7 +661,7 @@ with bot:
                     buttons=[
                         [
                             custom.Button.inline(
-                                "ʙᴀᴄᴋ", data="userbot_support")],
+                                "ʙᴀᴄᴋ", data="fourBrothersgroup")],
                     ]
                 )
             else:
@@ -680,7 +680,7 @@ with bot:
                     f"__Kamu Dapat Mengubah Pesan Ditombol, Kalau Kamu Belum Mengetahui Nya, Silakan start Bot, Klik Tombol Info, Disitu Ada Tulisan Pesan.__\n\n"
                     f"✘ **SetVars :**\n"
                     f"`.set var PESAN_INFO` <teks>\n"
-                    f"© @Rose_Userbot")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -688,7 +688,7 @@ with bot:
                     buttons=[
                         [
                             custom.Button.inline(
-                                "ʙᴀᴄᴋ", data="userbot_support")],
+                                "ʙᴀᴄᴋ", data="fourBrothersgroup")],
                     ]
                 )
             else:
@@ -738,11 +738,11 @@ with bot:
                     f"✘ **Description :**\n"
                     f"__Kamu Juga Dapat Mengubah Foto Dan Teks Custom Sesuka Hatimu Command Dibawah.__\n\n"
                     f"✘ **Command :**\n"
-                    f"`.rosealive` || `.rosebot` || `.alive` \n\n"
+                    f"`.skyzualive` || `.skyzubot` || `.alive` \n\n"
                     f"✘ **SetVars :**\n"
                     f"`.set var ALIVE_LOGO` <link>\n"
-                    f"`.set var ROSE_TEKS_KUSTOM` <teks>\n\n"
-                    f"© @Rose_Userbot")
+                    f"`.set var SKYZU_TEKS_KUSTOM` <teks>\n\n"
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -777,7 +777,7 @@ with bot:
                     f"`.set pm_msg`  <teks>\n\n"
                     f"✘ **SetVars :**\n"
                     f"`.set var PM_AUTO_BAN True`\n\n"
-                    f"© @Rose_Userbot")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -813,7 +813,7 @@ with bot:
                     f"✘ **SetVars :**\n"
                     f"`.set var INLINE_PIC` <link>\n"
                     f"`.set var EMOJI_HELP` <emoji>\n\n"
-                    f"© @Rose_Userbot")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -846,7 +846,7 @@ with bot:
                     f"__Diusahakan Untuk Update Deploy, Jangan Update Now, Agar Bisa Mengatahui Update Terbaru Nya.__\n\n"
                     f"✘ **Command :**\n"
                     f"`.update deploy`\n\n"
-                    f"© @Rose_Userbot")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -897,13 +897,13 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 text = (
-                    f"**{ROSE_TEKS_KUSTOM}**\n\n"
+                    f"**{SKYZU_TEKS_KUSTOM}**\n\n"
                     f"┏━━━━━━━━━━━━━━━━━━━━━\n"
                     f"┣ **Pemilik** - `{DEFAULTUSER}`\n"
                     f"┣ **Versi** - `5.0`\n"
-                    f"┣ **Groups** - @Rose_Userbot\n"
+                    f"┣ **Groups** - @fourBrothersgroup\n"
                     f"┣ **Bahasa** - `Python`\n"
-                    f"┣ **Branch** - `Rose-Userbot`\n"
+                    f"┣ **Branch** - `Skyzu-Userbot`\n"
                     f"┣ **Modules** - `170`\n"
                     f"┗━━━━━━━━━━━━━━━━━━━━━")
                 await event.edit(
@@ -1004,32 +1004,32 @@ with bot:
                 result = builder.photo(
                     file=roselogo,
                     link_preview=False,
-                    text=f"🌹འօʂҽ-Աʂҽɾҍօէ🌹\n\n**🅼🅰🅸🅽 🅼🅴🅽🆄**\n\n❥ **Bᴏᴛ Oғ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}".format(
+                    text=f"⚡Sƙყȥυ-υʂҽɾႦσƚ⚡\n\n**🅼🅰🅸🅽 🅼🅴🅽🆄**\n\n❥ **Bᴏᴛ Oғ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari 🌹འօʂҽ-Աʂҽɾҍօէ🌹 ",
+                    "Bantuan Dari ⚡Sƙყȥυ-υʂҽɾႦσƚ⚡ ",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    " 🌹འօʂҽ-Աʂҽɾҍօէ🌹 ",
-                    text="""°ROSE-USERBOT°""",
+                    " ⚡Sƙყȥυ-υʂҽɾႦσƚ⚡ ",
+                    text="""°SKYZU-USERBOT°""",
                     buttons=[
                         [
                             custom.Button.url(
                                 "ROSE",
-                                "https://github.com/SendiAp/Rose-Userbot"),
+                                "https://github.com/Askarbot/Skyzuu-Userbot"),
                             custom.Button.url(
                                 "SUPPORT",
-                                "t.me/Rose_Userbot")],
+                                "t.me/fourBrothersgroup")],
                         [custom.Button.url(
                             "LICENSE",
-                            "https://github.com/SendiAp/Rose-Userbot/blob/Rose-Userbot/LICENSE")],
+                            "https://github.com/Askarbot/Skyzuu-Userbot/blob/Skyzuu-Userbot/LICENSE")],
                     ],
                     link_preview=False,
                 )
@@ -1083,7 +1083,7 @@ with bot:
         @ tgbot.on(events.CallbackQuery(data=b"info_random"))
         async def start(event):
             text = (
-                f"**Owner** : {DEFAULTUSER}\n**Emoji** : {EMOJI_HELP}\n\n💌**Pesan** :\n{PESAN_INFO}\n\n**Powered By** : @Rose_Userbot")
+                f"**Owner** : {DEFAULTUSER}\n**Emoji** : {EMOJI_HELP}\n\n💌**Pesan** :\n{PESAN_INFO}\n\n**Powered By** : @fourBrothersgroup")
             await event.edit(
                 text,
                 link_preview=True,

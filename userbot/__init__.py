@@ -344,7 +344,7 @@ async def check_botlog_chatid():
 
     entity = await bot.get_entity(BOTLOG_CHATID)
     if entity.default_banned_rights.send_messages:
-        LOGS.info(
+        LOGS.info(ini
             "Your account doesn't have rights to send messages to BOTLOG_CHATID "
             "group. Check if you typed the Chat ID correctly.")
         quit(1)
@@ -361,7 +361,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "**⚡Sƙყȥυ-υʂҽɾႦσƚ⚡ Berhasil Di Aktifkan.**")
+    await bot.send_message(BOTLOG_CHATID, "**⚡𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓⚡𝘽𝙀𝙍𝙃𝘼𝙎𝙄𝙇 𝘿𝙄 𝘼𝙆𝙏𝙄𝙁𝙆𝘼𝙉**")
     return
 
 with bot:

@@ -437,7 +437,7 @@ with bot:
         uid = me.id
 
         roselogo = INLINE_PIC
-        asupan = WELCOME_PIC
+        asupan = ASUPAN_PIC
         plugins = CMD_HELP
         vr = BOT_VER
 
@@ -461,49 +461,30 @@ with bot:
                     f"➠ **Atau** Kalian Bisa Klik /notes Dibawah Jika Ada\n",
                     buttons=[
                         [
-                            Button.url("【🧑‍💻Develoved",
-                                       "https://t.me/skyzuuuu")],
+                            Button.url("【﻿Ｃｈａｎｎｅｌ】",
+                                       "https://t.me/fckyoupeople1")],
                     ]
                 )
 
 # ====================================InlineHandler===================================== #
 
-        @ tgbot.on(events.NewMessage(pattern=r"/start"))
+        @tgbot.on(events.NewMessage(pattern=r"/start"))
         async def handler(event):
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
                 await event.message.get_sender()
-                await tgbot.send_file(event.chat_id, file=asupan,
-                                      buttons=[
-                                          [
-                                              custom.Button.inline(
-                                                  "ᴍᴇɴᴜ", data="menu"),
-                                              custom.Button.inline(
-                                                  "ɪɴꜰᴏ", data="info_random")],
-                                          [custom.Button.inline(
-                                              "ᴄᴏᴍᴍᴀɴᴅ ʙᴏᴛ", b"cmd")],
-                                      ]
-                                      )
+                await event.reply(
+                    f"{START_WELCOME}\n\n**Powered By** : @Rose_Userbot\n\n",
+                    buttons=[
+                        [
+                            custom.Button.inline(
+                                "ᴍᴇɴᴜ", data="menu"),
+                            custom.Button.inline(
+                                "ɪɴꜰᴏ", data="about")],
+                    ]
+                )
 
-        @ tgbot.on(events.CallbackQuery(data=b"start"))
-        async def starte(event):
-            text = (
-                f"Join Groups Support @fourBrothersgroup")
-            await event.edit(
-                text,
-                link_preview=True,
-                buttons=[
-                    [
-                        custom.Button.inline(
-                            "ᴍᴇɴᴜ", data="menu"),
-                        custom.Button.inline(
-                            "ɪɴꜰᴏ", data="info_random")],
-                    [custom.Button.inline(
-                        "ᴄᴏᴍᴍᴀɴᴅ ʙᴏᴛ", b"cmd")],
-                ]
-            )
-
-        @ tgbot.on(events.NewMessage(pattern="/server"))
+        @ tgbot.on(events.NewMessage(pattern="/ping"))
         async def handler(event):
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
@@ -513,33 +494,33 @@ with bot:
                 ms = (end - start).microseconds / 1000
                 await tgbot.send_message(
                     event.chat_id,
-                    f"I'am Online!\n**Server**: `{ms}ms`",
+                    f"**PONG!!**\n `{ms}ms`",
                 )
 
-        @tgbot.on(events.NewMessage(pattern=r"/id"))
-        async def handler(event):
-            if event.message.from_id != uid:
-                u = await event.client.get_entity(event.chat_id)
-                await event.reply(f"ID`{u.id}`")
-
-        @tgbot.on(events.NewMessage(pattern="/repo"))
+        @tgbot.on(events.NewMessage(pattern=r"/asupan"))
         async def handler(event):
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
-                await event.reply(
-                    f"⚡Sƙყȥυ-υʂҽɾႦσƚ⚡\n",
-                    buttons=[
-                        [
-                            Button.url("ʀᴇᴘᴏ",
-                                       "https://github.com/Askarbot/Skyzuu-Userbot"),
-                            Button.url("ʟɪᴄᴇɴꜱᴇ",
-                                       "https://github.com/Askarbot/Skyzuu-Userbot/blob/Skyzuu-Userbot/LICENSE")],
-                        [Button.url("ɢʀᴏᴜᴘꜱ",
-                                    "t.me/fourBrothersgroup")],
-                    ]
-                )
+                await event.message.get_sender()
+                await tgbot.send_file(event.chat_id, file=asupan,
+                                      buttons=[
+                                          [
+                                              custom.Button.inline(
+                                                  "ᴘɪɴɢ", data="ping"
+                                              )
+                                          ]
+                                      ]
+                                      )
 
-# ====================================InlineHelpme===================================== #
+        @ tgbot.on(events.NewMessage(pattern="/chika"))
+        async def handler(event):
+            try:
+                resp = requests.get(
+                    "https://tede-api.herokuapp.com/api/chika").json()
+                results = f"{resp['url']}"
+                return await client.send_video(message.chat.id, video=results)
+            except Exception:
+                await message.reply_text("`Something went wrong LOL...`")
 
         @ tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
@@ -549,7 +530,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"⚡Sƙყȥυ-υʂҽɾႦσƚ⚡\n\n**🅼🅰🅸🅽 🅼🅴🅽🆄**\n\n❥ **Bᴏᴛ Oғ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)} "
+                text = f"⚡Bekk-userbot⚡\n\n**🅼🅰🅸🅽 🅼🅴🅽🆄**\n\n❥ **Bᴏᴛ Oғ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME} "
                 await event.edit(text,
                                  file=roselogo,
                                  buttons=buttons,
@@ -573,11 +554,60 @@ with bot:
                 link_preview=False,
             )
 
-        @tgbot.on(events.CallbackQuery(data=b"cmd"))
-        async def cmd(event):
-            await event.edit("/start - **Memulai Bot**\n/server - **Untuk Melihat Server Bot**\n/repo - **Mendapatkan Repository Bot**\n/id - **Mendapatkan Id Kamu**", buttons=Button.clear())
+        @ tgbot.on(
+            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                data=re.compile(rb"rose")
+            )
+        )
+        async def on_plug_in_callback_query_handler(event):
+            if event.query.user_id == uid:
+                text = (
+                    f"**{ROSE_TEKS_KUSTOM}**\n\n"
+                    f"┏━━━━━━━━━━━━━━━━━━━━━\n"
+                    f"┣ **Pemilik** - `{DEFAULTUSER}`\n"
+                    f"┣ **Versi** - `5.0`\n"
+                    f"┣ **Groups** - @Rose_Userbot\n"
+                    f"┣ **Bahasa** - `Python`\n"
+                    f"┣ **Branch** - `Rose-Userbot`\n"
+                    f"┣ **Modules** - `169`\n"
+                    f"┗━━━━━━━━━━━━━━━━━━━━━")
+                await event.edit(
+                    text,
+                    file=roselogo,
+                    link_preview=True,
+                    buttons=[
+                        [
+                            custom.Button.inline(
+                                "ʙᴀᴄᴋ", data="private")],
+                    ]
+                )
+            else:
+                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-# ====================================Menu===================================== #
+        @ tgbot.on(
+            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                data=re.compile(rb"about")
+            )
+        )
+        async def on_plug_in_callback_query_handler(event):
+            if event.query.user_id == uid:
+                text = (
+                    f"❁ __Saya Adalah Rose Userbot Yang Digunakan Banyak User Telegram__.\n\n"
+                    f"❁ __Saya Dibuat Hanya Untuk Bersenang Senang Ditelegram__.\n\n"
+                    f"❁ __Kelebihan Saya Banyak, Saya Mempunyai 169 Modules__.\n\n"
+                    f"© @Rose_Userbot")
+                await event.edit(
+                    text,
+                    file=roselogo,
+                    link_preview=True,
+                    buttons=[
+                        [custom.Button.inline("ᴄʟᴏꜱᴇ", data="closed")],
+                    ]
+                )
+            else:
+                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 5.0\n🛠 Modules : {len(plugins)}\n🌹 Branch : Rose-Userbot"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
@@ -593,109 +623,18 @@ with bot:
                     file=roselogo,
                     link_preview=True,
                     buttons=[
-                        [
-                            Button.inline("ʜᴏᴍᴇ 🏠", data="start"),
-                            Button.inline("ᴄᴜꜱᴛᴏᴍ ᴠᴀʀꜱ 💡", data="settings"),
-                        ],
-                        [
-                            Button.inline("ᴏᴡɴᴇʀ ᴛᴏᴏʟꜱ ✨", data="owner_tools"),
-                            Button.inline("ᴄᴏᴍᴍᴀɴᴅ ʙᴏᴛ ⚙️", data="pmon_pmof"),
-                        ],
-                        [Button.inline("⚡ Sƙყȥυ-υʂҽɾႦσƚ ⚡", data="fourBrothersgroup")],
-                    ]
-                )
-            else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nHanya {DEFAULTUSER}Yang Bisa Menekan Tombol Ini, Deploy Skyzu Userbot Untuk Mengetahui Fitur Nya."
-                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-
-# ====================================RoseUserbot===================================== #
-
-        @ tgbot.on(
-            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(rb"userbot_support")
-            )
-        )
-        async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == uid:
-                text = (
-                    f"{DEFAULTUSER}Ada Beberapa Vars Yang Tersembunyi, Silakan Cek Dibawah Untuk Mengetahui Nya.")
-                await event.edit(
-                    text,
-                    file=roselogo,
-                    link_preview=True,
-                    buttons=[
-                        [
-                            Button.inline("ᴡᴇʟᴄᴏᴍᴇ ᴘɪᴄᴛ", data="apiset"),
-                            Button.inline("ᴘᴇꜱᴀɴ ɪɴꜰᴏ", data="chatbot"),
-                        ],
-                        [
-                            Button.inline("ɪɴꜱᴛᴀɢʀᴀᴍ", data="alvcstm"),
-                            Button.inline("ʙᴏᴛ ʏᴏᴜ", data="ppmset"),
-                        ],
-                        [Button.inline("ᴏᴡɴᴇʀ", data="otvars")],
-                        [Button.inline("ᴄʜᴀɴɴᴇʟ", data="vcb")],
-                        [Button.inline("« Bᴀᴄᴋ", data="menu")],
-                    ]
-                )
-            else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nHanya {DEFAULTUSER} Yang Bisa Menekan Tombol Ini, Deploy Skyzu Userbot Untuk Mengetahui Fitur Nya."
-                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-
-        @ tgbot.on(
-            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(rb"apiset")
-            )
-        )
-        async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == uid:
-                text = (
-                    f"✘ **Description :**\n"
-                    f"__Kamu Dapat Mengubah Pesan Welcome Ketika Start Dibot.__\n\n"
-                    f"✘ **SetVars :**\n"
-                    f"`.set var WELCOME PIC` <link>\n"
-                    f"© @fourBrothersgroup")
-                await event.edit(
-                    text,
-                    file=roselogo,
-                    link_preview=True,
-                    buttons=[
-                        [
-                            custom.Button.inline(
-                                "ʙᴀᴄᴋ", data="fourBrothersgroup")],
+                        [custom.Button.inline(
+                            "🔐 ᴄᴏᴍᴍᴀɴᴅ ᴠᴀʀꜱ", data="settings")],
+                        [custom.Button.inline(
+                            "🤴 ᴘʀɪᴠᴀᴛᴇ ᴍᴇɴᴜ", data="private")],
+                        [custom.Button.inline(
+                            "🌹 ᴍᴏᴅᴜʟᴇꜱ", data="open_plugin")],
+                        [custom.Button.inline("🗑 ᴄʟᴏꜱᴇ 🗑", data="closed")],
                     ]
                 )
             else:
                 reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-
-        @ tgbot.on(
-            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(rb"chatbot")
-            )
-        )
-        async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == uid:
-                text = (
-                    f"✘ **Description :**\n"
-                    f"__Kamu Dapat Mengubah Pesan Ditombol, Kalau Kamu Belum Mengetahui Nya, Silakan start Bot, Klik Tombol Info, Disitu Ada Tulisan Pesan.__\n\n"
-                    f"✘ **SetVars :**\n"
-                    f"`.set var PESAN_INFO` <teks>\n"
-                    f"© @fourBrothersgroup")
-                await event.edit(
-                    text,
-                    file=roselogo,
-                    link_preview=True,
-                    buttons=[
-                        [
-                            custom.Button.inline(
-                                "ʙᴀᴄᴋ", data="fourBrothersgroup")],
-                    ]
-                )
-            else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
-                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-
-# ====================================CustomVars===================================== #
 
         @ tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
@@ -714,9 +653,35 @@ with bot:
                         [custom.Button.inline("ᴜᴘᴅᴀᴛᴇ", data="pembaruan")],
                         [custom.Button.inline("ᴀʟɪᴠᴇ", data="alive")],
                         [custom.Button.inline("ᴘᴍᴘᴇʀᴍɪᴛ", data="permirt")],
+                        [custom.Button.inline("ᴘᴍʙᴏᴛ", data="pmbot")],
                         [custom.Button.inline(
                             "ɪɴʟɪɴᴇ ᴍᴏᴅᴇ ", data="inline_mode")],
                         [custom.Button.inline("ʙᴀᴄᴋ", data="menu")],
+                    ]
+                )
+            else:
+                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+
+        @ tgbot.on(
+            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                data=re.compile(rb"private")
+            )
+        )
+        async def on_plug_in_callback_query_handler(event):
+            if event.query.user_id == uid:
+                text = (
+                    f"Menu Lainnya ! Untuk {DEFAULTUSER}")
+                await event.edit(
+                    text,
+                    file=roselogo,
+                    link_preview=True,
+                    buttons=[
+                        [custom.Button.inline("ᴀʟɪᴠᴇ ᴍᴇ", data="rose")],
+                        [custom.Button.inline(
+                            "ᴄᴀᴛᴀᴛᴀɴ ᴋᴇᴄɪʟ", data="catatan_1")],
+                        [custom.Button.inline("ᴘɪɴɢ", data="ping")],
+                        [custom.Button.inline("<<ʟᴇꜰᴛ", data="menu")],
                     ]
                 )
             else:
@@ -738,11 +703,11 @@ with bot:
                     f"✘ **Description :**\n"
                     f"__Kamu Juga Dapat Mengubah Foto Dan Teks Custom Sesuka Hatimu Command Dibawah.__\n\n"
                     f"✘ **Command :**\n"
-                    f"`.skyzualive` || `.skyzubot` || `.alive` \n\n"
+                    f"`.rosealive` || `.rosebot` || `.alive` \n\n"
                     f"✘ **SetVars :**\n"
                     f"`.set var ALIVE_LOGO` <link>\n"
-                    f"`.set var SKYZU_TEKS_KUSTOM` <teks>\n\n"
-                    f"© @fourBrothersgroup")
+                    f"`.set var ROSE_TEKS_KUSTOM` <teks>\n\n"
+                    f"© @Rose_Userbot")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -777,7 +742,7 @@ with bot:
                     f"`.set pm_msg`  <teks>\n\n"
                     f"✘ **SetVars :**\n"
                     f"`.set var PM_AUTO_BAN True`\n\n"
-                    f"© @fourBrothersgroup")
+                    f"© @Rose_Userbot")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -813,7 +778,40 @@ with bot:
                     f"✘ **SetVars :**\n"
                     f"`.set var INLINE_PIC` <link>\n"
                     f"`.set var EMOJI_HELP` <emoji>\n\n"
-                    f"© @fourBrothersgroup")
+                    f"© @Rose_Userbot")
+                await event.edit(
+                    text,
+                    file=roselogo,
+                    link_preview=True,
+                    buttons=[
+                        [
+                            custom.Button.inline(
+                                "ʙᴀᴄᴋ", data="settings"),
+                            custom.Button.inline(
+                                "ᴄʟᴏꜱᴇ", data="closed")],
+                    ]
+                )
+            else:
+                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+
+        @ tgbot.on(
+            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                data=re.compile(rb"pmbot")
+            )
+        )
+        async def on_plug_in_callback_query_handler(event):
+            if event.query.user_id == uid:
+                text = (
+                    f"**Modules :** `welcomebot`\n"
+                    f"** Owner: ** {DEFAULTUSER}\n\n"
+                    f"✘ **Penjelasan :**\n"
+                    f"__Kamu Dapat Membuat Welcome Bot Kamu Sendiri Dengan Sesuka Hatimu.__\n\n"
+                    f"✘ **Description :**\n"
+                    f"__Bot Belum Mendukung Menggunakan Mention Dll, Tolong Jangan Menggunakan Nya.__\n\n"
+                    f"✘ **SetVars :**\n"
+                    f"`.set var START_WELCOME` <teks>\n\n"
+                    f"© @Rose_Userbot")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -846,7 +844,7 @@ with bot:
                     f"__Diusahakan Untuk Update Deploy, Jangan Update Now, Agar Bisa Mengatahui Update Terbaru Nya.__\n\n"
                     f"✘ **Command :**\n"
                     f"`.update deploy`\n\n"
-                    f"© @fourBrothersgroup")
+                    f"© @Rose_Userbot")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -857,63 +855,6 @@ with bot:
                                 "ʙᴀᴄᴋ", data="settings"),
                             custom.Button.inline(
                                 "ᴄʟᴏꜱᴇ", data="closed")],
-                    ]
-                )
-            else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
-                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-
-# ====================================OwnerTools===================================== #
-
-        @ tgbot.on(
-            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(rb"owner_tools")
-            )
-        )
-        async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == uid:
-                text = (
-                    f"Menu Lainnya ! Untuk {DEFAULTUSER}")
-                await event.edit(
-                    text,
-                    file=roselogo,
-                    link_preview=True,
-                    buttons=[
-                        [custom.Button.inline("ᴏᴘᴇɴ ᴍᴏᴅᴜʟᴇꜱ", data="open_plugin")],
-                        [custom.Button.inline("ᴀʟɪᴠᴇ ᴍᴇ", data="rose")],
-                        [custom.Button.inline("ᴘɪɴɢ", data="ping")],
-                        [custom.Button.inline("<<ʟᴇꜰᴛ", data="menu")],
-                    ]
-                )
-            else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
-                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-
-        @ tgbot.on(
-            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(rb"rose")
-            )
-        )
-        async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == uid:
-                text = (
-                    f"**{SKYZU_TEKS_KUSTOM}**\n\n"
-                    f"┏━━━━━━━━━━━━━━━━━━━━━\n"
-                    f"┣ **Pemilik** - `{DEFAULTUSER}`\n"
-                    f"┣ **Versi** - `5.0`\n"
-                    f"┣ **Groups** - @fourBrothersgroup\n"
-                    f"┣ **Bahasa** - `Python`\n"
-                    f"┣ **Branch** - `Skyzu-Userbot`\n"
-                    f"┣ **Modules** - `170`\n"
-                    f"┗━━━━━━━━━━━━━━━━━━━━━")
-                await event.edit(
-                    text,
-                    file=roselogo,
-                    link_preview=True,
-                    buttons=[
-                        [
-                            custom.Button.inline(
-                                "ʙᴀᴄᴋ", data="owner_tools")],
                     ]
                 )
             else:
@@ -939,37 +880,70 @@ with bot:
                     buttons=[
                         [
                             custom.Button.inline(
-                                "ʙᴀᴄᴋ", data="owner_tools")],
+                                "ʙᴀᴄᴋ", data="private")],
                     ]
                 )
             else:
                 reply_pop_up_alert = f"PONG!!\n `{ms}ms`"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-# ====================================COMMANDHANDLER===================================== #
-
         @ tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(rb"pmon_pmof")
+                data=re.compile(rb"catatan_1")
             )
         )
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 text = (
-                    f"/ping - **Mengecek Sinyal Bot**")
+                    f"✘ **Penjelasan :**\n"
+                    f"__Kamu Juga Dapat Menyimpan Catatan Kamu Disini Sesuka Hatimu__.\n\n"
+                    f"✘ **Description :**\n"
+                    f"__Ketika Bot Kamu Mati, Catatan Kamu Otomatis Masih Ada, Tapi Jika Kamu Mendeploy Ulang Catatan Semua Ilang__.\n\n"
+                    f"✘ **Command :**\n"
+                    f"`.set var ISI_CATATAN` <catatan_baru>\n\n"
+                    f"© @Rose_Userbot")
                 await event.edit(
                     text,
                     file=roselogo,
                     link_preview=True,
                     buttons=[
-                        [custom.Button.inline("ʙᴀᴄᴋ", data="menu")],
+                        [
+                            custom.Button.inline(
+                                "<<ʙᴀᴄᴋ", data="private"),
+                            custom.Button.inline(
+                                "ᴄʟᴏꜱᴇ>>", data="closed")],
+                        [custom.Button.inline(
+                            "📝 ᴄᴀᴛᴀᴛᴀɴ ꜱᴀʏᴀ 📝", data="catatan_2")],
                     ]
                 )
             else:
                 reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-# ====================================CLOSED===================================== #
+        @ tgbot.on(
+            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+                data=re.compile(rb"catatan_2")
+            )
+        )
+        async def on_plug_in_callback_query_handler(event):
+            if event.query.user_id == uid:
+                text = (
+                    f"📝 **Catatan** {DEFAULTUSER}\n\n"
+                    f"{ISI_CATATAN}\n\n"
+                    f"© @Rose_Userbot")
+                await event.edit(
+                    text,
+                    file=roselogo,
+                    link_preview=True,
+                    buttons=[
+                        [
+                            custom.Button.inline(
+                                "ʙᴀᴄᴋ", data="catatan_1")],
+                    ]
+                )
+            else:
+                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @ tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
@@ -979,19 +953,17 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 text = (
-                    f"Closed Menu!")
+                    f"Closed Menu! /start")
                 await event.edit(
                     text,
                     file=roselogo,
                     link_preview=True,
                     buttons=[
                         [
-                            custom.Button.inline(
-                                "ᴏᴘᴇɴ ᴀɢᴀɪɴ", data="menu")],
+                            Button.url("ᴄʜᴀɴɴᴇʟ",
+                                       "https://t.me/fckyoupeople1")],
                     ]
                 )
-
-# ====================================INLINEHELPME===================================== #
 
         @ tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
@@ -1004,32 +976,32 @@ with bot:
                 result = builder.photo(
                     file=roselogo,
                     link_preview=False,
-                    text=f"⚡Sƙყȥυ-υʂҽɾႦσƚ⚡\n\n**🅼🅰🅸🅽 🅼🅴🅽🆄**\n\n❥ **Bᴏᴛ Oғ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}".format(
+                    text=f"⚡Bekk-userbot⚡\n\n**🅼🅰🅸🅽 🅼🅴🅽🆄**\n\n❥ **Bᴏᴛ Oғ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME}".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari ⚡Sƙყȥυ-υʂҽɾႦσƚ⚡ ",
+                    "Bantuan Dari ⚡Bekk-Userbot⚡ ",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    " ⚡Sƙყȥυ-υʂҽɾႦσƚ⚡ ",
-                    text="""°SKYZU-USERBOT°""",
+                    " ⚡Bekk-Userbot⚡ ",
+                    text="""°ROSE-USERBOT°""",
                     buttons=[
                         [
                             custom.Button.url(
                                 "ROSE",
-                                "https://github.com/Askarbot/Skyzuu-Userbot"),
+                                "https://github.com/SendiAp/Rose-Userbot"),
                             custom.Button.url(
                                 "SUPPORT",
-                                "t.me/fourBrothersgroup")],
+                                "t.me/Rose_Userbot")],
                         [custom.Button.url(
                             "LICENSE",
-                            "https://github.com/Askarbot/Skyzuu-Userbot/blob/Skyzuu-Userbot/LICENSE")],
+                            "https://github.com/SendiAp/Rose-Userbot/blob/Rose-Userbot/LICENSE")],
                     ],
                     link_preview=False,
                 )
@@ -1065,47 +1037,23 @@ with bot:
                     link_preview=True,
                     buttons=[
                         [
-                            Button.url(f"{EMOJI_HELP} ɢʀᴏᴜᴘꜱ {EMOJI_HELP} ",
+                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈",
                                        "t.me/Rose_Userbot"),
-                            Button.url(f"{EMOJI_HELP} ᴄʜᴀɴɴᴇʟ {EMOJI_HELP} ",
+                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈",
                                        "t.me/fckyoupeople1")],
-                        [Button.url(f"{EMOJI_HELP} ꜱᴇᴛᴛɪɴɢꜱ {EMOJI_HELP} ",
-                                    f"{BOT_USERYOU}"),
-                            Button.url(f"{EMOJI_HELP} ɪɴꜱᴛᴀɢʀᴀᴍ {EMOJI_HELP} ",
-                                       f"{IG_ALIVE}")],
                         [custom.Button.inline(
-                            f"{EMOJI_HELP} ᴄʟᴏꜱᴇ {EMOJI_HELP}", b"close")],
+                            "°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
+                        [custom.Button.inline(
+                            "°ᴄʟᴏꜱᴇ ɪɴʟɪɴᴇ°", b"close")],
                     ]
                 )
-
-# ====================================STARTWELCOME===================================== #
-
-        @ tgbot.on(events.CallbackQuery(data=b"info_random"))
-        async def start(event):
-            text = (
-                f"**Owner** : {DEFAULTUSER}\n**Emoji** : {EMOJI_HELP}\n\n💌**Pesan** :\n{PESAN_INFO}\n\n**Powered By** : @fourBrothersgroup")
-            await event.edit(
-                text,
-                link_preview=True,
-                buttons=[
-                    [
-                        Button.url(f"ᴏᴡɴᴇʀ ",
-                                   f"{OWNER_URL}"),
-                        Button.url(f"ᴄʜᴀɴɴᴇʟ ",
-                                   f"{CHANNEL_URL}")],
-                    [custom.Button.inline(
-                        "ʙᴀᴄᴋ", b"start")],
-                ]
-            )
 
         @ tgbot.on(events.CallbackQuery(data=b"close"))
         async def close(event):
             buttons = [
-                (custom.Button.inline("ᴏᴘᴇɴ ᴀɢᴀɪɴ", data="open_plugin"),),
+                (custom.Button.inline("Open Menu", data="open_plugin"),),
             ]
             await event.edit(f"Menu Ditutup! ", buttons=buttons)
-
-# ====================================INLINEHELPME===================================== #
 
         @ tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602

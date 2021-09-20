@@ -61,6 +61,7 @@ async def typewriter(typew):
     await typew.edit("`⚡ Cuma Skyzu Yang Paling Waras, Baik Hati, Dan Tidak Sombong :v`")
 # King Userbot Support
 
+
 @register(outgoing=True, pattern="^.istigfar(?: |$)(.*)")
 async def perkenalan(event):
     event.pattern_match.group(1)

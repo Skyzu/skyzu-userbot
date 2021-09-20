@@ -9,8 +9,8 @@
     "modular",
     "productivity"
 ],
-  "repository": "https://github.com/superbebek/bekk-userbot",
-  "telegram": "https://t.me/superbekk",
+  "repository": "https://github.com/Askarbot/Skyzuu-Userbot",
+  "telegram": "https://t.me/skyzuuuu",
   "success_url": "https://t.me/GirlHd",
   "stack": "container",
   "env": {
@@ -164,16 +164,16 @@
     },
     "DEFAULT_BIO": {
       "description": "Default Bio Mu.",
-      "value": "Rose-Userbot",
+      "value": "Skyzuu-Userbot",
       "required": false
     },
     "ALIVE_NAME": {
       "description": "Nama untuk menunjukan pesan .alive",
       "required": true
     },
-    "ROSE_TEKS_KUSTOM": {
+    "SKYZU_TEKS_KUSTOM": {
       "description": "Kustom Pesan Alive Mu Untuk Perintah .rosealive (Isi Terserah)",
-      "required": true 
+      "required": false 
     },
     "S_PACK_NAME": {
       "description": "Nama Sticker Pack Mu",

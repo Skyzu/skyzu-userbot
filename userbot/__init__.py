@@ -109,9 +109,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/muhammadrizky16/Kyy-Userbot")
+    "https://github.com/Askarbot/Skyzuu-Userbot")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "Kyy-Userbot")
+    "UPSTREAM_REPO_BRANCH", "Skyzuu-Userbot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -212,14 +212,14 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive Logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/99a845d405ce19278b179.jpg"
+    "ALIVE_LOGO") or "https://telegra.ph/file/4937705c1c6f82bdda486.jpg"
 
 # Default .helpme Logo
 INLINE_PIC = os.environ.get(
-    "INLINE_PIC") or "https://telegra.ph/file/99a845d405ce19278b179.jpg"
+    "INLINE_PIC") or "https://telegra.ph/file/4937705c1c6f82bdda486.jpg"
 
 # Default emoji help
-EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✨"
+EMOJI_HELP = os.environ.get("EMOJI_HELP") or "⚡"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -361,7 +361,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "**✨ҡʏʏ-ᴜsᴇʀʙᴏᴛ Berhasil Di Aktifkan.✨**")
+    await bot.send_message(BOTLOG_CHATID, "**⚡Sƙყȥυ-υʂҽɾႦσƚ⚡ Berhasil Di Aktifkan.**")
     return
 
 with bot:
@@ -484,7 +484,7 @@ with bot:
                     buttons=[
                         [
                             Button.url("【﻿Ｃｈａｎｎｅｌ】",
-                                       "https://t.me/ahhsudahlahhh")],
+                                       "https://t.me/GroupVirtualMusic")],
                     ]
                 )
 
@@ -495,7 +495,7 @@ with bot:
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
                 await event.reply(
-                    f"{START_WELCOME}\n\n**Powered By** : @ahhsudahlahhh\n\n",
+                    f"{START_WELCOME}\n\n**Powered By** : @skyzuuuu\n\n",
                     buttons=[
                         [
                             custom.Button.inline(
@@ -528,7 +528,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"✨ҡʏʏ-ᴜsᴇʀʙᴏᴛ✨\n\n**🇲 🇦 🇮 🇳  🇲 🇪 🇳 🇺**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME} "
+                text = f"⚡Sƙყȥυ-υʂҽɾႦσƚ⚡\n\n**🇲 🇦 🇮 🇳  🇲 🇪 🇳 🇺**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME} "
                 await event.edit(text,
                                  file=roselogo,
                                  buttons=buttons,
@@ -563,7 +563,7 @@ with bot:
                     f"❁ __Saya Adalah Kyy Userbot Yang Digunakan Banyak User Telegram__.\n\n"
                     f"❁ __Saya Dibuat Hanya Untuk Bersenang Senang Ditelegram__.\n\n"
                     f"❁ __Kelebihan Saya Banyak, Saya Mempunyai 175 Modules__.\n\n"
-                    f"© @ahhsudahlahhh")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -635,13 +635,13 @@ with bot:
             if event.query.user_id == uid:
                 text = (
                     f"Modules Name **Alive**\n\n"
-                    f"× `.alive` × `.kyyalive` × `.kyyon`\n"
+                    f"× `.alive` × `.skyzualive` × `.skyzuon`\n"
                     f"°__Menampilkan Alive Punya Kamu__.\n\n"
                     f"× `.set var ALIVE_LOGO` [**LINK**]\n"
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
-                    f"× `.set var KYY_TEKS_KUSTOM` [**TEKS**]\n"
+                    f"× `.set var SKYZU_TEKS_KUSTOM` [**TEKS**]\n"
                     f"°__Mengganti Teks Yang Ada Command KyyAlive__.\n\n"
-                    f"© @ahhsudahlahhh")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -671,7 +671,7 @@ with bot:
                     f"°__Mengaktifkan Pmpermit Kalian Atau Disebut Pesan Otomatis__.\n\n"
                     f"× `.set pm_msg` [**REPLYCHAT**]\n"
                     f"°__Mengganti Teks Pmpermit Selera Kamu__.\n\n"
-                    f"© @ahsudahlahhh")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -701,7 +701,7 @@ with bot:
                     f"°__Mengubah Emoji Inline Yang Ada Dicomand__ `.helpme`\n\n"
                     f"× `.set var INLINE_PIC` [**LINK**]\n"
                     f"°__Mengubah Foto Yang Ada Dicomand__ `.helpme`\n\n"
-                    f"© @ahhsudahlahhh")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -729,7 +729,7 @@ with bot:
                     f"Modules Name **pmbot**\n\n"
                     f"× `.set var START_WELCOME` [**TEKS**] \n"
                     f"°__Kamu Juga Bisa Mengubah Start Welcome Untuk Bot Kamu Yang Ini, Dengan Cara Diatas Dan Kata Kata Bebas__.\n\n"
-                    f"© @ahhsudahlahhh")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -759,7 +759,7 @@ with bot:
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
-                    f"© @ahhsudahlahhh")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -813,7 +813,7 @@ with bot:
                 AppPercentage = math.floor(
                     apps.get('quota_used') * 100 / quota)
                 text = (
-                    "✨ **ɪɴꜰᴏʀᴍᴀsɪ ᴅʏɴᴏ ʜᴇʀᴏᴋᴜ :**\n"
+                    "⚡ **ɪɴꜰᴏʀᴍᴀsɪ ᴅʏɴᴏ ʜᴇʀᴏᴋᴜ :**\n"
                     "╔════════════════════╗\n"
                     f" ☂ **ᴘᴇɴɢɢᴜɴᴀ ᴅʏɴᴏ sᴀᴀᴛ ɪɴɪ :**\n"
                     f"  ➽  `{AppHours}`**ᴊᴀᴍ**  `{AppMinutes}`**ᴍᴇɴɪᴛ**  "
@@ -824,7 +824,7 @@ with bot:
                     f"**|**  [`{percentage}`**%**]\n"
                     f" ✠➲ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}  "
                     "\n╚════════════════════╝"
-                    f"© @ahhsudahlahhh")
+                    f"© @fourBrothersgroup")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -847,7 +847,7 @@ with bot:
         async def killdabot(event):
             if event.query.user_id == uid:
                 text = (
-                    f"**Restaring Kyy-Userbot**...")
+                    f"**Restaring Skyzuu-Userbot**...")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -875,7 +875,7 @@ with bot:
                     buttons=[
                         [
                             Button.url("ᴄʜᴀɴɴᴇʟ",
-                                       "t.me/ahhsudahlahhh")],
+                                       "t.me/GroupVirtualMusic")],
                     ]
                 )
 
@@ -890,33 +890,33 @@ with bot:
                 result = builder.photo(
                     file=roselogo,
                     link_preview=False,
-                    text=f"✨ҡʏʏ-ᴜsᴇʀʙᴏᴛ✨\n\n**🇲​🇦​🇮​🇳​ 🇲​🇪​🇳​🇺​**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME}".format(
+                    text=f"⚡Sƙყȥυ-υʂҽɾႦσƚ⚡\n\n**🇲​🇦​🇮​🇳​ 🇲​🇪​🇳​🇺​**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME}".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari ✨ҡʏʏ-ᴜsᴇʀʙᴏᴛ✨",
+                    "Bantuan Dari ⚡Sƙყȥυ-υʂҽɾႦσƚ⚡,
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    " ✨ҡʏʏ-ᴜsᴇʀʙᴏᴛ✨",
-                    text="""°KYY-USERBOT°""",
+                    " ⚡Sƙყȥυ-υʂҽɾႦσƚ⚡",
+                    text="""°SKYZU-USERBOT°""",
                     buttons=[
                         [
                             custom.Button.url(
                                 "KYY",
-                                "https://github.com/muhammadrizky16/Kyy-Userbot"),
+                                "https://github.com/Askarbot/Skyzuu-Userbot"),
 
                             custom.Button.url(
                                 "SUPPORT",
-                                "t.me/ahhsudahlahhh")],
+                                "t.me/GroupVirtualMusic")],
                         [custom.Button.url(
                             "LICENSE",
-                            "https://github.com/muhammadrizky16/Kyy-Userbot/LICENSE")],
+                            "https://github.com/Askarbot/Skyzuu-Userbot/LICENSE")],
                     ],
                     link_preview=False,
                 )
@@ -953,9 +953,9 @@ with bot:
                     buttons=[
                         [
                             Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈",
-                                       "t.me/sinibrokk"),
+                                       "t.me/GfourBrothersgroup"),
                             Button.url("❈ᴄʜᴀɴɴᴇʟ❈",
-                                       "t.me/ahhsudahlahhh")],
+                                       "t.me/VirtualMusicChannel")],
                         [custom.Button.inline(
                             "°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
                         [custom.Button.inline(

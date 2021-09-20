@@ -8,9 +8,9 @@
     "plugin",
     "modular",
     "productivity"
-  ],
-  "repository": "https://github.com/Askarbot/Skyzu-Userbot/Skyzu-Userbot",
-  "telegram": "https://t.me/skyzuuuu",
+],
+  "repository": "https://github.com/SendiAp/Rose-UserBot",
+  "telegram": "https://t.me/pikyus1",
   "success_url": "https://t.me/UserbotSupport1",
   "stack": "container",
   "env": {
@@ -164,16 +164,16 @@
     },
     "DEFAULT_BIO": {
       "description": "Default Bio Mu.",
-      "value": "Skyzu-Userbot",
+      "value": "Rose-Userbot",
       "required": false
     },
     "ALIVE_NAME": {
       "description": "Nama untuk menunjukan pesan .alive",
       "required": true
     },
-    "SKYZU_TEKS_KUSTOM": {
-      "description": "Kustom Pesan Alive Mu Untuk Perintah .skyzualive (Isi Terserah)",
-      "required": false 
+    "ROSE_TEKS_KUSTOM": {
+      "description": "Kustom Pesan Alive Mu Untuk Perintah .rosealive (Isi Terserah)",
+      "required": true 
     },
     "S_PACK_NAME": {
       "description": "Nama Sticker Pack Mu",
@@ -234,6 +234,11 @@
       "description": "Username Bot Kamu Di @BotFather, Tanpa @",
       "value": "BotFather",
       "required": true
+    },
+    "BOT_USERYOU": {
+      "description": "Masukan Username Bot Kamu Di @BotFather,Menggunakan Link Contoh t.me/rose_01_bot",
+      "value": "t.me/(username bot kamu)",
+      "required": true
     }
   },
   "addons": [
@@ -261,4 +266,3 @@
     "url": "https://github.com/stevo550/buildpack-slug-cleaner"
   }]
 }
-

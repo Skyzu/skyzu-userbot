@@ -113,8 +113,9 @@ async def repo_is_here(wannasee):
         "⚡Sƙყȥυ-υʂҽɾႦσƚ⚡ \n"
         "✰ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Github](https://github.com/Askarbot/Skyzuu-Userbot)\n"
         "✰ **ᴏᴡɴᴇʀ ʙᴏᴛ :** [Skyzu](t.me/skyzuuuu)\n"
-        "✰ **ʟɪᴄᴇɴsᴇ :** [GPL-3.0 License](https://github.com/Askarbot/Skyzuu-Userbot/blob/Skyzuu-Userbot/LICENSE)"
         "✰ **ᴄʜᴀɴɴᴇʟ :** [Channel](t.me/Skyzuproject)\n"
+        "✰ **ʟɪᴄᴇɴsᴇ :** [GPL-3.0 License](https://github.com/Askarbot/Skyzuu-Userbot/blob/Skyzuu-Userbot/LICENSE)"
+      
     )
 
 

@@ -317,7 +317,7 @@ async def redis(alive):
         f"┃✧ **GitHub   :** [Sƙȥυ](https://github.com/Askarbot/Skyzuu-Userbot) \n"
         f"┃✧ **Groups   :** [groups](https://t.me/GroupVirtualMusic) \n"
         f"┃✧ **Owner    :** [Skyzu](https://t.me/skyzuuuu) \n"
-          ┃✧ **channel  :** [channel](https://t.me/Skyzuproject) \n"
+        ┃✧ ** channel: ** [channel](https: // t.me / Skyzuproject) \n"
         f"╰✠╼━━━━━━━━━━━━━━━━━━━✠╯")
     if ALIVE_LOGO:
         try:

@@ -484,7 +484,7 @@ with bot:
                     buttons=[
                         [
                             Button.url("【﻿Ｃｈａｎｎｅｌ】",
-                                       "https://t.me/GroupVirtualMusic")],
+                                       "https://t.me/Skyzuproject")],
                     ]
                 )
 
@@ -563,7 +563,7 @@ with bot:
                     f"❁ __Saya Adalah Kyy Userbot Yang Digunakan Banyak User Telegram__.\n\n"
                     f"❁ __Saya Dibuat Hanya Untuk Bersenang Senang Ditelegram__.\n\n"
                     f"❁ __Kelebihan Saya Banyak, Saya Mempunyai 175 Modules__.\n\n"
-                    f"© @fourBrothersgroup")
+                    f"© @Skyzuproject")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -641,7 +641,7 @@ with bot:
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
                     f"× `.set var SKYZU_TEKS_KUSTOM` [**TEKS**]\n"
                     f"°__Mengganti Teks Yang Ada Command KyyAlive__.\n\n"
-                    f"© @fourBrothersgroup")
+                    f"© @Skyzuproject")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -671,7 +671,7 @@ with bot:
                     f"°__Mengaktifkan Pmpermit Kalian Atau Disebut Pesan Otomatis__.\n\n"
                     f"× `.set pm_msg` [**REPLYCHAT**]\n"
                     f"°__Mengganti Teks Pmpermit Selera Kamu__.\n\n"
-                    f"© @fourBrothersgroup")
+                    f"© @Skyzuproject")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -701,7 +701,7 @@ with bot:
                     f"°__Mengubah Emoji Inline Yang Ada Dicomand__ `.helpme`\n\n"
                     f"× `.set var INLINE_PIC` [**LINK**]\n"
                     f"°__Mengubah Foto Yang Ada Dicomand__ `.helpme`\n\n"
-                    f"© @fourBrothersgroup")
+                    f"© @Skyzuproject")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -729,7 +729,7 @@ with bot:
                     f"Modules Name **pmbot**\n\n"
                     f"× `.set var START_WELCOME` [**TEKS**] \n"
                     f"°__Kamu Juga Bisa Mengubah Start Welcome Untuk Bot Kamu Yang Ini, Dengan Cara Diatas Dan Kata Kata Bebas__.\n\n"
-                    f"© @fourBrothersgroup")
+                    f"© @Skyzuproject")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -759,7 +759,7 @@ with bot:
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
-                    f"© @fourBrothersgroup")
+                    f"© @Skyzuproject")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -824,7 +824,7 @@ with bot:
                     f"**|**  [`{percentage}`**%**]\n"
                     f" ✠➲ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}  "
                     "\n╚════════════════════╝"
-                    f"© @fourBrothersgroup")
+                    f"© @Skyzuproject")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -875,7 +875,7 @@ with bot:
                     buttons=[
                         [
                             Button.url("ᴄʜᴀɴɴᴇʟ",
-                                       "t.me/GroupVirtualMusic")],
+                                       "t.me/Skyzuproject")],
                     ]
                 )
 
@@ -912,8 +912,8 @@ with bot:
                                 "https://github.com/Askarbot/Skyzuy-Userbot"),
 
                             custom.Button.url(
-                                "SUPPORT",
-                                "t.me/fourBrothersgroup")],
+                                "CHANNEL",
+                                "t.me/Skyzuproject")],
                         [custom.Button.url(
                             "LICENSE",
                             "https://github.com/Askarbot/Skyzuu-Userbot/LICENSE")],
@@ -955,7 +955,7 @@ with bot:
                             Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈",
                                        "t.me/fourBrothersgroup"),
                             Button.url("❈ᴄʜᴀɴɴᴇʟ❈",
-                                       "t.me/VirtualMusicChannel")],
+                                       "t.me/Skyzuproject")],
                         [custom.Button.inline(
                             "°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
                         [custom.Button.inline(

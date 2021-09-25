@@ -1,32 +1,34 @@
-# Ported By VCKYOU @VckyouuBitch
-# Fixes By Koala @Manusiarakitann
+# yang hapus credit anak babi , cape lah aku port
+# frm ultroid plugs thanks
+# Port by: Koala @manusiarakitan
 
-from PIL import Image
-import cv2
 import os
-from userbot.events import register
+
+import cv2
+from PIL import Image
+
 from userbot import CMD_HELP, bot
+from userbot.events import register
 
 
-@register(outgoing=True, pattern="^.tiny(?: |$)(.*)", disable_errors=True)
-async def _(event):
+@register(outgoing=True, pattern=r"^\.tiny(?: |$)(.*)", disable_errors=True)
+async def ultiny(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
-        await event.edit("`Mohon Balas Ke Sticker`")
+        await event.edit("`Balas Ke Pesan Sticker !`")
         return
-    xx = await event.edit("`Memproses Tiny....`")
+    xx = await event.edit("`Processing tiny...`")
     ik = await bot.download_media(reply)
-    im1 = Image.open("resources/extras/geez.png")
+    im1 = Image.open("userbot/resources/man_blank.png")
     if ik.endswith(".tgs"):
-        await event.client.download_media(reply, "geez.tgs")
-        os.system("lottie_convert.py geez.tgs json.json")
-        json = open("json.json", "r")
-        jsn = json.read()
-        json.close()
+        await event.client.download_media(reply, "ult.tgs")
+        os.system("lottie_convert.py ult.tgs json.json")
+        with open("json.json", "r") as json:
+            jsn = json.read()
         jsn = jsn.replace("512", "2000")
         open("json.json", "w").write(jsn)
-        os.system("lottie_convert.py json.json geez.tgs")
-        file = "geez.tgs"
+        os.system("lottie_convert.py json.json ult.tgs")
+        file = "ult.tgs"
         os.remove("json.json")
     elif ik.endswith((".gif", ".mp4")):
         iik = cv2.VideoCapture(ik)
@@ -81,6 +83,11 @@ async def _(event):
     os.remove(ik)
 
 
-CMD_HELP.update({
-    "tiny": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tiny`\
-    \nUsage : Untuk Memperkecil Sticker."})
+CMD_HELP.update(
+    {
+        "tiny": "**Plugin : **`tiny`\
+        \n\n  •  **Syntax :** `.tiny` <sambil reply ke media>\
+        \n  •  **Function : **Untuk Mengubah Sticker Menjadi Kecil.\
+    "
+    }
+)

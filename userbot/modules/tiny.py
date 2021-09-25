@@ -1,3 +1,6 @@
+# Ported By VCKYOU @VckyouuBitch
+# Fixes By Koala @Manusiarakitann
+
 from PIL import Image
 import cv2
 import os
@@ -11,19 +14,19 @@ async def _(event):
     if not (reply and (reply.media)):
         await event.edit("`Mohon Balas Ke Sticker`")
         return
-    xx = await event.edit("`Kecilin Tikell!!....`")
+    xx = await event.edit("`Memproses Tiny....`")
     ik = await bot.download_media(reply)
-    im1 = Image.open("userbot/utils/styles/RAMBOT.png")
+    im1 = Image.open("resources/extras/geez.png")
     if ik.endswith(".tgs"):
-        await event.client.download_media(reply, "ult.tgs")
-        os.system("lottie_convert.py ult.tgs json.json")
+        await event.client.download_media(reply, "geez.tgs")
+        os.system("lottie_convert.py geez.tgs json.json")
         json = open("json.json", "r")
         jsn = json.read()
         json.close()
         jsn = jsn.replace("512", "2000")
         open("json.json", "w").write(jsn)
-        os.system("lottie_convert.py json.json ult.tgs")
-        file = "ult.tgs"
+        os.system("lottie_convert.py json.json geez.tgs")
+        file = "geez.tgs"
         os.remove("json.json")
     elif ik.endswith((".gif", ".mp4")):
         iik = cv2.VideoCapture(ik)

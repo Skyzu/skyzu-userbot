@@ -1,30 +1,25 @@
-# yang hapus credit anak babi , cape lah aku port
-# frm ultroid plugs thanks
-# Port by: Koala @manusiarakitan
-
-import os
-
-import cv2
 from PIL import Image
-
-from userbot import CMD_HELP, bot
+import cv2
+import os
 from userbot.events import register
+from userbot import CMD_HELP, bot
 
 
-@register(outgoing=True, pattern=r"^\.tiny(?: |$)(.*)", disable_errors=True)
-async def ultiny(event):
+@register(outgoing=True, pattern="^.tiny(?: |$)(.*)", disable_errors=True)
+async def _(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
-        await event.edit("`Balas Ke Pesan Sticker !`")
+        await event.edit("`Mohon Balas Ke Sticker`")
         return
-    xx = await event.edit("`Processing tiny...`")
+    xx = await event.edit("`Kecilin Tikell!!....`")
     ik = await bot.download_media(reply)
-    im1 = Image.open("userbot/resources/man_blank.png")
+    im1 = Image.open("userbot/utils/styles/RAMBOT.png")
     if ik.endswith(".tgs"):
         await event.client.download_media(reply, "ult.tgs")
         os.system("lottie_convert.py ult.tgs json.json")
-        with open("json.json", "r") as json:
-            jsn = json.read()
+        json = open("json.json", "r")
+        jsn = json.read()
+        json.close()
         jsn = jsn.replace("512", "2000")
         open("json.json", "w").write(jsn)
         os.system("lottie_convert.py json.json ult.tgs")
@@ -83,11 +78,6 @@ async def ultiny(event):
     os.remove(ik)
 
 
-CMD_HELP.update(
-    {
-        "tiny": "**Plugin : **`tiny`\
-        \n\n  •  **Syntax :** `.tiny` <sambil reply ke media>\
-        \n  •  **Function : **Untuk Mengubah Sticker Menjadi Kecil.\
-    "
-    }
-)
+CMD_HELP.update({
+    "tiny": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tiny`\
+    \nUsage : Untuk Memperkecil Sticker."})

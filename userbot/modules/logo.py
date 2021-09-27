@@ -1,5 +1,3 @@
-# 🍀 © @tofik_dn
-# ⚠️ Do not remove credits
 import asyncio
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError

@@ -197,8 +197,6 @@ CMD_HELP.update({
     \nUsage: ntahlah gabut doang.\
     \n\n`.ass`\
     \nUsage: Salam duls biar sopan."
-    \n\n`.gift`
-    \nUsage: memberikan sesuatu.
 })
 
 CMD_HELP.update({

@@ -152,7 +152,6 @@ async def typewriter(typew):
     await typew.edit("**GC SAMPAH KAYA GINI, BUBARIN AJA GOBLOK!!**")
 
 
-
 CMD_HELP.update(
     {
         "war": "**Plugin : **`war`\

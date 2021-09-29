@@ -21,7 +21,7 @@ async def typewriter(typew):
 
 CMD_HELP.update(
     {
-        "broadcast": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .sok\
+        "war2": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .sok\
          \n↳ : ngatain orang yang sok keras\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .gucast\
          \n↳ : Mengirim Pesan Pribadi Secara Global"

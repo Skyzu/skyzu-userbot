@@ -108,15 +108,10 @@ async def typewriter(typew):
     await typew.edit("**Mampus Kau Wibu**")
 
 
-CMD_HELP.update(
-    {
-        "last": "**✘ Module :** `wibu`\
-        \n\n  •  **CMD :** `.wibu2`\
-        \n  •  **Function : **Untuk melihat sesuatu yang menarik\
-        \n  •  **Function : **Lari Cuk Ada Wibuuu Arghhhh**\
-        \n  ** Harap chat developer skyzu @skyzuuu Jika ingin mengidekan sesuatu yang menarik **\
-        \n\n  ** Perintah kosong **\
-        \n  ** Harap chat developer skyzu @skyzuuu Jika ingin mengidekan sesuatu yang menarik **\
-    "
-    }
-)
+CMD_HELP.update({
+    "wibu":
+    ".wibbu\
+\nUsage: ngatain wibu.\
+    ".wibu2\
+\nUsage: ngatain wibu2.\
+})

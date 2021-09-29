@@ -562,7 +562,7 @@ with bot:
                 text = (
                     f"❁ __Saya Adalah Skyzu Userbot Yang Digunakan Banyak User Telegram__.\n\n"
                     f"❁ __Saya Dibuat Hanya Untuk Bersenang Senang Ditelegram__.\n\n"
-                    f"❁ __Kelebihan Saya Banyak, Saya Mempunyai 175 Modules__.\n\n"
+                    f"❁ __Kelebihan Saya Banyak, Saya Mempunyai 180 Modules__.\n\n"
                     f"© @Skyzuproject")
                 await event.edit(
                     text,
@@ -640,7 +640,7 @@ with bot:
                     f"× `.set var ALIVE_LOGO` [**LINK**]\n"
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
                     f"× `.set var SKYZU_TEKS_KUSTOM` [**TEKS**]\n"
-                    f"°__Mengganti Teks Yang Ada Command KyyAlive__.\n\n"
+                    f"°__Mengganti Teks Yang Ada Command skyzuAlive__.\n\n"
                     f"© @Skyzuproject")
                 await event.edit(
                     text,
@@ -755,7 +755,7 @@ with bot:
             if event.query.user_id == uid:
                 text = (
                     f"Modules Name **Pembaruan**\n\n"
-                    f"× **Pembaruan Data Untuk Kyy Userbot, Command Untuk Pembaruan**.\n"
+                    f"× **Pembaruan Data Untuk Skyzuu-Userbot, Command Untuk Pembaruan**.\n"
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"

@@ -114,7 +114,7 @@ CMD_HELP.update(
         \n\n Cmd : `.wibbu`\
         \nUsage : ngatain wibu\
         \n\n Cmd : `.wibu2`\
-        \nUsage : ngatain wibu2\
+        \nUsage : ngatain wibu 2\
     "
     }
 )

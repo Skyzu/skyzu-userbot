@@ -116,7 +116,6 @@ async def typewriter(typew):
     await typew.edit("**KASIAN MANA MASIH MUDA**")
 
 
-
 @register(outgoing=True, pattern="^.perkenalan(?: |$)(.*)")
 async def perkenalan(event):
     event.pattern_match.group(1)

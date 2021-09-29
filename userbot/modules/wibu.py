@@ -114,9 +114,9 @@ CMD_HELP.update(
         \n\n  •  **CMD :** `.wibu2`\
         \n  •  **Function : **Untuk melihat sesuatu yang menarik\
         \n  •  **Function : **Lari Cuk Ada Wibuuu Arghhhh**\
-        \n  ** Harap chat developer Paradise @Nopegoodloking Jika ingin mengidekan sesuatu yang menarik **\
+        \n  ** Harap chat developer skyzu @skyzuuu Jika ingin mengidekan sesuatu yang menarik **\
         \n\n  ** Perintah kosong **\
-        \n  ** Harap chat developer Paradise @Nopegoodloking Jika ingin mengidekan sesuatu yang menarik **\
+        \n  ** Harap chat developer skyzu @skyzuuu Jika ingin mengidekan sesuatu yang menarik **\
     "
     }
 )

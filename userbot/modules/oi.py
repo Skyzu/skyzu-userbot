@@ -58,7 +58,6 @@ async def typewriter(typew):
     await typew.edit("**LEMBEK NGENTOT🔥**")
 
 
-
 @register(outgoing=True, pattern=r"^\.pp(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)

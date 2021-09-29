@@ -112,6 +112,6 @@ CMD_HELP.update({
     "wibu":
     ".wibbu\
 \nUsage: ngatain wibu.\
-    ".wibu2\
-\nUsage: ngatain wibu2.\
+    ".wibu2
+    \nUsage: ngatain wibu2.
 })

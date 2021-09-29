@@ -191,14 +191,13 @@ async def _(event):
             await event.edit(animation_chars[i % 17])
 
 
-
 CMD_HELP.update({
     "animasi7":
     "`.gabut` ; `.orgil`\
     \nUsage: ntahlah gabut doang.\
     \n\n`.ass`\
     \nUsage: Salam duls biar sopan."
-    \n\n`.gift`\
+    \n\n`.gift`
     \nUsage: memberikan sesuatu."
 })
 

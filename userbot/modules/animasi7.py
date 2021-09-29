@@ -148,7 +148,7 @@ async def typewriter(typew):
    # Create by myself @ram-ubot
 
 
-@bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\.gift(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:

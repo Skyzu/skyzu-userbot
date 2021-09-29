@@ -32,12 +32,6 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@register(outgoing=True, pattern=r"^\.ywc(?: |$)(.*)")
-async def typewriter(typew):
-    typew.pattern_match.group(1)
-    await typew.edit("**Sama sama kawan**")
-
-
 @register(outgoing=True, pattern=r"^\.jamet(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)

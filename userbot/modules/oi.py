@@ -163,8 +163,6 @@ CMD_HELP.update(
         \n  •  **Function : **Menghina Jamet muka hina!\
         \n\n  •  **Syntax :** `.so`\
         \n  •  **Function : **Ngeledek orang sokab\
-        \n\n  •  **Syntax :** `.so`\
-        \n  •  **Function : **Ngeledek orang sokab\
         \n\n  •  **Syntax :** `.met`\
         \n  •  **Function : **Ngeledek si jamet caper\
         \n\n  •  **Syntax :** `.war`\

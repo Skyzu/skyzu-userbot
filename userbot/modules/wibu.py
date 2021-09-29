@@ -108,10 +108,13 @@ async def typewriter(typew):
     await typew.edit("**Mampus Kau Wibu**")
 
 
-CMD_HELP.update({
-    "wibu":
-    ".wibbu\
-\nUsage: ngatain wibu.\
-    ".wibu2
-    \nUsage: ngatain wibu2.
-})
+CMD_HELP.update(
+    {
+        "wibu": "**Modules** - `wibu`\
+        \n\n Cmd : `.wibbu`\
+        \nUsage : ngatain wibu\
+        \n\n Cmd : `.wibu2`\
+        \nUsage : ngatain wibu2\
+    "
+    }
+)

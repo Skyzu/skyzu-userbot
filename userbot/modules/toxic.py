@@ -34,7 +34,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^Q(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**EHH GOBLOK LU SEMUA RIBUT SAMA GUA GOBLOK!!**")
+    await typew.edit("**EHH GOBLOK LU SEMUA RIBUT SAMA GUA SINI NGENTOT!**")
 
 
 @register(outgoing=True, pattern='^R(?: |$)(.*)')

@@ -116,7 +116,7 @@ async def typewriter(typew):
     await typew.edit("**KASIAN MANA MASIH MUDA**")
 
 
-@register(outgoing=True, pattern="^.perkenalan(?: |$)(.*)")
+@register(outgoing=True, pattern="^.perkenalkan(?: |$)(.*)")
 async def perkenalan(event):
     event.pattern_match.group(1)
     await event.edit(f"`Hai Guys , Perkenalkan Nama Gw {DEFAULTUSER}`")
@@ -160,7 +160,7 @@ CMD_HELP.update(
         "gabut": "**Modules** - `Gabut`\
         \n\n Cmd : `.l`\
         \nUsage : Untuk Menjawab Salam\
-        \n\n Cmd : `.perkenalan`\
+        \n\n Cmd : `.perkenalkan`\
         \nUsage : Memperkenalkan Diri\
         \n\n Cmd : `.alay`\
         \nUsage : ngeledek orang baru pasang bot\

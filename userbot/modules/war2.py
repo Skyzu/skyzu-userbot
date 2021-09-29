@@ -1,6 +1,5 @@
 from time import sleep
 
-from userbot import CMD_HELP
 from userbot.events import register
 
 
@@ -17,5 +16,3 @@ async def typewriter(typew):
     await typew.edit("**GAUSAH SOK KERAS DEH**")
     sleep(1)
     await typew.edit("**GAUSAH SOK KERAS DEH**")
-
-

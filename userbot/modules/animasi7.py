@@ -148,8 +148,6 @@ async def typewriter(typew):
    # Create by myself @ram-ubot
 
 
-
-
 CMD_HELP.update({
     "animasi7":
     "`.gabut` ; `.orgil`\

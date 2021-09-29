@@ -90,7 +90,7 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
-        "**PASANG PP DULU NGENTOT,BIAR ORANG-ORANG PADA TAU BETAPA HINA NYA MUKA LU 😆**"
+        "**PASANG PP DULU NGENTOT,BIAR ORANG-ORANG TAU BETAPA HINA NYA MUKA LU**"
     )
 
 
@@ -104,12 +104,6 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**GAUSAH SOKAB SAMA GUA NGENTOT, LU BABU GA LEVEL!!**")
-
-
-@register(outgoing=True, pattern=r"^\.nb(?: |$)(.*)")
-async def typewriter(typew):
-    typew.pattern_match.group(1)
-    await typew.edit("**MAEN BOT MULU ALAY NGENTOTT, KESANNYA NORAK GOBLOK!!!**")
 
 
 @register(outgoing=True, pattern=r"^\.met(?: |$)(.*)")
@@ -152,7 +146,7 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
-        "**SOKAB BET LU GOBLOK, KAGA ADA ISTILAH NYA BAWAHAN TEMENAN AMA BOS AHAHAHA!!**"
+        "**SOKAB BET SI LU NGENTOT!!**"
     )
 
 
@@ -168,7 +162,7 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
-        "**GAK KEREN LO KEK BEGITU GOBLOK, KELUARGA LU BAWA SINI GUA LUDAHIN SATU-SATU, SETDAH!!!**"
+        "**CIH GE KEREN LO BEGITU GOBLOK!!**"
     )
 
 
@@ -205,8 +199,6 @@ CMD_HELP.update(
         \n  •  **Function : **Menghina Jamet muka hina!\
         \n\n  •  **Syntax :** `.so`\
         \n  •  **Function : **Ngeledek orang sokab\
-        \n\n  •  **Syntax :** `.nb`\
-        \n  •  **Function : **Ngeledek orang norak baru pake bot\
         \n\n  •  **Syntax :** `.so`\
         \n  •  **Function : **Ngeledek orang sokab\
         \n\n  •  **Syntax :** `.skb`\
@@ -226,7 +218,7 @@ CMD_HELP.update(
         \n\n  •  **Syntax :** `.gembel`\
         \n  •  **Function : **Ngeledek bapaknya si jamet\
         \n\n  •  **Syntax :** `.cuih`\
-        \n  •  **Function : **Ngeludahin keluarganya satu satu wkwk\
+        \n  •  **Function : **ngatain orang sok keren\
         \n\n  •  **Syntax :** `.dih`\
         \n  •  **Function : **Ngeledek anak haram\
         \n\n  •  **Syntax :** `.gcs`\

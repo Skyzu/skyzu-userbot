@@ -17,7 +17,7 @@ async def typewriter(typew):
     await typew.edit("**GAUSAH SOK KERAS DEH**")
     sleep(1.5)
     await typew.edit("**GA KEREN LO BEGITU NGENTOT**")
-    
+
 
 CMD_HELP.update(
     {
@@ -27,4 +27,3 @@ CMD_HELP.update(
          \n↳ : Mengirim Pesan Pribadi Secara Global"
     }
 )
-

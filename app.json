@@ -35,6 +35,11 @@
       "value": "Check Di Heroku Dashboard Mu",
       "required": true
     },
+    "USER_NAME": {
+      "description": "isi username mu tanpa @'",
+      "value": "Check Username Mu",
+      "required": true 
+    },
     "BOTLOG": {
       "description": "Kalo Mau Off in BOTLOG Ganti False",
       "value": "True",

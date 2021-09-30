@@ -148,7 +148,6 @@ async def typewriter(typew):
    # Create by myself @ram-ubot
 
 
-
 """Available Commands: .gift"""
 
 
@@ -194,7 +193,6 @@ async def _(event):
             await asyncio.sleep(animation_interval)
 
             await event.edit(animation_chars[i % 17])
-
 
 
 CMD_HELP.update({

@@ -151,7 +151,7 @@ async def typewriter(typew):
 """Available Commands: .gift"""
 
 
-@bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+@register(outgoing=True, pattern='^.gift(?: |$)(.*)')
 async def _(event):
 
     if event.fwd_from:

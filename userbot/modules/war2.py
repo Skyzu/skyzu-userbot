@@ -31,12 +31,20 @@ async def typewriter(typew):
     await typew.edit("**BUAT LO KONTOL NIH KALO UDAH HINA GAUSAH SOK SOK NGEHINA HINA GUA KONTOL, GUA TERLALU SUCI BUAT LU YANG HINA ITU ADUHHH. SINI GUA LUDAHIN DLU LU BIAR DIRI LU SUCI KARENA LU TAU LUDAH GUA ITU MULIA SEKALI**")
 
 
+@register(outgoing=True, pattern=r"^\.gj(?: |$)(.*)")
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**YA AMPUN LU NGOMONG APA? GA NYAMBUNG KONTOL KAYA KEHIDUPAN LU MAKANYA ORG ORG KAYA LU GABAKALN MAJU HIDUPNYA APA LAGI ORG ORG BAWAHAN KAYA LU.**")
+
+
 CMD_HELP.update(
     {
         "war2": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .sok\
          \n↳ : ngatain orang yang sok keras\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .bk\
          \n↳ : ngatain bocah hina\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .gj\
+         \n↳ : ngatain bocah gajelas\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .an\
          \n↳ : ngatain anak pungut"
     }

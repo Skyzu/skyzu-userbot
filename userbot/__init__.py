@@ -361,7 +361,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"**Userbot has been deployed!**\n━━━━━━━━━━━━━━━\n❃ **bot of :** `@{USER_NAME}`\n❃ **BotVer :** `5.0`\n━━━━━━━━━━━━━━━\n❃ **Support :** @Skyzuproject\n━━━━━━━━━━━━━━━")
+    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"**Userbot has been deployed!**\n━━━━━━━━━━━━━━━\n❃ **bot of :** `{ALIVE_NAME}`\n❃ **BotVer :** `5.0`\n━━━━━━━━━━━━━━━\n❃ **Support :** @Skyzuproject\n━━━━━━━━━━━━━━━")
     return
 
 with bot:

@@ -64,10 +64,6 @@
       "description": "YouTube Data API Key for .yt command. Get from https://console.cloud.google.com",
       "required": false
     },
-    "OCR_SPACE_API_KEY": {
-      "description": "OCR API Key for .ocr command. Get from https://ocr.space/ocrapi",
-      "required": false
-    },
     "REM_BG_API_KEY": {
       "description": "API Key for .rbg command. Get from https://www.remove.bg/api",
       "required": false
@@ -96,11 +92,6 @@
     },
     "S_PACK_NAME": {
       "description": "Nama Sticker Pack Mu",
-      "required": false
-    },
-    "WEATHER_DEFCITY": {
-      "description": "Set the default city for the userbot's weather module.",
-      "value": "Tangerang",
       "required": false
     },
     "LOGSPAMMER": {

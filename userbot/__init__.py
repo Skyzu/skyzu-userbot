@@ -216,7 +216,7 @@ ALIVE_LOGO = os.environ.get(
 
 # Default foto log
 FOTO_LOG = os.environ.get(
-    "FOTO_LOG") or "https://telegra.ph/file/50de39ee2a49d1cddd739.mp4"
+    "FOTO_LOG") or "https://telegra.ph/file/9b3dacdcf44b95277dc5c.jpg"
 
 # Default .helpme Logo
 INLINE_PIC = os.environ.get(

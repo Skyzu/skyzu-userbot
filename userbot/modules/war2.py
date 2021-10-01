@@ -40,7 +40,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^.title(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("OI ANAK TITLE**")
+    await typew.edit("**OI ANAK TITLE**")
     sleep(2)
     await typew.edit("**OOO INI YANG SOK JADI PAHLAWAN DI TELEGRAM?**")
     sleep(3)

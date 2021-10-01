@@ -214,6 +214,10 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 ALIVE_LOGO = os.environ.get(
     "ALIVE_LOGO") or "https://telegra.ph/file/4b9621b82ab61e8e6daf3.mp4"
 
+# Default alive log
+ALIVE_LOG = os.environ.get(
+    "ALIVE_LOG") or "https://telegra.ph/file/532ad7a873ae146ee3a25.jpg"
+
 # Default .helpme Logo
 INLINE_PIC = os.environ.get(
     "INLINE_PIC") or "https://telegra.ph/file/4937705c1c6f82bdda486.jpg"
@@ -361,7 +365,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"**Userbot has been deployed!**\n➖➖➖➖➖➖➖➖➖\n**Bot Of:** {ALIVE_NAME}\n➖➖➖➖➖➖➖➖➖\n**Support:** @Skyzuproject\n➖➖➖➖➖➖➖➖➖")
+    await bot.send_file(BOTLOG_CHATID, ALIVE_LOG, caption=f"**Userbot has been deployed!**\n➖➖➖➖➖➖➖➖➖\n**Bot Of:** {ALIVE_NAME}\n➖➖➖➖➖➖➖➖➖\n**Support:** @Skyzuproject\n➖➖➖➖➖➖➖➖➖")
     return
 
 with bot:

@@ -213,7 +213,7 @@ async def pingme(pong):
     await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 9000
-    await pong.edit(f"**⚡SkyzuName : {ALIVE_NAME}**\n📗 `%sms`" % (duration))
+    await pong.edit(f"**⚡Oᴡɴᴇʀ : {ALIVE_NAME}**\n📗 `%sms`" % (duration))
 
 
 @register(outgoing=True, pattern="^.pink$")
@@ -242,7 +242,7 @@ async def redis(pong):
     await pong.edit("**CROOTTTT PINGGGG!**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**BABI!! **\n**NGENTOT** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration))
+    await pong.edit(f"**KONTOL!! **\n**NGENTOT** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration))
 
 
 @register(outgoing=True, pattern=r"^\.fping$")

@@ -1394,7 +1394,7 @@ async def fail(e):
         )
 
 
-@register(outgoing=True, pattern=r"^\.lol$")
+@register(outgoing=True, pattern=r"^\.loll$")
 async def leol(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit(

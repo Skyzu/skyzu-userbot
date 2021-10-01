@@ -42,7 +42,7 @@
     },
     "BOTLOG_CHATID": {
       "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
-      "value": "-1001234567890",
+      "value": "-1001572742132",
       "required": true
     },
     "FOTO_LOG": {
@@ -52,7 +52,7 @@
     },
     "G_BAN_LOGGER_GROUP": {
       "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
-      "value": "-1001234567890",
+      "value": "-1001572742132",
       "required": true
     },
     "PM_AUTO_BAN": {
@@ -80,11 +80,6 @@
       "description": "This should be True if the userbot is running on a Heroku Dyno.",
       "value": "True",
       "required": true
-    },
-    "DEFAULT_BIO": {
-      "description": "Default Bio Mu.",
-      "value": "⚡Sƙყȥυ-υʂҽɾႦσƚ⚡",
-      "required": false
     },
     "ALIVE_NAME": {
       "description": "Nama untuk menunjukan pesan .alive",

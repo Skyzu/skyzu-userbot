@@ -37,6 +37,45 @@ async def typewriter(typew):
     await typew.edit("**YA AMPUN LU NGOMONG APA? GA NYAMBUNG KONTOL KAYA KEHIDUPAN LU MAKANYA ORG ORG KAYA LU GABAKALN MAJU HIDUPNYA APA LAGI ORG ORG BAWAHAN KAYA LU.**")
 
 
+@register(outgoing=True, pattern='^.title(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("OI ANAK TITLE")
+    sleep(2)
+    await typew.edit("OOO INI YANG SOK JADI PAHLAWAN DI TELEGRAM?")
+    sleep(3)
+    await typew.edit("TITLE KEMANA MANA SAMPE MENUHIN NAMA")
+    sleep(2)
+    await typew.edit("ADA YANG SAMPE 18+ LAH SEGALA MACEM")
+    sleep(2)
+    await typew.edit("LO KIRA KEREN KEK GITU?")
+    sleep(2)
+    await typew.edit("KERJAAN CUMA NGURUSIN GRUP DI TELEGRAM SAMA NGAJAK ORANG WAR")
+    sleep(4)
+    await typew.edit("YAELAH BRO MENTAL LO CUMA DI SOSMED APA GIMANE?")
+    sleep(2) 
+    await typew.edit("PERASAAN DULU TELEGRAM GAADA DEH BOCAH BOCAH SOK JAGO KEK GINI") 
+    sleep(2) 
+    await typew.edit("GILIRAN TITLE NYA DI EJEK NGADU KE OWNER NYA")
+    sleep(4) 
+    await typew.edit("TRUS NGAJAK WAR")
+    sleep(2) 
+    await typew.edit("BUSET DAH BANG")
+    sleep(2) 
+    await typew.edit("UDAH SEJAGO APESI SAMPE GC DIBELA BELA") 
+    sleep(3) 
+    await typew.edit("ORANG TUA LO NOH ADA YANG NAGIH UTANG UDA LO BELA BELOM?") 
+    sleep(4) 
+    await typew.edit("RELA NGUTANG DEMI NGIDUPIN LU") 
+    sleep(2) 
+    await typew.edit("EH ANAKNYA MALAH NGEBELAIN GC GAJELAS HAHAHA")
+    sleep(3) 
+    await typew.edit("MANA VIRTUAL LAGI, SOK JAGO LAGI DUH") 
+    sleep(3) 
+    await typew.edit("SEMOGA CEPET SADAR YA HAHAHAHA") 
+   
+
+
 CMD_HELP.update(
     {
         "war2": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .sok\
@@ -45,6 +84,8 @@ CMD_HELP.update(
          \n↳ : ngatain bocah hina\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .gj\
          \n↳ : ngatain bocah gajelas\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .title\
+         \n↳ : ngatain bocah gila title\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .an\
          \n↳ : ngatain anak pungut"
     }

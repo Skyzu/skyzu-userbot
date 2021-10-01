@@ -45,6 +45,11 @@
       "value": "-1001234567890",
       "required": true
     },
+    "ALIVE_LOG": {
+      "description": "ALIVE LOG MU'",
+      "value": "https://telegra.ph/file/532ad7a873ae146ee3a25.jpg",
+      "required": false
+    },
     "G_BAN_LOGGER_GROUP": {
       "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
       "value": "-1001234567890",

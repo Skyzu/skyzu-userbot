@@ -176,7 +176,7 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 # Youtube API key
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
-# Untuk Perintah .kyyalive
+# Untuk Perintah .skyzualive
 ROSE_TEKS_KUSTOM = os.environ.get("KYY_TEKS_KUSTOM", "")
 
 # Untuk Mengubah Pesan Welcome
@@ -214,9 +214,9 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 ALIVE_LOGO = os.environ.get(
     "ALIVE_LOGO") or "https://telegra.ph/file/9ec25539197d9ab2ea0d1.jpg"
 
-# Default alive log
-ALIVE_LOG = os.environ.get(
-    "ALIVE_LOG") or "https://telegra.ph/file/50de39ee2a49d1cddd739.mp4"
+# Default foto log
+FOTO_LOG = os.environ.get(
+    "FOTO_LOG") or "https://telegra.ph/file/50de39ee2a49d1cddd739.mp4"
 
 # Default .helpme Logo
 INLINE_PIC = os.environ.get(
@@ -365,7 +365,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_file(BOTLOG_CHATID, ALIVE_LOG, caption=f"**Userbot has been deployed!**\n➖➖➖➖➖➖➖➖➖\n**Bot Of:** {ALIVE_NAME}\n➖➖➖➖➖➖➖➖➖\n**Support:** @Skyzuproject\n➖➖➖➖➖➖➖➖➖")
+    await bot.send_file(BOTLOG_CHATID, FOTO_LOG, caption=f"**Userbot has been deployed!**\n➖➖➖➖➖➖➖➖➖\n**Bot Of:** {ALIVE_NAME}\n➖➖➖➖➖➖➖➖➖\n**Support:** @Skyzuproject\n➖➖➖➖➖➖➖➖➖")
     return
 
 with bot:

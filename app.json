@@ -45,9 +45,9 @@
       "value": "-1001234567890",
       "required": true
     },
-    "ALIVE_LOG": {
-      "description": "ALIVE LOG MU'",
-      "value": "https://telegra.ph/file/532ad7a873ae146ee3a25.jpg",
+    "FOTO_LOG": {
+      "description": "foto log",
+      "value": "https://telegra.ph/file/50de39ee2a49d1cddd739.mp4",
       "required": false
     },
     "G_BAN_LOGGER_GROUP": {

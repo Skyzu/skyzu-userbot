@@ -55,14 +55,6 @@
       "value": "-1001234567890",
       "required": true
     },
-    "QUOTES_API_TOKEN": {
-      "description": "Dapatkan Token Dari http://antiddos.systems",
-      "required": false
-    },
-    "GIT_REPO_NAME": {
-      "description": "Add the GIT_REPO_NAME here. It helps with commit on GitHub.",
-      "required": false
-    },
     "PM_AUTO_BAN": {
       "description": "PM Auto-Ban Feature Switch. Also known as the 'bleep blop, this is a bot...' module.",
       "value": "False",
@@ -80,10 +72,6 @@
       "description": "API Key for .rbg command. Get from https://www.remove.bg/api",
       "required": false
     },
-    "REDIS_URI": {
-      "description": "Redis endpoint URL, from redislabs.com",
-      "required": false
-    },
     "TMP_DOWNLOAD_DIRECTORY": {
       "description": "Download location for many modules (GDrive, .download etc..)",
       "value": "./downloads/"
@@ -91,10 +79,6 @@
     "CLEAN_WELCOME": {
       "description": "When a new person joins, the old welcome message is deleted.",
       "value": "True"
-    },
-    "G_DRIVE_FOLDER_ID": {
-      "description": "Create a folder and put that folder's id here.check folder link for id.",
-      "required": false
     },
     "HEROKU_MEMEZ": {
       "description": "This should be True if the userbot is running on a Heroku Dyno.",
@@ -112,15 +96,6 @@
     },
     "S_PACK_NAME": {
       "description": "Nama Sticker Pack Mu",
-      "required": false
-    },
-    "G_DRIVE_DATA": {
-      "description": "Enter the Google Drive authentication data, as a JSON structure.",
-      "required": false
-    },
-    "BITLY_TOKEN": {
-      "description": "Your Bit.ly API key, get it from 'https://bitly.com/a/sign_up'",
-      "value": "",
       "required": false
     },
     "WEATHER_DEFCITY": {

@@ -1,31 +1,40 @@
+# Copyright (C) 2019 The Raphielscape Company LLC.
+#
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
+# you may not use this file except in compliance with the License.
+#
+# inline credit @keselekpermen69
+# Recode by @mrismanaziz
+# t.me/SharingUserbot
+#
 """ Userbot initialization. """
 
-import logging
 import os
-import time
 import re
-import redis
+import sys
+import time
 
 from sys import version_info
 from logging import basicConfig, getLogger, INFO, DEBUG
 from distutils.util import strtobool as sb
 from math import ceil
 
+from pathlib import Path
 from pylast import LastFMNetwork, md5
 from pySmartDL import SmartDL
 from pymongo import MongoClient
-from datetime import datetime
 from redis import StrictRedis
 from dotenv import load_dotenv
 from requests import get
 from telethon.sync import TelegramClient, custom, events
 from telethon.sessions import StringSession
-from telethon import Button, events, functions, types
-from telethon.utils import get_display_name
 
-redis_db = None
+from .storage import Storage
+
+STORAGE = (lambda n: Storage(Path("data") / n))
 
 load_dotenv("config.env")
+
 
 StartTime = time.time()
 
@@ -40,18 +49,40 @@ CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
 if CONSOLE_LOGGER_VERBOSE:
     basicConfig(
-        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        format="[%(name)s] - [%(levelname)s] - %(message)s",
         level=DEBUG,
     )
 else:
-    basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    basicConfig(format="[%(name)s] - [%(levelname)s] - %(message)s",
                 level=INFO)
 LOGS = getLogger(__name__)
 
-if version_info[0] < 3 or version_info[1] < 8:
-    LOGS.info("You MUST have a python version of at least 3.8."
-              "Multiple features depend on this. Bot quitting.")
-    quit(1)
+if version_info[0] < 3 or version_info[1] < 9:
+    LOGS.info("Anda HARUS memiliki python setidaknya versi 3.9."
+              "Beberapa fitur tergantung versi python ini. Bot berhenti.")
+    sys.exit(1)
+
+# Check if the config was edited by using the already used variable.
+# Basically, its the 'virginity check' for the config file ;)
+CONFIG_CHECK = os.environ.get(
+    "___________PLOX_______REMOVE_____THIS_____LINE__________", None)
+
+if CONFIG_CHECK:
+    LOGS.info(
+        "Harap hapus baris yang disebutkan dalam tagar pertama dari file config.env"
+    )
+    sys.exit(1)
+
+# KALO NGEFORK ID DEVS SAMA ID BLACKLIST_CHAT NYA GA USAH DI HAPUS YA GOBLOK 😡
+DEVS = 844432220, 1906014306, 1382636419, 1712874582, 1738637033,
+SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
+
+# For Blacklist Group Support
+BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
+if not BLACKLIST_CHAT:
+    BLACKLIST_CHAT = [-1001473548283]
+# JANGAN DI HAPUS GOBLOK 😡 LU COPY/EDIT AJA TINGGAL TAMBAHIN PUNYA LU
+# DI HAPUS GUA GBAN YA 🥴 GUA TANDAIN LU AKUN TELENYA 😡
 
 # Check if the config was edited by using the already used variable.
 # Basically, its the 'virginity check' for the config file ;)

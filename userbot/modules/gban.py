@@ -106,7 +106,7 @@ async def gben(userbot):
     except BaseException:
         return await dark.edit(f"`Terjadi Kesalahan`")
     if user:
-        if user.id == 1282429349:
+        if user.id == 1803347744:
             return await dark.edit(
                 f"`Anda Tidak Bisa Melakukan Global Banned, Karena dia pembuatku`"
             )

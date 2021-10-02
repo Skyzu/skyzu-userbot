@@ -1,4 +1,4 @@
-# GABUT DOANG BANG 
+# Skyzuu-Userbot Telegram
 
 </p>
 <p align="center">

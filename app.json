@@ -1,7 +1,7 @@
 {
   "name": "⚡Skyzu-Userbot⚡",
   "description": "🚫Skyzu-Userbot🚫 USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
-  "logo": "https://telegra.ph/file/370543177a86d96f25f72.jpg",
+  "logo": "https://telegra.ph/file/392a8cf066efbe726c6e1.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -44,11 +44,6 @@
       "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
       "value": "-1001572742132",
       "required": true
-    },
-    "FOTO_LOG": {
-      "description": "foto log",
-      "value": "https://telegra.ph/file/392a8cf066efbe726c6e1.jpg",
-      "required": false
     },
     "G_BAN_LOGGER_GROUP": {
       "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",

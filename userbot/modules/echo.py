@@ -4,8 +4,6 @@
 
 from userbot import CMD_HELP
 from userbot.events import register
-
-from userbot.utils import edit_delete, edit_or_reply
 from userbot.modules.sql_helper.echo_sql import (
     addecho,
     get_all_echos,
@@ -15,6 +13,7 @@ from userbot.modules.sql_helper.echo_sql import (
     remove_echo,
     remove_echos,
 )
+from userbot.utils import edit_delete, edit_or_reply
 from userbot.utils.events import get_user_from_event
 
 
@@ -40,13 +39,7 @@ async def echo(event):
     if is_echo(chat_id, user_id):
         return await event.edit("**Pengguna sudah diaktifkan dengan echo**")
     try:
-        addecho(
-            chat_id,
-            user_id,
-            chat_name,
-            user_name,
-            user_username,
-            chat_type)
+        addecho(chat_id, user_id, chat_name, user_name, user_username, chat_type)
     except Exception as e:
         await edit_delete(roseevent, f"**Error:**\n`{str(e)}`")
     else:
@@ -77,20 +70,21 @@ async def echo(event):
     if input_str:
         lecho = get_all_echos()
         if len(lecho) == 0:
-            await event.edit("Anda belum mengaktifkan echo,setidaknya untuk satu pengguna dalam obrolan apa pun.")
+            await event.edit(
+                "Anda belum mengaktifkan echo,setidaknya untuk satu pengguna dalam obrolan apa pun."
+            )
         try:
             remove_all_echos()
         except Exception as e:
             await edit_delete(event, f"**Error:**\n`{str(e)}`", 10)
         else:
-            await edit_or_reply(
-                event, "`Echo telah di hentikan.`"
-            )
+            await edit_or_reply(event, "`Echo telah di hentikan.`")
     else:
         lecho = get_echos(event.chat_id)
         if len(lecho) == 0:
             return await edit_delete(
-                event, "Anda belum mengaktifkan Echo setidaknya untuk satu pengguna dalam obrolan ini."
+                event,
+                "Anda belum mengaktifkan Echo setidaknya untuk satu pengguna dalam obrolan ini.",
             )
         try:
             remove_echos(event.chat_id)
@@ -132,7 +126,9 @@ async def echo(event):  # sourcery no-metrics
     else:
         lsts = get_echos(event.chat_id)
         if len(lsts) <= 0:
-            return await event.edit("Tidak ada pengguna yang mengaktifkan gema dalam obrolan ini")
+            return await event.edit(
+                "Tidak ada pengguna yang mengaktifkan gema dalam obrolan ini"
+            )
 
         for echos in lsts:
             if echos.user_username:
@@ -143,7 +139,10 @@ async def echo(event):  # sourcery no-metrics
                 private_chats += (
                     f"☞ [{echos.user_name}](tg://user?id={echos.user_id})\n"
                 )
-        output_str = f"**Pengguna yang mengaktifkan Echo dalam obrolan ini adalah:**\n" + private_chats
+        output_str = (
+            f"**Pengguna yang mengaktifkan Echo dalam obrolan ini adalah:**\n"
+            + private_chats
+        )
 
     await edit_or_reply(event, output_str)
 
@@ -155,8 +154,10 @@ async def samereply(event):
     ):
         await event.reply(event.message)
 
-CMD_HELP.update({
-    "echo":
-    "`.addecho` ; `.delecho` ; `.echolist`\
+
+CMD_HELP.update(
+    {
+        "echo": "`.addecho` ; `.delecho` ; `.echolist`\
     \nUsage: Untuk Menambahkan Followers Chat Kamu."
-})
+    }
+)

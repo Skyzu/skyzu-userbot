@@ -1,7 +1,8 @@
+import asyncio
 from time import sleep
+
 from userbot import CMD_HELP
 from userbot.events import register
-import asyncio
 
 
 @register(outgoing=True, pattern="^.sange$")
@@ -53,7 +54,7 @@ async def koc(e):
         await e.edit("AKU SAYANG KAMU💞")
 
 
-@register(outgoing=True, pattern='^.orgil(?: |$)(.*)')
+@register(outgoing=True, pattern="^.orgil(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`ANJING ADA ORANG GILA.....`")
@@ -123,7 +124,7 @@ async def koc(e):
             await event.edit(animation_chars[i % 11])
 
 
-@register(outgoing=True, pattern='^.ass(?: |$)(.*)')
+@register(outgoing=True, pattern="^.ass(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Salam dulu biar sopan....`")
@@ -145,21 +146,25 @@ async def typewriter(typew):
     await typew.edit("`Assalamu'alaikum`")
     sleep(3)
     await typew.edit("**YANG GA JAWAB, FIX ATHEISS!!**")
-   # Create by myself @ram-ubot
 
 
-CMD_HELP.update({
-    "animasi7":
-    "`.gabut` ; `.orgil`\
+# Create by myself @ram-ubot
+
+
+CMD_HELP.update(
+    {
+        "animasi7": "`.gabut` ; `.orgil`\
     \nUsage: ntahlah gabut doang.\
     \n\n`.ass`\
     \nUsage: Salam duls biar sopan."
-})
+    }
+)
 
-CMD_HELP.update({
-    "animasi8":
-    "`.cinta`\
+CMD_HELP.update(
+    {
+        "animasi8": "`.cinta`\
     \nUsage: mengirim cintamu ke seseorang.\
     \n\n`.sange` :\
     \nUsage: cobalah sndiri ngentot."
-})
+    }
+)

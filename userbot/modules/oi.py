@@ -117,9 +117,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern=r"^\.sokab(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit(
-        "**SOKAB BET SI LU NGENTOT!!**"
-    )
+    await typew.edit("**SOKAB BET SI LU NGENTOT!!**")
 
 
 @register(outgoing=True, pattern=r"^\.gembel(?: |$)(.*)")
@@ -133,9 +131,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern=r"^\.cuih(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit(
-        "**CIH GE KEREN LO BEGITU GOBLOK!!**"
-    )
+    await typew.edit("**CIH GE KEREN LO BEGITU GOBLOK!!**")
 
 
 @register(outgoing=True, pattern=r"^\.dih(?: |$)(.*)")

@@ -1,8 +1,8 @@
 import asyncio
+from platform import uname
 
 from userbot import ALIVE_NAME, CMD_HELP
 from userbot.events import register
-from platform import uname
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
@@ -20,12 +20,11 @@ async def _(event):
 
     animation_ttl = range(0, 22)
 
-   # input_str = event.pattern_match.group(1)
+    # input_str = event.pattern_match.group(1)
 
     await event.edit("Deploying...")
 
     animation_chars = [
-
         "Heroku Connecting To Latest Github Build (SendiAp/Rose-Userbot)",
         f"Build started by user `{DEFAULTUSER}`",
         f"Deploy `535a74f0` by user `{DEFAULTUSER}`",
@@ -47,8 +46,7 @@ async def _(event):
         "INFO - Rose-Userbot: Successfully...",
         "919852+00:00 app[worker.1]: 919 - Rose-Userbot -",
         "INFO - ⚡ Skyzu-Userbot ⚡ ⚙️ V5.0 [TELAH DIAKTIFKAN!]",
-        "**Build Succeeded**"
-
+        "**Build Succeeded**",
     ]
 
     for i in animation_ttl:
@@ -58,6 +56,6 @@ async def _(event):
         await event.edit(animation_chars[i % 22])
 
 
-CMD_HELP.update({
-    "deploy": ": `.deploy`"
-    "\n↳ : Untuk Deploy ke Heroku.. <Animasi> :v haha"})
+CMD_HELP.update(
+    {"deploy": ": `.deploy`" "\n↳ : Untuk Deploy ke Heroku.. <Animasi> :v haha"}
+)

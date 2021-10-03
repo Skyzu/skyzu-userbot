@@ -1,9 +1,10 @@
 from time import sleep
+
 from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern='^.sadboy(?: |$)(.*)')
+@register(outgoing=True, pattern="^.sadboy(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(2)
@@ -12,10 +13,12 @@ async def typewriter(typew):
     await typew.edit("`Kedua kamu manis`")
     sleep(1)
     await typew.edit("`Dan yang terakhir adalah kamu bukan jodohku`")
+
+
 # Create by myself @localheart
 
 
-@register(outgoing=True, pattern='^.stres(?: |$)(.*)')
+@register(outgoing=True, pattern="^.stres(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**fajar Peler☑️**")
@@ -39,7 +42,7 @@ async def typewriter(typew):
     await typew.edit("**CUMA SYZU YANG BAIK HATI DAN TIDAK SOMBONG✨**")
 
 
-@register(outgoing=True, pattern='^.lahk(?: |$)(.*)')
+@register(outgoing=True, pattern="^.lahk(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Lahk, Lo tolol?`")
@@ -51,7 +54,7 @@ async def typewriter(typew):
     await typew.edit("`Gua ga ketrigger sama bocah baru nyemplung!`")
 
 
-@register(outgoing=True, pattern='^.wah(?: |$)(.*)')
+@register(outgoing=True, pattern="^.wah(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Wahh, War nya keren bang`")
@@ -64,15 +67,19 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("`Kesannya lo ngasih kita hiburan.`")
     sleep(2)
-    await typew.edit("`Kasian badut🤡, Ga di hargain pengunjung, Eh lampiaskan nya ke Tele, Wkwkwk`")
+    await typew.edit(
+        "`Kasian badut🤡, Ga di hargain pengunjung, Eh lampiaskan nya ke Tele, Wkwkwk`"
+    )
     sleep(3)
     await typew.edit("`Dah sana cabut, Makasih hiburannya, Udah bikin Gua tawa ngakak`")
 
-CMD_HELP.update({
-    "skyzubot":
-    "`.stres`\
+
+CMD_HELP.update(
+    {
+        "skyzubot": "`.stres`\
     \nUsage: menampilkan alive bot.\
     \n\n`.sadboy`\
     \nUsage: hiks\
     \nUsage: misi."
-})
+    }
+)

@@ -7,20 +7,29 @@
 
 
 import asyncio
-from asyncio import create_subprocess_exec as asyncrunapp
-from asyncio.subprocess import PIPE as asyncPIPE
-from platform import python_version, uname
-from shutil import which
-from os import remove
-from telethon import __version__, version
 import platform
 import sys
 import time
+from asyncio import create_subprocess_exec as asyncrunapp
+from asyncio.subprocess import PIPE as asyncPIPE
 from datetime import datetime
-import psutil
-from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, StartTime, UPSTREAM_REPO_BRANCH, bot
-from userbot.events import register
+from os import remove
+from platform import python_version, uname
+from shutil import which
 
+import psutil
+from telethon import __version__, version
+
+from userbot import (
+    ALIVE_LOGO,
+    ALIVE_NAME,
+    BOT_VER,
+    CMD_HELP,
+    UPSTREAM_REPO_BRANCH,
+    StartTime,
+    bot,
+)
+from userbot.events import register
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
@@ -38,9 +47,7 @@ async def get_readable_time(seconds: int) -> str:
 
     while count < 4:
         count += 1
-        remainder, result = divmod(
-            seconds, 60) if count < 3 else divmod(
-            seconds, 24)
+        remainder, result = divmod(seconds, 60) if count < 3 else divmod(seconds, 24)
         if seconds == 0 and remainder == 0:
             break
         time_list.append(int(result))
@@ -72,10 +79,8 @@ async def psu(event):
     softw += f"`Waktu Hidup: {bt.day}/{bt.month}/{bt.year}  {bt.hour}:{bt.minute}:{bt.second}`\n"
     # CPU Cores
     cpuu = "**Informasi CPU**\n"
-    cpuu += "`Physical cores   : " + \
-        str(psutil.cpu_count(logical=False)) + "`\n"
-    cpuu += "`Total cores      : " + \
-        str(psutil.cpu_count(logical=True)) + "`\n"
+    cpuu += "`Physical cores   : " + str(psutil.cpu_count(logical=False)) + "`\n"
+    cpuu += "`Total cores      : " + str(psutil.cpu_count(logical=True)) + "`\n"
     # CPU frequencies
     cpufreq = psutil.cpu_freq()
     cpuu += f"`Max Frequency    : {cpufreq.max:.2f}Mhz`\n"
@@ -128,8 +133,7 @@ async def sysdetails(sysd):
             )
 
             stdout, stderr = await fetch.communicate()
-            result = str(stdout.decode().strip()) + \
-                str(stderr.decode().strip())
+            result = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
             await sysd.edit("`" + result + "`")
         except FileNotFoundError:
@@ -238,7 +242,8 @@ async def amireallyalive(alive):
         f"➥ **Bot Ver**  : `{BOT_VER}` \n"
         f"➥ **Modules**  : `{len(modules)}` \n"
         f"╰✠╼━━━━━━━━━━━━━━━✠╯\n"
-        f"[ɢʀᴏᴜᴘꜱ](https://t.me/GroupVirtualMusic) | [ʙᴏᴛᴏꜰ](https://t.me/{user.username}) | [ɢɪᴛʜᴜʙ](https://github.com/Askarbot/Skyzuu-Userbot)")
+        f"[ɢʀᴏᴜᴘꜱ](https://t.me/GroupVirtualMusic) | [ʙᴏᴛᴏꜰ](https://t.me/{user.username}) | [ɢɪᴛʜᴜʙ](https://github.com/Askarbot/Skyzuu-Userbot)"
+    )
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -271,7 +276,8 @@ async def amireallyalive(alive):
         f"✾ 🐍 • `ᴘʏᴛʜᴏɴ. :`v.{python_version()} ㅤㅤ\n"
         f"✾ 👾 • `ʙᴏᴛ :`v.{BOT_VER}                ㅤㅤㅤ \n"
         f"✾ 📂 • `ᴍᴏᴅᴜʟᴇ :`{len(modules)} ㅤㅤㅤㅤㅤㅤㅤ   \n"
-        f"●▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬●")
+        f"●▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬●"
+    )
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -318,7 +324,8 @@ async def redis(alive):
         f"┃✧ **Groups   :** [groups](https://t.me/GroupVirtualMusic) \n"
         f"┃✧ **Owner    :** [Skyzu](https://t.me/skyzuuuu) \n"
         f"┃✧ **channel  :** [channel](https://t.me/Skyzuproject) \n"
-        f"╰✠╼━━━━━━━━━━━━━━━━━━━✠╯")
+        f"╰✠╼━━━━━━━━━━━━━━━━━━━✠╯"
+    )
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -341,7 +348,7 @@ async def redis(alive):
 
 @register(outgoing=True, pattern="^.aliveu")
 async def amireallyaliveuser(username):
-    """ For .aliveu command, change the username in the .alive command. """
+    """For .aliveu command, change the username in the .alive command."""
     message = username.text
     output = ".aliveu [new username] tidak boleh kosong"
     if not (message == ".aliveu" and message[7:8] != " "):
@@ -359,29 +366,31 @@ async def amireallyalivereset(ureset):
     await ureset.edit("`" "Successfully reset user for alive!" "`")
 
 
-CMD_HELP.update({
-    "system":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.sysd`"
-    "\n↳ : Shows system information using neofetch."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.db`"
-    "\n↳ : Shows database related info."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.spc`"
-    "\n↳ : Show system specification."
-})
-CMD_HELP.update({
-    "alive":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.alive` or `.on` or `skyzu`"
-    "\n↳ : To see whether your bot is working or not."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.aliveu` <text>"
-    "\n↳ : Changes the 'user' in alive to the text you want."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.restalive`"
-    "\n↳ : Resets the user to default."
-})
 CMD_HELP.update(
     {
-        "botversion":
-        "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.botver`"
+        "system": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.sysd`"
+        "\n↳ : Shows system information using neofetch."
+        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.db`"
+        "\n↳ : Shows database related info."
+        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.spc`"
+        "\n↳ : Show system specification."
+    }
+)
+CMD_HELP.update(
+    {
+        "alive": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.alive` or `.on` or `skyzu`"
+        "\n↳ : To see whether your bot is working or not."
+        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.aliveu` <text>"
+        "\n↳ : Changes the 'user' in alive to the text you want."
+        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.restalive`"
+        "\n↳ : Resets the user to default."
+    }
+)
+CMD_HELP.update(
+    {
+        "botversion": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.botver`"
         "\n↳ : Shows the userbot version."
         "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.pip` <module(s)>"
         "\n↳ : Does a search of pip modules(s)."
-    })
+    }
+)

@@ -321,7 +321,6 @@ async def redis(alive):
         f"┃✧ **Bot Ver  :** {BOT_VER} \n"
         f"┃✧ **Modules  :** {len(modules)} Modules \n"
         f"┃✧ **GitHub   :** [Sƙȥυ](https://github.com/Askarbot/Skyzuu-Userbot) \n"
-        f"┃✧ **Groups   :** [groups](https://t.me/GroupVirtualMusic) \n"
         f"┃✧ **Owner    :** [Skyzu](https://t.me/skyzuuuu) \n"
         f"┃✧ **channel  :** [channel](https://t.me/Skyzuproject) \n"
         f"╰✠╼━━━━━━━━━━━━━━━━━━━✠╯"

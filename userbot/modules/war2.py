@@ -19,6 +19,27 @@ async def typewriter(typew):
     await typew.edit("**GA KEREN LO BEGITU NGENTOT**")
 
 
+@register(outgoing=True, pattern="^.wah(?: |$)(.*)")
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("`Wahh, War nya keren bang`")
+    sleep(2)
+    await typew.edit("`Tapi, Yang gua liat, kok Kaya lawakan`")
+    sleep(2)
+    await typew.edit("`Oh iya, Kan lo badut 🤡`")
+    sleep(2)
+    await typew.edit("`Kosa kata pas ngelawak, Jangan di pake war bang`")
+    sleep(2)
+    await typew.edit("`Kesannya lo ngasih kita hiburan.`")
+    sleep(2)
+    await typew.edit(
+        "`Kasian badut🤡, Ga di hargain pengunjung, Eh lampiaskan nya ke Tele, Wkwkwk`"
+    )
+    sleep(3)
+    await typew.edit("`Dah sana cabut, Makasih hiburannya, Udah bikin Gua tawa ngakak`")
+
+
+
 @register(outgoing=True, pattern=r"^\.an(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -106,6 +127,8 @@ CMD_HELP.update(
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .bk\
          \n↳ : ngatain bocah hina\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .gh\
+         \n↳ : lihat sendiri\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .wah\
          \n↳ : lihat sendiri\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .gj\
          \n↳ : ngatain bocah gajelas\

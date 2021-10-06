@@ -14,7 +14,7 @@ from asyncio import sleep
 
 from telethon.errors import rpcbaseerrors
 
-from userbot import CMD_HELP, 
+from userbot import CMD_HELP
 from userbot.events import register
 
 

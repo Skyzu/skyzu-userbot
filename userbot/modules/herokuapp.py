@@ -193,6 +193,7 @@ async def dyno_usage(dyno):
                 f"**|**  [`{percentage}`**%**]\n"
                 f" ✠➲ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}  "
                 "\n╚════════════════════╝"
+                f"✥ **Sisa Dyno Heroku** `{day}` **Hari Lagi**"
             )
             await asyncio.sleep(20)
             await event.delete()

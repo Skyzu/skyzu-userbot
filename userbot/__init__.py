@@ -814,6 +814,7 @@ with bot:
                     f"**|**  [`{percentage}`**%**]\n"
                     f" ✠➲ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}  "
                     "\n╚════════════════════╝"
+                    f"✥ **Sisa Dyno Heroku** `{day}` **Hari Lagi**"
                     f"© @Skyzuproject")
                 await event.edit(
                     text,

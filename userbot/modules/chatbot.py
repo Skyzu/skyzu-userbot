@@ -26,8 +26,8 @@ async def ngapain_rep(message):
             return (data.json())["msg"]
         else:
             LOGS.info("ERROR: API chatbot sedang down, report ke @tedesupport.")
-    except Exception:
-        LOGS.info("ERROR: {str(e)}")
+    except Exception as e:
+        LOGS.info(str(e))
 
 
 async def chat_bot_toggle(db, event):
@@ -36,15 +36,15 @@ async def chat_bot_toggle(db, event):
     if status == "on":
         if chat_id not in db:
             db.append(chat_id)
-            return await edit_or_reply(event, "ChatBot Diaktifkan.")
+            return await edit_or_reply(event, "ChatBot Diaktifkan!")
         await edit_or_reply(event, "ChatBot Sudah Diaktifkan.")
     elif status == "off":
         if chat_id in db:
             db.remove(chat_id)
-            return await edit_or_reply(event, "ChatBot Dinonaktifkan.")
+            return await edit_or_reply(event, "ChatBot Dinonaktifkan!")
         await edit_or_reply(event, "ChatBot Sudah Dinonaktifkan.")
     else:
-        await edit_or_reply(event, "**Usage:**\n.chatbot <on/off>")
+        await edit_or_reply(event, "**Usage:** `.chatbot` <on/off>")
 
 
 @register(outgoing=True, pattern=r"^\.chatbot(?: |$)(.*)")
@@ -52,14 +52,19 @@ async def on_apa_off(event):
     await chat_bot_toggle(aktifnya_chat_bot, event)
 
 
-@bot.on(events.NewMessage(incoming=True))
+@bot.on(
+    events.NewMessage(
+        incoming=True,
+        func=lambda e: (e.mentioned),
+    ),
+)
 async def tede_chatbot(event):
     sender = await event.get_sender()
-    if not isinstance(sender, User):
-        return
     if event.chat_id not in aktifnya_chat_bot:
         return
-    if event.text and event.is_reply:
+    if not isinstance(sender, User):
+        return
+    if event.text:
         rep = await ngapain_rep(event.message.message)
         tr = translator.translate(rep, LANGUAGE)
         if tr:
@@ -70,7 +75,7 @@ CMD_HELP.update(
     {
         "chatbot": "**Plugin : **`chatbot`\
       \n\n  •  **Syntax :** `.chatbot` <on/off>\
-      \n  •  **Function :** Ya chatbot\
+      \n  •  **Function :** Untuk membalas chat dengan chatbot AI.\
       "
     }
 )

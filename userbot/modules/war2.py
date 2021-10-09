@@ -33,7 +33,7 @@ async def typewriter(typew):
     await typew.edit("`Kesannya lo ngasih kita hiburan.`")
     sleep(2)
     await typew.edit(
-        "`Kasian badut🤡, Ga di hargain pengunjung, Eh lampiaskan nya ke Tele, Wkwkwk`"
+        "`Kasian badut🤡, Ga di hargain pengunjung, Eh lampiaskan nya ke Tele, Wkwkwkwk`"
     )
     sleep(3)
     await typew.edit("`Dah sana cabut, Makasih hiburannya, Udah bikin Gua tawa ngakak`")

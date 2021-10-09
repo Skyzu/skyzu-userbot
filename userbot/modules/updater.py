@@ -196,7 +196,7 @@ async def upstream(event):
 
     if changelog == "" and force_update is False:
         await event.edit(
-            f"\n⚡Sƙყȥυ-υʂҽɾႦσƚ⚡ Sudah Versi Terbaru || Tunggu Update Terbaru\n"
+            f"\n**✥ Skyzu-Userbot Sudah Versi Terbaru**\n"
         )
         await asyncio.sleep(15)
         await event.delete()

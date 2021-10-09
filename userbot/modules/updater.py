@@ -69,7 +69,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                 break
         if heroku_app is None:
             await event.edit(
-                f"{txt}\n`Kredensial Heroku tidak valid untuk deploy Geez-Project dyno.`"
+                f"{txt}\n`Kredensial Heroku tidak valid untuk deploy Skyzuu-Userbot dyno.`"
             )
             return repo.__del__()
         await event.edit("`Heroku : Sedang MengUpdate`" "\nMohon Menggunakan 5-7 Menit")
@@ -195,7 +195,7 @@ async def upstream(event):
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
 
     if changelog == "" and force_update is False:
-        await event.edit(f"\n**✥ Skyzu-Userbot Sudah Versi Terbaru**\n")
+        await event.edit(f"\n**⚡ Skyzu-Userbot Sudah Versi Terbaru**\n")
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()

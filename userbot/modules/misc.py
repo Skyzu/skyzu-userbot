@@ -120,8 +120,8 @@ async def repo_is_here(wannasee):
         "**__USERBOT INDONESIA__**\n"
         "𝗥𝗲𝗽𝗼 🇮🇩\n"
         "╰⎆ [⚡Skyzu-Userbot⚡](https://github.com/Askarbot/Skyzuu-Userbot)\n"
-        "❏ 𝗢𝘄𝗻𝗲𝗿 ⎆ [Skyzu](t.me/skyzuuuu)\n"
-        "❏ 𝗨𝗽𝗱𝗮𝘁𝗲 ⎆ [SkyzuProject](t.me/Skyzuproject)\n"
+        "❏ 𝗢𝘄𝗻𝗲𝗿 ⎆ [Skyzu](t.me/skyzuX)\n"
+        "❏ 𝗨𝗽𝗱𝗮𝘁𝗲 ⎆ [SkyzuXproject](t.me/skyzuXproject)\n"
     )
 
 

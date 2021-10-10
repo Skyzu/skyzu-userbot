@@ -351,7 +351,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"**Userbot has been deployed✨**\n➖➖➖➖➖➖➖➖➖\n**Bot Of:** {ALIVE_NAME}\n➖➖➖➖➖➖➖➖➖\n**Support: ** @ Skyzuproject\n➖➖➖➖➖➖➖➖➖")
+    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"**Userbot has been deployed✨**\n➖➖➖➖➖➖➖➖➖\n**Bot Of:** [{ALIVE_NAME}](https://t.me/{user.username})\n➖➖➖➖➖➖➖➖➖\n**Support: ** @SkyzuXproject\n➖➖➖➖➖➖➖➖➖")
     return
 
 with bot:
@@ -474,7 +474,7 @@ with bot:
                     buttons=[
                         [
                             Button.url("【﻿Ｃｈａｎｎｅｌ】",
-                                       "https://t.me/Skyzuproject")],
+                                       "https://t.me/skyzuXproject")],
                     ]
                 )
 

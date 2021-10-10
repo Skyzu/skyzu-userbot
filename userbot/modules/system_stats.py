@@ -270,7 +270,7 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"●▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬● \n"
-        f"✾ 🤴 • `ᴏᴡɴᴇʀ :`[Sƙȥυ](t.me/skyzuuuu)             ㅤ \n"
+        f"✾ 🤴 • `ᴏᴡɴᴇʀ :`[Sƙȥυ](t.me/skyzuX)             ㅤ \n"
         f"✾ 🖥️ • `ꜱʏꜱᴛᴇᴍ. :`Ubuntu 20.10            \n"
         f"✾ ⚙️ • `ᴛᴇʟᴇᴛʜᴏɴ :`v.{version.__version__}                ㅤㅤ  \n"
         f"✾ 🐍 • `ᴘʏᴛʜᴏɴ. :`v.{python_version()} ㅤㅤ\n"
@@ -321,8 +321,8 @@ async def redis(alive):
         f"┃✧ **Bot Ver  :** {BOT_VER} \n"
         f"┃✧ **Modules  :** {len(modules)} Modules \n"
         f"┃✧ **GitHub   :** [Sƙȥυ](https://github.com/Askarbot/Skyzuu-Userbot) \n"
-        f"┃✧ **Owner    :** [Skyzu](https://t.me/skyzuuuu) \n"
-        f"┃✧ **channel  :** [channel](https://t.me/Skyzuproject) \n"
+        f"┃✧ **Owner    :** [Skyzu](https://t.me/skyzuX) \n"
+        f"┃✧ **channel  :** [channel](https://t.me/SkyzuXproject) \n"
         f"╰✠╼━━━━━━━━━━━━━━━━━━━✠╯"
     )
     if ALIVE_LOGO:

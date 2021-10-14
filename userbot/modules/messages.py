@@ -1,7 +1,8 @@
-from userbot.events import register
 from userbot import CMD_HELP
+from userbot.events import register
 
 # Gausah kesini ngentot
+
 
 @register(outgoing=True, pattern=r"^\.(?:dm)\s?(.*)?")
 async def remoteaccess(event):
@@ -31,8 +32,10 @@ async def remoteaccess(event):
     except BaseException:
         await event.edit("**Terjadi Error. Lu limit kayanya tot.**")
 
+
 CMD_HELP.update(
     {
         "message": "`.dm`\
     \nMengirim Pesan Dengan Jarak Jauh Dengan .dm <username> <pesan>."
-    })
+    }
+)

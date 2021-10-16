@@ -39,6 +39,35 @@ async def typewriter(typew):
     await typew.edit("`Dah sana cabut, Makasih hiburannya, Udah bikin Gua tawa ngakak`")
 
 
+@register(outgoing=True, pattern=r"^\.kont(?: |$)(.*)")
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(1.5)
+    await typew.edit("**KONTOLL**")
+    sleep(1.5)
+    await typew.edit("**LU ANAK KONTOLL**")
+    sleep(1.5)
+    await typew.edit("**DI BIKIN DARI KONTOLL**")
+    sleep(1.5)
+    await typew.edit("**MUKALU PERSIS KONTOLL**")
+    sleep(1.5)
+    await typew.edit("**DASAR ANAK NGONTOLLLL**")
+    sleep(1.5)
+    await typew.edit("**NOLEP KONTOLL**")
+    sleep(1.5)
+    await typew.edit("**NGERUSUH KONTOLL**")
+    sleep(1.5)
+    await typew.edit("**BENER BENER KONTOLL**")
+    sleep(1.5)
+    await typew.edit("**PADAHAL LO GAPUNYA KONTOLL**")
+    sleep(1.5)
+    await typew.edit("**MENDING LO OPERASI KONTOLL**")
+    sleep(1.5)
+    await typew.edit("**BIAR LO PUNYA KONTOLL**")
+    sleep(1.5)
+    await typew.edit("**KASIAN CACAD GAPUNYA KONTOLL**")
+
+
 @register(outgoing=True, pattern=r"^\.an(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)

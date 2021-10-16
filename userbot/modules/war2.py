@@ -158,6 +158,8 @@ CMD_HELP.update(
          \n↳ : lihat sendiri\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .wah\
          \n↳ : lihat sendiri\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .kont\
+         \n↳ : ngatain anak kontol\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .gj\
          \n↳ : ngatain bocah gajelas\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .lol\

@@ -42,7 +42,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern=r"^\.kont(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    sleep(1.5)
+    sleep(1)
     await typew.edit("**KONTOLL**")
     sleep(1.5)
     await typew.edit("**LU ANAK KONTOLL**")

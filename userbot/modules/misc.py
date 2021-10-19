@@ -93,7 +93,7 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "Here's Something for You to Read :\n"
-        "\n[⚡ Skyzu-UserBot Repo](https://github.com/Askarbot/Skyzuu-Userbot/blob/Skyzuu-UserBot/README.md)"
+        "\n[⚡ Skyzu-UserBot Repo](https://github.com/Askarbot/Skyzuu-Userbot/blob/skyzu-userBot/README.md)"
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
         "\n[Special - Note](https://telegra.ph/Special-Note-11-02)"
     )
@@ -119,7 +119,7 @@ async def repo_is_here(wannasee):
     await wannasee.edit(
         "**__USERBOT INDONESIA__**\n"
         "𝗥𝗲𝗽𝗼 🇮🇩\n"
-        "╰⎆ [⚡Skyzu-Userbot⚡](https://github.com/Askarbot/Skyzuu-Userbot)\n"
+        "╰⎆ [⚡Skyzu-Userbot⚡](https://github.com/Askarbot/skyzu-userbot)\n"
         "❏ 𝗢𝘄𝗻𝗲𝗿 ⎆ [Skyzu](t.me/skyzuX)\n"
         "❏ 𝗨𝗽𝗱𝗮𝘁𝗲 ⎆ [SkyzuXproject](t.me/skyzuXproject)\n"
     )

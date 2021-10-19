@@ -4,7 +4,7 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^\.asupan$")
+@register(outgoing=True, pattern=r"^\.truth$")
 async def _(event):
     try:
         resp = requests.get("https://api-tede.herokuapp.com/api/truth").json()
@@ -14,7 +14,7 @@ async def _(event):
         await edit_or_reply(event, "**Something went wrong LOL...**")
 
 
-@register(outgoing=True, pattern=r"^\.asupan$")
+@register(outgoing=True, pattern=r"^\.dare$")
 async def _(event):
     try:
         resp = requests.get("https://api-tede.herokuapp.com/api/dare").json()

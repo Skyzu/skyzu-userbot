@@ -3,7 +3,7 @@ import requests
 from userbot import CMD_HELP, bot
 from userbot.events import register
 
-@register(outgoing=True, pattern=r"^\.truth$"))
+@register(outgoing=True, pattern=r"^\.truth$")
 async def tede_truth(event):
     try:
         resp = requests.get("https://api-tede.herokuapp.com/api/truth").json()
@@ -13,7 +13,7 @@ async def tede_truth(event):
         await edit_or_reply(event, "**Something went wrong LOL...**")
 
 
-@register(outgoing=True, pattern=r"^\.dare$"))
+@register(outgoing=True, pattern=r"^\.dare$")
 async def tede_dare(event):
     try:
         resp = requests.get("https://api-tede.herokuapp.com/api/dare").json()

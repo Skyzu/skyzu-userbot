@@ -242,7 +242,7 @@ async def amireallyalive(alive):
         f"➥ **Bot Ver**  : `{BOT_VER}` \n"
         f"➥ **Modules**  : `{len(modules)}` \n"
         f"╰✠╼━━━━━━━━━━━━━━━✠╯\n"
-        f"[ɢʀᴏᴜᴘꜱ](https://t.me/GroupVirtualMusic) | [ʙᴏᴛᴏꜰ](https://t.me/{user.username}) | [ɢɪᴛʜᴜʙ](https://github.com/Askarbot/Skyzuu-Userbot)"
+        f"[ɢʀᴏᴜᴘꜱ](https://t.me/GroupVirtualMusic) | [ʙᴏᴛᴏꜰ](https://t.me/{user.username}) | [ɢɪᴛʜᴜʙ](https://github.com/Askarbot/skyzu-userbot)"
     )
     if ALIVE_LOGO:
         try:
@@ -320,7 +320,7 @@ async def redis(alive):
         f"┃✧ **Branch   :** {UPSTREAM_REPO_BRANCH} \n"
         f"┃✧ **Bot Ver  :** {BOT_VER} \n"
         f"┃✧ **Modules  :** {len(modules)} Modules \n"
-        f"┃✧ **GitHub   :** [Sƙȥυ](https://github.com/Askarbot/Skyzuu-Userbot) \n"
+        f"┃✧ **GitHub   :** [Sƙȥυ](https://github.com/Askarbot/skyzu-userbot) \n"
         f"┃✧ **Owner    :** [Skyzu](https://t.me/skyzuX) \n"
         f"┃✧ **channel  :** [channel](https://t.me/SkyzuXproject) \n"
         f"╰✠╼━━━━━━━━━━━━━━━━━━━✠╯"

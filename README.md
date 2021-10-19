@@ -1,4 +1,4 @@
-# Skyzuu-Userbot Telegram
+# skyzu-userbot Telegram
 
 </p>
 <p align="center">

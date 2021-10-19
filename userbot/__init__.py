@@ -553,7 +553,7 @@ with bot:
                     f"❁ __Saya Adalah Skyzu Userbot Yang Digunakan Banyak User Telegram__.\n\n"
                     f"❁ __Saya Dibuat Hanya Untuk Bersenang Senang Ditelegram__.\n\n"
                     f"❁ __Kelebihan Saya Banyak, Saya Mempunyai 180 Modules__.\n\n"
-                    f"© @Skyzuproject")
+                    f"© @SkyzuXproject")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -631,7 +631,7 @@ with bot:
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
                     f"× `.set var SKYZU_TEKS_KUSTOM` [**TEKS**]\n"
                     f"°__Mengganti Teks Yang Ada Command skyzuAlive__.\n\n"
-                    f"© @Skyzuproject")
+                    f"© @skyzuXproject")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -691,7 +691,7 @@ with bot:
                     f"°__Mengubah Emoji Inline Yang Ada Dicomand__ `.helpme`\n\n"
                     f"× `.set var INLINE_PIC` [**LINK**]\n"
                     f"°__Mengubah Foto Yang Ada Dicomand__ `.helpme`\n\n"
-                    f"© @Skyzuproject")
+                    f"© @skyzuXproject")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -719,7 +719,7 @@ with bot:
                     f"Modules Name **pmbot**\n\n"
                     f"× `.set var START_WELCOME` [**TEKS**] \n"
                     f"°__Kamu Juga Bisa Mengubah Start Welcome Untuk Bot Kamu Yang Ini, Dengan Cara Diatas Dan Kata Kata Bebas__.\n\n"
-                    f"© @Skyzuproject")
+                    f"© @skyzuXproject")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -815,7 +815,7 @@ with bot:
                     f" ✠➲ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}  "
                     "\n╚════════════════════╝"
                     f"✥ **Sisa Dyno Heroku** `{day}` **Hari Lagi**"
-                    f"© @Skyzuproject")
+                    f"© @skyzuXproject")
                 await event.edit(
                     text,
                     file=roselogo,

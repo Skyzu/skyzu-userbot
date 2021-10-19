@@ -485,7 +485,7 @@ with bot:
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
                 await event.reply(
-                    f"{START_WELCOME}\n\n**Powered By** : @skyzuuuu\n\n",
+                    f"{START_WELCOME}\n\n**Powered By** : @skyzuX\n\n",
                     buttons=[
                         [
                             custom.Button.inline(
@@ -749,7 +749,7 @@ with bot:
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
-                    f"© @Skyzuproject")
+                    f"© @skyzuXproject")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -866,7 +866,7 @@ with bot:
                     buttons=[
                         [
                             Button.url("ᴄʜᴀɴɴᴇʟ",
-                                       "t.me/Skyzuproject")],
+                                       "t.me/skyzuXproject")],
                     ]
                 )
 
@@ -900,14 +900,14 @@ with bot:
                         [
                             custom.Button.url(
                                 "SKYZU",
-                                "https://github.com/Askarbot/Skyzuy-Userbot"),
+                                "https://github.com/Askarbot/skyzu-userbot"),
 
                             custom.Button.url(
                                 "CHANNEL",
-                                "t.me/Skyzuproject")],
+                                "t.me/skyzuXproject")],
                         [custom.Button.url(
                             "LICENSE",
-                            "https://github.com/Askarbot/Skyzuu-Userbot/LICENSE")],
+                            "https://github.com/Askarbot/skyzu-userbot/LICENSE")],
                     ],
                     link_preview=False,
                 )
@@ -944,9 +944,9 @@ with bot:
                     buttons=[
                         [
                             Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈",
-                                       "t.me/fourBrothersgroup"),
+                                       "t.me/GroupVirtualMusic"),
                             Button.url("❈ᴄʜᴀɴɴᴇʟ❈",
-                                       "t.me/Skyzuproject")],
+                                       "t.me/skyzuXproject")],
                         [custom.Button.inline(
                             "°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
                         [custom.Button.inline(

@@ -168,7 +168,7 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**⚜-**⚡Sƙყȥυ-υʂҽɾႦσƚ⚡ Versi:** \n "
+            "**⚜-**⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡ Versi:** \n "
             f"heads/Skyzu-Userbot-0-x634i7u1"
             "\n**⚜-**Revisi:**\n "
             f"{revout}"
@@ -242,7 +242,7 @@ async def amireallyalive(alive):
         f"➥ **Bot Ver**  : `{BOT_VER}` \n"
         f"➥ **Modules**  : `{len(modules)}` \n"
         f"╰✠╼━━━━━━━━━━━━━━━✠╯\n"
-        f"[ɢʀᴏᴜᴘꜱ](https://t.me/GroupVirtualMusic) | [ʙᴏᴛᴏꜰ](https://t.me/{user.username}) | [ɢɪᴛʜᴜʙ](https://github.com/Askarbot/skyzu-userbot)"
+        f"[ɢʀᴏᴜᴘꜱ](https://t.me/skyzusupport) | [ʙᴏᴛᴏꜰ](https://t.me/{user.username}) | [ɢɪᴛʜᴜʙ](https://github.com/Askarbot/skyzu-userbot)"
     )
     if ALIVE_LOGO:
         try:
@@ -322,7 +322,7 @@ async def redis(alive):
         f"┃✧ **Modules  :** {len(modules)} Modules \n"
         f"┃✧ **GitHub   :** [Sƙȥυ](https://github.com/Askarbot/skyzu-userbot) \n"
         f"┃✧ **Owner    :** [Skyzu](https://t.me/skyzuX) \n"
-        f"┃✧ **channel  :** [channel](https://t.me/SkyzuXproject) \n"
+        f"┃✧ **support  :** [groups](https://t.me/skyzusupport) \n"
         f"╰✠╼━━━━━━━━━━━━━━━━━━━✠╯"
     )
     if ALIVE_LOGO:

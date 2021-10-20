@@ -518,7 +518,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"⚡Sƙყȥυ-υʂҽɾႦσƚ⚡\n\n**🇲 🇦 🇮 🇳  🇲 🇪 🇳 🇺**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME} "
+                text = f"⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡\n\n**🇲 🇦 🇮 🇳  🇲 🇪 🇳 🇺**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME} "
                 await event.edit(text,
                                  file=roselogo,
                                  buttons=buttons,
@@ -631,7 +631,7 @@ with bot:
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
                     f"× `.set var SKYZU_TEKS_KUSTOM` [**TEKS**]\n"
                     f"°__Mengganti Teks Yang Ada Command skyzuAlive__.\n\n"
-                    f"© @skyzuXproject")
+                    f"© @skyzusupport")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -691,7 +691,7 @@ with bot:
                     f"°__Mengubah Emoji Inline Yang Ada Dicomand__ `.helpme`\n\n"
                     f"× `.set var INLINE_PIC` [**LINK**]\n"
                     f"°__Mengubah Foto Yang Ada Dicomand__ `.helpme`\n\n"
-                    f"© @skyzuXproject")
+                    f"© @skyzusupport")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -745,7 +745,7 @@ with bot:
             if event.query.user_id == uid:
                 text = (
                     f"Modules Name **Pembaruan**\n\n"
-                    f"× **Pembaruan Data Untuk Skyzuu-Userbot, Command Untuk Pembaruan**.\n"
+                    f"× **Pembaruan Data Untuk 𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁, Command Untuk Pembaruan**.\n"
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
@@ -815,7 +815,7 @@ with bot:
                     f" ✠➲ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}  "
                     "\n╚════════════════════╝"
                     f"✥ **Sisa Dyno Heroku** `{day}` **Hari Lagi**"
-                    f"© @skyzuXproject")
+                    f"© @skyzusupport")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -838,7 +838,7 @@ with bot:
         async def killdabot(event):
             if event.query.user_id == uid:
                 text = (
-                    f"**Restaring Skyzuu-Userbot**...")
+                    f"**Restaring 𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁**...")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -881,20 +881,20 @@ with bot:
                 result = builder.photo(
                     file=roselogo,
                     link_preview=False,
-                    text=f"⚡Sƙყȥυ-υʂҽɾႦσƚ⚡\n\n**🇲​🇦​🇮​🇳​ 🇲​🇪​🇳​🇺​**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME}".format(
+                    text=f"⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡\n\n**🇲​🇦​🇮​🇳​ 🇲​🇪​🇳​🇺​**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME}".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari ⚡Sƙყȥυ-υʂҽɾႦσƚ⚡",
+                    "Bantuan Dari ⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    " ⚡Sƙყȥυ-υʂҽɾႦσƚ⚡",
+                    " ⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡",
                     text="""°SKYZU-USERBOT°""",
                     buttons=[
                         [
@@ -944,7 +944,7 @@ with bot:
                     buttons=[
                         [
                             Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈",
-                                       "t.me/GroupVirtualMusic"),
+                                       "t.me/skyzusupport"),
                             Button.url("❈ᴄʜᴀɴɴᴇʟ❈",
                                        "t.me/skyzuXproject")],
                         [custom.Button.inline(

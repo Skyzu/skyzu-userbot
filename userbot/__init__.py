@@ -838,7 +838,7 @@ with bot:
         async def killdabot(event):
             if event.query.user_id == uid:
                 text = (
-                    f"**Restaring 𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁**...")
+                    f"**Restaring skyzu-userbot**...")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -900,14 +900,14 @@ with bot:
                         [
                             custom.Button.url(
                                 "SKYZU",
-                                "https://github.com/Askarbot/skyzu-userbot"),
+                                "https://github.com/Skyzu/skyzu-userbot"),
 
                             custom.Button.url(
                                 "CHANNEL",
                                 "t.me/skyzuXproject")],
                         [custom.Button.url(
                             "LICENSE",
-                            "https://github.com/Askarbot/skyzu-userbot/LICENSE")],
+                            "https://github.com/Skyzu/skyzu-userbot/LICENSE")],
                     ],
                     link_preview=False,
                 )

@@ -68,7 +68,6 @@ async def typewriter(typew):
     await typew.edit("**KASIAN CACAD GAPUNYA KONTOLL**")
 
 
-
 @register(outgoing=True, pattern=r"^\.emak(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)

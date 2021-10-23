@@ -59,7 +59,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         if HEROKU_APP_NAME is None:
             await event.edit(
                 "`[HEROKU]: Harap Siapkan Variabel` **HEROKU_APP_NAME** `"
-                " untuk dapat deploy perubahan terbaru dari ⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡.`"
+                " untuk dapat deploy perubahan terbaru dari ⚡Skyzu-Userbot⚡.`"
             )
             repo.__del__()
             return
@@ -97,14 +97,14 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             return await event.delete()
         else:
             await event.edit(
-                "`⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡ Berhasil DiUpdate,Restart Tunggu Sebentar`"
+                "`⚡Skyzu-Userbot⚡ Berhasil DiUpdate,Restart Tunggu Sebentar`"
             )
             await asyncio.sleep(15)
             await event.delete()
 
         if BOTLOG:
             await event.client.send_message(
-                BOTLOG_CHATID, "#BOT \n" "`⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡ Berhasil Di Update`"
+                BOTLOG_CHATID, "#BOT \n" "`⚡Skyzu-Userbot⚡ Berhasil Di Update`"
             )
 
     else:
@@ -122,9 +122,9 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit("**⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡** `Berhasil Di Update!`")
+    await event.edit("**⚡Skyzu-Userbot⚡** `Berhasil Di Update!`")
     await asyncio.sleep(1)
-    await event.edit("**⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡** `Di Restart....`")
+    await event.edit("**⚡Skyzu-Userbot⚡** `Di Restart....`")
     await asyncio.sleep(1)
     await event.edit("`Mohon Menunggu Beberapa Detik.`")
     await asyncio.sleep(10)
@@ -132,7 +132,7 @@ async def update(event, repo, ups_rem, ac_br):
 
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#BOT \n" "**⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡ Telah Di Perbarui.**"
+            BOTLOG_CHATID, "#BOT \n" "**⚡Skyzu-Userbot⚡ Telah Di Perbarui.**"
         )
         await asyncio.sleep(100)
         await event.delete()
@@ -195,13 +195,13 @@ async def upstream(event):
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
 
     if changelog == "" and force_update is False:
-        await event.edit(f"\n**⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁 Sudah Versi Terbaru**\n")
+        await event.edit(f"\n**⚡Skyzu-Userbot Sudah Versi Terbaru**\n")
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f"**Pembaruan Untuk ⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡ :\n\n⚒️ Pembaruan Data :**\n`{changelog}`"
+        changelog_str = f"**Pembaruan Untuk ⚡Skyzu-Uerbot⚡ :\n\n⚒️ Pembaruan Data :**\n`{changelog}`"
         if len(changelog_str) > 4096:
             await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
@@ -216,7 +216,7 @@ async def upstream(event):
         else:
             await event.edit(changelog_str)
         return await event.respond(
-            "**Perintah Untuk Update, Sebagai Berikut.**\n 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`.update now`\n 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari ⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡ .__"
+            "**Perintah Untuk Update, Sebagai Berikut.**\n 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`.update now`\n 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari **⚡Skyzu-Userbot⚡** .__"
         )
 
     if force_update:
@@ -224,13 +224,13 @@ async def upstream(event):
             "`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`"
         )
     else:
-        await event.edit("` Proses Update ⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡, Loading....1%`")
-        await event.edit("` Proses Update ⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡ Loading....20%`")
-        await event.edit("` Proses Update ⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡, Loading....35%`")
-        await event.edit("` Proses Update ⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡, Loading....77%`")
-        await event.edit("` Proses Update ⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡, Updating...90%`")
+        await event.edit("` Proses Update ⚡Skyzu-Userbot⚡, Loading....1%`")
+        await event.edit("` Proses Update ⚡Skyzu-Userbot⚡ Loading....20%`")
+        await event.edit("` Proses Update ⚡Skyzu-Userbot⚡, Loading....35%`")
+        await event.edit("` Proses Update ⚡Skyzu-Userbot⚡, Loading....77%`")
+        await event.edit("` Proses Update ⚡Skyzu-Userbot⚡, Updating...90%`")
         await event.edit(
-            "` Proses Update ⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡, Mohon Tunggu Sebentar....100%`"
+            "` Proses Update ⚡Skyzu-Userbot⚡, Mohon Tunggu Sebentar....100%`"
         )
 
     if conf == "now":

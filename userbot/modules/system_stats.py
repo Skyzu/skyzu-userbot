@@ -168,7 +168,7 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**⚜-**⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡ Versi:** \n "
+            "**⚜-**⚡Skyzu-Userbot⚡ Versi:** \n "
             f"heads/Skyzu-Userbot-0-x634i7u1"
             "\n**⚜-**Revisi:**\n "
             f"{revout}"
@@ -320,7 +320,7 @@ async def redis(alive):
         f"┃✧ **Branch   :** {UPSTREAM_REPO_BRANCH} \n"
         f"┃✧ **Bot Ver  :** {BOT_VER} \n"
         f"┃✧ **Modules  :** {len(modules)} Modules \n"
-        f"┃✧ **GitHub   :** [Sƙȥυ](https://github.com/Askarbot/skyzu-userbot) \n"
+        f"┃✧ **GitHub   :** [Sƙȥυ](https://github.com/Skyzu/skyzu-userbot) \n"
         f"┃✧ **Owner    :** [Skyzu](https://t.me/skyzuX) \n"
         f"┃✧ **support  :** [groups](https://t.me/skyzusupport) \n"
         f"╰✠╼━━━━━━━━━━━━━━━━━━━✠╯"

@@ -242,7 +242,7 @@ async def amireallyalive(alive):
         f"➥ **Bot Ver**  : `{BOT_VER}` \n"
         f"➥ **Modules**  : `{len(modules)}` \n"
         f"╰✠╼━━━━━━━━━━━━━━━✠╯\n"
-        f"[ɢʀᴏᴜᴘꜱ](https://t.me/skyzusupport) | [ʙᴏᴛᴏꜰ](https://t.me/{user.username}) | [ɢɪᴛʜᴜʙ](https://github.com/Askarbot/skyzu-userbot)"
+        f"[ɢʀᴏᴜᴘꜱ](https://t.me/skyzusupport) | [ʙᴏᴛᴏꜰ](https://t.me/{user.username}) | [ɢɪᴛʜᴜʙ](https://github.com/Skyzu/skyzu-userbot)"
     )
     if ALIVE_LOGO:
         try:
@@ -321,7 +321,7 @@ async def redis(alive):
         f"┃✧ **Bot Ver  :** {BOT_VER} \n"
         f"┃✧ **Modules  :** {len(modules)} Modules \n"
         f"┃✧ **GitHub   :** [Sƙȥυ](https://github.com/Skyzu/skyzu-userbot) \n"
-        f"┃✧ **Owner    :** [Skyzu](https://t.me/skyzuX) \n"
+        f"┃✧ **Owner    :** [Skyzu](https://t.me/skyzuex) \n"
         f"┃✧ **support  :** [groups](https://t.me/skyzusupport) \n"
         f"╰✠╼━━━━━━━━━━━━━━━━━━━✠╯"
     )

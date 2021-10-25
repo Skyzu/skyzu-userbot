@@ -146,7 +146,7 @@ async def perkenalan(event):
 # Perkenalan
 
 
-@register(outgoing=True, pattern="^Skyzu(?: |$)(.*)")
+@register(outgoing=True, pattern="^.skyzu(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -171,7 +171,7 @@ async def typewriter(typew):
     await typew.edit("**Tapi Bo'ong Hiyahiyahiya**")
 
 
-# Create by myself @localheart
+# Create by myself @skyzuex
 
 
 CMD_HELP.update(
@@ -189,7 +189,7 @@ CMD_HELP.update(
         \nUsage : Member Goblok\
         \n\n Cmd : `.kenalin`\
         \nUsage : Awokwok\
-        \n\n Cmd : `Skyzu`\
+        \n\n Cmd : `.skyzu`\
         \nUsage : buat ngeledek skyzu\
         \n\n Cmd : `.p`\
         \nUsage : Untuk Memberi Salam\

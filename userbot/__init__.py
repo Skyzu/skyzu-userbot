@@ -719,7 +719,7 @@ with bot:
                     f"Modules Name **pmbot**\n\n"
                     f"× `.set var START_WELCOME` [**TEKS**] \n"
                     f"°__Kamu Juga Bisa Mengubah Start Welcome Untuk Bot Kamu Yang Ini, Dengan Cara Diatas Dan Kata Kata Bebas__.\n\n"
-                    f"© @skyzuXproject")
+                    f"© @skyzusupport")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -749,7 +749,7 @@ with bot:
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
-                    f"© @skyzuXproject")
+                    f"© @skyzusupport")
                 await event.edit(
                     text,
                     file=roselogo,

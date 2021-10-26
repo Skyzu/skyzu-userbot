@@ -207,7 +207,7 @@ async def speedtst(spd):
         f"`{result['ping']}` \n"
         "✧ **ISP:** "
         f"`{result['client']['isp']}` \n"
-        "✧ **BOT:** ⚡𝘀𝗸𝘆𝘇𝘂-𝘂𝘀𝗲𝗿𝗯𝗼𝘁⚡"
+        "✧ **BOT:** ⚡skyzu-userbot⚡"
     )
 
 

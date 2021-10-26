@@ -1,5 +1,5 @@
 # imported from github.com/Skyzu/skyzu-userbot to userbot by @skyzuex
-# please don't nuke my credits 
+# please don't nuke my credits
 import asyncio
 import html
 import logging

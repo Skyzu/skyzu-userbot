@@ -1,5 +1,5 @@
-# imported from github.com/ravana69/PornHub to userbot by @heyworld
-# please don't nuke my credits 😓
+# imported from github.com/Skyzu/skyzu-userbot to userbot by @skyzuex
+# please don't nuke my credits 
 import asyncio
 import html
 import logging

@@ -12,7 +12,7 @@ async def usit(e):
     await e.edit(
         f"**Halo {DEFAULTUSER} Jika Anda Tidak Tau Perintah Untuk Memerintah Ku Ketik** `.help` Atau Bisa Minta Bantuan Ke:\n"
         "\n[Telegram](t.me/skyzuuuu)"
-        "\n[Repo](https://github.com/S/Skyzuu-UserBot)"
+        "\n[Repo](https://github.com/Skyzu/skyzu-userbot)"
     )
 
 
@@ -20,7 +20,7 @@ async def usit(e):
 async def var(m):
     await m.edit(
         f"**Disini Daftar Vars Dari {DEFAULTUSER}:**\n"
-        "\n[DAFTAR VARS](https://raw.githubusercontent.com/SendiAp/Skyzuu-Userbot/Skyzuu-Userbot/varshelper.txt)"
+        "\n[DAFTAR VARS](https://raw.githubusercontent.com/Skyzu/skyzu-userbot/skyzu-userbot/varshelper.txt)"
     )
 
 

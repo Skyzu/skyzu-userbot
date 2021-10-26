@@ -351,7 +351,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_file(BOTLOG_CHATID, caption=f"**Userbot has been deployed⚡**\n➖➖➖➖➖➖➖➖➖\n**Bot Of:** {ALIVE_NAME}\n➖➖➖➖➖➖➖➖➖\n**Support: **@skyzusupport\n➖➖➖➖➖➖➖➖➖")
+    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"**Userbot has been deployed✨**\n➖➖➖➖➖➖➖➖➖\n**Bot Of:** {ALIVE_NAME}\n➖➖➖➖➖➖➖➖➖\n**Support: **@skyzusupport\n➖➖➖➖➖➖➖➖➖")
     return
 
 with bot:
@@ -563,7 +563,7 @@ with bot:
                     ]
                 )
             else:
-                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 5.0\n🛠 Modules : {len(plugins)}\n✨ Branch : Kyy-Userbot"
+                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 5.0\n🛠 Modules : {len(plugins)}\n✨ Branch : Skyzu-Userbot"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(

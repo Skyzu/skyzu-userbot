@@ -1,3 +1,7 @@
+# ReCode by @skyzuex
+# FROM skyzu-userbot <https://github.com/Skyzu/skyzu-userbot>
+
+
 from time import sleep
 
 from userbot import CMD_HELP

@@ -351,7 +351,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "**⚡Skyzu-Userbot berhasil di aktifkan**\n━━━━━━━━━━━━━━━\n❃ **update :** @skyzuXproject\n❃ **BotVer :** `5.0`\n━━━━━━━━━━━━━━━\n❃ **Support :** @skyzusupport\n━━━━━━━━━━━━━━━")
+    await bot.send_message(BOTLOG_CHATID, "**Userbot has been deployed⚡**\n━━━━━━━━━━━━━━━\n❃ **update :** @skyzuXproject\n❃ **BotVer :** `5.0`\n━━━━━━━━━━━━━━━\n❃ **Support :** @skyzusupport\n━━━━━━━━━━━━━━━")
     return
 
 with bot:

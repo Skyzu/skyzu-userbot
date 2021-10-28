@@ -1,4 +1,4 @@
-<h1 align="center"><img src="./resources/extras/kenn.gif" width="20px">  Skyzu-userbot  <img src="./resources/extras/kenn.gif" width="20px"></h1>
+# Skyzu-userbot Telegram
 
 
 </p>

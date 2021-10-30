@@ -97,10 +97,10 @@ def register(**args):
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
                     text = "**Sky-Project ERROR**\n"
-                    link = "Silahkan chat: @skyzuuuu"
+                    link = "Silahkan chat: @skyzex"
                     text += "Untuk melaporkan kesalahan"
                     text += f"tinggal teruskan pesan ini {link}.\n"
-                    text += "Sendi Siap Membantu Kamu\n"
+                    text += "Skyzu Siap Membantu Kamu\n"
 
                     ftext = "========== DISCLAIMER =========="
                     ftext += "\nThis file uploaded ONLY here,"

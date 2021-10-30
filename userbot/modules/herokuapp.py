@@ -190,7 +190,6 @@ async def dyno_usage(dyno):
                 f" **Terpakai Kuota**: [{AppPercentage}%]\n"
                 f" **Total Keseluruhan**: [{percentage}%]\n\n"
                 f"**Owner**:`{ALIVE_NAME}.`\n"
-
             )
             await asyncio.sleep(20)
             await event.delete()

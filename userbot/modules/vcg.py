@@ -37,7 +37,7 @@ async def start_voice(td):
         return await td.edit(NO_ADMIN)
     try:
         await td.client(startvc(td.chat_id))
-        await td.edit("`Obrolan Suara dimulai on cam lu goblok`")
+        await td.edit("`Voice Chat Started...`")
     except Exception as ex:
         await td.edit(f"`{str(ex)}`")
 
@@ -52,7 +52,7 @@ async def stop_voice(td):
         return await td.edit(NO_ADMIN)
     try:
         await td.client(stopvc(await get_call(td)))
-        await td.edit("`Mengakhiri Obrolan Suara typing aja la goblok!`")
+        await td.edit("`Voice Chat Stopped...`")
     except Exception as ex:
         await td.edit(f"`{str(ex)}`")
 
@@ -77,7 +77,7 @@ async def vc_invite(td):
 
 CMD_HELP.update(
     {
-        "calls": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.startvc`\
+        "vcg": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.startvc`\
          \n↳ : Start Group Call in a group.\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.stopvc`\
          \n↳ : `Stop Group Call in a group.`\

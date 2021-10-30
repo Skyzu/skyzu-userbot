@@ -36,10 +36,13 @@ async def _(event):
     except Exception:
         await event.edit("**Tidak bisa menemukan video chikakiku.**")
 
+
 @register(outgoing=True, pattern=r"^\.bocil$")
 async def _(event):
     try:
-        response = requests.get("https://api-alphabot.herokuapp.com/api/asupan/bocil?apikey=Alphabot").json()
+        response = requests.get(
+            "https://api-alphabot.herokuapp.com/api/asupan/bocil?apikey=Alphabot"
+        ).json()
         await event.client.send_file(event.chat_id, response["url"])
         await event.delete()
     except Exception:

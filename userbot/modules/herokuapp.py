@@ -182,17 +182,15 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                "⚡ **ɪɴꜰᴏʀᴍᴀsɪ ᴅʏɴᴏ ʜᴇʀᴏᴋᴜ :**\n"
-                "╔════════════════════╗\n"
-                f" ☂ **ᴘᴇɴɢɢᴜɴᴀ ᴅʏɴᴏ sᴀᴀᴛ ɪɴɪ :**\n"
-                f"  ➽  `{AppHours}`**ᴊᴀᴍ**  `{AppMinutes}`**ᴍᴇɴɪᴛ**  "
-                f"**|**  [`{AppPercentage}`**%**]"
-                "\n◖════════════════════◗\n"
-                " ☂ **sɪsᴀ ᴋᴏᴜᴛᴀ ᴅʏɴᴏ ʙᴜʟᴀɴ ɪɴɪ :**\n"
-                f"  ➽  `{hours}`**ᴊᴀᴍ**  `{minutes}`**ᴍᴇɴɪᴛ**  "
-                f"**|**  [`{percentage}`**%**]\n"
-                f" ✠➲ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}  "
-                "\n╚════════════════════╝"
+                "⚙️ **Dyno Heroku** ⚙️:\n\n"
+                f"➸ `Pemakaian Dyno Hari Ini Untuk` **{ALIVE_NAME}**:\n"
+                f" ● {AppHours}**h** {AppMinutes}**m** ᴊᴀᴍ/ᴍᴇɴɪᴛ\n"
+                f"➸ `Sisa kuota jam dyno bulan ini`:\n"
+                f" ● {hours}**h** {minutes}**m** ᴊᴀᴍ/ᴍᴇɴɪᴛ\n\n"
+                f" **Terpakai Kuota**: [{AppPercentage}%]\n"
+                f" **Total Keseluruhan**: [{percentage}%]\n\n"
+                f"**Owner**:`{ALIVE_NAME}.`\n"
+
             )
             await asyncio.sleep(20)
             await event.delete()

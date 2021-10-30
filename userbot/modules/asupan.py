@@ -36,6 +36,15 @@ async def _(event):
     except Exception:
         await event.edit("**Tidak bisa menemukan video chikakiku.**")
 
+@register(outgoing=True, pattern=r"^\.bocil$")
+async def _(event):
+    try:
+        response = requests.get("https://api-alphabot.herokuapp.com/api/asupan/bocil?apikey=Alphabot").json()
+        await event.client.send_file(event.chat_id, response["url"])
+        await event.delete()
+    except Exception:
+        await event.edit("**Tidak bisa menemukan video bocil.**")
+
 
 CMD_HELP.update(
     {
@@ -46,6 +55,8 @@ CMD_HELP.update(
         \n  •  **Function : **Untuk Mengirim video wibu secara random.\
         \n\n  •  **Syntax :** `.chika`\
         \n  •  **Function : **Untuk Mengirim video chikakiku secara random.\
+        \n\n  •  **Syntax :** `.bocil`\
+        \n  •  **Function : **Untuk Mengirim video bocil secara random.\
     "
     }
 )

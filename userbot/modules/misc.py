@@ -117,7 +117,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """For .repo command, just returns the repo URL."""
     await wannasee.edit(
-        "**__USERBOT INDONESIA__**\n"
+        "**Usᴇʀʙᴏᴛ Tᴇʟᴇɢʀᴀᴍ*\n"
         "𝗥𝗲𝗽𝗼 🇮🇩\n"
         "╰⎆ [⚡Sƙყȥυ-υʂҽɾႦσƚ⚡](https://github.com/Skyzu/skyzu-userbot)\n"
         "❏ 𝗢𝘄𝗻𝗲𝗿 ⎆ [Skyzu](t.me/skyzuex)\n"

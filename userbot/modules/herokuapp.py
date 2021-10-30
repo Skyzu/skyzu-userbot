@@ -182,14 +182,18 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                "⚙️ **Dyno Heroku** ⚙️:\n\n"
-                f"➸ `Pemakaian Dyno Hari Ini\n"
-                f" ● {AppHours}**h** {AppMinutes}**m** ᴊᴀᴍ/ᴍᴇɴɪᴛ\n"
-                f"➸ `Sisa dyno bulan ini`:\n"
-                f" ● {hours}**h** {minutes}**m** ᴊᴀᴍ/ᴍᴇɴɪᴛ\n\n"
-                f" **Terpakai Kuota**: [{AppPercentage}%]\n"
-                f" **Total Keseluruhan**: [{percentage}%]\n\n"
-                f"**Owner**:`{ALIVE_NAME}`\n"
+                "┱─────────────────┲  \n"
+                "  ▸ ⚡𝗦𝗸𝘆𝘇𝘂 𝗨𝘀𝗲𝗿𝗯𝗼𝘁⚡  \n"
+                "╰─────────────────╯  \n"
+                "⊿◤ ᴘᴇɴɢɢᴜɴᴀᴀɴ ᴅʏɴᴏ ꜱᴀᴀᴛ ɪɴɪ \n"
+                f" ▸ {AppHours} ᴊᴀᴍ - {AppMinutes} ᴍᴇɴɪᴛ. \n"
+                f" ▸ ᴘʀᴇꜱᴇɴᴛᴀꜱᴇ : {AppPercentage}% \n"
+                "━━━━━━━━━━━━━━━━━━━\n"
+                "⊿◤ ᴘᴇɴɢɢᴜɴᴀᴀɴ ᴅʏɴᴏ ʙᴜʟᴀɴ ɪɴɪ \n"
+                f" ▸ {hours} ᴊᴀᴍ - {minutes} ᴍᴇɴɪᴛ. \n"
+                f" ▸ ᴘʀᴇꜱᴇɴᴛᴀꜱᴇ : {percentage}%. \n"
+                "━━━━━━━━━━━━━━━━━━━ \n"
+                f" • Oᴡɴᴇʀ  : {ALIVE_NAME} \n"
             )
             await asyncio.sleep(20)
             await event.delete()

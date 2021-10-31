@@ -195,7 +195,7 @@ async def upstream(event):
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
 
     if changelog == "" and force_update is False:
-        await event.edit(f"\n**⚡Skyzu-Userbot Sudah Versi Terbaru**\n")
+        await event.edit(f"\n**⚡𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Sudah Versi Terbaru**\n")
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
@@ -224,11 +224,11 @@ async def upstream(event):
             "`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`"
         )
     else:
-        await event.edit("` Proses Update ⚡Skyzu-Userbot⚡, Loading....1%`")
-        await event.edit("` Proses Update ⚡Skyzu-Userbot⚡ Loading....20%`")
-        await event.edit("` Proses Update ⚡Skyzu-Userbot⚡, Loading....35%`")
-        await event.edit("` Proses Update ⚡Skyzu-Userbot⚡, Loading....77%`")
-        await event.edit("` Proses Update ⚡Skyzu-Userbot⚡, Updating...90%`")
+        await event.edit("` Proses Update 𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Loading....1%`")
+        await event.edit("` Proses Update 𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Loading....20%`")
+        await event.edit("` Proses Update 𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Loading....35%`")
+        await event.edit("` Proses Update 𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Loading....77%`")
+        await event.edit("` Proses Update 𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Updating...90%`")
         await event.edit(
             "` Proses Update ⚡Skyzu-Userbot⚡, Mohon Tunggu Sebentar....100%`"
         )

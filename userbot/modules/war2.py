@@ -202,5 +202,6 @@ CMD_HELP.update(
          \n↳ : ngatain bocah gila title\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .an\
          \n↳ : ngatain anak pungut"
+         \n\n**Klo mau Req, kosa kata dari lu Hubungi @skyzuex**\
     }
 )

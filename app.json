@@ -10,8 +10,8 @@
     "productivity"
 ],
   "repository": "https://github.com/Skyzu/skyzu-userbot",
-  "telegram": "https://t.me/skyzuuuu",
-  "success_url": "https://t.me/GirlHd",
+  "telegram": "https://t.me/skyzuex",
+  "success_url": "https://t.me/skyzusupport",
   "stack": "container",
   "env": {
     "API_KEY": {

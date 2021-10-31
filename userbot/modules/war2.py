@@ -178,31 +178,32 @@ async def typewriter(typew):
 
 CMD_HELP.update(
     {
-        "war2": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .sok\
-         \n↳ : ngatain orang yang sok keras\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .bk\
-         \n↳ : ngatain bocah hina\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .gh\
-         \n↳ : lihat sendiri\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .ehh\
-         \n↳ : lihat sendiri\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .emak\
-         \n↳ : lihat sendiri\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .wah\
-         \n↳ : lihat sendiri\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .mas\
-         \n↳ : lihat sendiri\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .kont\
-         \n↳ : ngatain anak kontol\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .gj\
-         \n↳ : ngatain bocah gajelas\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .lol\
-         \n↳ : ngatain bocah tolol\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .title\
-         \n↳ : ngatain bocah gila title\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .an\
-         \n↳ : ngatain anak pungut"
-         \n\n**Klo mau Req, kosa kata dari lu Hubungi @skyzuex**\
+        "war": "**Plugin : **`war`\
+        \n\n  •  **Syntax :** `.sok`\
+        \n  •  **Function : **Ngatain orang sok keras\
+        \n\n  •  **Syntax :** `.bk`\
+        \n  •  **Function : **Ngatain bocah hina\
+        \n\n  •  **Syntax :** `.gh`\
+        \n  •  **Function : **Liat sendiri\
+        \n\n  •  **Syntax :** `.ehh`\
+        \n  •  **Function : **Liat sendiri\
+        \n\n  •  **Syntax :** `.emak`\
+        \n  •  **Function : **Liat sendiri\
+        \n\n  •  **Syntax :** `.wah`\
+        \n  •  **Function : **Liat sendiri\
+        \n\n  •  **Syntax :** `.mas`\
+        \n  •  **Function : **Liat sendiri\
+        \n\n  •  **Syntax :** `.kont`\
+        \n  •  **Function : **Ngatain anak kontoll\
+        \n\n  •  **Syntax :** `.gj`\
+        \n  •  **Function : **Ngatain anak gaje\
+        \n\n  •  **Syntax :** `.lol`\
+        \n  •  **Function : **Ngatain anak tolol\
+        \n\n  •  **Syntax :** `.title`\
+        \n  •  **Function : **Ngatain orang gila title\
+        \n\n  •  **Syntax :** `.an`\
+        \n  •  **Function : **Liat sendiri\
+        \n\n**Klo mau Req, kosa kata dari lu Hubungi @skyzuex**\
     "
     }
 )

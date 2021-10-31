@@ -3,7 +3,6 @@ import os
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
-from userbot import ALIVE_NAME
 from userbot.events import register
 
 

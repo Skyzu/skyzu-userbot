@@ -5,9 +5,8 @@ import requests
 from googletrans import Translator
 from telethon import events
 from telethon.tl.types import User
-
 from userbot import CMD_HELP, LOGS, bot
-from userbot.events import register
+from userbot.modules.sql_helper.tede_chatbot_sql import is_tede, rem_tede, set_tede
 
 translator = Translator()
 LANGUAGE = "id"
@@ -66,6 +65,8 @@ async def tede_chatbot(event):
         tr = translator.translate(rep, LANGUAGE)
         if tr:
             await event.reply(tr.text)
+        else:
+            await event.reply(rep)
 
 
 CMD_HELP.update(

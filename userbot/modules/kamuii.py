@@ -3,12 +3,13 @@ import os
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
+from userbot import ALIVE_NAME
 from userbot.events import register
 
 
 @register(outgoing=True, pattern=r"^.kamuii(:? |$)([1-8])?")
 async def _(fry):
-    await fry.edit("`Prosess, mengaktifkan kekuatan skyzu...`")
+    await fry.edit("`Prosess, mengaktifkan kekuatan super {ALIVE_NAME}...`")
     level = fry.pattern_match.group(2)
     if fry.fwd_from:
         return

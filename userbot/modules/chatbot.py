@@ -6,6 +6,7 @@ from googletrans import Translator
 from telethon import events
 from telethon.tl.types import User
 from userbot import CMD_HELP, LOGS, bot
+from userbot.events import register
 from userbot.modules.sql_helper.tede_chatbot_sql import is_tede, rem_tede, set_tede
 
 translator = Translator()

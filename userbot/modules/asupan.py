@@ -2,7 +2,6 @@
 # ⚠️ Do not remove credits
 
 import requests
-
 from userbot import CMD_HELP
 from userbot.events import register
 
@@ -43,10 +42,10 @@ async def _(event):
         response = requests.get(
             "https://api-alphabot.herokuapp.com/api/asupan/bocil?apikey=Alphabot"
         ).json()
-        await event.client.send_file(event.chat_id, response["url"])
+        await event.client.send_file(event.chat_id, response["result"])
         await event.delete()
     except Exception:
-        await event.edit("**Tidak bisa menemukan video bocil.**")
+        await event.edit("**Tidak bisa menemukan video asupan bocil.**")
 
 
 CMD_HELP.update(

@@ -12,7 +12,7 @@ cowpy
 psutil
 wget
 telethon-tgcrypto
-cffi>=1.0.0
+cffi>=1.0.
 dnspython
 emoji
 PyPDF2

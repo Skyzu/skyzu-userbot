@@ -43,8 +43,8 @@ if CONSOLE_LOGGER_VERBOSE:
     )
 else:
     basicConfig(
-        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=INFO
-    )
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        level=INFO)
 LOGS = getLogger(__name__)
 
 if version_info[0] < 3 or version_info[1] < 8:
@@ -139,7 +139,8 @@ if REDIS_URI and REDIS_PASSWORD:
 # Chrome Driver and Headless Google Chrome Binaries
 CHROME_BIN = os.environ.get("CHROME_BIN", "/app/.apt/usr/bin/google-chrome")
 CHROME_DRIVER = os.environ.get("CHROME_DRIVER") or "/usr/bin/chromedriver"
-GOOGLE_CHROME_BIN = os.environ.get("GOOGLE_CHROME_BIN") or "/usr/bin/google-chrome"
+GOOGLE_CHROME_BIN = os.environ.get(
+    "GOOGLE_CHROME_BIN") or "/usr/bin/google-chrome"
 
 # set to True if you want to log PMs to your PM_LOGGR_BOT_API_ID
 NC_LOG_P_M_S = bool(os.environ.get("NC_LOG_P_M_S", False))
@@ -201,14 +202,12 @@ ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
 S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive Logo
-ALIVE_LOGO = (
-    os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/392a8cf066efbe726c6e1.jpg"
-)
+ALIVE_LOGO = (os.environ.get("ALIVE_LOGO")
+              or "https://telegra.ph/file/392a8cf066efbe726c6e1.jpg")
 
 # Default .helpme Logo
-INLINE_PIC = (
-    os.environ.get("INLINE_PIC") or "https://telegra.ph/file/4937705c1c6f82bdda486.jpg"
-)
+INLINE_PIC = (os.environ.get("INLINE_PIC")
+              or "https://telegra.ph/file/4937705c1c6f82bdda486.jpg")
 
 # Default emoji help
 EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✨"
@@ -238,7 +237,8 @@ G_DRIVE_CLIENT_ID = os.environ.get("G_DRIVE_CLIENT_ID", None)
 G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", None)
 G_DRIVE_AUTH_TOKEN_DATA = os.environ.get("G_DRIVE_AUTH_TOKEN_DATA", None)
 G_DRIVE_FOLDER_ID = os.environ.get("G_DRIVE_FOLDER_ID", None)
-TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./downloads")
+TEMP_DOWNLOAD_DIRECTORY = os.environ.get(
+    "TMP_DOWNLOAD_DIRECTORY", "./downloads")
 # Google Photos
 G_PHOTOS_CLIENT_ID = os.environ.get("G_PHOTOS_CLIENT_ID", None)
 G_PHOTOS_CLIENT_SECRET = os.environ.get("G_PHOTOS_CLIENT_SECRET", None)
@@ -337,8 +337,7 @@ async def check_botlog_chatid():
     if entity.default_banned_rights.send_messages:
         LOGS.info(
             "Your account doesn't have rights to send messages to BOTLOG_CHATID "
-            "group. Check if you typed the Chat ID correctly."
-        )
+            "group. Check if you typed the Chat ID correctly.")
         quit(1)
 
 
@@ -409,28 +408,25 @@ def paginate_help(page_number, loaded_modules, prefix):
     modulo_page = page_number % max_num_pages
     if len(pairs) > number_of_rows:
         pairs = pairs[
-            modulo_page * number_of_rows : number_of_rows * (modulo_page + 1)
-        ] + [
-            (
-                custom.Button.inline(
-                    "<<ᴘʀᴇᴠɪᴏᴜꜱ", data="{}_prev({})".format(prefix, modulo_page)
-                ),
-                custom.Button.inline(
-                    "ᴍᴇɴᴜ", data="{}_close({})".format(prefix, modulo_page)
-                ),
-                custom.Button.inline(
-                    "ɴᴇxᴛ>>", data="{}_next({})".format(prefix, modulo_page)
-                ),
-            )
-        ]
+            modulo_page * number_of_rows: number_of_rows * (
+                modulo_page + 1)] + [
+            (custom.Button.inline(
+                "<<ᴘʀᴇᴠɪᴏᴜꜱ", data="{}_prev({})".format(
+                    prefix, modulo_page)), custom.Button.inline(
+                        "ᴍᴇɴᴜ", data="{}_close({})".format(
+                            prefix, modulo_page)), custom.Button.inline(
+                                "ɴᴇxᴛ>>", data="{}_next({})".format(
+                                    prefix, modulo_page)), )]
     return pairs
 
 
 with bot:
     try:
-        tgbot = TelegramClient("TG_BOT_TOKEN", api_id=API_KEY, api_hash=API_HASH).start(
-            bot_token=BOT_TOKEN
-        )
+        tgbot = TelegramClient(
+            "TG_BOT_TOKEN",
+            api_id=API_KEY,
+            api_hash=API_HASH).start(
+            bot_token=BOT_TOKEN)
 
         dugmeler = CMD_HELP
         me = bot.get_me()
@@ -561,8 +557,7 @@ with bot:
                     f"❁ __Saya Adalah Skyzu Userbot Yang Digunakan Banyak User Telegram__.\n\n"
                     f"❁ __Saya Dibuat Hanya Untuk Bersenang Senang Ditelegram__.\n\n"
                     f"❁ __Kelebihan Saya Banyak, Saya Mempunyai 180 Modules__.\n\n"
-                    f"© @skyzusupport"
-                )
+                    f"© @skyzusupport")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -667,8 +662,7 @@ with bot:
                     f"°__Mengaktifkan Pmpermit Kalian Atau Disebut Pesan Otomatis__.\n\n"
                     f"× `.set pm_msg` [**REPLYCHAT**]\n"
                     f"°__Mengganti Teks Pmpermit Selera Kamu__.\n\n"
-                    f"© @Skyzuproject"
-                )
+                    f"© @Skyzuproject")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -697,8 +691,7 @@ with bot:
                     f"°__Mengubah Emoji Inline Yang Ada Dicomand__ `.helpme`\n\n"
                     f"× `.set var INLINE_PIC` [**LINK**]\n"
                     f"°__Mengubah Foto Yang Ada Dicomand__ `.helpme`\n\n"
-                    f"© @skyzusupport"
-                )
+                    f"© @skyzusupport")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -725,8 +718,7 @@ with bot:
                     f"Modules Name **pmbot**\n\n"
                     f"× `.set var START_WELCOME` [**TEKS**] \n"
                     f"°__Kamu Juga Bisa Mengubah Start Welcome Untuk Bot Kamu Yang Ini, Dengan Cara Diatas Dan Kata Kata Bebas__.\n\n"
-                    f"© @skyzusupport"
-                )
+                    f"© @skyzusupport")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -755,8 +747,7 @@ with bot:
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
-                    f"© @skyzusupport"
-                )
+                    f"© @skyzusupport")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -803,7 +794,8 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if apps.get("app_uuid") == app.id:
                 apps.get("quota_used") / 60
-                AppPercentage = math.floor(apps.get("quota_used") * 100 / quota)
+                AppPercentage = math.floor(
+                    apps.get("quota_used") * 100 / quota)
                 text = (
                     "⚡ **ɪɴꜰᴏʀᴍᴀsɪ ᴅʏɴᴏ ʜᴇʀᴏᴋᴜ :**\n"
                     "╔════════════════════╗\n"
@@ -888,25 +880,19 @@ with bot:
                     link_preview=True,
                 )
             else:
-                result = builder.article(
-                    " **⚡skyzu-userbot⚡**",
-                    text="""°SKYZU-USERBOT°""",
-                    buttons=[
-                        [
-                            custom.Button.url(
-                                "SKYZU", "https://github.com/Skyzu/skyzu-userbot"
-                            ),
-                            custom.Button.url("CHANNEL", "t.me/skyzuXproject"),
-                        ],
-                        [
-                            custom.Button.url(
-                                "LICENSE",
-                                "https://github.com/Skyzu/skyzu-userbot/LICENSE",
-                            )
-                        ],
-                    ],
-                    link_preview=False,
-                )
+                result = builder.article(" **⚡skyzu-userbot⚡**",
+                                         text="""°SKYZU-USERBOT°""",
+                                         buttons=[[custom.Button.url("SKYZU",
+                                                                     "https://github.com/Skyzu/skyzu-userbot"),
+                                                   custom.Button.url("CHANNEL",
+                                                                     "t.me/skyzuXproject"),
+                                                   ],
+                                                  [custom.Button.url("LICENSE",
+                                                                     "https://github.com/Skyzu/skyzu-userbot/LICENSE",
+                                                                     )],
+                                                  ],
+                                         link_preview=False,
+                                         )
             await event.answer([result] if result else None)
 
         @tgbot.on(
@@ -916,8 +902,10 @@ with bot:
         )
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:  # pylint:disable=E0602
-                current_page_number = int(event.data_match.group(1).decode("UTF-8"))
-                buttons = paginate_help(current_page_number + 1, dugmeler, "helpme")
+                current_page_number = int(
+                    event.data_match.group(1).decode("UTF-8"))
+                buttons = paginate_help(
+                    current_page_number + 1, dugmeler, "helpme")
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
@@ -961,7 +949,8 @@ with bot:
         )
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:  # pylint:disable=E0602
-                current_page_number = int(event.data_match.group(1).decode("UTF-8"))
+                current_page_number = int(
+                    event.data_match.group(1).decode("UTF-8"))
                 buttons = paginate_help(
                     current_page_number - 1, dugmeler, "helpme"  # pylint:disable=E0602
                 )
@@ -1018,6 +1007,5 @@ with bot:
     except BaseException:
         LOGS.info(
             "BOTLOG_CHATID Environment Variable Isn't a "
-            "Valid Entity. Please Check Your Environment variables/config.env File."
-        )
+            "Valid Entity. Please Check Your Environment variables/config.env File.")
         quit(1)

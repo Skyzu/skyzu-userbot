@@ -178,7 +178,7 @@ async def typewriter(typew):
 
 CMD_HELP.update(
     {
-        "war": "**Plugin : **`war`\
+        "war2": "**Plugin : **`war2`\
         \n\n  •  **Syntax :** `.sok`\
         \n  •  **Function : **Ngatain orang sok keras\
         \n\n  •  **Syntax :** `.bk`\

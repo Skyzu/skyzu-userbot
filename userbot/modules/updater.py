@@ -59,7 +59,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         if HEROKU_APP_NAME is None:
             await event.edit(
                 "`[HEROKU]: Harap Siapkan Variabel` **HEROKU_APP_NAME** `"
-                " untuk dapat deploy perubahan terbaru dari ⚡Skyzu-Userbot⚡.`"
+                " untuk dapat deploy perubahan terbaru dari ⚡𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡.`"
             )
             repo.__del__()
             return
@@ -97,14 +97,14 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             return await event.delete()
         else:
             await event.edit(
-                "`⚡Skyzu-Userbot⚡ Berhasil DiUpdate,Restart Tunggu Sebentar`"
+                "`𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Berhasil DiUpdate,Restart Tunggu Sebentar`"
             )
             await asyncio.sleep(15)
             await event.delete()
 
         if BOTLOG:
             await event.client.send_message(
-                BOTLOG_CHATID, "#BOT \n" "`⚡Skyzu-Userbot⚡ Berhasil Di Update`"
+                BOTLOG_CHATID, "#BOT \n" "`𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Berhasil Di Update`"
             )
 
     else:
@@ -122,9 +122,9 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit("**⚡Skyzu-Userbot⚡** `Berhasil Di Update!`")
+    await event.edit("**𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​** `Berhasil Di Update!`")
     await asyncio.sleep(1)
-    await event.edit("**⚡Skyzu-Userbot⚡** `Di Restart....`")
+    await event.edit("**𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​** `Di Restart....`")
     await asyncio.sleep(1)
     await event.edit("`Mohon Menunggu Beberapa Detik.`")
     await asyncio.sleep(10)
@@ -132,7 +132,7 @@ async def update(event, repo, ups_rem, ac_br):
 
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#BOT \n" "**⚡Skyzu-Userbot⚡ Telah Di Perbarui.**"
+            BOTLOG_CHATID, "#BOT \n" "**⚡𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡ Telah Di Perbarui.**"
         )
         await asyncio.sleep(100)
         await event.delete()
@@ -201,7 +201,7 @@ async def upstream(event):
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f"**Pembaruan Untuk ⚡Skyzu-Uerbot⚡ :\n\n⚒️ Pembaruan Data :**\n`{changelog}`"
+        changelog_str = f"**Pembaruan Untuk 𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ :\n\n⚒️ Pembaruan Data :**\n`{changelog}`"
         if len(changelog_str) > 4096:
             await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
@@ -230,7 +230,7 @@ async def upstream(event):
         await event.edit("` Proses Update 𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Loading....77%`")
         await event.edit("` Proses Update 𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Updating...90%`")
         await event.edit(
-            "` Proses Update ⚡Skyzu-Userbot⚡, Mohon Tunggu Sebentar....100%`"
+            "` Proses Update 𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Mohon Tunggu Sebentar....100%`"
         )
 
     if conf == "now":

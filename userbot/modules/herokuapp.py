@@ -3,13 +3,11 @@
 """
 
 import asyncio
-import codecs
 import math
 import os
 
 import aiohttp
 import heroku3
-import requests
 
 from userbot import (
     ALIVE_NAME,

@@ -1,5 +1,5 @@
 # nyenyenyenye
-# from skyzu Userbot https://github.com/Skyzu/skyzu-userbot
+# # FROM skyzu-userbot <https://github.com/Skyzu/skyzu-userbot>
 # @skyzusupport
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError

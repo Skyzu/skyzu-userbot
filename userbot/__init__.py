@@ -203,11 +203,11 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive Logo
 ALIVE_LOGO = (os.environ.get("ALIVE_LOGO")
-              or "https://telegra.ph/file/392a8cf066efbe726c6e1.jpg")
+              or "https://telegra.ph/file/fd08937c4ae6cb1303731.jpg")
 
 # Default .helpme Logo
 INLINE_PIC = (os.environ.get("INLINE_PIC")
-              or "https://telegra.ph/file/4937705c1c6f82bdda486.jpg")
+              or "https://telegra.ph/file/fd08937c4ae6cb1303731.jpg")
 
 # Default emoji help
 EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✨"
@@ -353,9 +353,9 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(
-        BOTLOG_CHATID,
-        "**Userbot has been deployed⚡**\n━━━━━━━━━━━━━━━\n❃ **update :** @skyzuXproject\n❃ **BotVer :** `5.0`\n━━━━━━━━━━━━━━━\n❃ **Support :** @skyzusupport\n━━━━━━━━━━━━━━━",
+    await bot.send_file(
+        BOTLOG_CHATID,ALIVE_LOGO,
+        caption=f"**Userbot Has Been Deployed⚡**\n━━━━━━━━━━━━━━━━━\n**Bot Of:** {ALIVE_NAME}\n━━━━━━━━━━━━━━━━━\n**Support: **@skyzusupport\n━━━━━━━━━━━━━━━━━")
     )
     return
 

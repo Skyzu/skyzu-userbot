@@ -356,7 +356,6 @@ async def check_alive():
     await bot.send_file(
         BOTLOG_CHATID, ALIVE_LOGO,
         caption=f"**Userbot Has Been Deployed⚡**\n━━━━━━━━━━━━━━━━━\n**Bot Of:** {ALIVE_NAME}\n━━━━━━━━━━━━━━━━━\n**Support: **@skyzusupport\n━━━━━━━━━━━━━━━━━")
-    )
     return
 
 

@@ -44,12 +44,12 @@ CUSTOM_TEXT = (
 )
 DEF_UNAPPROVED_MSG = (
     "╔═════════════════════╗\n"
-    "    ⚡ 𝗔𝗧𝗧𝗘𝗡𝗧𝗜𝗢𝗡 𝗣𝗟𝗘𝗔𝗦𝗘 ⚡ ”\n"
+    "    ⚡ 𝗔𝗧𝗧𝗘𝗡𝗧𝗜𝗢𝗡 𝗣𝗟𝗘𝗔𝗦𝗘 ⚡ \n"
     "╚═════════════════════╝\n"
     "**TOLONG JANGAN MELAKUKAN SPAM CHAT KEPADA MAJIKAN SAYA** \n"
     f"**YA KONTOL KARENA SAYA AKAN OTOMATIS MEMBLOKIR KAMU, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN KAMU** \n"
     "╔═════════════════════╗\n"
-    "│○›SUPPORT : [Groups](t.me/skyzusupport)        \n"
+    "│○›SUPPORT : @skyzusupport      \n"
     f"│○›ᗷY : 𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​           \n"
     "╚═════════════════════╝"
 )

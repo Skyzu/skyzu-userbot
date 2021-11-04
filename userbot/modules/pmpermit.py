@@ -49,7 +49,7 @@ DEF_UNAPPROVED_MSG = (
     "**TOLONG JANGAN MELAKUKAN SPAM CHAT KEPADA MAJIKAN SAYA** \n"
     f"**YA KONTOL KARENA SAYA AKAN OTOMATIS MEMBLOKIR KAMU, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN KAMU** \n"
     "╔═════════════════════╗\n"
-    "│○›SUPPORT : [SKYZUSUPPORT](https://t.me/skyzusupport)        \n"
+    "│○›SUPPORT : [Groups](t.me/skyzusupport)        \n"
     f"│○›ᗷY : 𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​           \n"
     "╚═════════════════════╝"
 )

@@ -72,7 +72,9 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                 f"{txt}\n`Kredensial Heroku tidak valid untuk deploy 𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓 dyno.`"
             )
             return repo.__del__()
-        await event.edit("`Heroku : Sedang MengUpdate`" "\nMohon Mohon Menunggu 5-7 Menit")
+        await event.edit(
+            "`Heroku : Sedang MengUpdate`" "\nMohon Mohon Menunggu 5-7 Menit"
+        )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
         heroku_git_url = heroku_app.git_url.replace(

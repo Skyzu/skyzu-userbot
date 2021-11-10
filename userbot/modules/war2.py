@@ -1,6 +1,6 @@
 # ReCode by @skyzuex
 # FROM skyzu-userbot <https://github.com/Skyzu/skyzu-userbot>
-
+# KONTOLLLLLL
 
 from time import sleep
 
@@ -21,6 +21,28 @@ async def typewriter(typew):
     await typew.edit("**GAUSAH SOK KERAS DEH**")
     sleep(1.5)
     await typew.edit("**GA KEREN LO BEGITU NGENTOT**")
+
+
+@register(outgoing=True, pattern="^.alay(?: |$)(.*)")
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**Halo kak**")
+    sleep(1)
+    await typew.edit("**Gua liat-liat lu main bot mulu**")
+    sleep(2)
+    await typew.edit("**Alay banget sumpah**")
+    sleep(2)
+    await typew.edit("**Baru pasang ucelbot ya?**")
+    sleep(2)
+    await typew.edit("**Pantesan norak yahaha**")
+    sleep(2)
+    await typew.edit("**Kalo mau coba coba command di gc pribadi aja**")
+    sleep(2)
+    await typew.edit("**Jangan di publik, jijik liatnya anjg:v**")
+    sleep(2)
+    await typew.edit("**Intinya lo alay maen bot mulu**")
+    sleep(2)
+    await typew.edit("**Lawriiiiiiieeeee:v**")
 
 
 @register(outgoing=True, pattern="^.wah(?: |$)(.*)")
@@ -181,6 +203,8 @@ CMD_HELP.update(
         "war2": "**Plugin : **`war2`\
         \n\n  •  **Syntax :** `.sok`\
         \n  •  **Function : **Ngatain orang sok keras\
+        \n\n  •  **Syntax :** `.alay`\
+        \n  •  **Function : **Ngatain orang baru pasang bot\
         \n\n  •  **Syntax :** `.bk`\
         \n  •  **Function : **Ngatain bocah hina\
         \n\n  •  **Syntax :** `.gh`\

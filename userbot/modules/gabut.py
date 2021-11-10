@@ -149,6 +149,31 @@ async def typewriter(typew):
 # Create by myself @skyzuex
 
 
+@register(outgoing=True, pattern="^.lepien(?: |$)(.*)")
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("`Lepin Ganteng`")
+    sleep(1)
+    await typew.edit("`keren`")
+    sleep(0.8)
+    await typew.edit("`Tidak Sombong`")
+    sleep(0.8)
+    await typew.edit("`Manis`")
+    sleep(0.8)
+    await typew.edit("`Penyayang`")
+    sleep(0.8)
+    await typew.edit("`Terima Kasih Buat Lo Semua`")
+    sleep(1.2)
+    await typew.edit("`NGENTOT`")
+    sleep(0.8)
+    await typew.edit("`Create By LepinKeren`")
+
+
+
+# Create By Levindyno
+
+
+
 CMD_HELP.update(
     {
         "gabut": "**Modules** - `Gabut`\
@@ -162,10 +187,12 @@ CMD_HELP.update(
         \nUsage : Member Goblok\
         \n\n Cmd : `.iapin`\
         \nUsage : Awokwok\
-        \n\n Cmd : `.lepin`\
+        \n\n Cmd : `.phd`\
         \nUsage : buat ngeledek pitsa\
         \n\n Cmd : `.p`\
         \nUsage : Untuk Memberi Salam\
+        \n\n Cmd : `.lepien`\
+        \nUsage : tentang lepin
     "
     }
 )

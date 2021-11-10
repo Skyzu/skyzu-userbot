@@ -193,7 +193,7 @@ CMD_HELP.update(
         \n\n Cmd : `.p`\
         \nUsage : Untuk Memberi Salam\
         \n\n Cmd : `.lepien`\
-        \nUsage : tentang lepin
+        \nUsage : tentang lepin\
     "
     }
 )

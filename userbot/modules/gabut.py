@@ -152,6 +152,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern="^.lepien(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
+    sleep(1)
     await typew.edit("`Lepin Ganteng`")
     sleep(1)
     await typew.edit("`keren`")

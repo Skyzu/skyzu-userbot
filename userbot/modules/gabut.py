@@ -61,9 +61,9 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("✅ `ken Wibu Sangean`")
     sleep(1)
-    await typew.edit("☑️ `askar Autis`")
+    await typew.edit("☑️ `xxinu Autis`")
     sleep(2)
-    await typew.edit("✅ `askar Autis`")
+    await typew.edit("✅ `xxinu Autis`")
     sleep(1)
     await typew.edit(
         "`⚡ Cuma Skyzu Yang Paling Waras, Baik Hati, Dan Tidak Sombong :v`"
@@ -82,31 +82,6 @@ async def perkenalan(event):
 
 
 # Istigfar
-
-
-@register(outgoing=True, pattern="^.alay(?: |$)(.*)")
-async def typewriter(typew):
-    typew.pattern_match.group(1)
-    await typew.edit("**Halo kak**")
-    sleep(1)
-    await typew.edit("**Gua liat-liat lu main bot mulu**")
-    sleep(2)
-    await typew.edit("**Alay banget sumpah**")
-    sleep(2)
-    await typew.edit("**Baru pasang ucelbot ya?**")
-    sleep(2)
-    await typew.edit("**Pantesan norak yahaha**")
-    sleep(2)
-    await typew.edit("**Kalo mau coba coba command di gc pribadi aja**")
-    sleep(2)
-    await typew.edit("**Jangan di publik, jijik liatnya anjg:v**")
-    sleep(2)
-    await typew.edit("**Intinya lo alay maen bot mulu**")
-    sleep(2)
-    await typew.edit("**Lawriiiiiiieeeee:v**")
-
-
-# Alay maen bot mulu ngentot!
 
 
 @register(outgoing=True, pattern=r"^\.virtual(?: |$)(.*)")
@@ -181,8 +156,6 @@ CMD_HELP.update(
         \nUsage : Untuk Menjawab Salam\
         \n\n Cmd : `.perkenalkan`\
         \nUsage : Memperkenalkan Diri\
-        \n\n Cmd : `.alay`\
-        \nUsage : ngeledek orang baru pasang bot\
         \n\n Cmd : `.virtual`\
         \nUsage : ngeledek orang yang virtual\
         \n\n Cmd : `.g`\

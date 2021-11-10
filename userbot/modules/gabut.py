@@ -42,31 +42,31 @@ async def typewriter(typew):
 # Menjawab Salam
 
 
-@register(outgoing=True, pattern="^.kenalin(?: |$)(.*)")
+@register(outgoing=True, pattern="^.iapin(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("☑️ `putra wibu`")
+    await typew.edit("☑️ `Lepin Wibu`")
     sleep(2)
-    await typew.edit("✅ `putra wibu`")
+    await typew.edit("✅ `Lepin Wibu`")
     sleep(1)
-    await typew.edit("☑️ `duta stres`")
+    await typew.edit("☑️ `Lepin Stres`")
     sleep(2)
-    await typew.edit("✅ `duta stres`")
+    await typew.edit("✘ `Lepin stres`")
     sleep(1)
-    await typew.edit("☑️ `fajar Gajelas`")
+    await typew.edit("☑️ `Lepin Gajelas`")
     sleep(2)
-    await typew.edit("✅ `fajar Gajelas`")
+    await typew.edit("✅ `Lepin Gajelas`")
     sleep(1)
-    await typew.edit("☑️ `ken Wibu Sangean`")
+    await typew.edit("☑️ `Lepin Wibu Sangean`")
     sleep(2)
-    await typew.edit("✅ `ken Wibu Sangean`")
+    await typew.edit("✘ `Lepin Wibu Sangean`")
     sleep(1)
-    await typew.edit("☑️ `xxinu Autis`")
+    await typew.edit("☑️ `Lepin Perfect`")
     sleep(2)
-    await typew.edit("✅ `xxinu Autis`")
+    await typew.edit("✅ `Lepin Perfect`")
     sleep(1)
     await typew.edit(
-        "`⚡ Cuma Skyzu Yang Paling Waras, Baik Hati, Dan Tidak Sombong :v`"
+        "`⚡ Itu semua cuma kebohongan, Jangan di anggap serius brodi`"
     )
 
 
@@ -121,27 +121,27 @@ async def perkenalan(event):
 # Perkenalan
 
 
-@register(outgoing=True, pattern="^.skyzu(?: |$)(.*)")
+@register(outgoing=True, pattern="^.lepin(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
     await typew.edit("**Ehh Lu Mau Tau Gak?**")
     sleep(1)
-    await typew.edit("**Sih Skyzu mukanya mirip babi😂**")
+    await typew.edit("**Pitsa Ivangel Cantik Banget Anjir**")
     sleep(1)
-    await typew.edit("**Ehh Gak Bercanda Deh😁**")
+    await typew.edit("**Sumpah Gak Bohong**")
     sleep(1)
-    await typew.edit("**Emang Bener Sih Skyzu Mukanya Kaya Babi🙈**")
+    await typew.edit("**Emang Bener Sih Pitsa Spek Bidadari**")
     sleep(1)
-    await typew.edit("**Ehh Engga Deh,Skyzu Kan Ganteng Kaya Artis Korea😄**")
+    await typew.edit("**Ehh Tapi Engga Deh,Ada Kartun Yang Harus Aku Jaga😅**")
     sleep(1)
     await typew.edit("**Tapi Boong😂**")
     sleep(1)
     await typew.edit("**HAHAHAHAHAHAHA**")
     sleep(1)
-    await typew.edit("**Udah Ahh Takut Skyzu Nangis Minta Balon😂**")
+    await typew.edit("**Udah Ahh Takut Phd Marah Minta Bobba😂**")
     sleep(1)
-    await typew.edit("**Maaf Ya Skyzu Ganteng Bercanda😁**")
+    await typew.edit("**Maaf Ya Pitsa Cantik Bercanda😁**")
     sleep(1)
     await typew.edit("**Tapi Bo'ong Hiyahiyahiya**")
 
@@ -160,10 +160,10 @@ CMD_HELP.update(
         \nUsage : ngeledek orang yang virtual\
         \n\n Cmd : `.g`\
         \nUsage : Member Goblok\
-        \n\n Cmd : `.kenalin`\
+        \n\n Cmd : `.iapin`\
         \nUsage : Awokwok\
-        \n\n Cmd : `.skyzu`\
-        \nUsage : buat ngeledek skyzu\
+        \n\n Cmd : `.lepin`\
+        \nUsage : buat ngeledek pitsa\
         \n\n Cmd : `.p`\
         \nUsage : Untuk Memberi Salam\
     "

@@ -121,7 +121,7 @@ async def perkenalan(event):
 # Perkenalan
 
 
-@register(outgoing=True, pattern="^.lepin(?: |$)(.*)")
+@register(outgoing=True, pattern="^.phd(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)

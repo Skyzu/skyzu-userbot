@@ -355,7 +355,7 @@ with bot:
 async def check_alive():
     await bot.send_file(
         BOTLOG_CHATID, ALIVE_LOGO,
-        caption=f"**Userbot Has Been Deployed⚡**\n━━━━━━━━━━━━━━━━━\n**Bot Of:** {ALIVE_NAME}\n━━━━━━━━━━━━━━━━━\n**Support: **@skyzusupport\n━━━━━━━━━━━━━━━━━")
+        caption=f"**Userbot Has Been Deployed⚡**\n━━━━━━━━━━━━━━━━━\n**Bot Of:** {ALIVE_NAME}\n━━━━━━━━━━━━━━━━━\n**Support: **@pinpinlepin\n━━━━━━━━━━━━━━━━━")
     return
 
 
@@ -441,7 +441,7 @@ with bot:
                 tgbotusername = BOT_USERNAME
                 if tgbotusername is not None:
                     results = await event.client.inline_query(
-                        tgbotusername, "@skyzusupport"
+                        tgbotusername, "@pinpinlepin"
                     )
                     await results[0].click(
                         event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
@@ -477,7 +477,7 @@ with bot:
                     f"➠ ** Ketik ** /rules supaya tahu peraturan Group ini\n"
                     f"➠ **Atau** Kalian Bisa Klik /notes Dibawah Jika Ada\n",
                     buttons=[
-                        [Button.url("【﻿Ｃｈａｎｎｅｌ】", "https://t.me/skyzuXproject")],
+                        [Button.url("【﻿Ｃｈａｎｎｅｌ】", "https://t.me/pinpinlepin")],
                     ],
                 )
 
@@ -488,7 +488,7 @@ with bot:
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
                 await event.reply(
-                    f"{START_WELCOME}\n\n**Powered By** : @skyzuX\n\n",
+                    f"{START_WELCOME}\n\n**Powered By** : @levindyno\n\n",
                     buttons=[
                         [
                             custom.Button.inline("ꜱᴇᴛᴛɪɴɢꜱ", data="settings"),
@@ -520,7 +520,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"Usᴇʀʙᴏᴛ Tᴇʟᴇɢʀᴀᴍ\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ @skyzusupport "
+                text = f"Usᴇʀʙᴏᴛ Tᴇʟᴇɢʀᴀᴍ\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ @pinpinlepin "
                 await event.edit(
                     text,
                     file=roselogo,
@@ -553,10 +553,10 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 text = (
-                    f"❁ __Saya Adalah Skyzu Userbot Yang Digunakan Banyak User Telegram__.\n\n"
+                    f"❁ __Saya Adalah Lepin Userbot Yang Digunakan Banyak User Telegram__.\n\n"
                     f"❁ __Saya Dibuat Hanya Untuk Bersenang Senang Ditelegram__.\n\n"
                     f"❁ __Kelebihan Saya Banyak, Saya Mempunyai 180 Modules__.\n\n"
-                    f"© @skyzusupport")
+                    f"© @pinpinlepin")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -631,8 +631,7 @@ with bot:
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
                     f"× `.set var SKYZU_TEKS_KUSTOM` [**TEKS**]\n"
                     f"°__Mengganti Teks Yang Ada Command skyzualive__.\n\n"
-                    f"© @skyzusupport"
-                )
+                    f"© @pinpinlepin")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -661,7 +660,7 @@ with bot:
                     f"°__Mengaktifkan Pmpermit Kalian Atau Disebut Pesan Otomatis__.\n\n"
                     f"× `.set pm_msg` [**REPLYCHAT**]\n"
                     f"°__Mengganti Teks Pmpermit Selera Kamu__.\n\n"
-                    f"© @Skyzuproject")
+                    f"© @pinpinlepin")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -690,7 +689,7 @@ with bot:
                     f"°__Mengubah Emoji Inline Yang Ada Dicomand__ `.helpme`\n\n"
                     f"× `.set var INLINE_PIC` [**LINK**]\n"
                     f"°__Mengubah Foto Yang Ada Dicomand__ `.helpme`\n\n"
-                    f"© @skyzusupport")
+                    f"© @pinpinlepin")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -717,7 +716,7 @@ with bot:
                     f"Modules Name **pmbot**\n\n"
                     f"× `.set var START_WELCOME` [**TEKS**] \n"
                     f"°__Kamu Juga Bisa Mengubah Start Welcome Untuk Bot Kamu Yang Ini, Dengan Cara Diatas Dan Kata Kata Bebas__.\n\n"
-                    f"© @skyzusupport")
+                    f"© @pinpinlepin")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -746,7 +745,7 @@ with bot:
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
-                    f"© @skyzusupport")
+                    f"© @pinpinlepin")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -808,7 +807,7 @@ with bot:
                     f" ✠➲ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}  "
                     "\n╚════════════════════╝"
                     f"✥ **Sisa Dyno Heroku** `{day}` **Hari Lagi**"
-                    f"© @skyzusupport"
+                    f"© @pinpinlepin"
                 )
                 await event.edit(
                     text,
@@ -873,7 +872,7 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari **⚡skyzu-userbot⚡**",
+                    "Bantuan Dari **⚡lepin-userbot⚡**",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True,
@@ -882,12 +881,12 @@ with bot:
                 result = builder.article(" **⚡𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**",
                                          text="""°𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓°""",
                                          buttons=[[custom.Button.url("sᴋʏᴢᴜ​",
-                                                                     "https://github.com/Skyzu/skyzu-userbot"),
+                                                                     "https://github.com/LevinSkuy/lepin-userbot"),
                                                    custom.Button.url("ᴄʜᴀɴɴᴇʟ​",
-                                                                     "t.me/skyzuXproject"),
+                                                                     "t.me/pinpinlepin"),
                                                    ],
                                                   [custom.Button.url("ʟɪᴄᴇɴsᴇ​",
-                                                                     "https://github.com/Skyzu/skyzu-userbot/LICENSE",
+                                                                     "https://github.com/LevinSkuy/lepin-userbot/LICENSE",
                                                                      )],
                                                   ],
                                          link_preview=False,
@@ -926,8 +925,8 @@ with bot:
                     link_preview=True,
                     buttons=[
                         [
-                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/skyzusupport"),
-                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/skyzuXproject"),
+                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/pinpinlepin"),
+                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/avnihbos"),
                         ],
                         [custom.Button.inline("°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
                         [custom.Button.inline("°ᴄʟᴏꜱᴇ ɪɴʟɪɴᴇ°", b"close")],

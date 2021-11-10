@@ -312,7 +312,7 @@ async def redis(alive):
     await alive.edit("⚡")
     await asyncio.sleep(2)
     output = (
-        f"╭✠╼━━━━━━━━━━━━━━━━━━━✠╮\n"
+        f"╭✠╼━━━━━━━━━━━━━━━━━━✠╮\n"
         f"┃✧ **Name     :** {DEFAULTUSER} \n"
         f"┃✧ **Username :** @{user.username} \n"
         f"┃✧ **Telethon :** Ver {version.__version__} \n"
@@ -323,7 +323,7 @@ async def redis(alive):
         f"┃✧ **GitHub   :** [Sƙȥυ](https://github.com/Skyzu/skyzu-userbot) \n"
         f"┃✧ **Owner    :** [Skyzu](https://t.me/skyzuex) \n"
         f"┃✧ **support  :** [groups](https://t.me/skyzusupport) \n"
-        f"╰✠╼━━━━━━━━━━━━━━━━━━━✠╯"
+        f"╰✠╼━━━━━━━━━━━━━━━━━━✠╯"
     )
     if ALIVE_LOGO:
         try:

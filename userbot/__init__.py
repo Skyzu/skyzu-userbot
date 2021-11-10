@@ -410,7 +410,7 @@ def paginate_help(page_number, loaded_modules, prefix):
             modulo_page * number_of_rows: number_of_rows * (
                 modulo_page + 1)] + [
             (custom.Button.inline(
-                "<<ᴘʀᴇᴠɪᴏᴜꜱ", data="{}_prev({})".format(
+                "<ʙᴀᴄᴋ​", data="{}_prev({})".format(
                     prefix, modulo_page)), custom.Button.inline(
                         "ᴍᴇɴᴜ", data="{}_close({})".format(
                             prefix, modulo_page)), custom.Button.inline(
@@ -450,6 +450,10 @@ with bot:
                 else:
                     await event.edit(
                         "`The bot doesn't work! Please set the Bot Token and Username correctly. The module has been stopped.`"
+                    )
+            except Exception:
+                return await event.edit("⛔ **Kamu Tidak Diizinkan Untuk Menekan Nya**!")
+
 
         roselogo=INLINE_PIC
         plugins=CMD_HELP
@@ -486,7 +490,7 @@ with bot:
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
                 await event.reply(
-                    f"{START_WELCOME}\n\n**Powered By** : @skyzuX\n\n",
+                    f"{START_WELCOME}\n\n**Powered By** : @skyzuex\n\n",
                     buttons=[
                         [
                             custom.Button.inline("ꜱᴇᴛᴛɪɴɢꜱ", data="settings"),
@@ -608,7 +612,7 @@ with bot:
                         [custom.Button.inline("ᴜᴘᴅᴀᴛᴇ", data="pembaruan")],
                         [custom.Button.inline("ᴘɪɴɢ", data="ping")],
                         [custom.Button.inline("ᴄᴇᴋ ᴅʏɴᴏ", data="restart_bot")],
-                        [custom.Button.inline("<<ʟᴇꜰᴛ", data="settings")],
+                        [custom.Button.inline("<ʟᴇꜰᴛ", data="settings")],
                     ],
                 )
             else:
@@ -928,9 +932,9 @@ with bot:
                             Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/skyzusupport"),
                             Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/skyzuXproject"),
                         ],
-                        [custom.Button.inline(
+                        [ custom.Button.inline(
                             "°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
-                        [custom.Button.inline("°ᴄʟᴏꜱᴇ ɪɴʟɪɴᴇ°", b"close")],
+                        [ custom.Button.inline("°ᴄʟᴏꜱᴇ ɪɴʟɪɴᴇ°", b"close")],
                     ],
                 )
 

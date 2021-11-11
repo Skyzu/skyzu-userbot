@@ -109,13 +109,24 @@ async def typewriter(typew):
 @register(outgoing=True, pattern="^.perkenalkan(?: |$)(.*)")
 async def perkenalan(event):
     event.pattern_match.group(1)
-    await event.edit(f"`Hai Guys , Perkenalkan Nama Gw {DEFAULTUSER}`")
+    await event.edit("`Pertama Tama`")
     sleep(2)
-    await event.edit(f"`Gw Tinggal Di {WEATHER_DEFCITY}`")
+    await event.edit("`Lepin Ganteng`")
     sleep(2)
-    await event.edit("`Salam Kenal...`")
+    await event.edit("`Keren`")
     sleep(2)
-    await event.edit("`Udah Gitu Aja :v`")
+    await event.edit("`Tidak Sombong`")
+    sleep(1)
+    await event.edit("`Manis`")
+    sleep(1)
+    await event.edit("`Penyayang`")
+    sleep(1)
+    await event.edit("`Sekian Dan Terima Kasih Buat Lo Semua`")
+    sleep(1)
+    await event.edit("`NGENTOT`")
+    sleep(1)
+    await event.edit("`Create By Lepin Keren`")
+    
 
 
 # Perkenalan
@@ -182,7 +193,7 @@ CMD_HELP.update(
         "gabut": "**Modules** - `Gabut`\
         \n\n Cmd : `.l`\
         \nUsage : Untuk Menjawab Salam\
-        \n\n Cmd : `.perkenalkan`\
+        \n\n Cmd : `.lepien`\
         \nUsage : Memperkenalkan Diri\
         \n\n Cmd : `.virtual`\
         \nUsage : ngeledek orang yang virtual\
@@ -194,8 +205,6 @@ CMD_HELP.update(
         \nUsage : buat ngeledek pitsa\
         \n\n Cmd : `.p`\
         \nUsage : Untuk Memberi Salam\
-        \n\n Cmd : `.lepien`\
-        \nUsage : tentang lepin\
     "
     }
 )

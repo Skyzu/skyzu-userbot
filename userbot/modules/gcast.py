@@ -25,6 +25,7 @@ GCAST_BLACKLIST = [
     -1001481357570,  # UsergeOnTopic
     -1001459701099,  # CatUserbotSupport
     -1001109837870,  # TelegramBotIndonesia
+    -1001752592753,  # Skyzusupport
 ]
 
 

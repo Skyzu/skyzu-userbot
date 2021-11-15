@@ -34,7 +34,6 @@
 ## Stay Support 🚀
 ❁   [LonamiWebs](https://github.com/LonamiWebs/) and [Telethon](https://github.com/LonamiWebs/Telethon)
 
-
 ##
 
 🔰 **THANKS YOU TO**

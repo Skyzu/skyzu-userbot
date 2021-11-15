@@ -33,3 +33,10 @@
 
 ## Stay Support 🚀
 ❁   [LonamiWebs](https://github.com/LonamiWebs/) and [Telethon](https://github.com/LonamiWebs/Telethon)
+
+
+🔰 **THANKS YOU TO**
+*   [Sendy](https://github.con/SendiAp/Rose-Userbot)   Rose-Userbot
+*   [Risman](https://github.com/mrismanaziz/Man-Userbot)   Man - Userbot
+*   DAN TERIMAKASIH KEPADA USERBOT LAINNYA
+

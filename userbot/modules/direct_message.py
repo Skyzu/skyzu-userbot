@@ -2,7 +2,7 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 # Ported By @VckyouuBitch
-# FROM skyzu-userbot (https://github.com/Skyz/skyzu-userbot)
+# FROM skyzu-userbot (https://github.com/Skyzu/skyzu-userbot)
 
 
 @register(outgoing=True, pattern=r"^\.(?:dm)\s?(.*)?")

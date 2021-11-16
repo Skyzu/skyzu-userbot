@@ -7,7 +7,7 @@ from userbot.events import register
 
 # Port By @skyzu From Skyzu-Userbot
 # Buat Kamu Yang Hapus Credits. Intinya Kamu Anjing:)
-@register(outgoing=True, pattern="^.ip(?: |$)(.)")
+@register(outgoing=True, pattern="^.ip(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return

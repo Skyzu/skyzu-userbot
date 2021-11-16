@@ -1,5 +1,5 @@
 # Ported By VCKYOU @VckyouuBitch
-# Credits © Rose-Userbot
+# Credits © Skyzu-Userbot
 # Ya gitu deh:')
 
 

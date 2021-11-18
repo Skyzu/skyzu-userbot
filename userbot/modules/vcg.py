@@ -1,8 +1,5 @@
 # Thanks Full To Team Ultroid
-# Ported By Vcky @VckyouuBitch
-# Copyright (c) 2021 Geez - Projects
-# Geez - Projects https://github.com/Vckyou/Geez-UserBot
-# Ini Belum Ke Fix Ya Bg :')
+# Ported By Vcky @skyzu
 
 from telethon.tl.functions.channels import GetFullChannelRequest as getchat
 from telethon.tl.functions.phone import CreateGroupCallRequest as startvc

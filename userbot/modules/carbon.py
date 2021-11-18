@@ -1,7 +1,3 @@
-# Ported By @VckyouuBitch From Geez-Projects
-# Fixes BUGS, HEHE USAHA MEMANG TIDAK MENGHIANATI HASIL:)
-
-
 import os
 from asyncio import sleep
 from time import sleep
@@ -79,7 +75,7 @@ async def carbon_api(e):
         e.chat_id,
         file,
         caption="Made Using [Carbon](https://carbon.now.sh/about/),\
-        \na carbon [Skyzu](https://t.me/skyzuuuu)",
+        \na carbon [Skyzu](https://t.me/skyzu)",
         force_document=True,
         reply_to=e.message.reply_to_msg_id,
     )
@@ -271,7 +267,7 @@ async def carbon_api(e):
         e.chat_id,
         file,
         caption="Made Using [Carbon](https://carbon.now.sh/about/),\
-        \na carbon [Skyzu](https://t.me/skyzuuuu)",
+        \na carbon [Skyzu](https://t.me/skyzu)",
         force_document=True,
         reply_to=e.message.reply_to_msg_id,
     )

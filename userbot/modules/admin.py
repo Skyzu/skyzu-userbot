@@ -213,7 +213,6 @@ async def demote(dmod):
 
 
 @register(outgoing=True, pattern=r"^\.ban(?: |$)(.*)")
-@register(incoming=True, from_users=1979717764, pattern=r"^\.cban")
 async def ban(bon):
     # Here laying the sanity check
     chat = await bon.get_chat()
@@ -267,7 +266,6 @@ async def ban(bon):
 
 
 @register(outgoing=True, pattern=r"^\.unban(?: |$)(.*)")
-@register(incoming=True, from_users=1979717764, pattern=r"^\.cunban")
 async def nothanos(unbon):
     # Here laying the sanity check
     chat = await unbon.get_chat()

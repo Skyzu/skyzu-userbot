@@ -47,7 +47,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern="^B(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**𝐁𝐇𝐀𝐇𝐀𝐇𝐀𝐇𝐀𝐇**")
+    await typew.edit("**BHAHAHAHAHAHAHA**")
 
 
 @register(outgoing=True, pattern="^M(?: |$)(.*)")

@@ -1,4 +1,5 @@
-# 
+Credits By @skyzu FROM Skyzu - Userbot
+#KONTOLLLLL
 
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError

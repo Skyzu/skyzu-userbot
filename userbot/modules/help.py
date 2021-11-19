@@ -38,7 +38,7 @@ async def help(event):
             "**⚡𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**\n\n"
             f"**◉ Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n**◉ Mᴏᴅᴜʟᴇꜱ : {len(modules)}**\n\n"
             "**• Mᴀɪɴ Mᴇɴᴜ :**\n"
-            f"◉ {string}◉\n\n✐ **ɴᴏᴛᴇꜱ :**  `.help animasi`"
+            f"◉ {string}◉\n\n✐ **ɴᴏᴛᴇꜱ :**  `.help animasi`\n`@skyzusupport"
         )
         await asyncio.sleep(1000)
         await event.delete()

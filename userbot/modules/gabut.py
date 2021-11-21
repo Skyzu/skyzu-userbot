@@ -106,15 +106,17 @@ async def typewriter(typew):
     await typew.edit("**KASIAN MANA MASIH MUDA**")
 
 
-@register(outgoing=True, pattern="^.perkenalkan(?: |$)(.*)")
+@register(outgoing=True, pattern="^.terlepin(?: |$)(.*)")
 async def perkenalan(event):
     event.pattern_match.group(1)
+    await event.edit("`terlepin lepin dulu`")
+    sleep(2)
     await event.edit("`Pertama Tama`")
-    sleep(2)
+    sleep(1.2)
     await event.edit("`Lepin Ganteng`")
-    sleep(2)
+    sleep(1)
     await event.edit("`Keren`")
-    sleep(2)
+    sleep(1)
     await event.edit("`Tidak Sombong`")
     sleep(1)
     await event.edit("`Manis`")
@@ -160,32 +162,6 @@ async def typewriter(typew):
 # Create by myself @skyzuex
 
 
-@register(outgoing=True, pattern="^.lepien(?: |$)(.*)")
-async def typewriter(typew):
-    typew.pattern_match.group(1)
-    sleep(1)
-    await typew.edit("`pertama tama`")
-    sleep(3)
-    await typew.edit("`Lepin Ganteng`")
-    sleep(2)
-    await typew.edit("`keren`")
-    sleep(1)
-    await typew.edit("`Tidak Sombong`")
-    sleep(1)
-    await typew.edit("`Manis`")
-    sleep(1)
-    await typew.edit("`Penyayang`")
-    sleep(1)
-    await typew.edit("`Terima Kasih Buat Lo Semua`")
-    sleep(1)
-    await typew.edit("`NGENTOT`")
-    sleep(1)
-    await typew.edit("`Create By LepinKeren`")
-
-
-
-# Create By Levindyno
-
 
 
 CMD_HELP.update(
@@ -193,7 +169,7 @@ CMD_HELP.update(
         "gabut": "**Modules** - `Gabut`\
         \n\n Cmd : `.l`\
         \nUsage : Untuk Menjawab Salam\
-        \n\n Cmd : `.lepien`\
+        \n\n Cmd : `.terlepin`\
         \nUsage : Memperkenalkan Diri\
         \n\n Cmd : `.virtual`\
         \nUsage : ngeledek orang yang virtual\

@@ -21,7 +21,7 @@ async def _(event):
         except YouBlockedUserError:
             await event.edit("Harap unblock `@truthordares_bot` dan coba lagi")
             return
-        await event.edit(f"**Pesan truth**\n\n{response.message.message}")
+        await event.edit(f"**#TRUTH**\n\n{response.message.message}")
 
 
 @register(outgoing=True, pattern=r"^\.dare(?: |$)(.*)")
@@ -38,7 +38,7 @@ async def _(event):
         except YouBlockedUserError:
             await event.edit("Harap unblock `@truthordares_bot` dan coba lagi")
             return
-        await event.edit(f"**Pesan dare**\n\n{response.message.message}")
+        await event.edit(f"**#DARE**\n\n{response.message.message}")
 
 
 @register(outgoing=True, pattern=r"^\.spill(?: |$)(.*)")

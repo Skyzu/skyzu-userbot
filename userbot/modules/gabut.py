@@ -9,13 +9,40 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern="^.g(?: |$)(.*)")
+@register(outgoing=True, pattern="^.av(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit(f"**JAKA SEMBUNG BAWA GOLOK**")
+    await typew.edit(f"**AV NIH BOS**")
     sleep(3)
-    await typew.edit("**NIMBRUNG LAH GOBLOKK!!!**")
-
+    await typew.edit("**MENG AV AV DULU GA SEH**")
+    sleep(2)
+    await typew.edit("**LEPIN SI PALING GANTENG**")
+    sleep(1)
+    await typew.edit("**ODEN SI BAPAK OWNER**")
+    sleep(1)
+    await typew.edit("**FUCKIH CHINDO HUNTER**")
+    sleep(1)
+    await typew.edit("**ARSI SI PETARUNK**")
+    sleep(1)
+    await typew.edit("**LEMME UNLIMITED KOSA KATA**")
+    sleep(1)
+    await typew.edit("**ZENE SI BROTHER TEGAR**")
+    sleep(1)
+    await typew.edit("**REPAN SI PALING RAPPER**")
+    sleep(1)
+    await typew.edit("**NIMO SI TALENT BD**")
+    sleep(1)
+    await typew.edit("**BOBY S3 PROMOTE CH**")
+    sleep(1)
+    await typew.edit("**UCOK KEMBARAN CJ GTA**")
+    sleep(1)
+    await typew.edit("**YANG GA KESEBUT MAAF YA CAPE EDITNYA NGENTOT**")
+    sleep(2)
+    await typew.edit("**LOPYU CIWAY CIWAY ANGVI KALIAN CANTIK CANTIK**")
+    sleep(2)
+    await typew.edit("**SEKIAN TERIMA KASIH**)
+    sleep(2)
+    await typew.edit("**© @levindyno**")
 
 # Pantun
 
@@ -173,8 +200,8 @@ CMD_HELP.update(
         \nUsage : Memperkenalkan Diri\
         \n\n Cmd : `.virtual`\
         \nUsage : ngeledek orang yang virtual\
-        \n\n Cmd : `.g`\
-        \nUsage : Member Goblok\
+        \n\n Cmd : `.av`\
+        \nUsage : ALL ABOUT AV\
         \n\n Cmd : `.iapin`\
         \nUsage : Awokwok\
         \n\n Cmd : `.phd`\

@@ -45,7 +45,7 @@ async def _(event):
         "INFO - Skyzu-Userbot: Logged in as 557667062",
         "INFO - Skyzu-Userbot: Successfully...",
         "919852+00:00 app[worker.1]: 919 - Rose-Userbot -",
-        "INFO - ⚡ Skyzu-Userbot ⚡ ⚙️ V5.0 [TELAH DIAKTIFKAN!]",
+        "INFO - ⚡Lepin-Userbot ⚡ ⚙️ V5.0 [TELAH DIAKTIFKAN!]",
         "**Build Succeeded**",
     ]
 

@@ -320,7 +320,7 @@ async def redis(alive):
         f"┃✧ **Branch   :** {UPSTREAM_REPO_BRANCH} \n"
         f"┃✧ **Bot Ver  :** {BOT_VER} \n"
         f"┃✧ **Modules  :** {len(modules)} Modules \n"
-        f"┃✧ **GitHub   :** [Sƙȥυ](https://github.com/Skyzu/skyzu-userbot) \n"
+        f"┃✧ **GitHub   :** [UserBot](https://github.com/Skyzu/skyzu-userbot) \n"
         f"┃✧ **Owner    :** [Skyzu](https://t.me/skyzu) \n"
         f"┃✧ **support  :** [groups](https://t.me/skyzusupport) \n"
         f"╰✠╼━━━━━━━━━━━━━━━━✠╯"

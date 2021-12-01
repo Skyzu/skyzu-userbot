@@ -1,4 +1,4 @@
-# ReCode by @skyzuex
+# ReCode by @skyzu
 # FROM skyzu-userbot <https://github.com/Skyzu/skyzu-userbot>
 # KONTOLLLLLL
 
@@ -227,7 +227,7 @@ CMD_HELP.update(
         \n  •  **Function : **Ngatain orang gila title\
         \n\n  •  **Syntax :** `.an`\
         \n  •  **Function : **Liat sendiri\
-        \n\n**Klo mau Req, kosa kata dari lu Hubungi @skyzuex**\
+        \n\n**Klo mau Req, kosa kata dari lu Hubungi @skyzu**\
     "
     }
 )

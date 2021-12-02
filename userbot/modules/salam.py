@@ -29,7 +29,9 @@ async def typewriter(typew):
 @register(outgoing=True, pattern="^.dor(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**DAR DER DOR DAR DER DOR PALA BAPA KAU GW GEDOR SINI NGENTOT!!**")
+    await typew.edit(
+        "**DAR DER DOR DAR DER DOR PALA BAPA KAU GW GEDOR SINI NGENTOT!!**"
+    )
 
 
 @register(outgoing=True, pattern="^K(?: |$)(.*)")

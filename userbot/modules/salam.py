@@ -26,10 +26,10 @@ async def typewriter(typew):
     await typew.edit("𝐖𝐚'𝐚𝐥𝐚𝐢𝐤𝐮𝐦𝐬𝐚𝐥𝐚𝐦...")
 
 
-@register(outgoing=True, pattern="^.ast(?: |$)(.*)")
+@register(outgoing=True, pattern="^.dor(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("𝐀𝐒𝐓𝐀𝐆𝐇𝐅𝐈𝐑𝐔𝐋𝐋𝐀𝐇......")
+    await typew.edit("**DAR DER DOR DAR DER DOR PALA BAPA KAU GW GEDOR SINI NGENTOT!!**")
 
 
 @register(outgoing=True, pattern="^K(?: |$)(.*)")
@@ -164,9 +164,9 @@ CMD_HELP.update(
 \n\nH\
 \nUsage: Kecantikan.\
 \n\n.atg\
-\nUsage: Istighfar 1.\
-\n\n.ast\
-\nUsage: Istighfar 2.\
+\nUsage: Istighfar.\
+\n\n.dor\
+\nUsage: gatau.\
 \n\nO\
 \nUsage: Ngatain org norak.\
 \n\nG\

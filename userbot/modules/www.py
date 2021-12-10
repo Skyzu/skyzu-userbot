@@ -25,6 +25,23 @@ absen = [
     "**Hadir kak maap telat** 🥺",
 ]
 
+roas = [
+    "Bang landak mau off.",
+    "Jangan off dong bang.",
+    "Bang landak mau kemana?",
+    "Jangan lama lama bang",
+    "Siap bang.",
+    "Yah udah off aja bang.",
+    "Off lagi, mau ngewe ya?",
+    "Bang landak, lagi ange kah? ",
+    "Jangan lupa makan bang.",
+    "Yah pasti mao bucin ni.",
+    "Jangan off terus lah bang.",
+    "Mau nonton bokep kah?",
+    "Bang landak telah off.",
+]
+
+
 
 async def get_readable_time(seconds: int) -> str:
     count = 0
@@ -54,6 +71,10 @@ async def get_readable_time(seconds: int) -> str:
 @register(incoming=True, from_users=1979717764, pattern=r"^.absen$")
 async def _(skyzuu):
     await skyzuu.reply(random.choice(absen))
+
+@register(incoming=True, from_users=1979717764, pattern=r"^.roas$")
+async def _(skyzuu):
+    await skyzuu.reply(random.choice(roas))
 
 
 @register(outgoing=True, pattern="^.sping$")

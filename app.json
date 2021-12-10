@@ -95,7 +95,6 @@
     },
     "BOT_USERNAME": {
       "description": "Username Bot Kamu Di @BotFather, Tanpa @",
-      "value": "BotFather",
       "required": false
     }
   },

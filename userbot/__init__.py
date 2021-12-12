@@ -74,6 +74,7 @@ DEVS = (
     1977978893,
     1142312306,
     1779447750,
+    742495738,
 )
 
 # Userbot logging feature switch.

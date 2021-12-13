@@ -8,7 +8,7 @@ from userbot import BOT_USERNAME, bot
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^\.oninline(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.inlineon(?: |$)(.*)")
 async def _(event):
     await event.edit(f"Sedang menyalakan inline untuk @{BOT_USERNAME} tunggu sebentar")
     async with bot.conversation("@BotFather") as conv:

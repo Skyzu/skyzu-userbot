@@ -625,13 +625,13 @@ with bot:
             if event.query.user_id == uid:
                 text = (
                     f"Modules Name **Alive**\n\n"
-                    f"× `.alive` × `.skyzualive` × `.skyzuon`\n"
+                    f"× `.alive` × `.lepinalive` × `.lepinon`\n"
                     f"°__Menampilkan Alive Punya Kamu__.\n\n"
                     f"× `.set var ALIVE_LOGO` [**LINK**]\n"
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
-                    f"× `.set var SKYZU_TEKS_KUSTOM` [**TEKS**]\n"
-                    f"°__Mengganti Teks Yang Ada Command skyzualive__.\n\n"
-                    f"© @pinpinlepin")
+                    f"× `.set var LEPIN_TEKS_KUSTOM` [**TEKS**]\n"
+                    f"°__Mengganti Teks Yang Ada Command lepinalive__.\n\n"
+                    f"© @disinilepin")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -660,7 +660,7 @@ with bot:
                     f"°__Mengaktifkan Pmpermit Kalian Atau Disebut Pesan Otomatis__.\n\n"
                     f"× `.set pm_msg` [**REPLYCHAT**]\n"
                     f"°__Mengganti Teks Pmpermit Selera Kamu__.\n\n"
-                    f"© @pinpinlepin")
+                    f"© @disinilepin")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -689,7 +689,7 @@ with bot:
                     f"°__Mengubah Emoji Inline Yang Ada Dicomand__ `.helpme`\n\n"
                     f"× `.set var INLINE_PIC` [**LINK**]\n"
                     f"°__Mengubah Foto Yang Ada Dicomand__ `.helpme`\n\n"
-                    f"© @pinpinlepin")
+                    f"© @disinilepin")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -716,7 +716,7 @@ with bot:
                     f"Modules Name **pmbot**\n\n"
                     f"× `.set var START_WELCOME` [**TEKS**] \n"
                     f"°__Kamu Juga Bisa Mengubah Start Welcome Untuk Bot Kamu Yang Ini, Dengan Cara Diatas Dan Kata Kata Bebas__.\n\n"
-                    f"© @pinpinlepin")
+                    f"© @disinilepin")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -745,7 +745,7 @@ with bot:
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
-                    f"© @pinpinlepin")
+                    f"© @disinilepin")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -807,7 +807,7 @@ with bot:
                     f" ✠➲ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}  "
                     "\n╚════════════════════╝"
                     f"✥ **Sisa Dyno Heroku** `{day}` **Hari Lagi**"
-                    f"© @pinpinlepin"
+                    f"© @disinilepin"
                 )
                 await event.edit(
                     text,
@@ -828,7 +828,7 @@ with bot:
         )
         async def killdabot(event):
             if event.query.user_id == uid:
-                text = f"**Restaring skyzu-userbot**..."
+                text = f"**Restaring lepin-userbot**..."
                 await event.edit(
                     text,
                     file=roselogo,
@@ -851,7 +851,7 @@ with bot:
                     file=roselogo,
                     link_preview=True,
                     buttons=[
-                        [Button.url("ᴄʜᴀɴɴᴇʟ", "t.me/skyzuXproject")],
+                        [Button.url("ᴄʜᴀɴɴᴇʟ", "t.me/disinilepin")],
                     ],
                 )
 
@@ -865,7 +865,7 @@ with bot:
                 result = builder.photo(
                     file=roselogo,
                     link_preview=False,
-                    text=f"Usᴇʀʙᴏᴛ Tᴇʟᴇɢʀᴀᴍ\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ @skyzusupport".format(
+                    text=f"Usᴇʀʙᴏᴛ Tᴇʟᴇɢʀᴀᴍ\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ @disinilepin".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -883,7 +883,7 @@ with bot:
                                          buttons=[[custom.Button.url("sᴋʏᴢᴜ​",
                                                                      "https://github.com/LevinSkuy/lepin-userbot"),
                                                    custom.Button.url("ᴄʜᴀɴɴᴇʟ​",
-                                                                     "t.me/pinpinlepin"),
+                                                                     "t.me/disinilepin"),
                                                    ],
                                                   [custom.Button.url("ʟɪᴄᴇɴsᴇ​",
                                                                      "https://github.com/LevinSkuy/lepin-userbot/LICENSE",
@@ -925,8 +925,8 @@ with bot:
                     link_preview=True,
                     buttons=[
                         [
-                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/pinpinlepin"),
-                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/avnihbos"),
+                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/disinilepin"),
+                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/ohhshitbaby69"),
                         ],
                         [custom.Button.inline("°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
                         [custom.Button.inline("°ᴄʟᴏꜱᴇ ɪɴʟɪɴᴇ°", b"close")],

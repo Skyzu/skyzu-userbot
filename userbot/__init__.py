@@ -368,7 +368,7 @@ with bot:
 async def check_alive():
     await bot.send_message(
         BOTLOG_CHATID, ALIVE_NAME,
-        "**Userbot Has Been Deployed⚡**\n━━━━━━━━━━━━━━━━━\n**Bot Of:** {ALIVE_NAME}\n━━━━━━━━━━━━━━━━━\n**Support: **@skyzusupport\n━━━━━━━━━━━━━━━━━")
+        "**Userbot Has Been Deployed⚡**\n━━\n➠ **Ketik** `.alive` **untuk Mengecek Bot**\n━━\n➠ **support** @skyzusupport"
     return
 
 

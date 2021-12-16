@@ -24,7 +24,7 @@
 
 ## Group Support:
 
-   <a href="https://t.me/avnihbos"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
+   <a href="https://t.me/ohhshitbaby69"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
 
 ## String Session :
 

@@ -213,7 +213,7 @@ CMD_HELP.update(
         \n\n Cmd : `.iapin`\
         \nUsage : Awokwok\
         \n\n Cmd : `.trio`\
-        \nUsage : buat ngeledek pitsa\
+        \nUsage : TRIO GILA WKWK\
         \n\n Cmd : `.p`\
         \nUsage : Untuk Memberi Salam\
     "

@@ -161,27 +161,35 @@ async def perkenalan(event):
 # Perkenalan
 
 
-@register(outgoing=True, pattern="^.phd(?: |$)(.*)")
+@register(outgoing=True, pattern="^.trio(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
     await typew.edit("**Ehh Lu Mau Tau Gak?**")
     sleep(1)
-    await typew.edit("**Pitsa Ivangel Cantik Banget Anjir**")
+    await typew.edit("**Ada 3 sekawan sedang gabut**")
     sleep(1)
-    await typew.edit("**Sumpah Gak Bohong**")
+    await typew.edit("**Lepin Logan Dan Boy**")
     sleep(1)
-    await typew.edit("**Emang Bener Sih Pitsa Spek Bidadari**")
+    await typew.edit("**Nah Mereka Bertiga Memiliki Kemampuan Masing²**")
+    sleep(2)
+    await typew.edit("**Mereka Ganteng Dan Jago BD**")
+    sleep(2)
+    await typew.edit("**Mereka Mencoba Menggoda Wanita**")
+    sleep(2)
+    await typew.edit("*Dengan Cara Nanya Alur BD**")
+    sleep(2)
+    await typew.edit("**Abis Itu Mereka VCS Deh**")
     sleep(1)
-    await typew.edit("**Ehh Tapi Engga Deh,Ada Kartun Yang Harus Aku Jaga😅**")
+    await typew.edit("**Tamat**")
     sleep(1)
-    await typew.edit("**Tapi Boong😂**")
+    await typew.edit("**Tapi Boong**")
     sleep(1)
     await typew.edit("**HAHAHAHAHAHAHA**")
     sleep(1)
-    await typew.edit("**Udah Ahh Takut Phd Marah Minta Bobba😂**")
+    await typew.edit("**Udah Ahh Takut Suhu BD Marah Nunjukin Certi**")
     sleep(1)
-    await typew.edit("**Maaf Ya Pitsa Cantik Bercanda😁**")
+    await typew.edit("**Maaf Ya SUHU Bercanda**")
     sleep(1)
     await typew.edit("**Tapi Bo'ong Hiyahiyahiya**")
 
@@ -204,7 +212,7 @@ CMD_HELP.update(
         \nUsage : ALL ABOUT AV\
         \n\n Cmd : `.iapin`\
         \nUsage : Awokwok\
-        \n\n Cmd : `.phd`\
+        \n\n Cmd : `.trio`\
         \nUsage : buat ngeledek pitsa\
         \n\n Cmd : `.p`\
         \nUsage : Untuk Memberi Salam\

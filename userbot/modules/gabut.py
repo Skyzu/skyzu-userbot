@@ -42,7 +42,7 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("**SEKIAN TERIMA KASIH**")
     sleep(2)
-    await typew.edit("**© @levindyno**")
+    await typew.edit("**© @lepingsad**")
 
 # Pantun
 
@@ -153,7 +153,7 @@ async def perkenalan(event):
     await event.edit("`Sekian Dan Terima Kasih Buat Lo Semua`")
     sleep(1)
     await event.edit("`NGENTOT`")
-    sleep(1)
+    sleep(2)
     await event.edit("`Create By Lepin Keren`")
     
 
@@ -177,7 +177,7 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("**Mereka Mencoba Menggoda Wanita**")
     sleep(2)
-    await typew.edit("*Dengan Cara Nanya Alur BD**")
+    await typew.edit("**Dengan Cara Nanya Alur BD**")
     sleep(2)
     await typew.edit("**Abis Itu Mereka VCS Deh**")
     sleep(1)

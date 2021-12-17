@@ -20,7 +20,7 @@ async def usit(e):
 async def var(m):
     await m.edit(
         f"**Disini Daftar Vars Dari {DEFAULTUSER}:**\n"
-        "\n[DAFTAR VARS](https://raw.githubusercontent.com/LevimSkuy/lepim-userbot/lepin-userbot/varshelper.txt)"
+        "\n[DAFTAR VARS](https://raw.githubusercontent.com/LevimSkuy/lepin-userbot/lepin-userbot/varshelper.txt)"
     )
 
 

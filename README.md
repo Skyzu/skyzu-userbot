@@ -26,10 +26,6 @@
 
    <a href="https://t.me/skyzusupport"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
 
-## String Session :
-
-<a href="https://replit.com/@Sendi-Adiningti/String#README.md"><img src="https://img.shields.io/badge/run-string__session.py-magenta?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
-
 
 ## Stay Support 🚀
 ❁   [LonamiWebs](https://github.com/LonamiWebs/) and [Telethon](https://github.com/LonamiWebs/Telethon)

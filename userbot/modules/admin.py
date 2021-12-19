@@ -251,7 +251,7 @@ async def ban(bon):
         )
     else:
         await bon.edit(
-            f"`PENGGUNA:` [{user.first_name}](tg://user?id={user.id})\n`ID:` `{str(user.id)}` Telah Di Banned !"
+            f"`PENGGUNA:` [{user.first_name}](tg://user?id={user.id})\n`ID:` `{str(user.id)}` Si Jamet Telah Terbanned!"
         )
     # Announce to the logging group if we have banned the person
     # successfully!
@@ -285,7 +285,7 @@ async def nothanos(unbon):
 
     try:
         await unbon.client(EditBannedRequest(unbon.chat_id, user.id, UNBAN_RIGHTS))
-        await unbon.edit("```Unban Berhasil Dilakukan!```")
+        await unbon.edit("```Si Jamat Berhasil Di Unban```")
         await sleep(3)
         await unbon.delete()
 
@@ -301,7 +301,6 @@ async def nothanos(unbon):
 
 
 @register(outgoing=True, pattern=r"^\.mute(?: |$)(.*)")
-@register(incoming=True, from_users=1979717764, pattern=r"^\.cmute")
 async def spider(spdr):
     # Check if the function running under SQL mode
     try:
@@ -332,7 +331,7 @@ async def spider(spdr):
     # If everything goes well, do announcing and mute
     await spdr.edit("`Telah Dibisukan!`")
     if mute(spdr.chat_id, user.id) is False:
-        return await spdr.edit("`Error! Pengguna Sudah Dibisukan.`")
+        return await spdr.edit("`Error! Si Jamet Sudah Dibisukan.`")
     else:
         try:
             await spdr.client(EditBannedRequest(spdr.chat_id, user.id, MUTE_RIGHTS))
@@ -341,7 +340,7 @@ async def spider(spdr):
             if reason:
                 await spdr.edit(f"**Telah Dibisukan!**\n**Alasan:** `{reason}`")
             else:
-                await spdr.edit("`Telah Dibisukan!`")
+                await spdr.edit("`Si Jamet Telah Dibisukan!`")
 
             # Announce to logging group
             if BOTLOG:
@@ -356,7 +355,6 @@ async def spider(spdr):
 
 
 @register(outgoing=True, pattern=r"^\.unmute(?: |$)(.*)")
-@register(incoming=True, from_users=1979717764, pattern=r"^\.cunmute")
 async def unmoot(unmot):
     # Admin or creator check
     chat = await unmot.get_chat()
@@ -387,7 +385,7 @@ async def unmoot(unmot):
         try:
             await unmot.client(EditBannedRequest(unmot.chat_id, user.id, UNBAN_RIGHTS))
             await unmot.edit(
-                "```Berhasil Melakukan Unmute! Pengguna Sudah Tidak Lagi Dibisukan```"
+                "```Berhasil Melakukan Unmute! Si Jamet Sudah Tidak Lagi Dibisukan```"
             )
             await sleep(3)
             await unmot.delete()

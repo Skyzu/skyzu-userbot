@@ -6,6 +6,7 @@
 # Recode by @mrismanaziz
 # FROM Man-Userbot
 # t.me/SharingUserbot
+# t.me/skyzusupport
 #
 """ Userbot module containing commands for keeping costum global notes. """
 

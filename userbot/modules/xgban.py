@@ -7,7 +7,7 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-# Port By @VckyouuBitch From GeezProject
+# Port By @skyzu
 # Perkontolan Dengan Hapus Credits
 @register(outgoing=True, pattern="^.allban(?: |$)(.*)")
 async def testing(event):

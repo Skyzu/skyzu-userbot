@@ -488,7 +488,7 @@ with bot:
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
                 await event.reply(
-                    f"{START_WELCOME}\n\n**Powered By** : @levindyno\n\n",
+                    f"{START_WELCOME}\n\n**Powered By** : @lepingsad\n\n",
                     buttons=[
                         [
                             custom.Button.inline("ꜱᴇᴛᴛɪɴɢꜱ", data="settings"),
@@ -566,7 +566,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 5.0\n🛠 Modules : {len(plugins)}\n✨ Branch : Skyzu-Userbot"
+                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 5.0\n🛠 Modules : {len(plugins)}\n✨ Branch : Lepin-Userbot"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(

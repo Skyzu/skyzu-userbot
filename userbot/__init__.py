@@ -492,7 +492,7 @@ with bot:
                     f"➠ **Atau** Kalian Bisa Klik /notes Dibawah Jika Ada\n",
                     buttons=[
                         [Button.url("【﻿Ｃｈａｎｎｅｌ】",
-                                    "https://t.me/skyzuXproject")],
+                                    "https://t.me/ProjectSkyzu")],
                     ],
                 )
 
@@ -503,7 +503,7 @@ with bot:
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
                 await event.reply(
-                    f"{START_WELCOME}\n\n**Powered By** : @skyzuex\n\n",
+                    f"{START_WELCOME}\n\n**Powered By** : @skyzu\n\n",
                     buttons=[
                         [
                             custom.Button.inline("ꜱᴇᴛᴛɪɴɢꜱ", data="settings"),
@@ -625,7 +625,7 @@ with bot:
                         [custom.Button.inline("ᴜᴘᴅᴀᴛᴇ", data="pembaruan")],
                         [custom.Button.inline("ᴘɪɴɢ", data="ping")],
                         [custom.Button.inline("ᴄᴇᴋ ᴅʏɴᴏ", data="restart_bot")],
-                        [custom.Button.inline("<ʟᴇꜰᴛ", data="settings")],
+                        [custom.Button.inline("ʟᴇꜰᴛ", data="settings")],
                     ],
                 )
             else:
@@ -868,7 +868,7 @@ with bot:
                     file=roselogo,
                     link_preview=True,
                     buttons=[
-                        [Button.url("ᴄʜᴀɴɴᴇʟ", "t.me/skyzuXproject")],
+                        [Button.url("ᴄʜᴀɴɴᴇʟ", "t.me/ProjectSkyzu")],
                     ],
                 )
 
@@ -900,7 +900,7 @@ with bot:
                                          buttons=[[custom.Button.url("sᴋʏᴢᴜ​",
                                                                      "https://github.com/Skyzu/skyzu-userbot"),
                                                    custom.Button.url("ᴄʜᴀɴɴᴇʟ​",
-                                                                     "t.me/skyzuXproject"),
+                                                                     "t.me/ProjectSkyzu"),
                                                    ],
                                                   [custom.Button.url("ʟɪᴄᴇɴsᴇ​",
                                                                      "https://github.com/Skyzu/skyzu-userbot/LICENSE",
@@ -943,7 +943,7 @@ with bot:
                     buttons=[
                         [
                             Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/skyzusupport"),
-                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/skyzuXproject"),
+                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/ProjectSkyzu"),
                         ],
                         [custom.Button.inline(
                             "°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],

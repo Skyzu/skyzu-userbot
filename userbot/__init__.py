@@ -102,7 +102,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL", "https://github.com/LevinSkuy/lepin-userbot"
 )
-UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "Skyzuu-Userbot")
+UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "LEVIN-USERBOT")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -566,7 +566,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 5.0\n🛠 Modules : {len(plugins)}\n✨ Branch : Lepin-Userbot"
+                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 5.0\n🛠 Modules : {len(plugins)}\n✨ Branch : LEVIN-USERBOT"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -878,8 +878,8 @@ with bot:
                     link_preview=True,
                 )
             else:
-                result = builder.article(" **⚡𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**",
-                                         text="""°𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓°""",
+                result = builder.article(" **⚡LEVIN-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**",
+                                         text="""°LEVIN-𝐔𝐒𝐄𝐑𝐁𝐎𝐓°""",
                                          buttons=[[custom.Button.url("sᴋʏᴢᴜ​",
                                                                      "https://github.com/LevinSkuy/lepin-userbot"),
                                                    custom.Button.url("ᴄʜᴀɴɴᴇʟ​",
@@ -925,8 +925,8 @@ with bot:
                     link_preview=True,
                     buttons=[
                         [
-                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/disinilepin"),
-                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/ohhshitbaby69"),
+                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/ohhshitbaby69"),
+                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/disinilepin"),
                         ],
                         [custom.Button.inline("°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
                         [custom.Button.inline("°ᴄʟᴏꜱᴇ ɪɴʟɪɴᴇ°", b"close")],

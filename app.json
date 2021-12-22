@@ -1,7 +1,7 @@
 {
-  "name": "⚡Skyzu-Userbot⚡",
-  "description": "🚫Skyzu-Userbot🚫 USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
-  "logo": "https://telegra.ph/file/fd08937c4ae6cb1303731.jpg",
+  "name": "⚡Levin-Userbot⚡",
+  "description": "🚫Levin-Userbot🚫 USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "logo": "https://telegra.ph/file/85383ce93421c6b44ad97.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -10,8 +10,8 @@
     "productivity"
 ],
   "repository": "https://github.com/LevinSkuy/lepin-userbot",
-  "telegram": "https://t.me/skyzuex",
-  "success_url": "https://t.me/skyzusupport",
+  "telegram": "https://t.me/lepingsad",
+  "success_url": "https://t.me/ohhshitbaby69",
   "stack": "container",
   "env": {
     "API_KEY": {

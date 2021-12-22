@@ -1,7 +1,7 @@
 from platform import uname
 from time import sleep
 
-from userbot import ALIVE_NAME, CMD_HELP, WEATHER_DEFCITY
+from userbot import ALIVE_NAME, CMD_HELP
 from userbot.events import register
 
 # ================= CONSTANT =================
@@ -43,6 +43,7 @@ async def typewriter(typew):
     await typew.edit("**SEKIAN TERIMA KASIH**")
     sleep(2)
     await typew.edit("**© @lepingsad**")
+
 
 # Pantun
 
@@ -92,9 +93,7 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("✅ `Lepin Perfect`")
     sleep(1)
-    await typew.edit(
-        "`⚡ Itu semua cuma kebohongan, Jangan di anggap serius brodi`"
-    )
+    await typew.edit("`⚡ Itu semua cuma kebohongan, Jangan di anggap serius brodi`")
 
 
 # King Userbot Support
@@ -155,7 +154,6 @@ async def perkenalan(event):
     await event.edit("`NGENTOT`")
     sleep(2)
     await event.edit("`Create By Lepin Keren`")
-    
 
 
 # Perkenalan
@@ -195,8 +193,6 @@ async def typewriter(typew):
 
 
 # Create by myself @skyzuex
-
-
 
 
 CMD_HELP.update(

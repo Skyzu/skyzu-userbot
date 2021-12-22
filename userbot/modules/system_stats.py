@@ -44,7 +44,7 @@ async def get_readable_time(seconds: int) -> str:
     up_time = ""
     time_list = []
     time_suffix_list = ["Dtk", "Mnt", "Jam", "Hari"]
- 
+
     while count < 4:
         count += 1
         remainder, result = divmod(seconds, 60) if count < 3 else divmod(seconds, 24)

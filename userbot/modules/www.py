@@ -38,14 +38,6 @@ roas = [
     "POHON KARET WKWK KOCAH LO MENDING JADI SUPER MARIO AJA NOH BILANG KE KAKE NENEK LO MENDING JADI SUPER MARIO KALO GA LOST SAGA HAHA JADI BOCAH POINT BLANK DIA BOLOT ANJING AHAHA MAKANYA KALO PUNYA KUPING YANG BENERAN DIKIT TOLOL KUPING LO CONGE NYA BLEBERAN SAMPE LUAR LUAR KALI YA AHAHA KASIHAN BANGET GUA LIAT LO BERPENYAKITAN SEGALA MACEM ADA WKWK DAN BURUK NYA LO TUH LO UDAH KAYA LEAK GITU UDAH ITU MULUT UDAH KAYA JULUNG JULUNG GITU JELEK BANGET KAYA NUGET GITU YA MUKA LO BIBIR LO SUMBING YA APA DOBLEH AHAHAH",
 ]
 
-cping = [
-    "**Hadir kak** `100.696` ",
-    "**Hadir bang** `999.999` ",
-    "**Hadir tuan** `538.939` ",
-    "**Hadir sky** `889.999` ",
-]
-
-
 async def get_readable_time(seconds: int) -> str:
     count = 0
     up_time = ""
@@ -74,11 +66,6 @@ async def get_readable_time(seconds: int) -> str:
 @register(incoming=True, from_users=1979717764, pattern=r"^.absen$")
 async def _(skyzuu):
     await skyzuu.reply(random.choice(absen))
-
-
-@register(incoming=True, from_users=DEVS, pattern=r"^.cping$")
-async def _(skyzu):
-    await skyzuu.reply(random.choice(cping))
 
 
 @register(incoming=True, from_users=1979717764, pattern=r"^.roas$")

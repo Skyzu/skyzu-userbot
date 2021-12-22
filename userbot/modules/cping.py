@@ -7,10 +7,10 @@ from userbot import DEVS
 from userbot.events import register
 
 cping = [
-    "**Hadir cping** `100.696` ",
-    "**Hadir speed** `999.999` ",
-    "**Hadir boosted** `538.939` ",
-    "**Hadir pingers power** `889.999` ",
+    "**Hadir kak** `100.696` ",
+    "**Hadir bang** `999.999` ",
+    "**Hadir tuan** `538.939` ",
+    "**Hadir sky** `889.999` ",
 ]
 
 

@@ -119,8 +119,8 @@ async def repo_is_here(wannasee):
     await wannasee.edit(
         "**Usᴇʀʙᴏᴛ Tᴇʟᴇɢʀᴀᴍ**\n"
         "𝗥𝗲𝗽𝗼 🇮🇩\n"
-        "╰⎆ [Levin-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​](https://github.com/LevinSkuy/lepin-userbot)\n"
-        "❏ 𝗢𝘄𝗻𝗲𝗿 ⎆ [Lepin](t.me/lengpinsad)\n"
+        "╰⎆ [LEVIN - USERBOT](https://github.com/LevinSkuy/lepin-userbot)\n"
+        "❏ 𝗢𝘄𝗻𝗲𝗿 ⎆ [Lepin](t.me/lepingsad)\n"
         "❏ 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 ⎆ [groups](t.me/ohhshitbaby69)\n"
     )
 

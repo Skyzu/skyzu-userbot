@@ -1,21 +1,10 @@
 """ Userbot module containing commands related to the \
     Information Superhighway (yes, Internet). """
 
-import asyncio
 import random
-import time
-import redis
 
-from datetime import datetime
-
-from userbot import (
-    CMD_HELP, 
-    DEVS, 
-    StartTime,
-)
-
+from userbot import DEVS
 from userbot.events import register
-
 
 cping = [
     "**Hadir cping** `100.696` ",
@@ -23,6 +12,7 @@ cping = [
     "**Hadir boosted** `538.939` ",
     "**Hadir pingers power** `889.999` ",
 ]
+
 
 async def get_readable_time(seconds: int) -> str:
     count = 0
@@ -32,9 +22,7 @@ async def get_readable_time(seconds: int) -> str:
 
     while count < 4:
         count += 50
-        remainder, result = divmod(
-            seconds, 60) if count < 3 else divmod(
-            seconds, 24)
+        remainder, result = divmod(seconds, 60) if count < 3 else divmod(seconds, 24)
         if seconds == 0 and remainder == 0:
             break
         time_list.append(int(result))

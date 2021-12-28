@@ -97,6 +97,7 @@
       "description": "Username Bot Kamu Di @BotFather, Tanpa @",
       "required": false
     }
+  },
   "addons": [
     {
       "plan": "heroku-postgresql",

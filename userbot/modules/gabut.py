@@ -17,6 +17,7 @@ async def typewriter(typew):
     await typew.edit("**NIMBRUNG LAH GOBLOKK!!!**")
     sleep(3)
     await typew.edit("**DAR DER DOR MENTAL LU GUA GEDOR**") 
+    sleep(4) 
 
 
 @register(outgoing=True, pattern="^.p(?: |$)(.*)")
@@ -24,8 +25,8 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`ASSALAMUALAIKUM ANAK NGENTOT`")
     sleep(2)
-    await typew.edit("`السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ`")
-
+    await typew.edit("`ASSALAMUALAIKUM ANAK BABI`")
+    sleep(2)
 
 # Salam
 
@@ -33,15 +34,16 @@ async def typewriter(typew):
 @register(outgoing=True, pattern="^.l(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Kalo Orang Salam Itu Dijawab...`")
+    await typew.edit("`WAALAIKUMSALAM,JADI NGENTOT GA? `")
     sleep(2)
-    await typew.edit("`وَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ`")
+    await typew.edit("`WAALAIKUMSALAM KONTOL`")
+    sleep(2) 
 
 
 # Menjawab Salam
 
 
-@register(outgoing=True, pattern="^.kenalin(?: |$)(.*)")
+@register(outgoing=True, pattern="^.kenal(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("☑️ `Barra jelek`")
@@ -65,7 +67,7 @@ async def typewriter(typew):
     await typew.edit("✅ `Vxin cina bego`")
     sleep(1)
     await typew.edit(
-        "`⚡ CUMA JOO YANG PALING KEREN NGENTOT`"
+        "`CUMA JOO YANG PALING KEREN NGENTOT!!`"
     )
 
 
@@ -75,34 +77,34 @@ async def typewriter(typew):
 @register(outgoing=True, pattern="^.istigfar(?: |$)(.*)")
 async def perkenalan(event):
     event.pattern_match.group(1)
-    await event.edit(f"`Heh Kamu Gaboleh Begitu...`")
+    await event.edit(f"`Astaghfirullah ya Tuhan yesus`")
     sleep(2)
-    await event.edit("`اَسْتَغْفِرُاللهَ الْعَظِيْم`")
-
+    await event.edit("`itu titit ya anjing`")
+    sleep(2) 
 
 # Istigfar
 
 
-@register(outgoing=True, pattern=r"^\.virtual(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.jelek(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**OOOO**")
-    sleep(1.5)
-    await typew.edit("**INI YANG VIRTUAL**")
-    sleep(1.5)
-    await typew.edit("**YANG KATANYA SAYANG BANGET**")
-    sleep(1.5)
-    await typew.edit("**TAPI TETEP AJA DI TINGGAL**")
-    sleep(1.5)
-    await typew.edit("**NI INGET**")
-    sleep(1.5)
-    await typew.edit("**TANGANNYA AJA GA BISA DI PEGANG**")
-    sleep(1.5)
-    await typew.edit("**APALAGI OMONGANNYA**")
-    sleep(1.5)
-    await typew.edit("**BHAHAHAHA**")
-    sleep(1.5)
-    await typew.edit("**KASIAN MANA MASIH MUDA**")
+    await typew.edit("**EHH GOBLOK LU JELEK**")
+    sleep(2.5)
+    await typew.edit("**GAUSA SOSOAN NGEGHOSTING TOLOL**")
+    sleep(2.5)
+    await typew.edit("**MUKA LU AJA DEKIL GOBLOK**")
+    sleep(2.5)
+    await typew.edit("**SADAR TOLOL LU JELEK**")
+    sleep(2.5)
+    await typew.edit("**UDAH JELEK NYAKITIN GOBLOK**")
+    sleep(2.5)
+    await typew.edit("**DASAR ANAK NGENTOT**")
+    sleep(2.5)
+    await typew.edit("**DAKI DIMANA MANA**")
+    sleep(2.5)
+    await typew.edit("**KALO LU JELEK**")
+    sleep(2.5)
+    await typew.edit("**MINIMAL MANDILAH KONTOL**")
 
 
 @register(outgoing=True, pattern="^.perkenalkan(?: |$)(.*)")
@@ -114,35 +116,35 @@ async def perkenalan(event):
     sleep(2)
     await event.edit("`Jangan Lupa Coli Kontol`")
     sleep(2)
-    await event.edit("`Udah Yatim Diem`")
+    await event.edit("`Udah Yatim Mending Diem`")
 
 
 # Perkenalan
 
 
-@register(outgoing=True, pattern="^.skyzu(?: |$)(.*)")
+@register(outgoing=True, pattern="^.kalem(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
-    await typew.edit("**Ehh Lu Mau Tau Gak?**")
-    sleep(1)
-    await typew.edit("**Sih Skyzu mukanya mirip babi😂**")
-    sleep(1)
-    await typew.edit("**Ehh Gak Bercanda Deh😁**")
-    sleep(1)
-    await typew.edit("**Emang Bener Sih Skyzu Mukanya Kaya Babi🙈**")
-    sleep(1)
-    await typew.edit("**Ehh Engga Deh,Skyzu Kan Ganteng Kaya Artis Korea😄**")
-    sleep(1)
-    await typew.edit("**Tapi Boong😂**")
-    sleep(1)
-    await typew.edit("**HAHAHAHAHAHAHA**")
-    sleep(1)
-    await typew.edit("**Udah Ahh Takut Skyzu Nangis Minta Balon😂**")
-    sleep(1)
-    await typew.edit("**Maaf Ya Joo Ganteng Bercanda😁**")
-    sleep(1)
-    await typew.edit("**Tapi Bo'ong Hiyahiyahiya**")
+    await typew.edit("**DARR DERR DORR**")
+    sleep(2)
+    await typew.edit("**STELL KALEM MINTA DI GEDOR**")
+    sleep(2)
+    await typew.edit("**KUKIRA SITU KERAS🥺**")
+    sleep(2)
+    await typew.edit("**TERNYATA KERTAS**")
+    sleep(2)
+    await typew.edit("**AWOKAWOKAWOK**")
+    sleep(2)
+    await typew.edit("**UDAH GOBLOK**")
+    sleep(2)
+    await typew.edit("**CIRCLE STELL KALEM PALING OP**")
+    sleep(2)
+    await typew.edit("**INDEPENDENT NIH BOS**")
+    sleep(2)
+    await typew.edit("**ANTI KUBU KUBU TAI ANJING**")
+    sleep(2)
+    await typew.edit("**INTINYA KALEM PALING OP NGENTOT**")
 
 
 # Create by myself @skyzuex
@@ -155,14 +157,14 @@ CMD_HELP.update(
         \nUsage : Untuk Menjawab Salam\
         \n\n Cmd : `.perkenalkan`\
         \nUsage : Memperkenalkan Diri\
-        \n\n Cmd : `.virtual`\
-        \nUsage : ngeledek orang yang virtual\
+        \n\n Cmd : `.jelek`\
+        \nUsage : ngeledek orang yang jelek\
         \n\n Cmd : `.g`\
         \nUsage : Member Goblok\
         \n\n Cmd : `.kenalin`\
         \nUsage : Awokwok\
-        \n\n Cmd : `.skyzu`\
-        \nUsage : buat ngeledek skyzu\
+        \n\n Cmd : `.kalem`\
+        \nUsage : kalem pokonya\
         \n\n Cmd : `.p`\
         \nUsage : Untuk Memberi Salam\
     "

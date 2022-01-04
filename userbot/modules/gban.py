@@ -87,9 +87,9 @@ async def gben(userbot):
     if not sender.id == me.id:
         dark = await dc.reply("`Ingin Mengaktifkan Perintah Global Banned!`")
     else:
-        dark = await dc.edit("`Memproses Global Banned Pengguna Ini!!`")
+        dark = await dc.edit("`Memproses Global Banned Anak Yatim!!`")
     me = await userbot.client.get_me()
-    await dark.edit(f"`Global Banned Akan Segera Aktif Tuan!!!`")
+    await dark.edit(f"`Global Banned Akan Segera Aktif Ngentot!!`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await userbot.get_chat()
@@ -154,12 +154,12 @@ async def gunben(userbot):
     sender = await dc.get_sender()
     me = await dc.client.get_me()
     if not sender.id == me.id:
-        dark = await dc.reply("`Membatalkan Perintah Global Banned Pengguna Ini`")
+        dark = await dc.reply("`Membatalkan Perintah Global Banned Anak Yatim`")
     else:
-        dark = await dc.edit("`Membatalkan Perintah Global Banned`")
+        dark = await dc.edit("`Membatalkan Perintah Global Banned Anak Yatim`")
     me = await userbot.client.get_me()
     await dark.edit(
-        f"`Memulai Membatalkan Perintah Global Banned, Jangan Jadi Jamet Lagi Ya!!!`"
+        f"`Memulai Membatalkan Perintah Global Banned, Makannya TOLOL Jangan So Keren! `"
     )
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention

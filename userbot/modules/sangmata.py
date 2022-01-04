@@ -20,7 +20,7 @@ async def lastname(steal):
     if message.sender.bot:
         await steal.edit("```Balas Ke Pesan Pengguna Yang Sebenarnya.```")
         return
-    await steal.edit("```Lu siapa si ngentot, gua intip sabi laa..```")
+    await steal.edit("```LU SIAPA SI NGENTOT, GA SENENG WAR AJA KONTOL!!```")
     try:
         async with bot.conversation(chat) as conv:
             try:
@@ -41,7 +41,7 @@ async def lastname(steal):
                 "No records"
             ):
                 await steal.edit(
-                    "```Saya Tidak Menemukan Informasi Pengguna Ini, Pengguna Ini Belum Pernah Mengganti Nama Sebelumnya```"
+                    "```YAHH SORRY MEN, SI YATIM INI BELUM PERNAH MENGGANTI NAMANYA```"
                 )
                 await steal.client.delete_messages(
                     conv.chat_id, [msg.id, r.id, response.id]
@@ -54,7 +54,7 @@ async def lastname(steal):
                 conv.chat_id, [msg.id, r.id, response.id, respond.id]
             )
     except TimeoutError:
-        return await steal.edit("`Saya Sedang Sakit Mohon Maaf`")
+        return await steal.edit("`SINYAL LU JELEK NGENTOTTT`")
 
 
 CMD_HELP.update(

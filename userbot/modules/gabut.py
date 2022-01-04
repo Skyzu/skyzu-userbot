@@ -15,15 +15,14 @@ async def typewriter(typew):
     await typew.edit(f"**JAKA SEMBUNG BAWA GOLOK**")
     sleep(3)
     await typew.edit("**NIMBRUNG LAH GOBLOKK!!!**")
-
-
-# Pantun
+    sleep(3)
+    await typew.edit("**DAR DER DOR MENTAL LU GUA GEDOR**") 
 
 
 @register(outgoing=True, pattern="^.p(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Salam Dulu Biar Sopan...`")
+    await typew.edit("`ASSALAMUALAIKUM ANAK NGENTOT`")
     sleep(2)
     await typew.edit("`السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ`")
 
@@ -45,28 +44,28 @@ async def typewriter(typew):
 @register(outgoing=True, pattern="^.kenalin(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("☑️ `putra wibu`")
+    await typew.edit("☑️ `Barra jelek`")
     sleep(2)
-    await typew.edit("✅ `putra wibu`")
+    await typew.edit("✅ `Barra jelek`")
     sleep(1)
-    await typew.edit("☑️ `duta stres`")
+    await typew.edit("☑️ `Cenna goblok`")
     sleep(2)
-    await typew.edit("✅ `duta stres`")
+    await typew.edit("✅ `Cenna goblok`")
     sleep(1)
-    await typew.edit("☑️ `fajar Gajelas`")
+    await typew.edit("☑️ `Skyzu Kang Coli`")
     sleep(2)
-    await typew.edit("✅ `fajar Gajelas`")
+    await typew.edit("✅ `Skyzu Kang Coli`")
     sleep(1)
-    await typew.edit("☑️ `ken Wibu Sangean`")
+    await typew.edit("☑️ `Cumii cantik`")
     sleep(2)
-    await typew.edit("✅ `ken Wibu Sangean`")
+    await typew.edit("✅ `Cumii cantik`")
     sleep(1)
-    await typew.edit("☑️ `xxinu Autis`")
+    await typew.edit("☑️ `Vxin cina bego`")
     sleep(2)
-    await typew.edit("✅ `xxinu Autis`")
+    await typew.edit("✅ `Vxin cina bego`")
     sleep(1)
     await typew.edit(
-        "`⚡ Cuma Skyzu Yang Paling Waras, Baik Hati, Dan Tidak Sombong :v`"
+        "`⚡ CUMA JOO YANG PALING KEREN NGENTOT`"
     )
 
 
@@ -109,13 +108,13 @@ async def typewriter(typew):
 @register(outgoing=True, pattern="^.perkenalkan(?: |$)(.*)")
 async def perkenalan(event):
     event.pattern_match.group(1)
-    await event.edit(f"`Hai Guys , Perkenalkan Nama Gw {DEFAULTUSER}`")
+    await event.edit(f"`Hai Ngentot , Perkenalkan Nama Gua {DEFAULTUSER}`")
     sleep(2)
-    await event.edit(f"`Gw Tinggal Di {WEATHER_DEFCITY}`")
+    await event.edit(f"`Gua Tinggal Di {WEATHER_DEFCITY}`")
     sleep(2)
-    await event.edit("`Salam Kenal...`")
+    await event.edit("`Jangan Lupa Coli Kontol`")
     sleep(2)
-    await event.edit("`Udah Gitu Aja :v`")
+    await event.edit("`Udah Yatim Diem`")
 
 
 # Perkenalan
@@ -141,7 +140,7 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("**Udah Ahh Takut Skyzu Nangis Minta Balon😂**")
     sleep(1)
-    await typew.edit("**Maaf Ya Skyzu Ganteng Bercanda😁**")
+    await typew.edit("**Maaf Ya Joo Ganteng Bercanda😁**")
     sleep(1)
     await typew.edit("**Tapi Bo'ong Hiyahiyahiya**")
 

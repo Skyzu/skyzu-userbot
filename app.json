@@ -1,6 +1,6 @@
 {
-  "name": "⚡Skyzu-Userbot⚡",
-  "description": "🚫Skyzu-Userbot🚫 USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "name": "⚡Joo-Userbot⚡",
+  "description": "🚫Joo-Userbot🚫 USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
   "logo": "https://telegra.ph/file/fd08937c4ae6cb1303731.jpg",
   "keywords": [
     "telegram",
@@ -9,8 +9,8 @@
     "modular",
     "productivity"
 ],
-  "repository": "https://github.com/Skyzu/skyzu-userbot",
-  "telegram": "https://t.me/skyzu",
+  "repository": "https://github.com/jookalem/joo-userbot",
+  "telegram": "https://t.me/jooneverdie",
   "success_url": "https://t.me/skyzusupport",
   "stack": "container",
   "env": {

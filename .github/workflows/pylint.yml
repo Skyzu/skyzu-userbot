@@ -30,9 +30,9 @@ jobs:
       # commit changes
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: 'Skyzuu-Userbot: auto fixes'
+          commit_message: 'Joo-Userbot: auto fixes'
           commit_options: '--no-verify --signoff'
           repository: .
-          commit_user_name: Skyzu
-          commit_user_email: warsitowidodo4@gmail.com
-          commit_author: Skyzu <warsitowidodo4@gmail.com>
+          commit_user_name: Joo
+          commit_user_email: mhmmdikhsan180505@gmail.com
+          commit_author: Joo <mhmmdikhsan180505@gmail.com>

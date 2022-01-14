@@ -6,7 +6,7 @@ from userbot import CMD_HELP, bot
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^\.sa(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.sg(?: |$)(.*)")
 async def lastname(steal):
     if steal.fwd_from:
         return

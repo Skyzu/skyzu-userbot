@@ -19,7 +19,7 @@ from userbot import LOGSPAMMER, bot
 def register(**args):
     """Register a new event."""
     pattern = args.get("pattern", None)
-    disable_edited = args.get("disable_edited", False)
+    disable_edited = args.get("disable_edited", True)
     ignore_unsafe = args.get("ignore_unsafe", False)
     unsafe_pattern = r"^[^/!#@\$A-Za-z]"
     groups_only = args.get("groups_only", False)

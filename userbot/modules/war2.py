@@ -94,6 +94,23 @@ async def typewriter(typew):
     await typew.edit("**KASIAN CACAD GAPUNYA KONTOLL**")
 
 
+@register(outgoing=True, pattern=r"^\.kyy(?: |$)(.*)")
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(1.5)
+    await typew.edit("**KYY KONTOL**")
+    sleep(1.5)
+    await typew.edit("**KYY KAYA KONTOL BET**")
+    sleep(1.5)
+    await typew.edit("**MUKA KYY KAYA KONTOL**")
+    sleep(1.5)
+    await typew.edit("**KYY GAUSAH SOK KERAS DEH KONTOL**")
+    sleep(1.5)
+    await typew.edit("**GA KEREN LO BEGITU KYY NGENTOT**")
+    sleep(1.5)
+    await typew.edit("**MENDING LU MATI AJA KYY KONTOLLLLLLLLLLLLLLLLLLL**")
+
+
 @register(outgoing=True, pattern=r"^\.emak(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)

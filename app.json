@@ -97,7 +97,7 @@
       "description": "Username Bot Kamu Di @BotFather, Tanpa @",
       "required": false
     }
-  },
+},
   "addons": [
     {
       "plan": "heroku-postgresql",
@@ -121,5 +121,11 @@
     "url": "https://github.com/amivin/aria2-heroku"
   }, {
     "url": "https://github.com/stevo550/buildpack-slug-cleaner"
-  }]
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
 }

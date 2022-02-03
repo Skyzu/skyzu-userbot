@@ -1,3 +1,4 @@
+
 from telethon.tl.types import MessageEntityMentionName
 
 from userbot.core.logger import logging
@@ -7,10 +8,10 @@ LOGS = logging.getLogger("userbot")
 
 
 async def get_user_from_event(
-    event, roseevent=None, secondgroup=None, nogroup=False, noedits=False
+    event, kyyevent=None, secondgroup=None, nogroup=False, noedits=False
 ):  # sourcery no-metrics
-    if roseevent is None:
-        roseevent = event
+    if kyyevent is None:
+        kyyevent = event
     if nogroup is False:
         if secondgroup:
             args = event.pattern_match.group(2).split(" ", 1)
@@ -58,11 +59,11 @@ async def get_user_from_event(
         elif not args:
             if not noedits:
                 await edit_delete(
-                    roseevent, "`Pass the user's username, id or reply!`", 5
+                    kyyevent, "`Pass the user's username, id or reply!`", 5
                 )
             return None, None
     except Exception as e:
         LOGS.error(str(e))
     if not noedits:
-        await edit_delete(roseevent, "__Couldn't fetch user to proceed further__")
+        await edit_delete(kyyevent, "__Couldn't fetch user to proceed further__")
     return None, None

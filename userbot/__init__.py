@@ -336,6 +336,7 @@ def is_redis_alive():
     except BaseException:
         return False
 
+
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
 if not os.path.exists("bin"):

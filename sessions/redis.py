@@ -20,9 +20,9 @@
 import logging
 
 import redis
-
 from telethon.crypto import AuthKey
 from telethon.sessions import MemorySession
+
 """
 from telethon import utils
 from telethon.sessions.memory import _SentFileType
@@ -41,10 +41,8 @@ class RedisSession(MemorySession):
         if not isinstance(session_name, (str, bytes)):
             raise TypeError("Session name must be a string or bytes.")
 
-        if (not redis_connection
-                or not isinstance(redis_connection, redis.Redis)):
-            raise TypeError(
-                'The given redis_connection must be a Redis instance.')
+        if not redis_connection or not isinstance(redis_connection, redis.Redis):
+            raise TypeError("The given redis_connection must be a Redis instance.")
 
         super().__init__()
 
@@ -54,8 +52,9 @@ class RedisSession(MemorySession):
         self._auth_key: AuthKey = None
         self._takeout_id = None
 
-        self.session_name = (session_name if isinstance(session_name, str) else
-                             session_name.decode())
+        self.session_name = (
+            session_name if isinstance(session_name, str) else session_name.decode()
+        )
         self.redis_connection = redis_connection
         self.sess_prefix = "telethon:session:{}".format(self.session_name)
         self.feed_session()
@@ -74,14 +73,15 @@ class RedisSession(MemorySession):
             if not s:
                 return
 
-            self._dc_id = int(s.get(b'dc_id').decode())
-            self._server_address = s.get(b'server_address').decode()
-            self._port = int(s.get(b'port').decode())
-            self._takeout_id = (s.get(b'takeout_id').decode() if s.get(
-                b'takeout_id', False) else None)
+            self._dc_id = int(s.get(b"dc_id").decode())
+            self._server_address = s.get(b"server_address").decode()
+            self._port = int(s.get(b"port").decode())
+            self._takeout_id = (
+                s.get(b"takeout_id").decode() if s.get(b"takeout_id", False) else None
+            )
 
-            if s.get(b'auth_key', False):
-                self._auth_key = AuthKey(s.get(b'auth_key'))
+            if s.get(b"auth_key", False):
+                self._auth_key = AuthKey(s.get(b"auth_key"))
 
         except Exception as ex:
             LOGGER.exception(ex.args)
@@ -89,10 +89,10 @@ class RedisSession(MemorySession):
     def _get_sessions(self, strip_prefix=False):
         key_pattern = "{}:auth".format(self.sess_prefix)
         try:
-            sessions = self.redis_connection.keys(key_pattern + '*')
+            sessions = self.redis_connection.keys(key_pattern + "*")
             return [
-                s.decode().replace(key_pattern, '')
-                if strip_prefix else s.decode() for s in sessions
+                s.decode().replace(key_pattern, "") if strip_prefix else s.decode()
+                for s in sessions
             ]
         except Exception as ex:
             LOGGER.exception(ex.args)
@@ -104,11 +104,11 @@ class RedisSession(MemorySession):
 
         auth_key = self._auth_key.key if self._auth_key else bytes()
         s = {
-            'dc_id': self._dc_id,
-            'server_address': self._server_address,
-            'port': self._port,
-            'auth_key': auth_key,
-            'takeout_id': self.takeout_id or b''
+            "dc_id": self._dc_id,
+            "server_address": self._server_address,
+            "port": self._port,
+            "auth_key": auth_key,
+            "takeout_id": self.takeout_id or b"",
         }
 
         key = "{}:auth".format(self.sess_prefix)
@@ -130,7 +130,7 @@ class RedisSession(MemorySession):
         key_pattern = "{}:auth".format(self.sess_prefix)
         s = self.redis_connection.hgetall(key_pattern)
         if s:
-            auth_key = s.get(b'auth_key') or auth_key
+            auth_key = s.get(b"auth_key") or auth_key
             self._auth_key = AuthKey(s.get(auth_key))
 
     @property
@@ -185,9 +185,9 @@ class RedisSession(MemorySession):
                 s = {
                     "id": row[0],
                     "hash": row[1],
-                    "username": row[2] or b'',
-                    "phone": row[3] or b'',
-                    "name": row[4] or b'',
+                    "username": row[2] or b"",
+                    "phone": row[3] or b"",
+                    "name": row[4] or b"",
                 }
                 self.redis_connection.hmset(key, s)
         except Exception as ex:
@@ -197,15 +197,11 @@ class RedisSession(MemorySession):
         try:
             for key in self._get_entities():
                 entity = self.redis_connection.hgetall(key)
-                p = (
-                    entity.get(b'phone').decode()
-                    if entity.get(b'phone') else
-                    None
-                )
+                p = entity.get(b"phone").decode() if entity.get(b"phone") else None
                 if p and p == phone:
                     return (
-                        int(entity.get(b'id').deocde()),
-                        int(entity.get(b'hash').decode())
+                        int(entity.get(b"id").deocde()),
+                        int(entity.get(b"hash").decode()),
                     )
         except Exception as ex:
             LOGGER.exception(ex.args)
@@ -216,14 +212,14 @@ class RedisSession(MemorySession):
             for key in self._get_entities():
                 entity = self.redis_connection.hgetall(key)
                 u = (
-                    entity.get(b'username').decode()
-                    if entity.get(b'username') else
-                    None
+                    entity.get(b"username").decode()
+                    if entity.get(b"username")
+                    else None
                 )
                 if u and u == username:
                     return (
-                        int(entity.get(b'id').deocde()),
-                        int(entity.get(b'hash').decode())
+                        int(entity.get(b"id").deocde()),
+                        int(entity.get(b"hash").decode()),
                     )
         except Exception as ex:
             LOGGER.exception(ex.args)
@@ -233,15 +229,11 @@ class RedisSession(MemorySession):
         try:
             for key in self._get_entities():
                 entity = self.redis_connection.hgetall(key)
-                n = (
-                    entity.get(b'name').decode()
-                    if entity.get(b'name') else
-                    None
-                )
+                n = entity.get(b"name").decode() if entity.get(b"name") else None
                 if n and n == name:
                     return (
-                        int(entity.get(b'id').deocde()),
-                        int(entity.get(b'hash').decode())
+                        int(entity.get(b"id").deocde()),
+                        int(entity.get(b"hash").decode()),
                     )
         except Exception as ex:
             LOGGER.exception(ex.args)
@@ -254,7 +246,7 @@ class RedisSession(MemorySession):
             if not s:
                 return None
             try:
-                return id, int(s.get(b'hash').decode())
+                return id, int(s.get(b"hash").decode())
             except Exception as ex:
                 LOGGER.exception(ex.args)
                 return None
@@ -262,28 +254,28 @@ class RedisSession(MemorySession):
             ids = (
                 utils.get_peer_id(types.PeerUser(id)),
                 utils.get_peer_id(types.PeerChat(id)),
-                utils.get_peer_id(types.PeerChannel(id))
+                utils.get_peer_id(types.PeerChannel(id)),
             )
             try:
                 for key in self._get_entities():
                     entity = self.redis_connection.hgetall(key)
-                    ID = entity.get(b'id').decode()
+                    ID = entity.get(b"id").decode()
                     if ID and ID in ids:
-                        return ID, int(entity.get(b'hash').decode())
+                        return ID, int(entity.get(b"hash").decode())
             except Exception as ex:
                 LOGGER.exception(ex.args)
 
     def cache_file(self, md5_digest, file_size, instance):
         if not isinstance(instance, (types.InputDocument, types.InputPhoto)):
-            raise TypeError('Cannot cache %s instance' % type(instance))
+            raise TypeError("Cannot cache %s instance" % type(instance))
 
         key = "{}:sent_files:{}".format(self.sess_prefix, md5_digest)
         s = {
-            'md5_digest': md5_digest,
-            'file_size': file_size,
-            'type': _SentFileType.from_type(type(instance)),
-            'id': instance.id,
-            'access_hash': instance.access_hash,
+            "md5_digest": md5_digest,
+            "file_size": file_size,
+            "type": _SentFileType.from_type(type(instance)),
+            "id": instance.id,
+            "access_hash": instance.access_hash,
         }
         try:
             self.redis_connection.hmset(key, s)
@@ -296,14 +288,11 @@ class RedisSession(MemorySession):
         if s:
             try:
                 if (
-                    s.get(b'md5_digest').decode() == md5_digest and
-                    s.get(b'file_size').decode() == file_size and
-                    s.get(b'type').decode() == _SentFileType.from_type(cls)
+                    s.get(b"md5_digest").decode() == md5_digest
+                    and s.get(b"file_size").decode() == file_size
+                    and s.get(b"type").decode() == _SentFileType.from_type(cls)
                 ):
-                    return (cls(
-                        s.get(b'id').decode(),
-                        s.get(b'access_hash').decode()
-                    ))
+                    return cls(s.get(b"id").decode(), s.get(b"access_hash").decode())
             except Exception as ex:
                 LOGGER.exception(ex.args)
                 return None

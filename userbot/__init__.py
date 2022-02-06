@@ -310,33 +310,6 @@ API_URL = os.environ.get("API_URL", "http://antiddos.systems")
 BOT_TOKEN = os.environ.get("BOT_TOKEN") or None
 BOT_USERNAME = os.environ.get("BOT_USERNAME") or None
 
-# Init Mongo
-MONGOCLIENT = MongoClient(MONGO_URI, 27017, serverSelectionTimeoutMS=1)
-MONGO = MONGOCLIENT.userbot
-
-
-def is_mongo_alive():
-    try:
-        MONGOCLIENT.server_info()
-    except BaseException:
-        return False
-    return True
-
-
-# Init Redis
-# Redis will be hosted inside the docker container that hosts the bot
-# We need redis for just caching, so we just leave it to non-persistent
-REDIS = StrictRedis(host="localhost", port=6379, db=0)
-
-
-def is_redis_alive():
-    try:
-        REDIS.ping()
-        return True
-    except BaseException:
-        return False
-
-
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
 if not os.path.exists("bin"):
@@ -371,30 +344,6 @@ except Exception as e:
     sys.exit()
 
 
-async def checking():
-    gocheck = str("@SkyzuSupport")
-    checker = str("@ProjectSkyzu")
-    try:
-        await bot(GetSec(f"{gocheck}"))
-    except BaseException:
-        pass
-    try:
-        await bot(GetSec(f"{checker}"))
-    except BaseException:
-        pass
-
-
-with bot:
-    try:
-        bot.loop.run_until_complete(checking())
-    except BaseException:
-        LOGS.info(
-            "Join Support Group @SkyzuSupport and Channel @ProjectSkyzu to see the updates of ubot"
-            "Don't Leave"
-        )
-        quit(1)
-
-
 async def check_botlog_chatid():
     if not BOTLOG_CHATID and LOGSPAMMER:
         LOGS.info(
@@ -418,37 +367,6 @@ async def check_botlog_chatid():
             "group. Check if you typed the Chat ID correctly."
         )
         quit(1)
-
-
-with bot:
-    try:
-        bot.loop.run_until_complete(check_botlog_chatid())
-    except BaseException:
-        LOGS.info(
-            "BOTLOG_CHATID environment variable isn't a "
-            "valid entity. Check your environment variables/config.env file."
-        )
-        quit(1)
-
-
-async def check_alive():
-    bot.send_message(
-        BOTLOG_CHATID,
-        "Userbot Has Been Deployed⚡\n━━━━━━━━━━━━━━━\n❃ Branch : skyzu-Userbot\n❃ BotVer : 8.0.0\n━━━━━━━━━━━━━━━\n❃ Support : @skyzusupport\n━━━━━━━━━━━━━━━",
-    )
-    return
-
-
-with bot:
-    try:
-        bot.loop.run_until_complete(check_alive())
-    except BaseException:
-        LOGS.info(
-            "BOTLOG_CHATID environment variable isn't a "
-            "valid entity. Check your environment variables/config.env file."
-        )
-        quit(1)
-
 
 # Global Variables
 COUNT_MSG = 0

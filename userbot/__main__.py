@@ -25,7 +25,10 @@ except BaseException as e:
 async def userbot_on():
     try:
         if BOTLOG_CHATID != 0:
-            await bot.send_message(BOTLOG_CHATID, f"⚡Skyzu-Userbot Berhasil Diaktfikan⚡\n━━━━━━━━━━━━━━━\n❃ Bot Of : {ALIVE_NAME}\n❃ BotVer : {BOT_VER}@{UPSTREAM_REPO_BRANCH}\n━━━━━━━━━━━━━━━")
+            await bot.send_message(
+                BOTLOG_CHATID,
+                f"⚡Skyzu-Userbot Berhasil Diaktfikan⚡\n━━━━━━━━━━━━━━━\n❃ Bot Of : {ALIVE_NAME}\n❃ BotVer : {BOT_VER}@{UPSTREAM_REPO_BRANCH}\n━━━━━━━━━━━━━━━",
+            )
     except Exception as e:
         LOGS.info(str(e))
 

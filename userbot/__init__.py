@@ -426,7 +426,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"**Skyzu-Userbot ʙᴇʀʜᴀsɪʟ ᴅɪᴀᴋᴛɪғᴋᴀɴ⚡**\n━━━━━━━━━━━━━━━━━━━\n❃ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}\n❃ **ʙᴏᴛ ᴠᴇʀ :** 7.0\n━━━━━━━━━━━━━━━━━━━\n❃ **sᴜᴘᴘᴏʀᴛ​ :** @SkyzuSupport\n❃ **ᴄʜᴀɴɴᴇʟ​ :** @ProjectSkyzu \n━━━━━━━━━━━━━━━━━━━")
+    bot.send_message( BOTLOG_CHATID, "Userbot Has Been Deployed⚡\n━━━━━━━━━━━━━━━\n❃ Branch : skyzu-Userbot\n❃ BotVer : 8.0.0\n━━━━━━━━━━━━━━━\n❃ Support : @skyzusupport\n━━━━━━━━━━━━━━━")   
     return
 
 with bot:

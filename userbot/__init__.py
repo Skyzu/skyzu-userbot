@@ -371,7 +371,7 @@ except Exception as e:
 
 async def checking():
     gocheck = str("@SkyzuSupport")
-    checker = str("@NastyProject")
+    checker = str("@ProjectSkyzu")
     try:
         await bot(GetSec(f"{gocheck}"))
     except BaseException:
@@ -386,7 +386,7 @@ with bot:
         bot.loop.run_until_complete(checking())
     except BaseException:
         LOGS.info(
-            "Join Support Group @SkyzuSupport and Channel @kayzuchannel to see the updates of ubot"
+            "Join Support Group @SkyzuSupport and Channel @ProjectSkyzu to see the updates of ubot"
             "Don't Leave")
         quit(1)
 
@@ -707,7 +707,7 @@ with bot:
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
                     f"× `.set var SKYZU_TEKS_KUSTOM` [**TEKS**]\n"
                     f"°__Mengganti Teks Yang Ada Command KayAlive__.\n\n"
-                    f"© @Kayzuuuuu")
+                    f"© @skyzu")
                 await event.edit(
                     text,
                     file=kyylogo,
@@ -737,7 +737,7 @@ with bot:
                     f"°__Mengaktifkan Pmpermit Kalian Atau Disebut Pesan Otomatis__.\n\n"
                     f"× `.set pm_msg` [**REPLYCHAT**]\n"
                     f"°__Mengganti Teks Pmpermit Selera Kamu__.\n\n"
-                    f"© @Kayzuuuuu")
+                    f"© @skyzu")
                 await event.edit(
                     text,
                     file=kyylogo,
@@ -767,7 +767,7 @@ with bot:
                     f"°__Mengubah Emoji Inline Yang Ada Dicomand__ `.helpme`\n\n"
                     f"× `.set var INLINE_PIC` [**LINK**]\n"
                     f"°__Mengubah Foto Yang Ada Dicomand__ `.helpme`\n\n"
-                    f"© @Kayzuuuuu")
+                    f"© @skyzu")
                 await event.edit(
                     text,
                     file=kyylogo,
@@ -795,7 +795,7 @@ with bot:
                     f"Modules Name **pmbot**\n\n"
                     f"× `.set var START_WELCOME` [**TEKS**] \n"
                     f"°__Kamu Juga Bisa Mengubah Start Welcome Untuk Bot Kamu Yang Ini, Dengan Cara Diatas Dan Kata Kata Bebas__.\n\n"
-                    f"© @Kayzuuuuu")
+                    f"© @skyzu")
                 await event.edit(
                     text,
                     file=kyylogo,
@@ -825,7 +825,7 @@ with bot:
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
-                    f"© @Kayzuuuuu")
+                    f"© @skyzu")
                 await event.edit(
                     text,
                     file=kyylogo,
@@ -890,7 +890,7 @@ with bot:
                     f"**|**  [`{percentage}`**%**]\n"
                     f" ✠➲ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}  "
                     "\n╚════════════════════╝"
-                    f"© @Kayzuuuuu")
+                    f"© @skyzu")
                 await event.edit(
                     text,
                     file=kyylogo,
@@ -979,7 +979,7 @@ with bot:
 
                             custom.Button.url(
                                 "ᴄʜᴀɴɴᴇʟ",
-                                "t.me/kayzuchannel")],
+                                "t.me/ProjectSkyzu")],
                         [custom.Button.url(
                             "ʟɪᴄᴇɴsᴇ",
                             "https://github.com/Skyzu/skyzu-userbot/LICENSE")],
@@ -1021,7 +1021,7 @@ with bot:
                             Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈",
                                        "t.me/SkyzuSupport"),
                             Button.url("❈ᴄʜᴀɴɴᴇʟ❈",
-                                       "t.me/kayzuchannel")],
+                                       "t.me/ProjectSkyzu")],
                         [custom.Button.inline(
                             "°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
                         [custom.Button.inline(

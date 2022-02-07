@@ -205,7 +205,7 @@ YOUTUBE_API_KEY = (
     os.environ.get("YOUTUBE_API_KEY") or "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
 )
 
-# Untuk Perintah .kayalive
+# Untuk Perintah .skyalive
 SKYZU_TEKS_KUSTOM = os.environ.get("SKYZU_TEKS_KUSTOM", "I'am Using Skyzu-Userbot⚡")
 
 # Untuk Mengubah Pesan Welcome
@@ -879,7 +879,7 @@ with bot:
                     file=kyylogo,
                     link_preview=True,
                     buttons=[
-                        [Button.url("ᴄʜᴀɴɴᴇʟ", "t.me/kayzuchannel")],
+                        [Button.url("ᴄʜᴀɴɴᴇʟ", "t.me/ProjectSkyzu")],
                     ],
                 )
 

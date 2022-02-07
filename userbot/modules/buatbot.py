@@ -1,6 +1,5 @@
 # nyenyenyenye
 # FROM skyzu-userbot <https://github.com/Skyzu/skyzu-userbot>
-# port by koala🐨/@manusiarakitann
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest

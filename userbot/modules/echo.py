@@ -1,5 +1,5 @@
-# Thanks Sandy
-# Recode By Apis
+# Thanks skyzu
+# Recode By kijuu
 
 from userbot import CMD_HELP
 from userbot.events import register

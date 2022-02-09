@@ -2,7 +2,9 @@ from telethon.events import ChatAction
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.types import MessageEntityMentionName
 
-from userbot import ALIVE_NAME, CMD_HELP, DEVS, bot
+from userbot import ALIVE_NAME, CMD_HELP, DEVS, bot, CMD_HANDLER as cmd
+
+from userbot.utils import skyzu_cmd
 from userbot.events import register
 
 
@@ -78,7 +80,7 @@ async def handler(tele):
                             return
 
 
-@register(outgoing=True, pattern="^.gban(?: |$)(.*)")
+@skyzu_cmd(pattern=".gban(?: |$)(.*)")
 @register(incoming=True, from_users=DEVS, pattern=r"^\.cgban(?: |$)(.*)")
 async def gben(userbot):
     dc = userbot
@@ -147,7 +149,7 @@ async def gben(userbot):
     )
 
 
-@register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
+@skyzu_cmd(pattern=".ungban(?: |$)(.*)")
 @register(incoming=True, from_users=DEVS, pattern=r"^\.cungban(?: |$)(.*)")
 async def gunben(userbot):
     dc = userbot
@@ -220,10 +222,11 @@ async def gunben(userbot):
 
 CMD_HELP.update(
     {
-        "gban": "\
-**Modules:** __Global Banned__\n\n**Perintah:** `.gban`\
-\n**Penjelasan:** Melakukan Banned Secara Global Ke Semua Grup Dimana Anda Sebagai Admin\
-\n\n**Perintah:** `.ungban`\
-\n**Penjelasan:** Membatalkan Global Banned"
+        "gban": f"**Plugin : **`gban`\
+      \n\n  •  **Syntax :** `{cmd}gban`\
+      \n  •  **Function :** Melakukan Banned Secara Global Ke Semua Grup Dimana Anda Sebagai Admin.\
+      \n\n  •  **Syntax :** `{cmd}ungban`\
+      \n  •  **Function :** membatalkan global banned.\
+      "
     }
 )

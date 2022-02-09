@@ -10,8 +10,8 @@
 # FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 GCAST_BLACKLIST = [
     -1001473548283,  # SharingUserbot
@@ -29,7 +29,7 @@ GCAST_BLACKLIST = [
 ]
 
 
-@register(outgoing=True, pattern=r"^\.gcast(?: |$)(.*)")
+@skyzu_cmd(pattern="gcast(?: |$)(.*)")
 async def gcast(event):
     xx = event.pattern_match.group(1)
     if xx:
@@ -58,7 +58,7 @@ async def gcast(event):
     )
 
 
-@register(outgoing=True, pattern=r"^\.gucast(?: |$)(.*)")
+@skyzu_cmd(pattern="gucast(?: |$)(.*)")
 async def gucast(event):
     xx = event.pattern_match.group(1)
     if xx:
@@ -86,8 +86,8 @@ async def gucast(event):
 
 CMD_HELP.update(
     {
-        "gcast": "**Plugin : **`gcast`\
-        \n\n  •  **Syntax :** `.gcast` <text/reply media>\
+        "gcast": f"**Plugin : **`gcast`\
+        \n\n  •  **Syntax :** `{cmd}gcast` <text/reply media>\
         \n  •  **Function : **Mengirim Global Broadcast pesan ke Seluruh Grup yang kamu masuk. (Bisa Mengirim Media/Sticker)\
     "
     }
@@ -96,8 +96,8 @@ CMD_HELP.update(
 
 CMD_HELP.update(
     {
-        "gucast": "**Plugin : **`gucast`\
-        \n\n  •  **Syntax :** `.gucast` <text/reply media>\
+        "gucast": f"**Plugin : **`gucast`\
+        \n\n  •  **Syntax :** `{cmd}gucast` <text/reply media>\
         \n  •  **Function : **Mengirim Global Broadcast pesan ke Seluruh Private Massage / PC yang masuk. (Bisa Mengirim Media/Sticker)\
     "
     }

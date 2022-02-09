@@ -8,7 +8,9 @@ from telethon.events import StopPropagation
 from telethon.tl.functions.account import UpdateProfileRequest
 
 from userbot.events import register
+from userbot.utils import skyzu_cmd
 
+from userbot import CMD_HANDLER as cmd
 from userbot import (  # noqa pylint: disable=unused-import isort:skip
     AFKREASON,
     BOTLOG,
@@ -43,7 +45,7 @@ afk_start = {}
 # =================================================================
 
 
-@register(outgoing=True, pattern="^.afk(?: |$)(.*)", disable_errors=True)
+@skyzu_cmd(pattern="afk(?: |$)(.*)")
 async def set_afk(afk_e):
     """For .afk command, allows you to inform people that you are afk when they message you"""
     message = afk_e.text  # pylint:disable=E0602
@@ -291,7 +293,7 @@ async def afk_on_pm(sender):
 
 CMD_HELP.update(
     {
-        "afk": "`.afk` [Alasan]\
+        "afk": f"`{cmd}afk` [Alasan]\
 \nUsage: Lakukan ketika ingin OFF.\nSiapapun Yang Balas, Tag, Atau Chat Kamu \
 Mereka Akan Tau Alasan Kamu OFF.\n\nAFK Bisa Dilakukan Dan Dibatalkan Dimanapun.\
 "

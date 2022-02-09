@@ -7,10 +7,10 @@ from random import choice, randint
 from telethon.events import StopPropagation
 from telethon.tl.functions.account import UpdateProfileRequest
 
+from userbot import CMD_HANDLER as cmd
 from userbot.events import register
 from userbot.utils import skyzu_cmd
 
-from userbot import CMD_HANDLER as cmd
 from userbot import (  # noqa pylint: disable=unused-import isort:skip
     AFKREASON,
     BOTLOG,

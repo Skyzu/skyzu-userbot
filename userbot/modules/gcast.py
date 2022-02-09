@@ -10,7 +10,8 @@
 # FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 
-from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP
 from userbot.utils import skyzu_cmd
 
 GCAST_BLACKLIST = [

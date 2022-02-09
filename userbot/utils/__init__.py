@@ -15,6 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 from .chrome import chrome, options
 from .format import parse_pre
+from .decorator import skyzu_cmd, skyzu_handler
 from .google_images_download import googleimagesdownload
 from .progress import CancelProcess, progress
 from .tools import (

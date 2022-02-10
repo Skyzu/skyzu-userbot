@@ -1,5 +1,5 @@
 # This is a troll indeed ffs *facepalm*
-# Ported from xtra-telegram 
+# Ported from xtra-telegram
 import asyncio
 
 from telethon.tl.functions.users import GetFullUserRequest

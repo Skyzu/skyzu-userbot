@@ -1,5 +1,5 @@
-# Ported By @VckyouuBitch From Geez - Projects
-# Copyright © Team Geez - Project
+# Ported By @skyzu From Skyzu - Projects
+# Copyright SkyzuProject
 # kiju
 
 from telethon.errors import (

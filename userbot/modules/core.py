@@ -1,5 +1,5 @@
 # Recode By @mrismanaziz
-# FROM Geez-Project
+# FROM SkyzuProject
 
 import importlib
 import logging

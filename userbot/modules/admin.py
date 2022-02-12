@@ -33,11 +33,11 @@ from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
 from userbot.events import register
 
 # =================== CONSTANT ===================
-PP_TOO_SMOL = "`Gambar Terlalu Kecil`"
-PP_ERROR = "`Gagal Memproses Gambar`"
-NO_ADMIN = "`Maaf Anda Bukan Admin:)`"
-NO_PERM = "`Maaf Anda Tidak Mempunyai Izin!`"
-NO_SQL = "`Berjalan Pada Mode Non-SQL`"
+PP_TOO_SMOL = "**Gambar Terlalu Kecil**"
+PP_ERROR = "**Gagal Memproses Gambar**"
+NO_ADMIN = "**Maaf Anda Bukan Admin:)**"
+NO_PERM = "**Maaf Anda Tidak Mempunyai Izin!**"
+NO_SQL = "**Berjalan Pada Mode Non-SQL**"
 
 CHAT_PP_CHANGED = "`Berhasil Mengubah Profil Grup`"
 CHAT_PP_ERROR = (
@@ -278,7 +278,7 @@ async def nothanos(unbon):
         return await unbon.edit(NO_ADMIN)
 
     # If everything goes well...
-    await unbon.edit("`Sedang Melakukan Unban...`")
+    await unbon.edit("**Sedang Melakukan Unban...**")
 
     user = await get_user_from_event(unbon)
     user = user[0]
@@ -287,7 +287,7 @@ async def nothanos(unbon):
 
     try:
         await unbon.client(EditBannedRequest(unbon.chat_id, user.id, UNBAN_RIGHTS))
-        await unbon.edit("```Si Jamat Berhasil Di Unban```")
+        await unbon.edit("**Si Jamat Berhasil Di Unban**")
         await sleep(3)
         await unbon.delete()
 
@@ -299,7 +299,7 @@ async def nothanos(unbon):
                 f"GRUP: {unbon.chat.title}(`{unbon.chat_id}`)",
             )
     except UserIdInvalidError:
-        await unbon.edit("`Sepertinya Terjadi Kesalahan!`")
+        await unbon.edit("**Sepertinya Terjadi Kesalahan!**")
 
 
 @register(outgoing=True, pattern=r"^\.mute(?: |$)(.*)")
@@ -342,7 +342,7 @@ async def spider(spdr):
             if reason:
                 await spdr.edit(f"**Telah Dibisukan!**\n**Alasan:** `{reason}`")
             else:
-                await spdr.edit("`Si Jamet Telah Dibisukan!`")
+                await spdr.edit("**Si Jamet Telah Dibisukan!**")
 
             # Announce to logging group
             if BOTLOG:
@@ -353,7 +353,7 @@ async def spider(spdr):
                     f"GRUP: {spdr.chat.title}(`{spdr.chat_id}`)",
                 )
         except UserIdInvalidError:
-            return await spdr.edit("`Terjadi Kesalahan!`")
+            return await spdr.edit("**Terjadi Kesalahan!**")
 
 
 @register(outgoing=True, pattern=r"^\.unmute(?: |$)(.*)")
@@ -374,7 +374,7 @@ async def unmoot(unmot):
         return await unmot.edit(NO_SQL)
 
     # If admin or creator, inform the user and start unmuting
-    await unmot.edit("```Melakukan Unmute...```")
+    await unmot.edit("**Melakukan Unmute...**")
     user = await get_user_from_event(unmot)
     user = user[0]
     if not user:
@@ -392,7 +392,7 @@ async def unmoot(unmot):
             await sleep(3)
             await unmot.delete()
         except UserIdInvalidError:
-            return await unmot.edit("`Terjadi Kesalahan!`")
+            return await unmot.edit("**Terjadi Kesalahan!**")
 
         if BOTLOG:
             await unmot.client.send_message(
@@ -463,7 +463,7 @@ async def ungmoot(un_gmute):
         await un_gmute.edit("`Kesalahan! Pengguna Sedang Tidak Di Gmute.`")
     else:
         # Inform about success
-        await un_gmute.edit("```Berhasil! Pengguna Sudah Tidak Lagi Dibisukan```")
+        await un_gmute.edit("**Berhasil! Pengguna Sudah Tidak Lagi Dibisukan**")
         await sleep(3)
         await un_gmute.delete()
 

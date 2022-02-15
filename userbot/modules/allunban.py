@@ -1,5 +1,4 @@
-# Port By @VckyouuBitch From GeezProjects
-# Copyright © 2021 Geez-Projects
+# Copyright © 2021 Skyzu-Projects
 from telethon.tl.types import ChannelParticipantsKicked
 
 from userbot import CMD_HELP

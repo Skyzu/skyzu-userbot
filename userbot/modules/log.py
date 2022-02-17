@@ -5,16 +5,14 @@ import asyncio
 
 from telethon import events
 
-from userbot import BOTLOG_CHATID
-from userbot import CMD_HELP, LOGS, bot
+from userbot import BOTLOG_CHATID, CMD_HELP, LOGS, bot
+from userbot.events import register
+from userbot.modules.calls import vcmention
 from userbot.modules.sql_helper import no_log_pms_sql
 from userbot.modules.sql_helper.globals import addgvar, gvarstatus
-from userbot.modules.calls import vcmention
 from userbot.utils import _format
-from telethon import events
 from userbot.utils.tools import media_type
 
-from userbot.events import register
 
 class LOG_CHATS:
     def __init__(self):
@@ -137,7 +135,8 @@ async def log(log_text):
         await log_text.edit("**Berhasil disimpan di Grup Log**")
     else:
         await log_text.edit(
-            "**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**")
+            "**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**"
+        )
 
 
 @register(pattern=r"^\.log$")
@@ -161,7 +160,9 @@ async def set_no_log_p_m(event):
 @register(pattern=r"^\.pmlog (on|off)$")
 async def set_pmlog(event):
     if BOTLOG_CHATID == -100:
-        return await event.edit("**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**")
+        return await event.edit(
+            "**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**"
+        )
     input_str = event.pattern_match.group(1)
     if input_str == "off":
         h_type = False
@@ -187,7 +188,9 @@ async def set_pmlog(event):
 @register(pattern=r"^\.gruplog (on|off)$")
 async def set_gruplog(event):
     if BOTLOG_CHATID == -100:
-        return await event.edit("**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**")
+        return await event.edit(
+            "**Untuk Menggunakan Module ini, Anda Harus Mengatur** `BOTLOG_CHATID` **di Config Vars**"
+        )
     input_str = event.pattern_match.group(1)
     if input_str == "off":
         h_type = False

@@ -2,11 +2,11 @@
 # # Copyright (C) 2021 Geez-Project
 import asyncio
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
-@register(outgoing=True, pattern="^.ftyping(?: |$)(.*)")
+@skyzu_cmd(pattern="ftyping(?: |$)(.*)")
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
@@ -24,7 +24,7 @@ async def _(event):
         await asyncio.sleep(t)
 
 
-@register(outgoing=True, pattern="^.faudio(?: |$)(.*)")
+@skyzu_cmd(pattern="faudio(?: |$)(.*)")
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
@@ -42,7 +42,7 @@ async def _(event):
         await asyncio.sleep(t)
 
 
-@register(outgoing=True, pattern="^.fvideo(?: |$)(.*)")
+@skyzu_cmd(pattern="fvideo(?: |$)(.*)")
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
@@ -60,7 +60,7 @@ async def _(event):
         await asyncio.sleep(t)
 
 
-@register(outgoing=True, pattern="^.fgame(?: |$)(.*)")
+@skyzu_cmd(pattern="fgame(?: |$)(.*)")
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
@@ -80,13 +80,13 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "fakeaction": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ftyping` <jumlah teks>\
+        "fakeaction": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}ftyping` <jumlah teks>\
    \nUsage : Seakan akan sedang mengetik padahal tidak\
-   \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.faudio` <jumlah teks>\
+   \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}faudio` <jumlah teks>\
    \nUsage : Berfungsi sama seperti ftyping tapi ini dalam bentuk fake audio\
-   \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.fgame` <jumlah teks>\
+   \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}fgame` <jumlah teks>\
    \nUsage : Berfungsi sama seperti ftyping tapi ini dalam bentuk fake game\
-   \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.fvideo` <jumlah teks>\
+   \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}fvideo` <jumlah teks>\
    \nUsage : Berfungsi sama seperti ftyping tapi ini dalam bentuk fake video"
     }
 )

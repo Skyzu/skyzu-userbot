@@ -6,11 +6,11 @@
 import asyncio
 from asyncio import sleep
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
-from userbot.events import register
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
-@register(outgoing=True, pattern="^.cspam (.*)")
+@skyzu_cmd(pattern="cspam (.*)")
 async def tmeme(e):
     cspam = str(e.pattern_match.group(1))
     message = cspam.replace(" ", "")
@@ -23,7 +23,7 @@ async def tmeme(e):
         )
 
 
-@register(outgoing=True, pattern="^.wspam (.*)")
+@skyzu_cmd(pattern="wspam (.*)")
 async def tmeme(e):
     wspam = str(e.pattern_match.group(1))
     message = wspam.split()
@@ -36,7 +36,7 @@ async def tmeme(e):
         )
 
 
-@register(outgoing=True, pattern="^.spam (.*)")
+@skyzu_cmd(pattern="spam (.*)")
 async def spammer(e):
     counter = int(e.pattern_match.group(1).split(" ", 1)[0])
     spam_message = str(e.pattern_match.group(1).split(" ", 1)[1])
@@ -48,7 +48,7 @@ async def spammer(e):
         )
 
 
-@register(outgoing=True, pattern="^.picspam")
+@skyzu_cmd(pattern="picspam")
 async def tiny_pic_spam(e):
     message = e.text
     text = message.split()
@@ -63,7 +63,7 @@ async def tiny_pic_spam(e):
         )
 
 
-@register(outgoing=True, pattern="^.delayspam (.*)")
+@skyzu_cmd(pattern="delayspam (.*)")
 async def spammer(e):
     spamDelay = float(e.pattern_match.group(1).split(" ", 2)[0])
     counter = int(e.pattern_match.group(1).split(" ", 2)[1])
@@ -80,16 +80,16 @@ async def spammer(e):
 
 CMD_HELP.update(
     {
-        "spam": "`.cspam` <text>\
+        "spam": f"`{cmd}cspam` <text>\
 \nUsage: Spam the text letter by letter.\
-\n\n`.spam` <count> <text>\
+\n\n`{cmd}spam` <count> <text>\
 \nUsage: Floods text in the chat !!\
-\n\n`.wspam` <text>\
+\n\n`{cmd}wspam` <text>\
 \nUsage: Spam the text word by word.\
-\n\n`.picspam` <count> <link to image/gif>\
+\n\n`{cmd}picspam` <count> <link to image/gif>\
 \nUsage: As if text spam was not enough !!\
-\n\n`.delayspam` <delay> <count> <text>\
-\nUsage: `.bigspam` but with custom delay.\
+\n\n`{cmd}delayspam` <delay> <count> <text>\
+\nUsage: `{cmd}bigspam` but with custom delay.\
 \n\n\nNOTE : Spam at your own risk !!"
     }
 )

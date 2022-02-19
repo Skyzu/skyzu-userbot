@@ -9,6 +9,7 @@ import os
 import aiohttp
 import heroku3
 
+from userbot import CMD_HANDLER as cmd
 from userbot import (
     ALIVE_NAME,
     BOTLOG,
@@ -17,7 +18,7 @@ from userbot import (
     HEROKU_API_KEY,
     HEROKU_APP_NAME,
 )
-from userbot.events import register
+from userbot.utils import skyzu_cmd
 
 heroku_api = "https://api.heroku.com"
 if HEROKU_APP_NAME is not None and HEROKU_API_KEY is not None:
@@ -33,7 +34,7 @@ else:
 """
 
 
-@register(outgoing=True, pattern=r"^.(get|del) var(?: |$)(\w*)")
+@skyzu_cmd(pattern="(get|del) var(?: |$)(\w*)")
 async def variable(var):
     exe = var.pattern_match.group(1)
     if app is None:
@@ -96,7 +97,7 @@ async def variable(var):
             return True
 
 
-@register(outgoing=True, pattern=r"^.set var (\w*) ([\s\S]*)")
+@skyzu_cmd(pattern="set var (\w*) ([\s\S]*)")
 async def set_var(var):
     await var.edit("`Sedang Menyetel Config Vars ヅ`")
     variable = var.pattern_match.group(1)
@@ -127,7 +128,7 @@ async def set_var(var):
 """
 
 
-@register(outgoing=True, pattern=r"^.usage(?: |$)")
+@skyzu_cmd(pattern="usage(?: |$)")
 async def dyno_usage(dyno):
     """
     Get your account Dyno Usage
@@ -191,7 +192,7 @@ async def dyno_usage(dyno):
             return True
 
 
-@register(outgoing=True, pattern=r"^\.logs")
+@skyzu_cmd(pattern="logs")
 async def _(dyno):
     try:
         Heroku = heroku3.from_key(HEROKU_API_KEY)
@@ -214,15 +215,15 @@ async def _(dyno):
 
 CMD_HELP.update(
     {
-        "herokuapp": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.usage`"
+        "herokuapp": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}usage`"
         "\n↳ : Check Quota Dyno Heroku"
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.set var <NEW VAR> <VALUE>`"
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}set var <NEW VAR> <VALUE>`"
         "\n↳ : Tambahkan Variabel Baru Atau Memperbarui Variabel"
         "\nSetelah Menyetel Variabel Tersebut, Rose-Userbot Akan Di Restart."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.get var atau .get var <VAR>`"
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.get var atau .get var <VAR>`"
         "\n↳ : Dapatkan Variabel Yang Ada, !!PERINGATAN!! Gunakanlah Di Grup Privasi Anda."
         "\nIni Mengembalikan Semua Informasi Pribadi Anda, Harap berhati-hati."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.del var <VAR>`"
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}del var <VAR>`"
         "\n↳ : Menghapus Variabel Yang Ada"
         "\nSetelah Menghapus Variabel, Bot Akan Di Restart."
     }

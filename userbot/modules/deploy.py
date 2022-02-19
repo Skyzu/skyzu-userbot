@@ -1,15 +1,15 @@
 import asyncio
 from platform import uname
 
-from userbot import ALIVE_NAME, CMD_HELP
-from userbot.events import register
+from userbot import ALIVE_NAME, CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern="^.deploy ?(.*)")
+@skyzu_cmd(pattern="deploy ?(.*)")
 async def _(event):
 
     if event.fwd_from:
@@ -57,5 +57,5 @@ async def _(event):
 
 
 CMD_HELP.update(
-    {"deploy": ": `.deploy`" "\n↳ : Untuk Deploy ke Heroku.. <Animasi> :v haha"}
+    {"deploy": f": `{cmd}deploy`" "\n↳ : Untuk Deploy ke Heroku.. <Animasi> :v haha"}
 )

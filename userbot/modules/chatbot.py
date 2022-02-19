@@ -6,8 +6,8 @@ from googletrans import Translator
 from telethon import events
 from telethon.tl.types import User
 
-from userbot import CMD_HELP, LOGS, bot
-from userbot.events import register
+from userbot import CMD_HELP, LOGS, bot, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 from userbot.modules.sql_helper.tede_chatbot_sql import is_tede, rem_tede, set_tede
 
 translator = Translator()
@@ -45,7 +45,7 @@ async def chat_bot_toggle(event):
         await event.edit("**Usage:** `.chatbot` <on/off>")
 
 
-@register(outgoing=True, pattern=r"^\.chatbot(?: |$)(.*)")
+@skyzu_cmd(pattern="chatbot(?: |$)(.*)")
 async def on_apa_off(event):
     await chat_bot_toggle(event)
 
@@ -73,8 +73,8 @@ async def tede_chatbot(event):
 
 CMD_HELP.update(
     {
-        "chatbot": "**Plugin : **`chatbot`\
-      \n\n  •  **Syntax :** `.chatbot` <on/off>\
+        "chatbot": f"**Plugin : **`chatbot`\
+      \n\n  •  **Syntax :** `{cmd}chatbot` <on/off>\
       \n  •  **Function :** Untuk membalas chat dengan chatbot AI.\
       "
     }

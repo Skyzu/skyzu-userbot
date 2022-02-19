@@ -7,8 +7,8 @@ dont edit credits
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.types import MessageEntityMentionName
 
-from userbot import ALIVE_NAME, CMD_HELP
-from userbot.events import register
+from userbot import ALIVE_NAME, CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
 async def get_user_from_event(event):
@@ -59,7 +59,7 @@ except BaseException:
     client2 = client3 = None
 
 
-@register(outgoing=True, pattern=r"^\.gkick(?: |$)(.*)")
+@skyzu_cmd(pattern="gkick(?: |$)(.*)")
 async def gspide(rk):
     lazy = rk
     sender = await lazy.get_sender()
@@ -124,8 +124,8 @@ async def gspide(rk):
 
 CMD_HELP.update(
     {
-        "gkick": "\
-`.gkick reason`\
+        "gkick": f"\
+`{cmd}gkick reason`\
 \nUsage: Globally Ban users from all the Group Administrations bots where you are SUDO"
     }
 )

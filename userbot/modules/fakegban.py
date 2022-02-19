@@ -5,17 +5,17 @@ import asyncio
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from userbot import ALIVE_NAME, CMD_HELP, bot
+from userbot import ALIVE_NAME, CMD_HELP, bot, CMD_HANDLER as cmd
 
 # from userbot.utils import admin_cmd
-from userbot.events import register
+from userbot.utils import skyzu_cmd
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern="^.fgban(?: |$)(.*)")
+@skyzu_cmd(pattern="fgban(?: |$)(.*)")
 async def gbun(event):
     if event.fwd_from:
         return
@@ -67,7 +67,7 @@ async def gbun(event):
 
 CMD_HELP.update(
     {
-        "fakegban": "`.fgban`\
+        "fakegban": f"`{cmd}fgban`\
     \nUsage: Type .fgban or Reply .fgban reason and see it yourself. "
     }
 )

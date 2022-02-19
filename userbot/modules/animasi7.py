@@ -1,11 +1,11 @@
 import asyncio
 from time import sleep
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
-@register(outgoing=True, pattern="^.sange$")
+@skyzu_cmd(pattern="sange$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("SAYANGGGGGGGGG 💕")
@@ -54,7 +54,7 @@ async def koc(e):
         await e.edit("AKU SAYANG KAMU💞")
 
 
-@register(outgoing=True, pattern="^.orgil(?: |$)(.*)")
+@skyzu_cmd(pattern="orgil(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`ANJING ADA ORANG GILA.....`")
@@ -112,7 +112,7 @@ async def typewriter(typew):
     await typew.edit("`-TAMAT-`")
 
 
-@register(outgoing=True, pattern="^.mf$")
+@skyzu_cmd(pattern="mf$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`MAAF GADULU YA`  ")
@@ -124,7 +124,7 @@ async def koc(e):
             await event.edit(animation_chars[i % 11])
 
 
-@register(outgoing=True, pattern="^.ass(?: |$)(.*)")
+@skyzu_cmd(pattern="ass(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Salam dulu biar sopan....`")
@@ -153,18 +153,18 @@ async def typewriter(typew):
 
 CMD_HELP.update(
     {
-        "animasi7": "`.gabut` ; `.orgil`\
+        "animasi7": f"`{cmd}gabut` ; `{cmd}orgil`\
     \nUsage: ntahlah gabut doang.\
-    \n\n`.ass`\
+    \n\n`{cmd}ass`\
     \nUsage: Salam duls biar sopan."
     }
 )
 
 CMD_HELP.update(
     {
-        "animasi8": "`.cinta`\
+        "animasi8": f"`{cmd}cinta`\
     \nUsage: mengirim cintamu ke seseorang.\
-    \n\n`.sange` :\
+    \n\n`{cmd}sange` :\
     \nUsage: cobalah sndiri ngentot."
     }
 )

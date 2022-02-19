@@ -546,9 +546,7 @@ async def rm_deletedacc(show):
     if not admin and not creator:
         return await show.edit("`Mohon Maaf, Bukan Admin Disini!`")
 
-    await show.edit(
-        "**Menghapus Akun Terhapus...\nMohon Menunggu Sedang Dalam Proses**"
-    )
+    await show.edit("`Menghapus Akun Terhapus...\nMohon Menunggu Sedang Dalam Proses`")
     del_u = 0
     del_a = 0
 
@@ -567,12 +565,12 @@ async def rm_deletedacc(show):
             del_u += 1
 
     if del_u > 0:
-        del_status = f"**Membersihkan** `{del_u}` **Akun Terhapus**"
+        del_status = f"`Membersihkan` **{del_u}** `Akun Terhapus`"
 
     if del_a > 0:
         del_status = (
             f"Membersihkan **{del_u}** Akun Terhapus "
-            f"\n`{del_a}` **Admin Akun Terhapus Tidak Bisa Dihapus.**"
+            f"\n**{del_a}** `Admin Akun Terhapus Tidak Bisa Dihapus.`"
         )
     await show.edit(del_status)
     await sleep(2)
@@ -582,7 +580,7 @@ async def rm_deletedacc(show):
         await show.client.send_message(
             BOTLOG_CHATID,
             "#MEMBERSIHKAN\n"
-            f"**Membersihkan `{del_u}` Akun Terhapus!**"
+            f"Membersihkan **{del_u}** Akun Terhapus!"
             f"\nGRUP: {show.chat.title}(`{show.chat_id}`)",
         )
 
@@ -620,7 +618,7 @@ async def pin(msg):
     to_pin = msg.reply_to_msg_id
 
     if not to_pin:
-        return await msg.edit("**Mohon Balas Ke Pesan Untuk Melakukan Pin.**")
+        return await msg.edit("`Mohon Balas Ke Pesan Untuk Melakukan Pin.`")
 
     options = msg.pattern_match.group(1)
 

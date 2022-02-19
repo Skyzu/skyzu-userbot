@@ -1,10 +1,10 @@
 from time import sleep
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
-@register(outgoing=True, pattern="^.sadboy(?: |$)(.*)")
+@skyzu_cmd(pattern="sadboy(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(2)
@@ -18,7 +18,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@register(outgoing=True, pattern="^.punten(?: |$)(.*)")
+@skyzu_cmd(pattern="punten(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -36,7 +36,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@register(outgoing=True, pattern="^.pantau(?: |$)(.*)")
+@skyzu_cmd(pattern="pantau(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -54,7 +54,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@register(outgoing=True, pattern="^.idiot(?: |$)(.*)")
+@skyzu_cmd(pattern="idiot(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -97,11 +97,11 @@ async def typewriter(typew):
 
 CMD_HELP.update(
     {
-        "animasi2": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.sadboy`\
+        "animasi2": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}sadboy`\
     \n↳ : Biasalah sadboy hikss\
-    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.punten` dan `.pantau`\
+    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}punten` dan `{cmd}pantau`\
     \n↳ : Coba aja hehehe.\
-    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.idiot`\
+    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}idiot`\
     \n↳ : u're ediot xixixi.\
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `kosong`\
     \n↳ : Tunggu update selanjutnya kawan."

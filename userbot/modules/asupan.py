@@ -3,11 +3,11 @@
 
 import requests
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
-@register(outgoing=True, pattern=r"^\.asupan$")
+@skyzu_cmd(pattern="asupan$")
 async def _(event):
     try:
         response = requests.get("https://api-tede.herokuapp.com/api/asupan/ptl").json()
@@ -17,7 +17,7 @@ async def _(event):
         await event.edit("**Tidak bisa menemukan video asupan.**")
 
 
-@register(outgoing=True, pattern=r"^\.wibu$")
+@skyzu_cmd(pattern="wibu$")
 async def _(event):
     try:
         response = requests.get("https://api-tede.herokuapp.com/api/asupan/wibu").json()
@@ -27,7 +27,7 @@ async def _(event):
         await event.edit("**Tidak bisa menemukan video wibu.**")
 
 
-@register(outgoing=True, pattern=r"^\.chika$")
+@skyzu_cmd(pattern="chika$")
 async def _(event):
     try:
         response = requests.get("https://api-tede.herokuapp.com/api/chika").json()
@@ -37,7 +37,7 @@ async def _(event):
         await event.edit("**Tidak bisa menemukan video chikakiku.**")
 
 
-@register(outgoing=True, pattern=r"^\.bocil$")
+@skyzu_cmd(pattern="bocil$")
 async def _(event):
     try:
         response = requests.get(
@@ -51,14 +51,14 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "asupan": "**Plugin : **`asupan`\
-        \n\n  •  **Syntax :** `.asupan`\
+        "asupan": f"**Plugin : **`asupan`\
+        \n\n  •  **Syntax :** `{cmd}asupan`\
         \n  •  **Function : **Untuk Mengirim video asupan secara random.\
-        \n\n  •  **Syntax :** `.wibu`\
+        \n\n  •  **Syntax :** `{cmd}wibu`\
         \n  •  **Function : **Untuk Mengirim video wibu secara random.\
-        \n\n  •  **Syntax :** `.chika`\
+        \n\n  •  **Syntax :** `{cmd}chika`\
         \n  •  **Function : **Untuk Mengirim video chikakiku secara random.\
-        \n\n  •  **Syntax :** `.bocil`\
+        \n\n  •  **Syntax :** `{cmd}bocil`\
         \n  •  **Function : **Untuk Mengirim video bocil secara random.\
     "
     }

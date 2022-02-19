@@ -1,10 +1,10 @@
 import aiohttp
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
-@register(pattern=r".git (.*)", outgoing=True)
+@skyzu_cmd(pattern="git (.*)")
 async def github(event):
     URL = f"https://api.github.com/users/{event.pattern_match.group(1)}"
     await event.get_chat()
@@ -47,5 +47,5 @@ async def github(event):
 
 
 CMD_HELP.update(
-    {"github": ">`.git <username>`" "\nUsage: Like .whois but for GitHub usernames."}
+    {"github": f">`{cmd}git <username>`" "\nUsage: Like .whois but for GitHub usernames."}
 )

@@ -1,10 +1,10 @@
 # Edit By @pikyus1
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
-@register(outgoing=True, pattern="^.thanks(?: |$)(.*)")
+@skyzu_cmd(pattern="thanks(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -19,7 +19,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern="^.malam(?: |$)(.*)")
+@skyzu_cmd(pattern="malam(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -34,7 +34,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern="^.rumah(?: |$)(.*)")
+@skyzu_cmd(pattern="rumah(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -50,7 +50,7 @@ async def typewriter(typew):
 
 CMD_HELP.update(
     {
-        "animasi6": "`.rumah` ; `.malam` ; `.thanks`\
+        "animasi6": f"`{cmd}rumah` ; `{cmd}malam` ; `{cmd}thanks`\
     \nUsage: liat aja."
     }
 )

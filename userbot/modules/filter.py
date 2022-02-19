@@ -8,8 +8,9 @@
 from asyncio import sleep
 from re import IGNORECASE, escape, search
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, CMD_HANDLER as cmd
 from userbot.events import register
+from userbot.utils import skyzu_cmd
 
 
 @register(incoming=True, disable_edited=True, disable_errors=True)
@@ -40,7 +41,7 @@ async def filter_incoming_handler(handler):
         pass
 
 
-@register(outgoing=True, pattern=r"^.filter (.*)")
+@skyzu_cmd(pattern="filter (.*)")
 async def add_new_filter(new_handler):
     """For .filter command, allows adding new filters in a chat"""
     try:
@@ -85,7 +86,7 @@ async def add_new_filter(new_handler):
         await new_handler.edit(success.format(keyword, "Disini"))
 
 
-@register(outgoing=True, pattern=r"^.stop (.*)")
+@skyzu_cmd(pattern="stop (.*)")
 async def remove_a_filter(r_handler):
     """For .stop command, allows you to remove a filter from a chat."""
     try:
@@ -101,7 +102,7 @@ async def remove_a_filter(r_handler):
         )
 
 
-@register(outgoing=True, pattern="^.bersihkanbotfilter (.*)")
+@skyzu_cmd(pattern="bersihkanbotfilter (.*)")
 async def kick_marie_filter(event):
     """ For .bersihkanbotfilter command, allows you to kick all \
         Marie(or her clones) filters from a chat. """
@@ -126,7 +127,7 @@ async def kick_marie_filter(event):
         )
 
 
-@register(outgoing=True, pattern="^.filters$")
+@skyzu_cmd(pattern="filters$")
 async def filters_active(event):
     """For .filters command, lists all of the active filters in a chat."""
     try:
@@ -147,15 +148,15 @@ async def filters_active(event):
 
 CMD_HELP.update(
     {
-        "filter": "`.filters`\
+        "filter": f"`{cmd}filters`\
     \nUsage: Melihat filter userbot yang aktif di obrolan.\
-    \n\n`.filter` <keyword> <balasan> atau balas ke pesan ketik .filter <keyword>\
+    \n\n`.filter` <keyword> <balasan> atau balas ke pesan ketik {cmd}filter <keyword>\
     \nUsage: Membuat filter di obrolan.\
     \nBot Akan Membalas Jika Ada Yang Menyebut 'keyword' yang dibuat.\
     \nBisa dipake ke media/sticker/vn/file.\
-    \n\n`.stop` <keyword>\
+    \n\n`{cmd}stop` <keyword>\
     \nUsage: Untuk Nonaktifkan Filter.\
-    \n\n`.bersihkanbotfilter` <marie/rose>\
+    \n\n`{cmd}bersihkanbotfilter` <marie/rose>\
     \nUsage: Menghapus semua filter yang ada di bot grup (Saat ini bot yang didukung: Marie, Rose.) dalam obrolan."
     }
 )

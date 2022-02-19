@@ -20,6 +20,7 @@ from shutil import which
 import psutil
 from telethon import __version__, version
 
+from userbot import CMD_HANDLER as cmd
 from userbot import (
     ALIVE_LOGO,
     ALIVE_NAME,
@@ -29,7 +30,7 @@ from userbot import (
     StartTime,
     bot,
 )
-from userbot.events import register
+from userbot.utils import skyzu_cmd
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
@@ -65,7 +66,7 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@register(outgoing=True, pattern=r"^\.spc")
+@skyzu_cmd(pattern="spc")
 async def psu(event):
     uname = platform.uname()
     softw = "**Informasi Sistem**\n"
@@ -121,7 +122,7 @@ def get_size(bytes, suffix="B"):
         bytes /= factor
 
 
-@register(outgoing=True, pattern=r"^\.sysd$")
+@skyzu_cmd(pattern="sysd$")
 async def sysdetails(sysd):
     if not sysd.text[0].isalpha() and sysd.text[0] not in ("/", "#", "@", "!"):
         try:
@@ -140,7 +141,7 @@ async def sysdetails(sysd):
             await sysd.edit("`Install neofetch first !!`")
 
 
-@register(outgoing=True, pattern=r"^\.botver$")
+@skyzu_cmd(pattern="botver$")
 async def bot_ver(event):
     if event.text[0].isalpha() or event.text[0] in ("/", "#", "@", "!"):
         return
@@ -179,7 +180,7 @@ async def bot_ver(event):
         )
 
 
-@register(outgoing=True, pattern=r"^\.pip(?: |$)(.*)")
+@skyzu_cmd(pattern="pip(?: |$)(.*)")
 async def pipcheck(pip):
     if pip.text[0].isalpha() or pip.text[0] in ("/", "#", "@", "!"):
         return
@@ -227,7 +228,7 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@register(outgoing=True, pattern=r"^\.(?:skyzualive)\s?(.)?")
+@skyzu_cmd(pattern="(?:skyzualive)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -264,7 +265,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:skyzuon)\s?(.)?")
+@skyzu_cmd(pattern="(?:skyzuon)\s?(.)?")
 async def amireallyalive(alive):
     await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -298,7 +299,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:alive|on)\s?(.)?")
+@skyzu_cmd(pattern="(?:alive|on)\s?(.)?")
 async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -345,7 +346,7 @@ async def redis(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern="^.aliveu")
+@skyzu_cmd(pattern="aliveu")
 async def amireallyaliveuser(username):
     """For .aliveu command, change the username in the .alive command."""
     message = username.text
@@ -358,7 +359,7 @@ async def amireallyaliveuser(username):
     await username.edit("`" f"{output}" "`")
 
 
-@register(outgoing=True, pattern=r"^\.resetalive$")
+@skyzu_cmd(pattern="resetalive$")
 async def amireallyalivereset(ureset):
     global DEFAULTUSER  # global statement
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
@@ -367,21 +368,21 @@ async def amireallyalivereset(ureset):
 
 CMD_HELP.update(
     {
-        "system": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.sysd`"
+        "system": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}sysd`"
         "\n↳ : Shows system information using neofetch."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.db`"
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}db`"
         "\n↳ : Shows database related info."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.spc`"
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}spc`"
         "\n↳ : Show system specification."
     }
 )
 CMD_HELP.update(
     {
-        "alive": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.alive` or `.on` or `skyzu`"
+        "alive": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}alive` or `{cmd}on` or `skyzu`"
         "\n↳ : To see whether your bot is working or not."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.aliveu` <text>"
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}aliveu` <text>"
         "\n↳ : Changes the 'user' in alive to the text you want."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.restalive`"
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}restalive`"
         "\n↳ : Resets the user to default."
     }
 )

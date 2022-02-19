@@ -4,13 +4,13 @@
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 chat = "@BotFather"
 
 
-@register(outgoing=True, pattern="^.botbaru ?(.*)")
+@skyzu_cmd(pattern="botbaru ?(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -45,7 +45,7 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "botfather": ".botbaru\
-    \nUntuk Membuat Bot Dari Botfather, .botbaru  < bot_name > <bot_username >  ."
+        "botfather": f"{cmd}botbaru\
+    \nUntuk Membuat Bot Dari Botfather, {cmd}botbaru  < bot_name > <bot_username >  ."
     }
 )

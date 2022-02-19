@@ -3,11 +3,11 @@ from time import sleep
 
 from telethon import events
 
-from userbot import CMD_HELP, bot
-from userbot.events import register
+from userbot import CMD_HELP, bot, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
-@register(outgoing=True, pattern="^.hua$")
+@skyzu_cmd(pattern="hua$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("أ‿أ")
@@ -42,7 +42,7 @@ async def koc(e):
         await e.edit("༼ ༎ຶ ෴ ༎ຶ༽")
 
 
-@register(outgoing=True, pattern="^.huh(?: |$)(.*)")
+@skyzu_cmd(pattern="huh(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`\n(\\_/)`" "`\n(●_●)`" "`\n />❤️ *Ini Buat Kamu`")
@@ -126,7 +126,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@register(outgoing=True, pattern="^.nah(?: |$)(.*)")
+@skyzu_cmd(pattern="nah(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`\n(\\_/)`" "`\n(●_●)`" "`\n />💖 *Ini Buat Kamu`")
@@ -169,13 +169,13 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "animasi1": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.nah` ; `.huh` ; `.owner`\
+        "animasi1": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}nah` ; `{cmd}huh` ; `.owner`\
     \n↳ : Cobain Sendiri.\
-    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.bunga` ; `.buah`\
+    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}bunga` ; `{cmd}buah`\
     \n↳ : animasi.\
-    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.waktu`\
+    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}waktu`\
     \n↳ : animasi.\
-    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.hua`\
+    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}hua`\
     \n↳ : nangis.\
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ceritacinta` ; `.canda`\
     \n↳ : liat sendiri"

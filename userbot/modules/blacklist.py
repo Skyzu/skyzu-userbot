@@ -10,8 +10,9 @@ import io
 import re
 
 import userbot.modules.sql_helper.blacklist_sql as sql
-from userbot import CMD_HELP
+from userbot import CMD_HELP, CMD_HANDLER as cmd
 from userbot.events import register
+from userbot.utils import skyzu_cmd
 
 
 @register(incoming=True, disable_edited=True, disable_errors=True)
@@ -34,7 +35,7 @@ async def on_new_message(event):
             break
 
 
-@register(outgoing=True, pattern=r"^\.addbl(?: |$)(.*)")
+@skyzu_cmd(pattern="addbl(?: |$)(.*)")
 async def on_add_black_list(addbl):
     text = addbl.pattern_match.group(1)
     to_blacklist = list(
@@ -48,7 +49,7 @@ async def on_add_black_list(addbl):
     )
 
 
-@register(outgoing=True, pattern=r"^\.listbl(?: |$)(.*)")
+@skyzu_cmd(pattern="listbl(?: |$)(.*)")
 async def on_view_blacklist(listbl):
     all_blacklisted = sql.get_chat_blacklist(listbl.chat_id)
     OUT_STR = "Blacklists in the Current Chat:\n"
@@ -73,7 +74,7 @@ async def on_view_blacklist(listbl):
         await listbl.edit(OUT_STR)
 
 
-@register(outgoing=True, pattern=r"^\.rmbl(?: |$)(.*)")
+@skyzu_cmd(pattern="rmbl(?: |$)(.*)")
 async def on_delete_blacklist(rmbl):
     text = rmbl.pattern_match.group(1)
     to_unblacklist = list(
@@ -92,12 +93,12 @@ async def on_delete_blacklist(rmbl):
 
 CMD_HELP.update(
     {
-        "blacklist": ">`.listbl`"
+        "blacklist": f">`{cmd}listbl`"
         "\nUsage: Melihat daftar blacklist yang aktif di obrolan."
-        "\n\n>`.addbl <kata>`"
+        f"\n\n>`{cmd}addbl <kata>`"
         "\nUsage: Memasukan pesan ke blacklist 'kata blacklist'."
         "\nlord bot akan otomatis menghapus 'kata blacklist'."
-        "\n\n>`.rmbl <kata>`"
+        f"\n\n>`{cmd}rmbl <kata>`"
         "\nUsage: Menghapus kata blacklist."
     }
 )

@@ -3,13 +3,13 @@ from asyncio import sleep
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
 # Port By @skyzu
 # Perkontolan Dengan Hapus Credits
-@register(outgoing=True, pattern="^.allban(?: |$)(.*)")
+@skyzu_cmd(pattern="allban(?: |$)(.*)")
 async def testing(event):
     nikal = await event.get_chat()
     chutiya = await event.client.get_me()
@@ -40,8 +40,8 @@ async def testing(event):
 
 CMD_HELP.update(
     {
-        "allban": "**Plugin : **`allban`\
-    \n\n**Syntax : **`.allban`\
+        "allban": f"**Plugin : **`allban`\
+    \n\n**Syntax : **`{cmd}allban`\
     \n**Function : **ban all members in 1 cmnd"
     }
 )

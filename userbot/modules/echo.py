@@ -1,8 +1,8 @@
 # Thanks skyzu
 # Recode By kijuu
 
-from userbot import CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import skyzu_cmd
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP
 from userbot.events import register
 from userbot.modules.sql_helper.echo_sql import (
     addecho,
@@ -13,7 +13,7 @@ from userbot.modules.sql_helper.echo_sql import (
     remove_echo,
     remove_echos,
 )
-from userbot.utils import edit_delete, edit_or_reply
+from userbot.utils import edit_delete, edit_or_reply, skyzu_cmd
 from userbot.utils.events import get_user_from_event
 
 

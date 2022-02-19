@@ -7,7 +7,8 @@ from telethon.tl.functions.phone import DiscardGroupCallRequest as stopvc
 from telethon.tl.functions.phone import GetGroupCallRequest as getvc
 from telethon.tl.functions.phone import InviteToGroupCallRequest as invitetovc
 
-from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP
 from userbot.utils import skyzu_cmd
 
 NO_ADMIN = "`Maaf Kamu Bukan Admin!"

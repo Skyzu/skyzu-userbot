@@ -12,9 +12,10 @@ import requests
 from bs4 import BeautifulSoup
 from PIL import Image
 
-from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, UPSTREAM_REPO_URL, bot, CMD_HANDLER as cmd
-from userbot.utils import skyzu_cmd
-from userbot.utils import time_formatter
+from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP, UPSTREAM_REPO_URL, bot
+from userbot.utils import skyzu_cmd, time_formatter
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node

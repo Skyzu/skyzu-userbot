@@ -14,7 +14,8 @@ from getpass import getuser
 from os import remove
 from sys import executable
 
-from userbot import CMD_HELP, TERM_ALIAS, CMD_HANDLER as cmd
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP, TERM_ALIAS
 from userbot.utils import skyzu_cmd
 
 

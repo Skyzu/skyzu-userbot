@@ -9,15 +9,9 @@ import os
 import aiohttp
 import heroku3
 
+from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
-from userbot import (
-    ALIVE_NAME,
-    BOTLOG,
-    BOTLOG_CHATID,
-    CMD_HELP,
-    HEROKU_API_KEY,
-    HEROKU_APP_NAME,
-)
+from userbot import CMD_HELP, HEROKU_API_KEY, HEROKU_APP_NAME
 from userbot.utils import skyzu_cmd
 
 heroku_api = "https://api.heroku.com"

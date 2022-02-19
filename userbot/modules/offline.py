@@ -10,9 +10,9 @@ from datetime import datetime
 from telethon import events
 from telethon.tl import functions, types
 
+from userbot import CMD_HANDLER as cmd
 from userbot.utils import skyzu_cmd
 
-from userbot import CMD_HANDLER as cmd
 from userbot import (  # noqa pylint: disable=unused-import isort:skip
     AFKREASON,
     ALIVE_NAME,

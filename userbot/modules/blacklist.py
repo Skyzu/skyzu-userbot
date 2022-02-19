@@ -10,7 +10,8 @@ import io
 import re
 
 import userbot.modules.sql_helper.blacklist_sql as sql
-from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP
 from userbot.events import register
 from userbot.utils import skyzu_cmd
 

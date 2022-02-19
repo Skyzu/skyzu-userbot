@@ -5,7 +5,9 @@ import asyncio
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from userbot import ALIVE_NAME, CMD_HELP, bot, CMD_HANDLER as cmd
+from userbot import ALIVE_NAME
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP, bot
 
 # from userbot.utils import admin_cmd
 from userbot.utils import skyzu_cmd

@@ -2,7 +2,8 @@
 # # Copyright (C) 2021 Geez-Project
 import asyncio
 
-from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP
 from userbot.utils import skyzu_cmd
 
 

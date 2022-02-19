@@ -6,9 +6,10 @@ from googletrans import Translator
 from telethon import events
 from telethon.tl.types import User
 
-from userbot import CMD_HELP, LOGS, bot, CMD_HANDLER as cmd
-from userbot.utils import skyzu_cmd
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP, LOGS, bot
 from userbot.modules.sql_helper.tede_chatbot_sql import is_tede, rem_tede, set_tede
+from userbot.utils import skyzu_cmd
 
 translator = Translator()
 LANGUAGE = "id"

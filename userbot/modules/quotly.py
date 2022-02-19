@@ -13,7 +13,8 @@ import requests
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot import CMD_HELP, bot, CMD_HANDLER as cmd
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP, bot
 from userbot.utils import skyzu_cmd
 
 if 1 == 1:

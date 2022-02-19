@@ -25,10 +25,12 @@ from telethon.tl.types import (
 )
 from telethon.utils import get_input_location, pack_bot_file_id
 
-from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, bot, CMD_HANDLER as cmd
+from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP, bot
 from userbot.events import register
-from userbot.utils import skyzu_cmd
 from userbot.modules.admin import get_user_from_event
+from userbot.utils import skyzu_cmd
 
 
 @skyzu_cmd(pattern="id(?: |$)(.*)")

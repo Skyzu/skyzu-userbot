@@ -546,7 +546,9 @@ async def rm_deletedacc(show):
     if not admin and not creator:
         return await show.edit("`Mohon Maaf, Bukan Admin Disini!`")
 
-    await show.edit("**Menghapus Akun Terhapus...\nMohon Menunggu Sedang Dalam Proses**")
+    await show.edit(
+        "**Menghapus Akun Terhapus...\nMohon Menunggu Sedang Dalam Proses**"
+    )
     del_u = 0
     del_a = 0
 

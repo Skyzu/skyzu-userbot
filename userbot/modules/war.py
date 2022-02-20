@@ -1,7 +1,7 @@
 from time import sleep
 
-from userbot import CMD_HELP
-from userbot.untils import skyzu_cmd
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
 @skyzu_cmd(pattern="sayang(?: |$)(.*)")

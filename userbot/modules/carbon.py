@@ -6,7 +6,7 @@ from urllib.parse import quote_plus
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from userbot import CHROME_DRIVER, CMD_HELP, GOOGLE_CHROME_BIN
+from userbot import CHROME_DRIVER, CMD_HELP, GOOGLE_CHROME_BIN as cmd
 from userbot.utils import skyzu_cmd
 
 CARBONLANG = "auto"

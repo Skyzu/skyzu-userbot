@@ -1,10 +1,11 @@
 from datetime import datetime
 
 from pytz import timezone
-from userbot import CMD_HELP, bot, LOGS, CLEAN_WELCOME, BOTLOG_CHATID
 from telethon.events import ChatAction
+
+from userbot import BOTLOG_CHATID, CLEAN_WELCOME, CMD_HELP, LOGS, bot
 from userbot.events import skyzu_cmd
-from userbot import CMD_HANDLER as cmd
+
 
 @bot.on(ChatAction)
 async def welcome_to_chat(event):

@@ -178,7 +178,7 @@ CMD_HELP.update(
         \n  •  **Function : **ngatain orang sok keren\
         \n\n  •  **Syntax :** `{cmd}dih`\
         \n  •  **Function : **Ngeledek anak haram\
-        \n\n  •  **Syntax :** `.gcs`\
+        \n\n  •  **Syntax :** `{cmd}gcs`\
         \n  •  **Function : **Ngeledek gc sampah\
         \n\n**Klo mau Req, kosa kata dari lu Hubungi @skyzu**\
     "

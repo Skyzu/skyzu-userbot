@@ -25,10 +25,10 @@ from .tools import (
     human_to_bytes,
     humanbytes,
     md5,
+    media_type,
     post_to_telegraph,
     run_cmd,
     runcmd,
     take_screen_shot,
     time_formatter,
-    media_type,
 )

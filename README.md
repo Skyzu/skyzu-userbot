@@ -2,14 +2,12 @@
 
 
 
-</p>
 <p align="center">
-    <a href="https://github.com/Skyzu/skyzu-userbot"> <img src="https://img.shields.io/github/repo-size/noob-kittu/YoneRobot?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/Skyzu/skyzu-userbot/commits"> <img src="https://img.shields.io/github/last-commit/noob-kittu/YoneRobot?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/Skyzu/skyzu-userbot/issues"> <img src="https://img.shields.io/github/issues/noob-kittu/YoneRobot?color=blueviolet&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/Skyzu/skyzu-userbot/network/members"> <img src="https://img.shields.io/github/forks/noob-kittu/YoneRobot?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>  
-    <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=yellow&label=telethon&logo=python&logoColor=green&style=for-the-badge" /></a>
-</p>
+    <a href="https://github.com/Skyzu/skyzu-userbot/commits/skyzu-userbot"><img src="https://img.shields.io/github/last-commit/Skyzu/skyzu-userbot?color=ff0000&logo=github&logoColor=ffffff&style=for-the-badge" /></a>
+    <a href="https://github.com/Skyzu/Skyzu-userbot"> <img src="https://img.shields.io/github/repo-size/Skyzu/skyzu-userbot?logo=github&style=for-the-badge" /></a>
+    <a href="https://pypi.org/project/Telethon/"><img src="https://img.shields.io/pypi/v/telethon?color=important&label=telethon&logo=python&logoColor=brightgreen&style=for-the-badge" /></a>
+    <img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.6-purple?style=for-the-badge&logo=appveyor"/>
+    </p>
 
 <p align="center">
   <img src="https://telegra.ph/file/fd08937c4ae6cb1303731.jpg">

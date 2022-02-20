@@ -2,13 +2,13 @@ import json
 
 import requests
 
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 PLACE = ""
 
 
-@register(pattern=r"^\.adzan(?: |$)(.*)")
+@skyzu_cmd(pattern="adzan(?: |$)(.*)")
 async def get_adzan(adzan):
     if not adzan.pattern_match.group(1):
         LOCATION = PLACE
@@ -54,5 +54,5 @@ async def get_adzan(adzan):
 
 
 CMD_HELP.update(
-    {"adzan": "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.adzan` <kota>" "\n↳ : Memberikan Informasi Waktu Sholat."}
+    {"adzan": "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}adzan` <kota>" "\n↳ : Memberikan Informasi Waktu Sholat."}
 )

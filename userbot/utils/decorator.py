@@ -80,8 +80,8 @@ def skyzu_cmd(
     def decorator(func):
         if not disable_edited:
             bot.add_event_handler(
-                func, events.MessageEdited(
-                    **args, outgoing=True, pattern=skyzu_reg))
+                func, events.MessageEdited(**args, outgoing=True, pattern=skyzu_reg)
+            )
         bot.add_event_handler(
             func, events.NewMessage(**args, outgoing=True, pattern=skyzu_reg)
         )

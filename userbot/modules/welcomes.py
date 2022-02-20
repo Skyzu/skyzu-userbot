@@ -4,7 +4,8 @@ from pytz import timezone
 from telethon.events import ChatAction
 
 from userbot import BOTLOG_CHATID, CLEAN_WELCOME, CMD_HELP, LOGS, bot
-from userbot.events import register
+from userbot import CMD_HANDLER as cmd
+from userbot.untils import skyzu_cmd
 
 
 @bot.on(ChatAction)
@@ -107,7 +108,7 @@ async def welcome_to_chat(event):
             update_previous_welcome(event.chat_id, current_message.id)
 
 
-@register(outgoing=True, pattern=r"^.setwelcome(?: |$)(.*)")
+@skyzu_cmd(pattern="setwelcome(?: |$)(.*)")
 async def save_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import add_welcome_setting
@@ -142,7 +143,7 @@ async def save_welcome(event):
         await event.edit(success.format("Disini"))
 
 
-@register(outgoing=True, pattern="^.checkwelcome$")
+@skyzu_cmd(pattern="checkwelcome$")
 async def show_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import get_current_welcome_settings
@@ -162,7 +163,7 @@ async def show_welcome(event):
         await event.reply(cws.reply)
 
 
-@register(outgoing=True, pattern="^.rmwelcome$")
+@skyzu_cmd(pattern="rmwelcome$")
 async def del_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import rm_welcome_setting
@@ -176,15 +177,15 @@ async def del_welcome(event):
 
 CMD_HELP.update(
     {
-        "welcome": ">`.setwelcome` <pesan welcome> atau balas ke pesan ketik `.setwelcome`"
+        "welcome": ">`{cmd}setwelcome` <pesan welcome> atau balas ke pesan ketik `.setwelcome`"
         "\nUsage: Menyimpan pesan welcome digrup."
         "\n\nFormat Variabel yang bisa digunakan dipesan welcome:"
         "\n`{mention}, {title}, {count}, {first}, {last}, {fullname}, "
         "{userid}, {username}, {my_first}, {my_fullname}, {my_last}, "
         "{my_mention}, {my_username}`"
-        "\n\n>`.checkwelcome`"
+        "\n\n>`{cmd}checkwelcome`"
         "\nUsage: Check pesan welcome yang anda simpan."
-        "\n\n>`.rmwelcome`"
+        "\n\n>`{cmd}rmwelcome`"
         "\nUsage: Menghapus pesan welcome yang anda simpan."
     }
 )

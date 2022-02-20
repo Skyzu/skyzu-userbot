@@ -15,21 +15,21 @@ NO_ADMIN = "`Maaf Kamu Bukan Admin!"
 
 
 def vcmention(user):
-        full_name = get_display_name(user)
-        if not isinstance(user, types.User):
-            return full_name
-        return f"[{full_name}](tg://user?id={user.id})"
-    
-    
-    async def get_call(kyy):
-        kyy = await kyy.client(getchat(kyy.chat_id))
-        tod = await kyy.client(getvc(kyy.full_chat.call))
-        return hehe.call
+    full_name = get_display_name(user)
+    if not isinstance(user, types.User):
+        return full_name
+    return f"[{full_name}](tg://user?id={user.id})"
+
+
+async def get_call(kyy):
+    kyy = await kyy.client(getchat(kyy.chat_id))
+    await kyy.client(getvc(kyy.full_chat.call))
+    return hehe.call
 
 
 def user_list(l, n):
     for i in range(0, len(l), n):
-        yield l[i : i + n]
+        yield l[i: i + n]
 
 
 @skyzu_cmd(pattern="startvc$")

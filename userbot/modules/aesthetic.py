@@ -1,7 +1,8 @@
 from telethon import events
 
 from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 PRINTABLE_ASCII = range(0x21, 0x7F)
 
@@ -16,7 +17,7 @@ def aesthetify(string):
         yield chr(c)
 
 
-@register(outgoing=True, pattern=r"^\.ae(?: |$)(.*)")
+@skyzu_cmd(pattern="ae(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return

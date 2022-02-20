@@ -3,6 +3,7 @@ import json
 import requests
 
 from userbot import CMD_HELP
+from userbot import CMD_HANDLER as cmd
 from userbot.utils import skyzu_cmd
 
 PLACE = ""
@@ -55,7 +56,7 @@ async def get_adzan(adzan):
 
 CMD_HELP.update(
     {
-        "adzan": "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}adzan` <kota>"
+        "adzan": f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}adzan` <kota>"
         "\n↳ : Memberikan Informasi Waktu Sholat."
     }
 )

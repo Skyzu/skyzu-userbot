@@ -6,7 +6,7 @@ from userbot import CMD_HELP
 from userbot.utils import skyzu_cmd
 
 
-@skyzu_cmd(pattern="allunban(?: |$)(.*)", groups_only=True)
+@skyzu_cmd(pattern="allunban(?: |$)(.*)")
 async def _(event):
     await event.edit("`Sedang Mencari List Banning.`")
     p = 0

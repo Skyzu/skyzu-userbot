@@ -1,10 +1,9 @@
 from datetime import datetime
 
 from pytz import timezone
-from userbot import CMD_HELP, bot, LOGS, CLEAN_WELCOME, BOTLOG_CHATID
+from userbot.utils import skyzu_cmd
+from userbot import CMD_HELP, bot, LOGS, CLEAN_WELCOME, BOTLOG_CHATID, CMD_HANDLER as cmd
 from telethon.events import ChatAction
-from userbot.events import rose_cmd
-from userbot import CMD_HANDLER as cmd
 
 
 @bot.on(ChatAction)
@@ -102,7 +101,7 @@ async def welcome_to_chat(event):
             update_previous_welcome(event.chat_id, current_message.id)
 
 
-@skyzu_cmd(pattern="setwelcome(?: |$)(.*)"))
+@skyzu_cmd(pattern="setwelcome(?: |$)(.*)")
 async def save_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import add_welcome_setting
@@ -114,8 +113,9 @@ async def save_welcome(event):
     if msg and msg.media and not string:
         if BOTLOG_CHATID:
             await event.client.send_message(
-                BOTLOG_CHATID, f"#ROSE #WELCOME\n»**ID-GRUP:** {event.chat_id}"
-                "\n» __Memasang Pesan Welcome Digroups__ , __Mohon Jangan Dihapus__"
+                BOTLOG_CHATID, f"#WELCOME \nID GRUP: {event.chat_id}"
+                "\nMemasang Pesan Perintah Welcome Digrup, Ini Adalah Catatan Pesan Welcome "
+                "Mohon Jangan Dihapus!"
             )
             msg_o = await event.client.forward_messages(
                 entity=BOTLOG_CHATID,
@@ -125,59 +125,61 @@ async def save_welcome(event):
             msg_id = msg_o.id
         else:
             return await event.edit(
-                "🚧 `Untuk membuat media sebagai pesan Welcome, BOTLOG_CHATID Harus disetel...`"
+                "`Untuk membuat media sebagai pesan Welcome, BOTLOG_CHATID Harus disetel.`"
             )
     elif event.reply_to_msg_id and not string:
         rep_msg = await event.get_reply_message()
         string = rep_msg.text
-    success = "✔️ `Berhasil Menyimpan Pesan Welcome {}`..."
+    success = "`Berhasil Menyimpan Pesan Welcome {}`"
     if add_welcome_setting(event.chat_id, 0, string, msg_id) is True:
         await event.edit(success.format('Disini'))
     else:
         await event.edit(success.format('Disini'))
 
 
-@skyzu_cmd(pattern="checkwelcome(?: |$)(.*)"))
+@skyzu_cmd(pattern="checkwelcome$")
 async def show_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import get_current_welcome_settings
     except AttributeError:
-        return await event.edit("`Berjalan pada mode Non-SQL...`")
+        return await event.edit("`Running on Non-SQL mode!`")
     cws = get_current_welcome_settings(event.chat_id)
     if not cws:
-        return await event.edit("✖️ `Disini Tidak Ada Pesan Welcome Yang Anda Simpan...`")
+        return await event.edit("`Disini Tidak Ada Pesan Welcome Yang Anda Simpan `")
     elif cws and cws.f_mesg_id:
         msg_o = await event.client.get_messages(entity=BOTLOG_CHATID,
                                                 ids=int(cws.f_mesg_id))
         await event.edit(
-            "📝 `Anda Telah Membuat Pesan Welcome Disini...`")
+            "`Anda Telah Membuat Pesan Welcome Disini`")
         await event.reply(msg_o.message, file=msg_o.media)
     elif cws and cws.reply:
         await event.edit(
-            "📝 `Anda Telah Membuat Pesan Welcome Disini...`")
+            "`Anda Telah Membuat Pesan Welcome Disini`")
         await event.reply(cws.reply)
 
 
-@skyzu_cmd(pattern=rmwelcome(?: |$)(.*)"))
+@skyzu_cmd(pattern="rmwelcome$")
 async def del_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import rm_welcome_setting
     except AttributeError:
-        return await event.edit("`Berjalan pada mode Non-SQL...`")
+        return await event.edit("`Running on Non-SQL mode!`")
     if rm_welcome_setting(event.chat_id) is True:
-        await event.edit("✔️ `Menghapus Pesan Welcome Berhasil Dilakukan...`")
+        await event.edit("`Menghapus Pesan Welcome Berhasil Dilakukan`")
     else:
-        await event.edit("📛 `Anda Tidak Menyimpan Pesan Welcome Apapun Disini...`")
+        await event.edit("`Anda Tidak Menyimpan Pesan Welcome Apapun Disini`")
 
 
 CMD_HELP.update({
     "welcome":
-    f"**✘ Format Variabel Pesan Welcome :\
-\n\n  •  **Perintah :** `{cmd}setwelcome`\
-  \n  •  **Fungsi :** Membuat Pesan Welcome Digrpups.\
-\n\n  •  **Perintah :** `{cmd}checkwelcome`\
-  \n  •  **Fungsi : ** Melihat Pesan welcome yang dipasang Digroups.\
-\n\n  •  **Perintah :** `{cmd}rmwelcome`\
-  \n  •  **Fungsi : ** Menghapus Pesan Welcome Yang Disimpan.\
-\n\n  •  **Perintah :** `/get format` @skyzusupport\
-  \n  •  **Fungsi :** Mendapatkan Format Variable Digrub @skyzusupport"})
+    f">`{cmd}.setwelcome` <pesan welcome> atau balas ke pesan ketik `.setwelcome`"
+    "\nUsage: Menyimpan pesan welcome digrup."
+    "\n\nFormat Variabel yang bisa digunakan dipesan welcome:"
+    "\n`{mention}, {title}, {count}, {first}, {last}, {fullname}, "
+    "{userid}, {username}, {my_first}, {my_fullname}, {my_last}, "
+    "{my_mention}, {my_username}`"
+    "\n\n>`.checkwelcome`"
+    "\nUsage: Check pesan welcome yang anda simpan."
+    f"\n\n>`{cmd}.rmwelcome`"
+    "\nUsage: Menghapus pesan welcome yang anda simpan."
+})

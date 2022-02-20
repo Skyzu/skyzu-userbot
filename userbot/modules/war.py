@@ -84,7 +84,7 @@ async def typewriter(typew):
     await typew.edit("**NAMANYA JUGA JAMET CAPER SANA SINI BUAT CARI NAMA BHAHAHA**")
 
 
-@register(outgoing=True, pattern=r"^\.war(?: |$)(.*)")
+@skyzu_cmd(pattern="war(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -92,7 +92,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern=r"^\.wartai(?: |$)(.*)")
+@skyzu_cmd(pattern="wartai(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(

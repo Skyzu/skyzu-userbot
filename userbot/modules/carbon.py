@@ -342,8 +342,9 @@ async def carbon_api(e):
     await e.delete()  # Deleting msg
 
 
-CMD_HELP.update({
-    "carbon":
-    f"`{cmd}carbon`value <values=1,2,3,4>\
+CMD_HELP.update(
+    {
+        "carbon": f"`{cmd}carbon`value <values=1,2,3,4>\
         \nUsage:reply or type .carbon1 or 2,3,4 value and beautify your text."
-})
+    }
+)

@@ -3,8 +3,7 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot import CMD_HELP, bot, CMD_HANDLER as cmd
-from userbot.utils import skyzy_cmd
+from userbot import CMD_HELP, bot
 
 
 @skyzu_cmd(pattern="truth(?: |$)(.*)")

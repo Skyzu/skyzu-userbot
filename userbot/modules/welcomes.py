@@ -178,7 +178,7 @@ async def del_welcome(event):
 
 CMD_HELP.update(
     {
-        "welcome": f">`{cmd}setwelcome` <pesan welcome> atau balas ke pesan ketik `.setwelcome`"
+        "welcome": f">`{cmd}setwelcome` <pesan welcome> atau balas ke pesan ketik `{cmd}setwelcome`"
         "\nUsage: Menyimpan pesan welcome digrup."
         "\n\nFormat Variabel yang bisa digunakan dipesan welcome:"
         "\n`{mention}, {title}, {count}, {first}, {last}, {fullname}, "

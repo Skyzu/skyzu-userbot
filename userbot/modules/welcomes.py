@@ -4,7 +4,6 @@ from pytz import timezone
 from telethon.events import ChatAction
 
 from userbot import BOTLOG_CHATID, CLEAN_WELCOME, CMD_HELP, LOGS, bot
-from userbot import CMD_HANDLER as cmd
 from userbot.events import skyzu_cmd
 
 

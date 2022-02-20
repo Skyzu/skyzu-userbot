@@ -15,9 +15,9 @@ NO_ADMIN = "`Maaf Kamu Bukan Admin!"
 
 
 async def get_call(event):
-    geez = await event.client(getchat(event.chat_id))
-    vcky = await event.client(getvc(geez.full_chat.call, limit=1))
-    return vcky.call
+    sky = await event.client(getchat(event.chat_id))
+    skyzu = await event.client(getvc(sky.full_chat.call, limit=1))
+    return skyzu.call
 
 
 def user_list(l, n):

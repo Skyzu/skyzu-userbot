@@ -1,7 +1,6 @@
 from telethon import events
 
 from userbot import CMD_HELP
-from userbot import CMD_HANDLER as cmd
 from userbot.utils import skyzu_cmd
 
 PRINTABLE_ASCII = range(0x21, 0x7F)

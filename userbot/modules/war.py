@@ -1,6 +1,7 @@
 from time import sleep
 
 from userbot import CMD_HELP
+from userbot import CMD_HANDLER as cmd
 from userbot.utils import skyzu_cmd
 
 
@@ -150,7 +151,7 @@ async def typewriter(typew):
 
 CMD_HELP.update(
     {
-        "war": "**Plugin : **`war`\
+        "war": f"**Plugin : **`war`\
         \n\n  •  **Syntax :** `{cmd}jamet`\
         \n  •  **Function : **Menghina Jamet telegram\
         \n\n  •  **Syntax :** `{cmd}pp`\

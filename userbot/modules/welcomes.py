@@ -184,7 +184,7 @@ CMD_HELP.update(
         "\n`{mention}, {title}, {count}, {first}, {last}, {fullname}, "
         "{userid}, {username}, {my_first}, {my_fullname}, {my_last}, "
         "{my_mention}, {my_username}`"
-        "\n\n>`{cmd}checkwelcome`"
+        f"\n\n>`{cmd}checkwelcome`"
         "\nUsage: Check pesan welcome yang anda simpan."
         f"\n\n>`{cmd}rmwelcome`"
         "\nUsage: Menghapus pesan welcome yang anda simpan."

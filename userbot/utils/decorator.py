@@ -84,7 +84,7 @@ def skyzu_cmd(
                     **args, outgoing=True, pattern=skyzu_reg)
         bot.add_event_handler(
             func, events.NewMessage(**args, outgoing=True, pattern=skyzu_reg)
-        
+        )
         if allow_sudo:
             if not disable_edited:
                 bot.add_event_handler(

@@ -15,9 +15,15 @@ from aiohttp import ClientSession
 from bs4 import BeautifulSoup
 from requests import get
 
-from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, CMD_HANDLER as cmd
-from userbot.utils import skyzu_cmd
-from userbot.utils import chrome, human_to_bytes, humanbytes, md5, time_formatter
+from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
+from userbot.utils import (
+    chrome,
+    human_to_bytes,
+    humanbytes,
+    md5,
+    skyzu_cmd,
+    time_formatter,
+)
 
 GITHUB = "https://github.com"
 

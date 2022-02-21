@@ -863,7 +863,7 @@ with bot:
         )
         async def killdabot(event):
             if event.query.user_id == uid:
-                text = f"**Restaring Skyzy-Ubot**..."
+                text = f"**Restaring Skyzu-Userbot**..."
                 await event.edit(
                     text,
                     file=kyylogo,

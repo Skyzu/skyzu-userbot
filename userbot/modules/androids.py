@@ -15,14 +15,14 @@ from aiohttp import ClientSession
 from bs4 import BeautifulSoup
 from requests import get
 
-from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
-from userbot.events import register
+from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 from userbot.utils import chrome, human_to_bytes, humanbytes, md5, time_formatter
 
 GITHUB = "https://github.com"
 
 
-@register(outgoing=True, pattern=r"^\.magisk$")
+@skyzu_cmd(pattern="magisk$")
 async def magisk(request):
     """magisk latest releases"""
     magisk_dict = {
@@ -46,7 +46,7 @@ async def magisk(request):
     await request.edit(releases)
 
 
-@register(outgoing=True, pattern=r"^\.device(?: |$)(\S*)")
+@skyzu_cmd(pattern="device(?: |$)(\S*)")
 async def device_info(request):
     textx = await request.get_reply_message()
     codename = request.pattern_match.group(1)
@@ -77,7 +77,7 @@ async def device_info(request):
     await request.edit(reply)
 
 
-@register(outgoing=True, pattern=r"^\.codename(?: |)([\S]*)(?: |)([\s\S]*)")
+@skyzu_cmd(pattern="codename(?: |)([\S]*)(?: |)([\s\S]*)")
 async def codename_info(request):
     textx = await request.get_reply_message()
     brand = request.pattern_match.group(1).lower()
@@ -120,7 +120,7 @@ async def codename_info(request):
     await request.edit(reply)
 
 
-@register(outgoing=True, pattern=r"^\.pixeldl(?: |$)(.*)")
+@skyzu_cmd(pattern="pixeldl(?: |$)(.*)")
 async def download_api(dl):
     await dl.edit("`Collecting information...`")
     URL = dl.pattern_match.group(1)
@@ -220,7 +220,7 @@ async def download_api(dl):
     return
 
 
-@register(outgoing=True, pattern=r"^\.specs(?: |)([\S]*)(?: |)([\s\S]*)")
+@skyzu_cmd(pattern="specs(?: |)([\S]*)(?: |)([\s\S]*)")
 async def devices_specifications(request):
     textx = await request.get_reply_message()
     brand = request.pattern_match.group(1).lower()
@@ -279,7 +279,7 @@ async def devices_specifications(request):
     await request.edit(reply)
 
 
-@register(outgoing=True, pattern=r"^\.twrp(?: |$)(\S*)")
+@skyzu_cmd(pattern="twrp(?: |$)(\S*)")
 async def twrp(request):
     textx = await request.get_reply_message()
     device = request.pattern_match.group(1)
@@ -311,21 +311,21 @@ async def twrp(request):
 
 CMD_HELP.update(
     {
-        "androids": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.magisk`\
+        "androids": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}magisk`\
 \n↳ : Get latest Magisk releases\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.device <codename>`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}device <codename>`\
 \n↳ : Get info about android device codename or model.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.codename <brand> <device>`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}codename <brand> <device>`\
 \n↳ : Search for android device codename.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.pixeldl` **<download.pixelexperience.org>**\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}pixeldl` **<download.pixelexperience.org>**\
 \n↳ : Download pixel experience ROM into your userbot server.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.spec <brand> <device>`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}spec <brand> <device>`\
 \n↳ : Get device specifications info.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.twrp <codename>`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}twrp <codename>`\
 \n↳ : Get latest twrp download for android device.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.gpsetup` <Try this in botlog group only>\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}gpsetup` <Try this in botlog group only>\
 \n↳ : Setup auth for Google Photos.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙 `.gp` Reply to photo or video.\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙 `{cmd}gp` Reply to photo or video.\
 \n↳ : Upload photo or video to Google.\
 \n\nYou need G_PHOTOS_CLIENT_ID and G_PHOTOS_CLIENT_SECRET.\nGet it from [here](https://j.mp/39lWQQm)"
     }

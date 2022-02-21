@@ -181,7 +181,7 @@ async def remove_profilepic(delpfp):
     await delpfp.edit(f"`Berhasil Menghapus {len(input_photos)} Foto Profil.`")
 
 
-@skyzu_cmd(pattern="data(?: |$)(.*)", outgoing=True)
+@skyzu_cmd(pattern="data(?: |$)(.*)")
 async def who(event):
 
     await event.edit("`Mengambil Informasi Data`")

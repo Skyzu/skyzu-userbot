@@ -1,6 +1,6 @@
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot import CMD_HELP, bot, CMD_HANDLER as cmd
+from userbot import CMD_HELP, bot
 from userbot.utils import skyzu_cmd
 
 

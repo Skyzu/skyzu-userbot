@@ -4,7 +4,7 @@ import os
 import os.path
 import re
 import shlex
-import ya_kalo_ngga
+import ya_kali_ngga
 from os.path import basename
 from typing import Optional, Union
 

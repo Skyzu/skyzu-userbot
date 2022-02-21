@@ -317,7 +317,7 @@ async def twrp(request):
 
 CMD_HELP.update(
     {
-        "androids": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}magisk`\
+       f"androids": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}magisk`\
 \n↳ : Get latest Magisk releases\
 \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}device <codename>`\
 \n↳ : Get info about android device codename or model.\

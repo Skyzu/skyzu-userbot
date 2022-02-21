@@ -1,5 +1,6 @@
 import asyncio
 import hashlib
+import pybase64
 import os
 import os.path
 import re

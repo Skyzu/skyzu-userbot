@@ -1,7 +1,7 @@
-# Ported By Vicky @pikyus1 From Rose-Userbot
-# Copyright © Geez - Project
+# Ported By @skyzu From Skyzu-Userbot
+# Copyright © Skyzu - Project
 # Kalo mau dihargai, jangan hapus kredit yakak:)
-# https://github.com/SendiAp/Rose-Userbot
+# https://github.com/Skyzu/skyzu-userbot
 
 import asyncio
 import base64
@@ -10,11 +10,11 @@ from telethon.tl import functions, types
 from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
-from userbot.events import register
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
-@register(outgoing=True, pattern=r"^\.sspam(?: |$)(.*)")
+@skyzu_cmd(pattern="sspam(?: |$)(.*)")
 async def stickerpack_spam(event):
     if event.fwd_from:
         return
@@ -76,8 +76,8 @@ async def stickerpack_spam(event):
 
 CMD_HELP.update(
     {
-        "sspam": "**Plugin : Sticker Pack Spam**\
-        \n\n**Command  :** `.sspam`\
+        f"sspam": "**Plugin : Sticker Pack Spam**\
+        \n\n**Command  :** `{cmd}sspam`\
         \n**Usage :** `Balas ke sticker, Fungsi Spam Satu Pack.`"
     }
 )

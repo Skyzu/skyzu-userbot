@@ -2,7 +2,6 @@
 # FROM skyzu-userbot <https://github.com/Skyzu/skyzu+userbot>
 
 from userbot import CMD_HELP
-from userbot import CMD_HANDLER as cmd
 from userbot.utils import skyzu_cmd
 
 

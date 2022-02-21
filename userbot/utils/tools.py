@@ -4,7 +4,6 @@ import os
 import os.path
 import re
 import shlex
-from userbot.utils.tools import ya_kali_ngga
 from os.path import basename
 from typing import Optional, Union
 

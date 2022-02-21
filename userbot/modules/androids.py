@@ -319,18 +319,18 @@ CMD_HELP.update(
     {
         "androids": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}magisk`\
 \n↳ : Get latest Magisk releases\
-f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}device <codename>`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}device <codename>`\
 \n↳ : Get info about android device codename or model.\
-f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}codename <brand> <device>`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}codename <brand> <device>`\
 \n↳ : Search for android device codename.\
-f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}pixeldl` **<download.pixelexperience.org>**\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}pixeldl` **<download.pixelexperience.org>**\
 \n↳ : Download pixel experience ROM into your userbot server.\
-f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}spec <brand> <device>`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}spec <brand> <device>`\
 \n↳ : Get device specifications info.\
-f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}twrp <codename>`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}twrp <codename>`\
 \n↳ : Get latest twrp download for android device.\
-f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}gpsetup` <Try this in botlog group only>\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}gpsetup` <Try this in botlog group only>\
 \n↳ : Setup auth for Google Photos.\
-f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙 `{cmd}gp` Reply to photo or video.\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙 `{cmd}gp` Reply to photo or video.\
 \n↳ : Upload photo or video to Google.\
 \n\nYou need G_PHOTOS_CLIENT_ID and G_PHOTOS_CLIENT_SECRET.\nGet it from [here](https://j.mp/39lWQQm)"

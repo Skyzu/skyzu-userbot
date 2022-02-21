@@ -21,9 +21,9 @@ def vcmention(user):
     return f"[{full_name}](tg://user?id={user.id})"
 
 
-async def get_call(kyy):
-    kyy = await kyy.client(getchat(kyy.chat_id))
-    await kyy.client(getvc(kyy.full_chat.call))
+async def get_call(sky):
+    sky = await kyy.client(getchat(kyy.chat_id))
+    await kyy.client(getvc(sky.full_chat.call))
     return hehe.call
 
 

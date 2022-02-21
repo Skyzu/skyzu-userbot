@@ -1,10 +1,15 @@
+
 import asyncio
 
+from telethon import events
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
 
 import userbot.modules.sql_helper.antiflood_sql as sql
-from userbot.utils import skyzu_cmd
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP, bot
+from userbot.events import skyzu_cmd
+from userbot.utils import edit_or_reply
 from userbot.utils.tools import is_admin
 
 CHAT_FLOOD = sql.__load_flood_settings()
@@ -14,7 +19,7 @@ ANTI_FLOOD_WARN_MODE = ChatBannedRights(
 )
 
 
-@register(incoming=True, disable_edited=True, disable_errors=True)
+@bot.on(events.NewMessage(incoming=True))
 async def _(event):
     # logger.info(CHAT_FLOOD)
     if not CHAT_FLOOD:
@@ -22,7 +27,7 @@ async def _(event):
     admin_c = await is_admin(event.chat_id, event.message.from_id)
     if admin_c:
         return
-    if not (str(event.chat_id) in CHAT_FLOOD):
+    if str(event.chat_id) not in CHAT_FLOOD:
         return
     should_ban = sql.update_flood(event.chat_id, event.message.from_id)
     if not should_ban:
@@ -33,12 +38,11 @@ async def _(event):
                 event.chat_id, event.message.from_id, ANTI_FLOOD_WARN_MODE
             )
         )
-    except Exception as e:  # pylint:disable=C0103,W0703
+    except Exception as e:
         no_admin_privilege_message = await event.client.send_message(
             entity=event.chat_id,
             message="""**Automatic AntiFlooder**
-@admin [User](tg://user?id={}) is flooding this chat.
-
+[User](tg://user?id={}) Membanjiri obrolan.
 `{}`""".format(
                 event.message.from_id, str(e)
             ),
@@ -50,15 +54,15 @@ async def _(event):
         await event.client.send_message(
             entity=event.chat_id,
             message="""**Automatic AntiFlooder**
-[User](tg://user?id={}) has been automatically restricted
-because he reached the defined flood limit.""".format(
+[User](tg://user?id={}) Membanjiri obrolan.
+**Aksi:** Saya membisukan dia 🔇""".format(
                 event.message.from_id
             ),
             reply_to=event.message.id,
         )
 
 
-@skyzu_cmd(pattern="setflood(?: |$)(.*)")
+@bot.on(skyzu_cmd(outgoing=True, pattern="setflood(?: |$)(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -66,8 +70,20 @@ async def _(event):
     try:
         sql.set_flood(event.chat_id, input_str)
         sql.__load_flood_settings()
-        await event.edit(
-            "Antiflood updated to {} in the current chat".format(input_str)
+        await edit_or_reply(
+            event,
+            f"**Antiflood diperbarui menjadi** `{input_str}` **dalam obrolan saat ini**",
         )
-    except Exception as e:  # pylint:disable=C0103,W0703
-        await event.edit(str(e))
+    except Exception as e:
+        await edit_or_reply(event, f"{e}")
+
+
+CMD_HELP.update(
+    {
+        "antiflood": f"**Plugin : **`antiflood`\
+        \n\n  •  **Syntax :** `{cmd}setflood` [jumlah pesan]\
+        \n  •  **Function : **memperingatkan pengguna jika dia melakukan spam pada obrolan dan jika Anda adalah admin maka itu akan membisukan dia dalam grup itu.\
+        \n\n  •  **NOTE :** Untuk mematikan setflood, atur jumlah pesan menjadi 0 » `.setflood 0`\
+    "
+    }
+)

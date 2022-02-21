@@ -7,7 +7,6 @@
 from telethon.tl.functions.messages import EditChatDefaultBannedRightsRequest
 from telethon.tl.types import ChatBannedRights
 
-from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
 from userbot.utils import skyzu_cmd
 
@@ -196,7 +195,7 @@ async def rem_locks(event):
 
 CMD_HELP.update(
     {
-       f"locks": "`{cmd}lock <all atau Jenis>` atau `.unlock <all atau Jenis>`\
+        f"locks": "`{cmd}lock <all atau Jenis>` atau `.unlock <all atau Jenis>`\
 \nUsage: Memungkinkan anda kunci atau membuka kunci, beberapa jenis pesan dalam obrolan.\
 \n[Anda Harus Jadi Admin Grup Untuk Menggunakan Perintah!]\
 \n\nJenis pesan yang bisa dikunci atau dibuka adalah: \

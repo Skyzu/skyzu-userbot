@@ -317,9 +317,9 @@ async def fetch_info(replied_user, event):
     return photo, caption
 
 
-CMD_HELP.update(
-    {
-        f"profil": "`{cmd}username` <username baru>\
+CMD_HELP.update({
+    "profil":
+    f"`{cmd}username` <username baru>\
 \nUsage: Ganti Username Telegram.\
 \n\n`{cmd}name` <nama depan> Atau `{cmd}name` <Nama Depan> <Nama Belakang>\
 \nUsage: Ganti Nama Telegram Anda\
@@ -333,7 +333,6 @@ CMD_HELP.update(
 \nUsage: Menunjukkan nama pengguna yang dipesan oleh Anda.\
 \n\n`{cmd}count`\
 \nUsage: Menghitung Grup, Chat, Bot etc...\
-\n\n`.data` <username> Atau Balas Ke Pesan Ketik `.data`\
+\n\n`{cmd}data` <username> Atau Balas Ke Pesan Ketik `.data`\
 \nUsage: Mendapatkan Informasi Pengguna."
-    }
-)
+})

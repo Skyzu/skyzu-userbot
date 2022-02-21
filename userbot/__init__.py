@@ -777,7 +777,7 @@ with bot:
             if event.query.user_id == uid:
                 text = (
                     f"Modules Name **Pembaruan**\n\n"
-                    f"× **Pembaruan Data Untuk Kayzu Ubot, Command Untuk Pembaruan**.\n"
+                    f"× **Pembaruan Data Untuk Skyzu Ubot, Command Untuk Pembaruan**.\n"
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
@@ -863,7 +863,7 @@ with bot:
         )
         async def killdabot(event):
             if event.query.user_id == uid:
-                text = f"**Restaring Kayzu-Ubot**..."
+                text = f"**Restaring Skyzy-Ubot**..."
                 await event.edit(
                     text,
                     file=kyylogo,

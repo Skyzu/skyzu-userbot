@@ -123,7 +123,7 @@ async def codename_info(request):
     await request.edit(reply)
 
 
-@man_cmd(pattern="pixeldl(?: |$)(.*)")
+@skyzu_cmd(pattern="pixeldl(?: |$)(.*)")
 async def download_api(dl):
     await dl.edit("`Collecting information...`")
     URL = dl.pattern_match.group(1)

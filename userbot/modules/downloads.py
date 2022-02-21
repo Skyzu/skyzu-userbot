@@ -1,7 +1,7 @@
 # Thanks Full To Ultroid
-# Ported By @VckyouuBitch
-# Copyright (c) 2021 Geez - Projects
-# Geez - Projects https://github.com/Vckyou/Geez-UserBot
+# Ported By @skyzu
+# Copyright (c) 2021 Skyzu - Projects
+# Skyzu - Projects https://github.com/Skyzu/skyzu-userbot
 
 import json
 import os
@@ -23,13 +23,13 @@ from youtube_dl.utils import (
 )
 from youtubesearchpython import SearchVideos
 
-from userbot import ALIVE_NAME, CMD_HELP
-from userbot.events import register
+from userbot import ALIVE_NAME, CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 
-@register(outgoing=True, pattern=r"^\.song (.*)")
+@skyzu_cmd(pattern="song (.*)")
 async def download_video(event):
     a = event.text
     if len(a) >= 5 and a[5] == "s":
@@ -138,7 +138,7 @@ Connected to server...
         pass
 
 
-@register(outgoing=True, pattern=r"^\.vsongs (.*)")
+@skyzu_cmd(pattern="vsongs (.*)")
 async def download_vsong(event):
     x = await event.edit("Processing..")
     url = event.pattern_match.group(1)
@@ -213,7 +213,7 @@ async def download_vsong(event):
     await x.delete()
 
 
-@register(outgoing=True, pattern=r"^\.lirik (.*)")
+@skyzu_cmd(pattern="lirik (.*)")
 async def original(event):
     if not event.pattern_match.group(1):
         return await event.edit(
@@ -237,11 +237,11 @@ async def original(event):
 
 CMD_HELP.update(
     {
-        "musikdownload": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.song <Penyanyi atau Band - Judul Lagu>`\
+        "musikdownload": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}song <Penyanyi atau Band - Judul Lagu>`\
          \n↳ : Mengunduh Sebuah Lagu Yang Diinginkan.\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.vsong` `<judul lagu>`\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}vsong` `<judul lagu>`\
          \n↳ : `unggah video lagu.`\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.lirik` <Penyanyi atau Band - Judul Lagu>`\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}lirik` <Penyanyi atau Band - Judul Lagu>`\
          \n↳ : Mencari Lirik Lagu Yang Diinginkan."
     }
 )

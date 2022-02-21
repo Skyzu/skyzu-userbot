@@ -23,7 +23,7 @@ from youtube_dl.utils import (
 )
 from youtubesearchpython import SearchVideos
 
-from userbot import ALIVE_NAME, CMD_HELP, CMD_HANDLER as cmd
+from userbot import ALIVE_NAME, CMD_HELP
 from userbot.utils import skyzu_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node

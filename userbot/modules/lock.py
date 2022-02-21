@@ -100,7 +100,7 @@ async def locks(event):
         return
 
 
-@register(outgoing=True, pattern=r"^.unlock ?(.*)")
+@skyzu_cmd(pattern="unlock ?(.*)")
 async def rem_locks(event):
     input_str = event.pattern_match.group(1).lower()
     peer_id = event.chat_id

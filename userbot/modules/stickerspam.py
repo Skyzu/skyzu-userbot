@@ -10,7 +10,7 @@ from telethon.tl import functions, types
 from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, CMD_HANDLER as cmd
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
 from userbot.utils import skyzu_cmd
 
 

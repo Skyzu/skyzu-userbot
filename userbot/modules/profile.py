@@ -319,7 +319,7 @@ async def fetch_info(replied_user, event):
 
 CMD_HELP.update(
     {
-        f"profil": "`{cmd}username` <username baru>\
+       f"profil": "`{cmd}username` <username baru>\
 \nUsage: Ganti Username Telegram.\
 \n\n`{cmd}name` <nama depan> Atau `{cmd}name` <Nama Depan> <Nama Belakang>\
 \nUsage: Ganti Nama Telegram Anda\
@@ -329,9 +329,9 @@ CMD_HELP.update(
 \nUsage: Untuk Mengganti Bio Telegram.\
 \n\n`{cmd}delpfp` Atau `{cmd}delpfp` <berapa profil>/<all>\
 \nUsage: Menghapus Foto Profil Telegram.\
-\n\n`.reserved`\
+\n\n`{cmd}reserved`\
 \nUsage: Menunjukkan nama pengguna yang dipesan oleh Anda.\
-\n\n`.count`\
+\n\n`{cmd}count`\
 \nUsage: Menghitung Grup, Chat, Bot etc...\
 \n\n`.data` <username> Atau Balas Ke Pesan Ketik `.data`\
 \nUsage: Mendapatkan Informasi Pengguna."

@@ -76,7 +76,7 @@ if CONFIG_CHECK:
 DEVS = (
     844432220,
     883761960,
-    1964264380,
+    2127265501,
     1738637033,
     1663258664,
     1416529201,
@@ -86,7 +86,7 @@ DEVS = (
     1784606556,
 )
 
-SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "1964264380").split()}
+SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "2127265501").split()}
 BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
 
 # Telegram App KEY and HASH

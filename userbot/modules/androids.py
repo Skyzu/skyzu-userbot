@@ -317,22 +317,19 @@ async def twrp(request):
 
 CMD_HELP.update(
     {
-        "androids": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}magisk`\
-\n↳ : Get latest Magisk releases\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}device <codename>`\
-\n↳ : Get info about android device codename or model.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}codename <brand> <device>`\
-\n↳ : Search for android device codename.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}pixeldl` **<download.pixelexperience.org>**\
-\n↳ : Download pixel experience ROM into your userbot server.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}spec <brand> <device>`\
-\n↳ : Get device specifications info.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}twrp <codename>`\
-\n↳ : Get latest twrp download for android device.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}gpsetup` <Try this in botlog group only>\
-\n↳ : Setup auth for Google Photos.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙 `{cmd}gp` Reply to photo or video.\
-\n↳ : Upload photo or video to Google.\
-\n\nYou need G_PHOTOS_CLIENT_ID and G_PHOTOS_CLIENT_SECRET.\nGet it from [here](https://j.mp/39lWQQm)"
+        "android": f"**Plugin : **`android`\
+        \n\n  •  **Syntax :** `{cmd}magisk`\
+        \n  •  **Function : **Dapatkan rilis Magisk terbaru \
+        \n\n  •  **Syntax :** `{cmd}device <codename>`\
+        \n  •  **Function : **Dapatkan info tentang nama kode atau model perangkat android. \
+        \n\n  •  **Syntax :** `{cmd}codename <brand> <device>`\
+        \n  •  **Function : **Cari nama kode perangkat android. \
+        \n\n  •  **Syntax :** `{cmd}pixeldl` **<download.pixelexperience.org>**\
+        \n  •  **Function : **Unduh ROM pengalaman piksel ke server bot pengguna Anda. \
+        \n\n  •  **Syntax :** `{cmd}specs <brand> <device>`\
+        \n  •  **Function : **Dapatkan info spesifikasi perangkat. \
+        \n\n  •  **Syntax :** `{cmd}twrp <codename>`\
+        \n  •  **Function : **Dapatkan unduhan twrp terbaru untuk perangkat android. \
+    "
     }
 )

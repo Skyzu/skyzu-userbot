@@ -7,6 +7,7 @@ import shlex
 from os.path import basename
 from typing import Optional, Union
 
+from userbot.utils.tools import ya_kali_ngga
 from html_telegraph_poster import TelegraphPoster
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import (

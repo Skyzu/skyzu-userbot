@@ -114,7 +114,7 @@ async def gben(userbot):
     if user:
         if user.id in DEVS:
             return await dark.edit(
-                f"`Anda Tidak Bisa Melakukan Global Banned, Karena dia pembuatku 🤪`"
+                f"**Anda Tidak Bisa Melakukan Global Banned, Karena dia pembuatku**🤪"
             )
         try:
             from userbot.modules.sql_helper.gmute_sql import gmute
@@ -146,9 +146,11 @@ async def gben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**Perintah:** `{ALIVE_NAME}`\n**Pengguna:** [{user.first_name}](tg://user?id={user.id})\n**Aksi:** `Global Banned`"
+        r"\\**#GBanned_User**//"
+        f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
+        f"**User ID:** `{user.id}`\n"
+        f"**Action:** `Global Banned`"
     )
-
 
 @skyzu_cmd(pattern="ungban(?: |$)(.*)")
 @register(incoming=True, from_users=DEVS, pattern=r"^\.cungban(?: |$)(.*)")

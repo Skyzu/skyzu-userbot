@@ -29,9 +29,11 @@ from telethon.tl.types import (
     PeerChat,
 )
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import skyzu_cmd
+from userbot import BOTLOG, BOTLOG_CHATID
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP
 from userbot.events import register
+from userbot.utils import skyzu_cmd
 
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "**Gambar Terlalu Kecil**"
@@ -942,4 +944,6 @@ CMD_HELP.update(
         f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}users` Atau >`{cmd}users` <nama member>"
         "\n↳ : Mendapatkan daftar pengguna daam grup."
         f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}setgpic` <balas ke gambar>"
-        "\n↳ : Mengganti foto profil grup."})
+        "\n↳ : Mengganti foto profil grup."
+    }
+)

@@ -152,6 +152,7 @@ async def gben(userbot):
         f"**Action:** `Global Banned`"
     )
 
+
 @skyzu_cmd(pattern="ungban(?: |$)(.*)")
 @register(incoming=True, from_users=DEVS, pattern=r"^\.cungban(?: |$)(.*)")
 async def gunben(userbot):

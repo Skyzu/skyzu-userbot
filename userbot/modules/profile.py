@@ -319,21 +319,23 @@ async def fetch_info(replied_user, event):
 
 CMD_HELP.update(
     {
-        "profil": f"`{cmd}username` <username baru>\
-\nUsage: Ganti Username Telegram.\
-\n\n`{cmd}name` <nama depan> Atau `{cmd}name` <Nama Depan> <Nama Belakang>\
-\nUsage: Ganti Nama Telegram Anda\
-\n\n`{cmd}setpfp`\
-\nUsage: Balas Ke Gambar Ketik {cmd}setpfp Untuk Mengganti Foto Profil Telegram.\
-\n\n`{cmd}setbio` <bio baru>\
-\nUsage: Untuk Mengganti Bio Telegram.\
-\n\n`{cmd}delpfp` Atau `{cmd}delpfp` <berapa profil>/<all>\
-\nUsage: Menghapus Foto Profil Telegram.\
-\n\n`{cmd}reserved`\
-\nUsage: Menunjukkan nama pengguna yang dipesan oleh Anda.\
-\n\n`{cmd}count`\
-\nUsage: Menghitung Grup, Chat, Bot etc...\
-\n\n`{cmd}data` <username> Atau Balas Ke Pesan Ketik `.data`\
-\nUsage: Mendapatkan Informasi Pengguna."
+        "profil": "**Plugin : **`profil`\
+        \n\n  •  **Syntax :** `.username` <username baru>\
+        \n  •  **Function : **Menganti Username Telegram.\
+        \n\n  •  **Syntax :** `.name` <nama depan> atau `.name` <Nama Depan> <Nama Belakang>\
+        \n  •  **Function : **Menganti Nama Telegram Anda.\
+        \n\n  •  **Syntax :** `.setbio` <bio baru>\
+        \n  •  **Function : **Untuk Mengganti Bio Telegram.\
+        \n\n  •  **Syntax :** `.setpfp`\
+        \n  •  **Function : **Balas Ke Gambar Ketik .setpfp Untuk Mengganti Foto Profil Telegram.\
+        \n\n  •  **Syntax :** `.delpfp` atau `.delpfp` <berapa profil>/<all>\
+        \n  •  **Function : **Menghapus Foto Profil Telegram.\
+        \n\n  •  **Syntax :** `.reserved`\
+        \n  •  **Function : **Menunjukkan nama pengguna yang dipesan oleh Anda.\
+        \n\n  •  **Syntax :** `.count`\
+        \n  •  **Function : **Menghitung Grup, Chat, Bot dll.\
+        \n\n  •  **Syntax :** `.info` <username> Atau Balas Ke Pesan Ketik `.data`\
+        \n  •  **Function : **Mendapatkan Informasi Pengguna.\
+    "
     }
 )

@@ -5,10 +5,11 @@
 from time import sleep
 
 from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
-@register(outgoing=True, pattern=r"^\.sok(?: |$)(.*)")
+@skyzu_cmd(pattern="sok(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1.5)
@@ -23,7 +24,7 @@ async def typewriter(typew):
     await typew.edit("**GA KEREN LO BEGITU NGENTOT**")
 
 
-@register(outgoing=True, pattern="^.alay(?: |$)(.*)")
+@skyzu_cmd(pattern="alay(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Halo kak**")
@@ -45,7 +46,7 @@ async def typewriter(typew):
     await typew.edit("**Lawriiiiiiieeeee:v**")
 
 
-@register(outgoing=True, pattern="^.wah(?: |$)(.*)")
+@skyzu_cmd(pattern="wah(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Wahh, War nya keren bang`")
@@ -65,7 +66,7 @@ async def typewriter(typew):
     await typew.edit("`Dah sana cabut, Makasih hiburannya, Udah bikin Gua tawa ngakak`")
 
 
-@register(outgoing=True, pattern=r"^\.kont(?: |$)(.*)")
+@skyzu_cmd(pattern="kont(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -94,7 +95,7 @@ async def typewriter(typew):
     await typew.edit("**KASIAN CACAD GAPUNYA KONTOLL**")
 
 
-@register(outgoing=True, pattern=r"^\.emak(?: |$)(.*)")
+@skyzu_cmd(pattern="emak(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -102,7 +103,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern=r"^\.ehh(?: |$)(.*)")
+@skyzu_cmd(pattern="ehh(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -110,7 +111,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern=r"^\.mas(?: |$)(.*)")
+@skyzu_cmd(pattern="mas(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -118,7 +119,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern=r"^\.an(?: |$)(.*)")
+@skyzu_cmd(pattern="an(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -126,7 +127,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern=r"^\.bk(?: |$)(.*)")
+@skyzu_cmd(pattern="bk(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -134,7 +135,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern=r"^\.gj(?: |$)(.*)")
+@skyzu_cmd(pattern="gj(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -142,7 +143,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern=r"^\.gh(?: |$)(.*)")
+@skyzu_cmd(pattern="gh(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -150,7 +151,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern=r"^\.lol(?: |$)(.*)")
+@skyzu_cmd(pattern="lol(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -158,7 +159,7 @@ async def typewriter(typew):
     )
 
 
-@register(outgoing=True, pattern="^.title(?: |$)(.*)")
+@skyzu_cmd(pattern="title(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**OI ANAK TITLE**")
@@ -200,34 +201,29 @@ async def typewriter(typew):
 
 CMD_HELP.update(
     {
-        "war2": "**Plugin : **`war2`\
-        \n\n  •  **Syntax :** `.sok`\
-        \n  •  **Function : **Ngatain orang sok keras\
-        \n\n  •  **Syntax :** `.alay`\
-        \n  •  **Function : **Ngatain orang baru pasang bot\
-        \n\n  •  **Syntax :** `.bk`\
-        \n  •  **Function : **Ngatain bocah hina\
-        \n\n  •  **Syntax :** `.gh`\
-        \n  •  **Function : **Liat sendiri\
-        \n\n  •  **Syntax :** `.ehh`\
-        \n  •  **Function : **Liat sendiri\
-        \n\n  •  **Syntax :** `.emak`\
-        \n  •  **Function : **Liat sendiri\
-        \n\n  •  **Syntax :** `.wah`\
-        \n  •  **Function : **Liat sendiri\
-        \n\n  •  **Syntax :** `.mas`\
-        \n  •  **Function : **Liat sendiri\
-        \n\n  •  **Syntax :** `.kont`\
-        \n  •  **Function : **Ngatain anak kontoll\
-        \n\n  •  **Syntax :** `.gj`\
-        \n  •  **Function : **Ngatain anak gaje\
-        \n\n  •  **Syntax :** `.lol`\
-        \n  •  **Function : **Ngatain anak tolol\
-        \n\n  •  **Syntax :** `.title`\
-        \n  •  **Function : **Ngatain orang gila title\
-        \n\n  •  **Syntax :** `.an`\
-        \n  •  **Function : **Liat sendiri\
-        \n\n**Klo mau Req, kosa kata dari lu Hubungi @skyzu**\
+        "war2": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: {cmd}ehh\
+        \n↳ : lihat sendiri\
+        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: {cmd}emak\
+        \n↳ : lihat sendiri\
+        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: {cmd}mas\
+        \n↳ : lihat sendiri\
+        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: {cmd}dih\
+        \n↳ : lihat sendiri\
+        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: {cmd}gcs\
+        \n↳ : lihat sendiri\
+        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: {cmd}skb\
+        \n↳ : lihat sendiri\
+        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: {cmd}an\
+        \n↳ : lihat sendiri\
+        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: {cmd}bk\
+        \n↳ : lihat sendiri\
+        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: {cmd}gj\
+        \n↳ : lihat sendiri\
+        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: {cmd}gh\
+        \n↳ : lihat sendiri\
+        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: {cmd}lol\
+        \n↳ : lihat sendiri\
+        \n↳ **COBAIN AJA SENDIRI SEMUA!**.\
     "
     }
 )

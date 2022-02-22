@@ -22,11 +22,6 @@
       "description": "Dapatkan Api Hash Di Web my.telegram.org/Dibot @scrapsendbot.",
       "required": true
     },
-    "ALIVE_LOGO": {
-      "description": "Gambar dalam module .alive",
-      "value": "https://telegra.ph/file/fd08937c4ae6cb1303731.jpg",
-      "required": false
-    },
      "STRING_SESSION": {
       "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya ke @skyzuuuu di telegram",
       "required": true
@@ -68,11 +63,11 @@
     },
     "BOT_TOKEN": {
       "description": "Set this to enable inline bot helper. get the token from @BotFather",
-      "required": true
+      "required": false
     },
     "BOT_USERNAME": {
       "description": "Username Bot Kamu Di @BotFather, Tanpa @",
-      "required": true
+      "required": false
     }
   },
   "addons": [

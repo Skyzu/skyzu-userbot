@@ -28,6 +28,7 @@ from telethon.tl.types import (
 from telethon.utils import get_input_location
 
 from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
+from userbot import CMD_HANDLER as cmd
 from userbot.utils import skyzu_cmd
 
 # ====================== CONSTANT ===============================
@@ -319,22 +320,22 @@ async def fetch_info(replied_user, event):
 
 CMD_HELP.update(
     {
-        "profil": "**Plugin : **`profil`\
-        \n\n  •  **Syntax :** `.username` <username baru>\
+        "profil": f"**Plugin : **`profil`\
+        \n\n  •  **Syntax :** `{cmd}username` <username baru>\
         \n  •  **Function : **Menganti Username Telegram.\
-        \n\n  •  **Syntax :** `.name` <nama depan> atau `.name` <Nama Depan> <Nama Belakang>\
+        \n\n  •  **Syntax :** `{cmd}name` <nama depan> atau `.name` <Nama Depan> <Nama Belakang>\
         \n  •  **Function : **Menganti Nama Telegram Anda.\
-        \n\n  •  **Syntax :** `.setbio` <bio baru>\
+        \n\n  •  **Syntax :** `{cmd}setbio` <bio baru>\
         \n  •  **Function : **Untuk Mengganti Bio Telegram.\
-        \n\n  •  **Syntax :** `.setpfp`\
+        \n\n  •  **Syntax :** `{cmd}setpfp`\
         \n  •  **Function : **Balas Ke Gambar Ketik .setpfp Untuk Mengganti Foto Profil Telegram.\
-        \n\n  •  **Syntax :** `.delpfp` atau `.delpfp` <berapa profil>/<all>\
+        \n\n  •  **Syntax :** `{cmd}delpfp` atau `.delpfp` <berapa profil>/<all>\
         \n  •  **Function : **Menghapus Foto Profil Telegram.\
-        \n\n  •  **Syntax :** `.reserved`\
+        \n\n  •  **Syntax :** `{cmd}reserved`\
         \n  •  **Function : **Menunjukkan nama pengguna yang dipesan oleh Anda.\
-        \n\n  •  **Syntax :** `.count`\
+        \n\n  •  **Syntax :** `{cmd}count`\
         \n  •  **Function : **Menghitung Grup, Chat, Bot dll.\
-        \n\n  •  **Syntax :** `.info` <username> Atau Balas Ke Pesan Ketik `.data`\
+        \n\n  •  **Syntax :** `{cmd}info` <username> Atau Balas Ke Pesan Ketik `.data`\
         \n  •  **Function : **Mendapatkan Informasi Pengguna.\
     "
     }

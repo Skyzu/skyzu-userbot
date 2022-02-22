@@ -73,7 +73,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             return repo.__del__()
         await event.edit(
-            "`Heroku : Sedang MengUpdate`" "\nMohon Mohon Menunggu 5-7 Menit"
+            "**[HEROKU] Sedang MengUpdate**" "\n**Mohon Mohon Menunggu 5-7 Menit**"
         )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")

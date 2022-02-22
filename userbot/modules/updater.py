@@ -93,13 +93,13 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         build = app.builds(order_by="created_at", sort="desc")[0]
         if build.status == "failed":
             await event.edit(
-                "`Build Gagal!\n" "Dibatalkan atau ada beberapa kesalahan...`"
+                "`Build Gagal!\n" "Dibatalkan atau ada beberapa kesalahan...**"
             )
             await asyncio.sleep(5)
             return await event.delete()
         else:
             await event.edit(
-                "`𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Berhasil DiUpdate,Restart Tunggu Sebentar`"
+                "**𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Berhasil DiUpdate,Restart Tunggu Sebentar**"
             )
             await asyncio.sleep(15)
             await event.delete()

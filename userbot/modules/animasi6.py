@@ -1,4 +1,4 @@
-# Edit By @pikyus1
+# Edit By @skyzu
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP

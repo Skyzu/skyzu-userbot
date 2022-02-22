@@ -874,7 +874,7 @@ async def get_userdel_from_id(user, event):
     return user_obj
 
 
-@skyzu_cmd(pattern="bots$")
+@skyzu_cmd(pattern="bots ?(.*)")
 async def get_bots(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"

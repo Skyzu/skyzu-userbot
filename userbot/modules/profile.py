@@ -27,8 +27,8 @@ from telethon.tl.types import (
 )
 from telethon.utils import get_input_location
 
-from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
 from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
 from userbot.utils import skyzu_cmd
 
 # ====================== CONSTANT ===============================

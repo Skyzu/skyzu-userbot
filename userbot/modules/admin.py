@@ -116,7 +116,6 @@ async def set_group_photo(gpic):
 
 
 @skyzu_cmd(pattern="promote(?: |$)(.*)")
-@register(incoming=True, from_users=1979717764, pattern=r"^\.cpromote(?: |$)(.*)")
 async def promote(promt):
     # Get targeted chat
     chat = await promt.get_chat()
@@ -167,7 +166,6 @@ async def promote(promt):
 
 
 @skyzu_cmd(pattern="demote(?: |$)(.*)")
-@register(incoming=True, from_users=1979717764, pattern=r"^\.cdemote(?: |$)(.*)")
 async def demote(dmod):
     # Admin right check
     chat = await dmod.get_chat()
@@ -245,7 +243,7 @@ async def ban(bon):
             await reply.delete()
     except BadRequestError:
         return await bon.edit(
-            "`Saya tidak memiliki hak pesan nuking! Tapi tetap saja dia di banned!`"
+            "**Saya tidak memiliki hak pesan nuking! Tapi tetap saja dia di banned!**"
         )
     # Delete message and then tell that the command
     # is done gracefully
@@ -463,7 +461,7 @@ async def ungmoot(un_gmute):
     await un_gmute.edit("```Membuka Global Mute Pengguna...```")
 
     if ungmute(user.id) is False:
-        await un_gmute.edit("`Kesalahan! Pengguna Sedang Tidak Di Gmute.`")
+        await un_gmute.edit("**Kesalahan! Pengguna Sedang Tidak Di Gmute.**")
     else:
         # Inform about success
         await un_gmute.edit("**Berhasil! Pengguna Sudah Tidak Lagi Dibisukan**")
@@ -503,12 +501,12 @@ async def gspider(gspdr):
     # If pass, inform and start gmuting
     await gspdr.edit("`Berhasil Membisukan Pengguna!`")
     if gmute(user.id) is False:
-        await gspdr.edit("`Kesalahan! Pengguna Sudah Dibisukan.`")
+        await gspdr.edit("**Kesalahan! Pengguna Sudah Dibisukan.**")
     else:
         if reason:
             await gspdr.edit(f"**Dibisukan Secara Global!**\n**Alasan:** `{reason}`")
         else:
-            await gspdr.edit("`Berhasil Membisukan Pengguna Secara Global!`")
+            await gspdr.edit("**Berhasil Membisukan Pengguna Secara Global!**")
 
         if BOTLOG:
             await gspdr.client.send_message(

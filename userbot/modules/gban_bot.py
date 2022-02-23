@@ -6,8 +6,6 @@ Available Commands:
 import asyncio
 
 from userbot import ALIVE_NAME, G_BAN_LOGGER_GROUP, bot
-from userbot import CMD_HANDLER as cmd
-from userbot.events import register
 
 # imported from uniborg by @heyworld
 

@@ -152,7 +152,7 @@ CMD_HELP.update(
     {
         "filter": f"`{cmd}filters`\
     \nUsage: Melihat filter userbot yang aktif di obrolan.\
-    \n\n`.filter` <keyword> <balasan> atau balas ke pesan ketik {cmd}filter <keyword>\
+    \n\n`{cmd}filter` <keyword> <balasan> atau balas ke pesan ketik {cmd}filter <keyword>\
     \nUsage: Membuat filter di obrolan.\
     \nBot Akan Membalas Jika Ada Yang Menyebut 'keyword' yang dibuat.\
     \nBisa dipake ke media/sticker/vn/file.\

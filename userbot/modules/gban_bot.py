@@ -7,6 +7,8 @@ import asyncio
 
 from userbot import ALIVE_NAME, G_BAN_LOGGER_GROUP, bot
 
+from userbot.utils import skyzu_cmd
+
 # imported from uniborg by @heyworld
 
 # ================= CONSTANT =================

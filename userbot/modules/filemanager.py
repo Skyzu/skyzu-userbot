@@ -4,13 +4,14 @@ import os.path
 import time
 from os.path import exists, isdir
 
-from userbot.events import register
+from userbot import CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 from userbot.utils import humanbytes
 
 MAX_MESSAGE_SIZE_LIMIT = 4095
 
 
-@register(outgoing=True, pattern=r"^\.ls ?(.*)")
+@skyzu_cmd(pattern="ls ?(.*)")
 async def lst(event):
     if event.fwd_from:
         return

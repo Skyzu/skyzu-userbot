@@ -16,7 +16,7 @@ from userbot import CMD_HELP
 from userbot.utils import skyzu_cmd
 
 
-@register(outgoing=True, pattern=r"\.\w*", ignore_unsafe=True, disable_errors=True)
+@skyzu_cmd(pattern="w*", ignore_unsafe=True, disable_errors=True)
 async def on_snip(event):
     """costums logic."""
     try:

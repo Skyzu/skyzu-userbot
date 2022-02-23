@@ -8,128 +8,142 @@
 # t.me/SharingUserbot
 # t.me/skyzusupport
 #
-""" Userbot module containing commands for keeping costum global notes. """
+import io
 
 from userbot import BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.modules.sql_helper import snips_sql as sql
+from userbot.utils import edit_delete, edit_or_reply, Skyzu_cmd, reply_id
 
 
-@skyzu_cmd(pattern="\(\S+)")
-async def on_snip(event):
-    """costums logic."""
-    try:
-        from userbot.modules.sql_helper.snips_sql import get_snip
-    except AttributeError:
+@skyzu_cmd(pattern=r"\#(\S+)")
+async def incom_note(event):
+    if not BOTLOG_CHATID:
         return
-    name = event.text[1:]
-    snip = get_snip(name)
-    message_id_to_reply = event.message.reply_to_msg_id
-    if not message_id_to_reply:
-        message_id_to_reply = None
-    if snip:
-        if snip.f_mesg_id:
-            msg_o = await event.client.get_messages(
-                entity=BOTLOG_CHATID, ids=int(snip.f_mesg_id)
+    try:
+        if not (await event.get_sender()).bot:
+            notename = event.text[1:]
+            notename = notename.lower()
+            note = sql.get_note(notename)
+            message_id_to_reply = await reply_id(event)
+            if note:
+                if note.f_mesg_id:
+                    msg_o = await event.client.get_messages(
+                        entity=BOTLOG_CHATID, ids=int(note.f_mesg_id)
+                    )
+                    await event.delete()
+                    await event.client.send_message(
+                        event.chat_id,
+                        msg_o,
+                        reply_to=message_id_to_reply,
+                        link_preview=False,
+                    )
+                elif note.reply:
+                    await event.delete()
+                    await event.client.send_message(
+                        event.chat_id,
+                        note.reply,
+                        reply_to=message_id_to_reply,
+                        link_preview=False,
+                    )
+    except AttributeError:
+        pass
+
+
+@skyzu_cmd(pattern="custom(?:\\s|$)([\\s\\S]*)")
+async def add_snip(event):
+    trigger = event.pattern_match.group(1)
+    stri = event.text.partition(trigger)[2]
+    cht = await event.get_reply_message()
+    cht_id = None
+    trigger = trigger.lower()
+    if cht:
+        if stri:
+            return await edit_delete(
+                event,
+                f"**Balas pesan dengan** `{cmd}custom <trigger>` **untuk menambahkan ke custom cmd**",
             )
-            await event.client.send_message(
+        await event.client.send_message(
+            BOTLOG_CHATID,
+            f"📝 **#CUSTOM_CMD**\n • **KEYWORD:** `#{trigger}`\n • 🔖 Pesan ini disimpan sebagai catatan data untuk custom, Tolong JANGAN Dihapus!!",
+        )
+        cht_o = await event.client.forward_messages(
+            entity=BOTLOG_CHATID, messages=cht, from_peer=event.chat_id, silent=True
+        )
+        cht_id = cht_o.id
+    if not cht:
+        if not stri:
+            return await edit_delete(
+                event,
+                f"**Perintah tidak diketahui! ketik** `{cmd}help custom` **bila butuh bantuan.**",
+            )
+        await event.client.send_message(
+            BOTLOG_CHATID,
+            f"📝 **#CUSTOM_CMD**\n • **KEYWORD:** `#{trigger}`\n • 🔖 Pesan ini disimpan sebagai catatan data untuk custom, Tolong JANGAN Dihapus!!",
+        )
+        cht_o = await event.client.send_message(BOTLOG_CHATID, stri)
+        cht_id = cht_o.id
+        stri = None
+    success = "**custom {}. Gunakan** `#{}` **di mana saja untuk menggunakannya**"
+    if sql.add_note(trigger, stri, cht_id) is False:
+        sql.rm_note(trigger)
+        if sql.add_note(trigger, stri, cht_id) is False:
+            return await edit_or_reply(event, "**Gagal Menambahkan Custom CMD**")
+        return await edit_or_reply(event, success.format("Berhasil di Update", trigger))
+    return await edit_or_reply(event, success.format("Berhasil disimpan", trigger))
+
+
+@skyzu_cmd(pattern="delcustom(?:\\s|$)([\\s\\S]*)")
+async def _(event):
+    input_str = (event.pattern_match.group(1)).lower()
+    if not input_str:
+        return await edit_delete(event, "**Berikan nama custom untuk dihapus**")
+    if input_str.startswith("#"):
+        input_str = input_str.replace("#", "")
+    try:
+        sql.rm_note(input_str)
+        await edit_or_reply(
+            event, "**Berhasil menghapus custom:** `#{}`".format(input_str)
+        )
+    except BaseException:
+        await edit_or_reply(event, "Tidak ada snip yang disimpan dengan pemicu ini.")
+
+
+@skyzu_cmd(pattern="customs$")
+async def lsnote(event):
+    all_snips = sql.get_notes()
+    OUT_STR = "**List Custom yang tersedia:**\n"
+    if len(all_snips) > 0:
+        for a_snip in all_snips:
+            OUT_STR += f"✣ `#{a_snip.keyword}` \n"
+    else:
+        OUT_STR = "**Tidak ada custom cmd yang disimpan.**"
+    if len(OUT_STR) > 4000:
+        with io.BytesIO(str.encode(OUT_STR)) as out_file:
+            out_file.name = "snips.text"
+            await event.client.send_file(
                 event.chat_id,
-                msg_o.message,
-                reply_to=message_id_to_reply,
-                file=msg_o.media,
+                out_file,
+                force_document=True,
+                allow_cache=False,
+                caption="**List Custom yang tersedia**",
+                reply_to=event,
             )
             await event.delete()
-        elif snip.reply:
-            await event.client.send_message(
-                event.chat_id, snip.reply, reply_to=message_id_to_reply
-            )
-            await event.delete()
-
-
-@skyzu_cmd(pattern="costum (\w*)")
-async def on_snip_save(event):
-    """For .costum command, saves costums for future use."""
-    try:
-        from userbot.modules.sql_helper.snips_sql import add_snip
-    except AtrributeError:
-        await event.edit("**Berjalan pada mode Non-SQL!**")
-        return
-    keyword = event.pattern_match.group(1)
-    string = event.text.partition(keyword)[2]
-    msg = await event.get_reply_message()
-    msg_id = None
-    if msg and msg.media and not string:
-        if BOTLOG_CHATID:
-            await event.client.send_message(
-                BOTLOG_CHATID,
-                f"📝 **#COSTUM**\
-            \n • **KEYWORD:** `{keyword}`\
-            \n • 🔖 Pesan ini disimpan sebagai catatan data untuk costum, Tolong JANGAN Dihapus!!",
-            )
-            msg_o = await event.client.forward_messages(
-                entity=BOTLOG_CHATID, messages=msg, from_peer=event.chat_id, silent=True
-            )
-            msg_id = msg_o.id
-        else:
-            await event.edit(
-                "**Menyimpan kostum dengan media membutuhkan `BOTLOG_CHATID` untuk disetel.**"
-            )
-            return
-    elif event.reply_to_msg_id and not string:
-        rep_msg = await event.get_reply_message()
-        string = rep_msg.text
-    success = (
-        "**Costum {} disimpan. Gunakan** `.{}` **di mana saja untuk menggunakannya**"
-    )
-    if add_snip(keyword, string, msg_id) is False:
-        await event.edit(success.format("Berhasil", keyword))
     else:
-        await event.edit(success.format("Berhasil", keyword))
-
-
-@skyzu_cmd(pattern="costums$")
-async def on_snip_list(event):
-    """For .costums command, lists costums saved by you."""
-    try:
-        from userbot.modules.sql_helper.snips_sql import get_snips
-    except AttributeError:
-        await event.edit("**Berjalan pada mode Non-SQL!**")
-        return
-
-    message = "**Tidak ada kostum yang tersedia saat ini.**"
-    all_snips = get_snips()
-    for a_snip in all_snips:
-        if message == "**Tidak ada kostum yang tersedia saat ini.**":
-            message = "**List Costum yang tersedia:**\n"
-        message += f"✣ `.{a_snip.snip}`\n"
-    await event.edit(message)
-
-
-@skyzu_cmd(pattern="delcostum (\w*)")
-async def on_snip_delete(event):
-    """For .delcostum command, deletes a costum."""
-    try:
-        from userbot.modules.sql_helper.snips_sql import remove_snip
-    except AttributeError:
-        await event.edit("**Berjalan pada mode Non-SQL!**")
-        return
-    name = event.pattern_match.group(1)
-    if remove_snip(name) is True:
-        await event.edit(f"**Berhasil menghapus costum:** `{name}`")
-    else:
-        await event.edit(f"**Tidak dapat menemukan costum:** `{name}`")
+        await edit_or_reply(event, OUT_STR)
 
 
 CMD_HELP.update(
     {
-        "costum": f"**Plugin : **`costum`\
-        \n\n  •  **Syntax :** `{cmd}costum` <nama> <data> atau membalas pesan dengan .costum <nama>\
-        \n  •  **Function : **Menyimpan pesan costum (catatan global) dengan nama. (bisa dengan gambar, docs, dan stickers!)\
-        \n\n  •  **Syntax :** `{cmd}costums`\
-        \n  •  **Function : **Mendapat semua costums yang disimpan.\
-        \n\n  •  **Syntax :** `{cmd}delcostum` <nama_costum>\
-        \n  •  **Function : **Menghapus costum yang ditentukan.\
+        "custom": f"**Plugin : **`custom`\
+        \n\n  •  **Syntax :** `{cmd}custom` <nama> <data> atau membalas pesan dengan .custom <nama>\
+        \n  •  **Function : **Menyimpan pesan custom (catatan global) dengan nama. (bisa dengan gambar, docs, dan stickers!)\
+        \n\n  •  **Syntax :** `{cmd}customs`\
+        \n  •  **Function : **Mendapat semua customs yang disimpan.\
+        \n\n  •  **Syntax :** `{cmd}delcustom` <nama_custom>\
+        \n  •  **Function : **Menghapus custom yang ditentukan.\
     "
     }
 )

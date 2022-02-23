@@ -10,8 +10,9 @@
 #
 """ Userbot module containing commands for keeping costum global notes. """
 
-from userbot import BOTLOG_CHATID, CMD_HELP
+from userbot import BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP
 from userbot.utils import skyzu_cmd
 
 

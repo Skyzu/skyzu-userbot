@@ -14,7 +14,7 @@ from userbot import BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
 from userbot.modules.sql_helper import snips_sql as sql
-from userbot.utils import edit_delete, edit_or_reply, Skyzu_cmd, reply_id
+from userbot.utils import edit_delete, edit_or_reply, reply_id
 
 
 @skyzu_cmd(pattern=r"\#(\S+)")

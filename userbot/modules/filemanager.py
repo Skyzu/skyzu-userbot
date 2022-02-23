@@ -4,9 +4,7 @@ import os.path
 import time
 from os.path import exists, isdir
 
-from userbot import CMD_HANDLER as cmd
-from userbot.utils import skyzu_cmd
-from userbot.utils import humanbytes
+from userbot.utils import humanbytes, skyzu_cmd
 
 MAX_MESSAGE_SIZE_LIMIT = 4095
 

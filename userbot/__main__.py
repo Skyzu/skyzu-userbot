@@ -22,6 +22,7 @@ from userbot import (
 )
 from userbot.modules import ALL_MODULES
 from userbot.utils.tools import ya_kali_ngga
+from userbot.utils import autobot
 
 try:
     for module_name in ALL_MODULES:

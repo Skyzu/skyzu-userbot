@@ -8,8 +8,6 @@
 import sys
 from importlib import import_module
 
-from telethon.tl.functions.channels import InviteToChannelRequest
-
 from userbot import (
     ALIVE_NAME,
     BOT_TOKEN,

@@ -39,7 +39,7 @@ async def userbot_on():
         pass
 
 
-bot.loop.run_until_complete(check_alive())
+bot.loop.run_until_complete(userbot_on())
 if not BOT_TOKEN:
     LOGS.info(
         "BOT_TOKEN Vars tidak terisi, Memulai Membuat BOT Otomatis di @Botfather..."

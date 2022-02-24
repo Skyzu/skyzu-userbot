@@ -11,6 +11,7 @@ from importlib import import_module
 from userbot import ALIVE_NAME, BOT_VER, BOTLOG_CHATID, LOGS, UPSTREAM_REPO_BRANCH, bot
 from userbot.modules import ALL_MODULES
 from userbot.utils.tools import ya_kali_ngga
+from userbot.utils import autobot
 
 try:
     for module_name in ALL_MODULES:

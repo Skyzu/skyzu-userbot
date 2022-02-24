@@ -474,7 +474,9 @@ with bot:
             try:
                 tgbotusername = BOT_USERNAME
                 if tgbotusername is not None:
-                    results = await event.client.inline_query(tgbotusername, "{BOT_USERNAME}")
+                    results = await event.client.inline_query(
+                        tgbotusername, "{BOT_USERNAME}"
+                    )
                     await results[0].click(
                         event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
                     )

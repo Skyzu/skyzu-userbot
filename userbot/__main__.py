@@ -46,21 +46,13 @@ async def userbot_on():
     except BaseException:
         pass
 
-
 bot.loop.run_until_complete(userbot_on())
+bot.loop.run_until_complete(ya_kali_ngga())
 if not BOT_TOKEN:
     LOGS.info(
         "BOT_TOKEN Vars tidak terisi, Memulai Membuat BOT Otomatis di @Botfather..."
     )
     bot.loop.run_until_complete(autobot())
-
-if len(sys.argv) not in (1, 3, 4):
-    bot.disconnect()
-else:
-    bot.run_until_disconnected()
-
-bot.loop.run_until_complete(userbot_on())
-bot.loop.run_until_complete(ya_kali_ngga())
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
 else:

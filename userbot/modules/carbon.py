@@ -10,7 +10,6 @@ from userbot import CMD_HELP
 from userbot.utils import edit_delete, edit_or_reply, skyzu_cmd
 from userbot.utils.misc import Carbon
 
-
 all_col = [
     "Black",
     "Navy",

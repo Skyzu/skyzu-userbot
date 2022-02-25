@@ -164,7 +164,7 @@ all_col = [
 
 @skyzu_cmd(pattern="(rc|c)arbon")
 async def crbn(event):
-    from_user = skyzu(event.sender)
+    from_user = (event.sender)
     xxxx = await edit_or_reply(event, "`Processing...`")
     te = event.text
     col = random.choice(all_col) if te[1] == "r" else "Grey"
@@ -194,7 +194,7 @@ async def crbn(event):
 
 @skyzu_cmd(pattern="ccarbon ?(.*)")
 async def crbn(event):
-    from_user = skyzu(event.sender)
+    from_user = (event.sender)
     match = event.pattern_match.group(1).strip()
     if not match:
         return await edit_or_reply(

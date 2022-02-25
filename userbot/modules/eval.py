@@ -143,7 +143,6 @@ async def terminal_runner(term):
         await term.edit(f"`{curruser}:~$ {command}\n{result}`")
 
 
-
 @skyzu_cmd(pattern="json$")
 async def _(event):
     if event.fwd_from:

@@ -178,7 +178,6 @@ CMD_HELP.update(
         "eval": f">`{cmd}eval print('world')`" "\nUsage: Just like exec.",
         "exec": f">`{cmd}exec print('hello')`" "\nUsage: Execute small python scripts.",
         "term": f">`{cmd}term <cmd>`"
-        "json": f">`{cmd}json <cmd>`"
         "\nUsage: Run bash commands and scripts on your server.",
     }
 )

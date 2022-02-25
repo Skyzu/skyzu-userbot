@@ -10,6 +10,8 @@ from userbot import CMD_HELP
 from userbot.utils import edit_delete, edit_or_reply, skyzu_cmd
 from userbot.utils.misc import Carbon
 
+from .vcg import vcmention
+
 all_col = [
     "Black",
     "Navy",
@@ -164,7 +166,7 @@ all_col = [
 
 @skyzu_cmd(pattern="(rc|c)arbon")
 async def crbn(event):
-    from_user = event.sender
+    from_user = vcmention(event.sender)
     xxxx = await edit_or_reply(event, "`Processing...`")
     te = event.text
     col = random.choice(all_col) if te[1] == "r" else "Grey"
@@ -194,7 +196,7 @@ async def crbn(event):
 
 @skyzu_cmd(pattern="ccarbon ?(.*)")
 async def crbn(event):
-    from_user = event.sender
+    from_user = vcmention(event.sender)
     match = event.pattern_match.group(1).strip()
     if not match:
         return await edit_or_reply(

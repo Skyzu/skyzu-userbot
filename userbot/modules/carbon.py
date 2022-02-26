@@ -5,8 +5,9 @@
 import os
 import random
 
+from userbot import ALIVE_NAME
 from userbot import CMD_HANDLER as cmd
-from userbot import CMD_HELP, ALIVE_NAME
+from userbot import CMD_HELP
 from userbot.utils import edit_delete, edit_or_reply, skyzu_cmd
 from userbot.utils.misc import Carbon
 
@@ -164,7 +165,7 @@ all_col = [
 
 @skyzu_cmd(pattern="(rc|c)arbon")
 async def crbn(event):
-    from_user = event.sender
+    event.sender
     xxxx = await edit_or_reply(event, "`Processing...`")
     te = event.text
     col = random.choice(all_col) if te[1] == "r" else "Grey"
@@ -194,7 +195,7 @@ async def crbn(event):
 
 @skyzu_cmd(pattern="ccarbon ?(.*)")
 async def crbn(event):
-    from_user = event.sender
+    event.sender
     match = event.pattern_match.group(1).strip()
     if not match:
         return await edit_or_reply(

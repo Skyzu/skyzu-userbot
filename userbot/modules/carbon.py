@@ -6,7 +6,7 @@ import os
 import random
 
 from userbot import CMD_HANDLER as cmd
-from userbot import CMD_HELP
+from userbot import CMD_HELP, ALIVE_NAME
 from userbot.utils import edit_delete, edit_or_reply, skyzu_cmd
 from userbot.utils.misc import Carbon
 
@@ -187,7 +187,7 @@ async def crbn(event):
     xx = await Carbon(code=code, file_name="carbon_man", backgroundColor=col)
     await xxxx.delete()
     await event.reply(
-        f"**Carbonised by** {from_user}",
+        f"**Carbonised by** {ALIVE_NAME}",
         file=xx,
     )
 
@@ -222,7 +222,7 @@ async def crbn(event):
     xx = await Carbon(code=code, backgroundColor=match)
     await msg.delete()
     await event.reply(
-        f"**Carbonised by** {from_user}",
+        f"**Carbonised by** {ALIVE_NAME}",
         file=xx,
     )
 

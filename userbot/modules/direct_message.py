@@ -1,11 +1,10 @@
-from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
-# Ported By @VckyouuBitch
 # FROM skyzu-userbot (https://github.com/Skyzu/skyzu-userbot)
 
 
-@register(outgoing=True, pattern=r"^\.(?:dm)\s?(.*)?")
+@skyzu_cmd(pattern=(?:dm)\s?(.*)?")
 async def remoteaccess(event):
 
     p = event.pattern_match.group(1)
@@ -32,6 +31,21 @@ async def remoteaccess(event):
         await event.edit("`Success Mengirim Pesan Anda.`")
     except BaseException:
         await event.edit("**Terjadi Error. Gagal Mengirim Pesan.**")
+
+@skyzu_cmd(pattern="open(?: |$)(.*)")
+async def _(event):
+    b = await event.client.download_media(await event.get_reply_message())
+    with open(b, "r") as a:
+        c = a.read()
+    await edit_or_reply(event, "**Berhasil Membaca Berkas**")
+    if len(c) > 4095:
+        await edit_or_reply(
+            event, c, deflink=True, linktext="**Berhasil Membaca Berkas**"
+        )
+    else:
+        await event.client.send_message(event.chat_id, f"`{c}`")
+        await event.delete()
+    os.remove(b)
 
 
 CMD_HELP.update(

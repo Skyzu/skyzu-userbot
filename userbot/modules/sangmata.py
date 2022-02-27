@@ -8,13 +8,7 @@ from telethon.tl.functions.contacts import UnblockRequest
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import (
-    _format,
-    edit_delete,
-    edit_or_reply,
-    get_user_from_event,
-    skyzu_cmd,
-)
+from userbot.utils import skyzu_cmd
 
 
 @skyzu_cmd(pattern="sg(u)?(?:\s|$)([\s\S]*)")

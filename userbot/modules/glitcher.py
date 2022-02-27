@@ -9,10 +9,9 @@ from PIL import Image, ImageDraw, ImageFont
 from telethon import functions, types
 from telethon.tl.types import DocumentAttributeFilename
 
-from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
 from userbot import CMD_HANDLER as cmd
-from userbot.utils import skyzu_cmd
-from userbot.utils import progress
+from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
+from userbot.utils import progress, skyzu_cmd
 
 Glitched = TEMP_DOWNLOAD_DIRECTORY + "glitch.gif"
 

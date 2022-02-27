@@ -32,6 +32,7 @@ async def remoteaccess(event):
     except BaseException:
         await event.edit("**Terjadi Error. Gagal Mengirim Pesan.**")
 
+
 @skyzu_cmd(pattern="open(?: |$)(.*)")
 async def _(event):
     b = await event.client.download_media(await event.get_reply_message())

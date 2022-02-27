@@ -10,7 +10,8 @@ from telethon import functions, types
 from telethon.tl.types import DocumentAttributeFilename
 
 from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
-from userbot.events import register
+from userbot import CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 from userbot.utils import progress
 
 Glitched = TEMP_DOWNLOAD_DIRECTORY + "glitch.gif"
@@ -32,7 +33,7 @@ EMOJI_PATTERN = re.compile(
 )
 
 
-@register(outgoing=True, pattern=r"^\.glitch(?: |$)(.*)")
+@skyzu_cmd(pattern="glitch(?: |$)(.*)")
 async def glitch(event):
     if not event.reply_to_msg_id:
         await event.edit("`Aku Mau Glitch Sebuah Hantu!`")
@@ -245,7 +246,7 @@ async def check_media(reply_message):
 
 CMD_HELP.update(
     {
-        "glitch": ">`.glitch <1-8>`"
+        "glitch": f">`{cmd}glitch <1-8>`"
         "\nUsage: Balas Ke Sticker/Gambar.\nGlitch Level 1-8 Jika Tidak Membuat Level Maka Otomatis Default Level 2"
     }
 )

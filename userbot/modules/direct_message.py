@@ -4,7 +4,7 @@ from userbot.utils import skyzu_cmd
 # FROM skyzu-userbot (https://github.com/Skyzu/skyzu-userbot)
 
 
-@skyzu_cmd(pattern=(?:dm)\s?(.*)?")
+@skyzu_cmd(pattern="(?:dm)\s?(.*)?")
 async def remoteaccess(event):
 
     p = event.pattern_match.group(1)

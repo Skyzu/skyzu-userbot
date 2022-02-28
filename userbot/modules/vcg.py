@@ -68,7 +68,7 @@ async def stop_voice(c):
 
 @skyzu_cmd(pattern="vcinvite")
 async def _(sky):
-    await kyy.edit("`Sedang Menginvite Member...`")
+    await sky.edit("`Sedang Menginvite Member...`")
     users = []
     z = 0
     async for x in sky.client.iter_participants(sky.chat_id):

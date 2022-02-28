@@ -22,7 +22,7 @@ def vcmention(user):
 
 
 async def get_call(sky):
-    sky = await sky.client(getchat(kyy.chat_id))
+    sky = await sky.client(getchat(sky.chat_id))
     await sky.client(getvc(sky.full_chat.call))
     return hehe.call
 

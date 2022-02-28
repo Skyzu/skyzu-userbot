@@ -1,16 +1,16 @@
 # Thanks TeamUltroid
 # Ported By @skyzu
 
+from telethon.tl import types
 from telethon.tl.functions.channels import GetFullChannelRequest as getchat
 from telethon.tl.functions.phone import CreateGroupCallRequest as startvc
 from telethon.tl.functions.phone import DiscardGroupCallRequest as stopvc
 from telethon.tl.functions.phone import GetGroupCallRequest as getvc
 from telethon.tl.functions.phone import InviteToGroupCallRequest as invitetovc
-
-from telethon.tl import types
 from telethon.utils import get_display_name
 
-from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP
 from userbot.utils import skyzu_cmd
 
 NO_ADMIN = "`Maaf Kamu Bukan Admin 👮`"
@@ -31,7 +31,7 @@ async def get_call(sky):
 
 def user_list(l, n):
     for i in range(0, len(l), n):
-        yield l[i: i + n]
+        yield l[i : i + n]
 
 
 @skyzu_cmd(pattern="startvc$")

@@ -490,6 +490,7 @@ with bot:
 
         dugmeler = CMD_HELP
         me = bot.get_me()
+        owner = user.first_name
         uid = me.id
 
         @tgbot.on(

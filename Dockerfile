@@ -3,6 +3,8 @@ FROM skyzuxzy/skyzu-userbot:buster
 #━━━━━ Userbot Telegram ━━━━━
 #━━━━━ By Skyzuu-Userbot ━━━━━
 
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install ffmpeg -y
 RUN git clone -b Skyzuu-Userbot https://github.com/Skyzu/skyzu-userbot /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools

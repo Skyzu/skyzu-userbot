@@ -50,8 +50,7 @@ logging.basicConfig(
 logging.getLogger("asyncio").setLevel(logging.ERROR)
 logging.getLogger("pytgcalls").setLevel(logging.ERROR)
 logging.getLogger("telethon.network.mtprotosender").setLevel(logging.ERROR)
-logging.getLogger(
-    "telethon.network.connection.connection").setLevel(logging.ERROR)
+logging.getLogger("telethon.network.connection.connection").setLevel(logging.ERROR)
 LOGS = getLogger(__name__)
 
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -276,11 +275,13 @@ INLINE_PIC = (
 EMOJI_HELP = os.environ.get("EMOJI_HELP") or "⚡"
 
 # Picture For VCPLUGIN
-PLAY_PIC = (os.environ.get("PLAY_PIC")
-            or "https://telegra.ph/file/6213d2673486beca02967.png")
+PLAY_PIC = (
+    os.environ.get("PLAY_PIC") or "https://telegra.ph/file/6213d2673486beca02967.png"
+)
 
-QUEUE_PIC = (os.environ.get("QUEUE_PIC")
-             or "https://telegra.ph/file/d6f92c979ad96b2031cba.png")
+QUEUE_PIC = (
+    os.environ.get("QUEUE_PIC") or "https://telegra.ph/file/d6f92c979ad96b2031cba.png"
+)
 
 
 # Last.fm Module

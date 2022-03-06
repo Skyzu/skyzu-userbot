@@ -4,13 +4,12 @@ import os
 import os.path
 import re
 import shlex
-from PIL import Image
-from yt_dlp import YoutubeDL
 from os.path import basename
 from typing import Optional, Union
 
 import pybase64
 from html_telegraph_poster import TelegraphPoster
+from PIL import Image
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.functions.channels import JoinChannelRequest as Get
 from telethon.tl.types import (
@@ -18,6 +17,7 @@ from telethon.tl.types import (
     ChannelParticipantCreator,
     DocumentAttributeFilename,
 )
+from yt_dlp import YoutubeDL
 
 from userbot import LOGS, SUDO_USERS, bot
 
@@ -338,6 +338,7 @@ async def media_to_pic(event, reply):
         im.save(file)
     await runcmd(f"rm -rf '{media}'")
     return [event, file, mediatype]
+
 
 ydl_opts = {
     "format": "bestaudio[ext=m4a]",

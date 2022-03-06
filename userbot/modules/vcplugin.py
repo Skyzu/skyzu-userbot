@@ -395,7 +395,7 @@ async def vc_pause(event):
         await edit_delete(event, "**Tidak Sedang Memutar Streaming**")
 
 
-@kyy_cmd(pattern="resume$")
+@skyzu_cmd(pattern="resume$")
 async def vc_resume(event):
     chat_id = event.chat_id
     if chat_id in QUEUE:

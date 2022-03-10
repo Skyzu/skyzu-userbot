@@ -515,7 +515,7 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "chat": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}getid`\
+        f"chat": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}getid`\
 \n↳ : Dapatkan ID dari media Telegram mana pun, atau pengguna mana pun\
 \n\n: `{cmd}getbot`\
 \n↳ : Dapatkan Bot dalam obrolan apa pun.\

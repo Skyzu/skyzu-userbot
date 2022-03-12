@@ -22,7 +22,6 @@
 from userbot import BOT_USERNAME, CMD_HELP, bot
 from userbot.utils import edit_delete, edit_or_reply, skyzu_cmd
 
-
 user = bot.get_me()
 DEFAULTUSER = user.first_name
 CUSTOM_HELP_EMOJI = "✨"

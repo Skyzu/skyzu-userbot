@@ -1,28 +1,50 @@
-import logging
+#    TeleBot - UserBot
+#    Copyright (C) 2020 TeleBot
 
-from userbot import BOT_USERNAME
-from userbot.utils import skyzu_cmd
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
 
-logging.basicConfig(
-    format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING
-)
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+#    Recode by Fariz <Github.com/farizjs>
+#    From Flicks-Userbot
+#    <t.me/TheFlicksUserbot>
 
 
-@skyzu_cmd(pattern="helpme")
-async def yardim(event):
-    try:
-        tgbotusername = BOT_USERNAME
-        if tgbotusername is not None:
-            results = await event.client.inline_query(tgbotusername, "@skyzusupport")
+from userbot import BOT_USERNAME, CMD_HELP, bot
+from userbot.utils import edit_or_reply, edit_delete, skyzu_cmd
+
+user = bot.get_me()
+DEFAULTUSER = user.first_name
+CUSTOM_HELP_EMOJI = "✨"
+
+
+@skyzu_cmd(pattern="help ?(.*)")
+async def cmd_list(event):
+    args = event.pattern_match.group(1).lower()
+    if args:
+        if args in CMD_HELP:
+            await edit_or_reply(event, f"**✘ Commands available in {args} ✘** \n\n" + str(CMD_HELP[args]) + "\n\n**☞ @ProjectSkyzu**")
+        else:
+            await edit_delete(event, f"**Module** `{args}` **Tidak tersedia!**")
+    else:
+        try:
+            results = await bot.inline_query(  # pylint:disable=E0602
+                BOT_USERNAME, "@SkyzuUserbot"
+            )
             await results[0].click(
                 event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
             )
             await event.delete()
-        else:
-            await event.edit(
-                "`Botnya tidak berfungsi! Silahkan atur Bot Token dan Username dengan benar. Modul telah dihentikan.`"
-            )
-    except Exception:
-        return await event.edit(
-            "`Anda tidak dapat mengirim hasil sebaris dalam hal ini ke chat (disebabkan oleh Mengirim Inline Sebaris)`"
-        )
+        except BaseException:
+            await edit_delete(event,
+                              f"** Sepertinya obrolan atau bot ini tidak mendukung inline mode.**"
+                              )

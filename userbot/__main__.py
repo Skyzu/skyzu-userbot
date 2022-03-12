@@ -8,7 +8,7 @@
 import sys
 from importlib import import_module
 
-from requests
+import requests
 from userbot import (
     ALIVE_NAME,
     BOT_TOKEN,

@@ -118,7 +118,8 @@ def skyzu_handler(
 
     return decorator
     
-    def asst_cmd(**args):
+    
+def asst_cmd(**args):
     pattern = args.get("pattern", None)
     r_pattern = r"^[/!]"
     if pattern is not None and not pattern.startswith("(?i)"):

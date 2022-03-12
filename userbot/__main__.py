@@ -30,6 +30,9 @@ try:
     user = bot.get_me()
     call_py.start()
     LOGS.info(f"⚡Skyzu-Userbot⚡ ⚙️ V{BOT_VER} [ TELAH DIAKTIFKAN! ]")
+except BaseException as e:
+    LOGS.info(str(e), exc_info=True)
+    sys.exit(1)
 
 
 async def userbot_on():

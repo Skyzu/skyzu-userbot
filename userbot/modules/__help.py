@@ -20,11 +20,13 @@ from telethon.errors.rpcerrorlist import BotInlineDisabledError as noinline
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest
 
-from userbot import BOT_USERNAME, bot
+from userbot import BOT_USERNAME
 from userbot import CMD_HANDLER as cmd
+from userbot import bot
 from userbot.utils import edit_or_reply, skyzu_cmd
 
 tgbotusername = BOT_USERNAME
+
 
 @skyzu_cmd(pattern="helpme$")
 async def yardim(event):

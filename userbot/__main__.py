@@ -27,8 +27,8 @@ try:
     for module_name in ALL_MODULES:
         imported_module = import_module("userbot.modules." + module_name)
     bot.start()
-    user = bot.get_me()
     call_py.start()
+    user = bot.get_me()
     LOGS.info(f"⚡Skyzu-Userbot⚡ ⚙️ V{BOT_VER} [ TELAH DIAKTIFKAN! ]")
 except BaseException as e:
     LOGS.info(str(e), exc_info=True)

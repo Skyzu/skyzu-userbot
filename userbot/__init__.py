@@ -434,7 +434,6 @@ async def check_botlog_chatid():
         quit(1)
 
 
-
 async def update_restart_msg(chat_id, msg_id):
     DEFAULTUSER = ALIVE_NAME or "Set `ALIVE_NAME` ConfigVar!"
     message = (
@@ -453,9 +452,7 @@ try:
     chat_id, msg_id = gvarstatus("restartstatus").split("\n")
     with bot:
         try:
-            bot.loop.run_until_complete(
-                update_restart_msg(
-                    int(chat_id), int(msg_id)))
+            bot.loop.run_until_complete(update_restart_msg(int(chat_id), int(msg_id)))
         except BaseException:
             pass
     delgvar("restartstatus")
@@ -502,7 +499,7 @@ def paginate_help(page_number, loaded_modules, prefix):
     modulo_page = page_number % max_num_pages
     if len(pairs) > number_of_rows:
         pairs = pairs[
-            modulo_page * number_of_rows: number_of_rows * (modulo_page + 1)
+            modulo_page * number_of_rows : number_of_rows * (modulo_page + 1)
         ] + [
             (
                 custom.Button.inline(
@@ -548,8 +545,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
-                buttons = paginate_help(
-                    current_page_number, dugmeler, "helpme")
+                buttons = paginate_help(current_page_number, dugmeler, "helpme")
                 text = f"**✨ Skyzu-Userbotɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
                 await event.edit(
                     text,
@@ -561,8 +557,7 @@ with bot:
                 reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-        @tgbot.on(events.NewMessage(incoming=True,
-                  func=lambda e: e.is_private))
+        @tgbot.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
         async def bot_pms(event):
             chat = await event.get_chat()
             if check_is_black_list(chat.id):
@@ -618,12 +613,8 @@ with bot:
                         return await event.reply(f"**ERROR:** `{e}`")
                     try:
                         add_user_to_db(
-                            reply_to,
-                            user_name,
-                            user_id,
-                            reply_msg,
-                            event.id,
-                            msg.id)
+                            reply_to, user_name, user_id, reply_msg, event.id, msg.id
+                        )
                     except Exception as e:
                         LOGS.error(str(e))
                         if BOTLOG:
@@ -650,20 +641,14 @@ with bot:
                     title="Repository",
                     description="Repository Skyzu - Userbot",
                     url="https://t.me/SkyzuSupport",
-                    thumb=InputWebDocument(
-                        INLINE_PIC,
-                        0,
-                        "image/jpeg",
-                        []),
+                    thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
                     text="**Skyzu-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ ʀᴇᴘᴏ :** [Skyzu-Ex](https://t.me/Skyzuex)\n✣ **sᴜᴘᴘᴏʀᴛ :** @SkyzuSupport\n✣ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Skyzu-Userbot](https://github.com/Skyzu/Skyzu-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
+                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/SkyzuSupport"),
                             custom.Button.url(
-                                "ɢʀᴏᴜᴘ",
-                                "https://t.me/SkyzuSupport"),
-                            custom.Button.url(
-                                "ʀᴇᴘᴏ",
-                                "https://github.com/Skyzu/skyzu-userbot"),
+                                "ʀᴇᴘᴏ", "https://github.com/Skyzu/skyzu-userbot"
+                            ),
                         ],
                     ],
                     link_preview=False,
@@ -681,9 +666,9 @@ with bot:
                         to_check -= 1
                     if n_escapes % 2 == 0:
                         buttons.append(
-                            (match.group(2), match.group(3), bool(
-                                match.group(4))))
-                        note_data += markdown_note[prev: match.start(1)]
+                            (match.group(2), match.group(3), bool(match.group(4)))
+                        )
+                        note_data += markdown_note[prev : match.start(1)]
                         prev = match.end(1)
                     elif n_escapes % 2 == 1:
                         note_data += markdown_note[prev:to_check]
@@ -705,20 +690,14 @@ with bot:
                     title="✨ Skyzu-Userbot✨",
                     description="Skyzu - Userbot | Telethon",
                     url="https://t.me/ProjectSkyzu",
-                    thumb=InputWebDocument(
-                        INLINE_PIC,
-                        0,
-                        "image/jpeg",
-                        []),
+                    thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
                     text=f"**Skyzu-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ:** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @ProjectSkyzu\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
+                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/SkyzuSupport"),
                             custom.Button.url(
-                                "ɢʀᴏᴜᴘ",
-                                "https://t.me/SkyzuSupport"),
-                            custom.Button.url(
-                                "ʀᴇᴘᴏ",
-                                "https://github.com/Skyzu/skyzu-userbot"),
+                                "ʀᴇᴘᴏ", "https://github.com/Skyzu/skyzu-userbot"
+                            ),
                         ],
                     ],
                     link_preview=False,
@@ -734,10 +713,8 @@ with bot:
         )
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
-                current_page_number = int(
-                    event.data_match.group(1).decode("UTF-8"))
-                buttons = paginate_help(
-                    current_page_number + 1, dugmeler, "helpme")
+                current_page_number = int(event.data_match.group(1).decode("UTF-8"))
+                buttons = paginate_help(current_page_number + 1, dugmeler, "helpme")
                 await event.edit(buttons=buttons)
             else:
                 reply_pop_up_alert = (
@@ -748,8 +725,7 @@ with bot:
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in DEVS and SUDO_USERS:
-                openlagi = custom.Button.inline(
-                    "• Re-Open Menu •", data="reopen")
+                openlagi = custom.Button.inline("• Re-Open Menu •", data="reopen")
                 await event.edit(
                     "⚜️ **ʜᴇʟᴘ ᴍᴏᴅᴇ ʙᴜᴛᴛᴏɴ ᴅɪᴛᴜᴛᴜᴘ!** ⚜️", buttons=openlagi
                 )
@@ -764,10 +740,8 @@ with bot:
         )
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
-                current_page_number = int(
-                    event.data_match.group(1).decode("UTF-8"))
-                buttons = paginate_help(
-                    current_page_number - 1, dugmeler, "helpme")
+                current_page_number = int(event.data_match.group(1).decode("UTF-8"))
+                buttons = paginate_help(current_page_number - 1, dugmeler, "helpme")
                 await event.edit(buttons=buttons)
             else:
                 reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
@@ -790,8 +764,9 @@ with bot:
                         + " "
                     )
                 else:
-                    help_string = (str(CMD_HELP[modul_name]).replace(
-                        "`", "").replace("**", ""))
+                    help_string = (
+                        str(CMD_HELP[modul_name]).replace("`", "").replace("**", "")
+                    )
 
                 reply_pop_up_alert = (
                     help_string
@@ -808,7 +783,8 @@ with bot:
         LOGS.info(
             "Help Mode Inline Bot Mu Tidak aktif. Tidak di aktifkan juga tidak apa-apa. "
             "Untuk Mengaktifkannya Buat bot di @BotFather Lalu Tambahkan var BOT_TOKEN dan BOT_USERNAME. "
-            "Pergi Ke @BotFather lalu settings bot » Pilih mode inline » Turn On. ")
+            "Pergi Ke @BotFather lalu settings bot » Pilih mode inline » Turn On. "
+        )
     try:
         bot.loop.run_until_complete(check_botlog_chatid())
     except BaseException as e:

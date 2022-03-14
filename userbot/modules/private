@@ -18,6 +18,7 @@ from userbot import (
     StartTime,
     bot,
     tgbot,
+    user,
 )
 from userbot.modules.sql_helper.bot_blacklists import check_is_black_list
 from userbot.modules.sql_helper.bot_starters import (
@@ -30,7 +31,6 @@ from userbot.utils import _format, asst_cmd, callback, reply_id
 
 from .ping import get_readable_time
 
-user = bot.get_me()
 botusername = BOT_USERNAME
 OWNER = user.first_name
 OWNER_ID = user.id

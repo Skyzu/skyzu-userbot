@@ -20,7 +20,7 @@
 
 
 from userbot import BOT_USERNAME, CMD_HELP, bot, user
-from userbot.utils import edit_or_reply, edit_delete, skyzu_cmd
+from userbot.utils import edit_delete, edit_or_reply, skyzu_cmd
 
 DEFAULTUSER = user.first_name
 CUSTOM_HELP_EMOJI = "✨"
@@ -31,7 +31,12 @@ async def cmd_list(event):
     args = event.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
-            await edit_or_reply(event, f"**✘ Commands available in {args} ✘** \n\n" + str(CMD_HELP[args]) + "\n\n**☞ @ProjectSkyzu**")
+            await edit_or_reply(
+                event,
+                f"**✘ Commands available in {args} ✘** \n\n"
+                + str(CMD_HELP[args])
+                + "\n\n**☞ @ProjectSkyzu**",
+            )
         else:
             await edit_delete(event, f"**Module** `{args}` **Tidak tersedia!**")
     else:
@@ -44,6 +49,7 @@ async def cmd_list(event):
             )
             await event.delete()
         except BaseException:
-            await edit_delete(event,
-                              f"** Sepertinya obrolan atau bot ini tidak mendukung inline mode.**"
-                              )
+            await edit_delete(
+                event,
+                f"** Sepertinya obrolan atau bot ini tidak mendukung inline mode.**",
+            )

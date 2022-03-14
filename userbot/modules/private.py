@@ -22,7 +22,6 @@ from userbot import (
     HEROKU_APP_NAME,
     SUDO_HANDLER,
     StartTime,
-    bot,
     tgbot,
     user,
 )

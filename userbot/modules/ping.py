@@ -186,8 +186,7 @@ async def redis(pong):
 async def _(ping):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    xx = await edit_or_reply(ping, "**✣**")
-    await xx.edit("**𖣘**")
+    xx = await edit_or_reply(ping, "**𖣘**")
     await xx.edit("**𖣘𖣘**")
     await xx.edit("**𖣘𖣘𖣘**")
     await xx.edit("**◕‿- PONG!**")

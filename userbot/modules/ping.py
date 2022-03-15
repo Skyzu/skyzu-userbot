@@ -192,7 +192,7 @@ async def _(ping):
     await xx.edit("**◕‿- PONG!**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(
+    await xx.edit(
         f"**PONG!!🏓**\n"
         f"• **Pinger** - "
         f"`%sms` \n"

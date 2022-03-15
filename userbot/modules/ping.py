@@ -183,7 +183,7 @@ async def redis(pong):
 
 
 @skyzu_cmd(pattern="ping$")
-async def _(ping):
+async def _(pong):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     await pong.edit("**𖣘**")

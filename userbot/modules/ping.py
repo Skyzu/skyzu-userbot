@@ -183,8 +183,7 @@ async def redis(pong):
 
 
 @skyzu_cmd(pattern="ping$")
-async def redis(pong):
-    """For .ping command, ping the userbot from any chat."""
+async def _(ping):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     await pong.edit("**𖣘**")
@@ -199,7 +198,7 @@ async def redis(pong):
         f"`%sms` \n"
         f"• **Uptime** - "
         f"`{uptime}` \n"
-        f"**➳ Owner:** `{ALIVE_NAME}`" % (duration)
+        f"**➳ Owner:** [{user.first_name}](tg://user?id={user.id})" % (duration)
     )
 
 

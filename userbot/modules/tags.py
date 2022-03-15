@@ -61,20 +61,21 @@ async def _(e):
     await e.delete()
 
 
-CMD_HELP.update({
-    'tags':
-    f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}tag all`"
-    "\n• : Tag Top 100 Members of chat."
-    f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}tag admin`"
-    "\n• : Tag Admins of that chat."
-    f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}tag owner`"
-    "\n• : Tag Owner of that chat."
-    f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}tag bot`"
-    "\n• : Tag Bots of that chat."
-    f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}tag rec`"
-    "\n• : Tag recently Active Members."
-    f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}tag on`"
-    "\n• : Tag online Members(work only if privacy off)."
-    f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}tag off`"
-    "\n• : Tag Offline Members(work only if privacy off)."
-})
+CMD_HELP.update(
+    {
+        "tags": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}tag all`"
+        "\n• : Tag Top 100 Members of chat."
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}tag admin`"
+        "\n• : Tag Admins of that chat."
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}tag owner`"
+        "\n• : Tag Owner of that chat."
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}tag bot`"
+        "\n• : Tag Bots of that chat."
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}tag rec`"
+        "\n• : Tag recently Active Members."
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}tag on`"
+        "\n• : Tag online Members(work only if privacy off)."
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}tag off`"
+        "\n• : Tag Offline Members(work only if privacy off)."
+    }
+)

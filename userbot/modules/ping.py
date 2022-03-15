@@ -17,7 +17,7 @@ from userbot import ALIVE_NAME
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, DEVS, StartTime
 from userbot.events import register
-from userbot.utils import skyzu_cmd
+from userbot.utils import edit_or_reply, skyzu_cmd
 
 absen = [
     "**Eh ada skyzu**",

@@ -158,27 +158,27 @@ async def redis(pong):
 
 
 @skyzu_cmd(pattern="sinyal$")
-async def redis(pong):
-    """For .ping command, ping the userbot from any chat."""
+async def _(ping):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("**Mengecek Sinyal...**")
-    await pong.edit("**0% ▒▒▒▒▒▒▒▒▒▒**")
-    await pong.edit("**20% ██▒▒▒▒▒▒▒▒**")
-    await pong.edit("**40% ████▒▒▒▒▒▒**")
-    await pong.edit("**60% ██████▒▒▒▒**")
-    await pong.edit("**80% ████████▒▒**")
-    await pong.edit("**100% ██████████**")
+    sky = await edit_or_reply(ping, "**mengecek sinyal...**")
+    await sky.edit("**0% ▒▒▒▒▒▒▒▒▒▒**")
+    await sky.edit("**20% ██▒▒▒▒▒▒▒▒**")
+    await sky.edit("**40% ████▒▒▒▒▒▒**")
+    await sky.edit("**60% ██████▒▒▒▒**")
+    await sky.edit("**80% ████████▒▒**")
+    await sky.edit("**100% ██████████**")
     await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(
+    user = await ping.client.get_me()
+    await sky.edit(
         f"**⚡𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**\n"
         f"** ▹  Sɪɢɴᴀʟ   :** "
         f"`%sms` \n"
         f"** ▹  Uᴘᴛɪᴍᴇ  :** "
         f"`{uptime}` \n"
-        f"** ▹  Oᴡɴᴇʀ   :** `{ALIVE_NAME}` \n" % (duration)
+        f"** ▹  Oᴡɴᴇʀ   :** [{user.first_name}](tg://user?id={user.id})" % (duration)
     )
 
 

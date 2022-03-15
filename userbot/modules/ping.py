@@ -199,7 +199,7 @@ async def _(ping):
         f"`%sms` \n"
         f"• **Uptime** - "
         f"`{uptime}` \n"
-        f"**➳ Owner:** [{user.first_name}](tg://user?id={user.id})" % (duration)
+        f"**✦҈͜͡➳ Owner:** [{user.first_name}](tg://user?id={user.id})" % (duration)
     )
 
 

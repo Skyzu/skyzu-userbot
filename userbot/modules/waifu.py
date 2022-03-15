@@ -9,7 +9,8 @@ from asyncio import sleep
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
-from userbot.events import register
+from userbot import CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 EMOJI_PATTERN = re.compile(
     "["
@@ -33,7 +34,7 @@ def deEmojify(inputString: str) -> str:
     return re.sub(EMOJI_PATTERN, "", inputString)
 
 
-@register(outgoing=True, pattern="^.waifu(?: |$)(.*)")
+@skyzu_cmd(pattern="waifu(?: |$)(.*)")
 async def waifu(animu):
     # """Generate random waifu sticker with the text!"""
 
@@ -63,7 +64,7 @@ async def waifu(animu):
     await animu.delete()
 
 
-@register(outgoing=True, pattern=r"^.hz(:? |$)(.*)?")
+@skyzu_cmd(pattern="hz(:? |$)(.*)?")
 async def _(hazmat):
     await hazmat.edit("`Sending information...`")
     level = hazmat.pattern_match.group(2)

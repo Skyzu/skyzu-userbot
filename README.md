@@ -1,7 +1,7 @@
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
    <p align="center">
    𝐒𝐊𝐘𝐙𝐔  -  𝐔𝐒𝐄𝐑𝐁𝐎𝐓​​ 
-
-
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 <p align="center">
     <a href="https://github.com/Skyzu/skyzu-userbot/commits/skyzu-userbot"><img src="https://img.shields.io/github/last-commit/Skyzu/skyzu-userbot?color=ff0000&logo=github&logoColor=ffffff&style=for-the-badge" /></a>

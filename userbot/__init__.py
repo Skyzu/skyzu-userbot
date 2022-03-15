@@ -275,7 +275,7 @@ ALIVE_LOGO = (
 )
 # Default .helpme Logo
 INLINE_PIC = (
-    os.environ.get("INLINE_PIC") or "https://telegra.ph/file/fd08937c4ae6cb1303731.jpg"
+    os.environ.get("INLINE_PIC") or "https://telegra.ph/file/831065146253ade66e36b.jpg"
 )
 
 # Default emoji help

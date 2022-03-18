@@ -16,9 +16,9 @@ import requests
 from bs4 import BeautifulSoup
 from PIL import Image
 
-from userbot import CMD_HELP, bot
 from userbot import CMD_HANDLER as cmd
-from userbot.utils import skyzu_cmd 
+from userbot import CMD_HELP, bot
+from userbot.utils import skyzu_cmd
 
 opener = urllib.request.build_opener()
 useragent = "Mozilla/5.0 (Linux; Android 9; SM-G960F Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.70 Mobile Safari/537.36"

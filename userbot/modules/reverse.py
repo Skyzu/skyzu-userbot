@@ -17,14 +17,15 @@ from bs4 import BeautifulSoup
 from PIL import Image
 
 from userbot import CMD_HELP, bot
-from userbot.events import register
+from userbot import CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd 
 
 opener = urllib.request.build_opener()
 useragent = "Mozilla/5.0 (Linux; Android 9; SM-G960F Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.70 Mobile Safari/537.36"
 opener.addheaders = [("User-agent", useragent)]
 
 
-@register(outgoing=True, pattern=r"^.reverse(?: |$)(\d*)")
+@skyzu_cmd(pattern="reverse(?: |$)(\d*)")
 async def okgoogle(img):
     """For .reverse command, Google search images and stickers."""
     if os.path.isfile("okgoogle.png"):
@@ -144,7 +145,7 @@ async def scam(results, lim):
 
 CMD_HELP.update(
     {
-        "reverse": ">`.reverse`"
+        "reverse": f">`{cmd}reverse`"
         "\nUsage: Balas gambar/stiker untuk melakukan pencarian terbalik di google"
     }
 )

@@ -23,10 +23,10 @@ def vcmention(user):
     return f"[{full_name}](tg://user?id={user.id})"
 
 
-async def get_call(sky):
-    sky = await sky.client(getchat(sky.chat_id))
-    await sky.client(getvc(sky.full_chat.call, limit=1))
-    return hehe.call
+async def get_call(event):
+    mm = await event.client(getchat(event.chat_id))
+    xx = await event.client(getvc(mm.full_chat.call, limit=1))
+    return xx.call
 
 
 def user_list(l, n):

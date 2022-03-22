@@ -67,21 +67,21 @@ async def stop_voice(c):
 
 
 @skyzu_cmd(pattern="vcinvite")
-async def _(sky):
-    await sky.edit("`Sedang Menginvite Member...`")
+async def _(taro):
+    await taro.edit("`Sedang Menginvite Member...`")
     users = []
     z = 0
-    async for x in sky.client.iter_participants(sky.chat_id):
+    async for x in taro.client.iter_participants(taro.chat_id):
         if not x.bot:
             users.append(x.id)
     hmm = list(user_list(users, 6))
     for p in hmm:
         try:
-            await sky.client(invitetovc(call=await get_call(sky), users=p))
+            await taro.client(invitetovc(call=await get_call(taro), users=p))
             z += 6
         except BaseException:
             pass
-    await sky.edit(f"`Menginvite {z} Member`")
+    await taro.edit(f"`Menginvite {z} Member`")
 
 
 CMD_HELP.update(

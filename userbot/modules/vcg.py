@@ -16,13 +16,6 @@ from userbot.utils import skyzu_cmd
 NO_ADMIN = "`Maaf Kamu Bukan Admin 👮`"
 
 
-def vcmention(user):
-    full_name = get_display_name(user)
-    if not isinstance(user, types.User):
-        return full_name
-    return f"[{full_name}](tg://user?id={user.id})"
-
-
 async def get_call(event):
     mm = await event.client(getchat(event.chat_id))
     xx = await event.client(getvc(mm.full_chat.call, limit=1))
@@ -35,62 +28,92 @@ def user_list(l, n):
 
 
 @skyzu_cmd(pattern="startvc$")
+@register(pattern=r"^\.startvcs$", sudo=True)
 async def start_voice(c):
+    me = await c.client.get_me()
     chat = await c.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
 
     if not admin and not creator:
-        await c.edit(f"**Maaf {ALIVE_NAME} Bukan Admin 👮**")
+        await edit_delete(c, f"**Maaf {me.first_name} Bukan Admin 👮**")
         return
     try:
         await c.client(startvc(c.chat_id))
-        await c.edit("`Memulai Obrolan Suara`")
+        await edit_or_reply(c, "`Voice Chat Started...`")
     except Exception as ex:
-        await c.edit(f"**ERROR:** `{ex}`")
+        await edit_delete(c, f"**ERROR:** `{ex}`")
 
 
 @skyzu_cmd(pattern="stopvc$")
+@register(pattern=r"^\.stopvcs$", sudo=True)
 async def stop_voice(c):
+    me = await c.client.get_me()
     chat = await c.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
 
     if not admin and not creator:
-        await c.edit(f"**Maaf {ALIVE_NAME} Bukan Admin 👮**")
+        await edit_delete(c, f"**Maaf {me.first_name} Bukan Admin 👮**")
         return
     try:
         await c.client(stopvc(await get_call(c)))
-        await c.edit("`Mematikan Obrolan Suara`")
+        await edit_or_reply(c, "`Voice Chat Stopped...`")
     except Exception as ex:
-        await c.edit(f"**ERROR:** `{ex}`")
+        await edit_delete(c, f"**ERROR:** `{ex}`")
 
 
 @skyzu_cmd(pattern="vcinvite")
-async def _(taro):
-    await taro.edit("`Sedang Menginvite Member...`")
+async def _(c):
+    xxnx = await edit_or_reply(c, "`Inviting Members to Voice Chat...`")
     users = []
     z = 0
-    async for x in taro.client.iter_participants(taro.chat_id):
+    async for x in c.client.iter_participants(c.chat_id):
         if not x.bot:
             users.append(x.id)
-    hmm = list(user_list(users, 6))
-    for p in hmm:
+    botman = list(user_list(users, 6))
+    for p in botman:
         try:
-            await taro.client(invitetovc(call=await get_call(taro), users=p))
+            await c.client(invitetovc(call=await get_call(c), users=p))
             z += 6
         except BaseException:
             pass
-    await taro.edit(f"`Menginvite {z} Member`")
+    await xxnx.edit(f"`{z}` **Orang Berhasil diundang ke VCG**")
+
+
+@skyzu_cmd(pattern="vctitle(?: |$)(.*)")
+@register(pattern=r"^\.cvctitle$", sudo=True)
+async def change_title(e):
+    title = e.pattern_match.group(1)
+    me = await e.client.get_me()
+    chat = await e.get_chat()
+    admin = chat.admin_rights
+    creator = chat.creator
+
+    if not title:
+        return await edit_delete(e, "**Silahkan Masukan Title Obrolan Suara Grup**")
+
+    if not admin and not creator:
+        await edit_delete(e, f"**Maaf {me.first_name} Bukan Admin 👮**")
+        return
+    try:
+        await e.client(settitle(call=await get_call(e), title=title.strip()))
+        await edit_or_reply(e, f"**Berhasil Mengubah Judul VCG Menjadi** `{title}`")
+    except Exception as ex:
+        await edit_delete(e, f"**ERROR:** `{ex}`")
 
 
 CMD_HELP.update(
     {
-        "vcg": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}startvc`\
-         \n↳ : Memulai Obrolan Suara dalam Group.\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}stopvc`\
-         \n↳ : `Menghentikan Obrolan Suara Pada Group.`\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}vcinvite`\
-         \n↳ : Invite semua member yang berada di group."
+        "vcg": f"**Plugin : **`vcg`\
+        \n\n  •  **Syntax :** `{cmd}startvc`\
+        \n  •  **Function : **Untuk Memulai voice chat group\
+        \n\n  •  **Syntax :** `{cmd}stopvc`\
+        \n  •  **Function : **Untuk Memberhentikan voice chat group\
+        \n\n  •  **Syntax :** `{cmd}vctitle` <title vcg>\
+        \n  •  **Function : **Untuk Mengubah title/judul voice chat group\
+        \n\n  •  **Syntax :** `{cmd}vcinvite`\
+        \n  •  **Function : **Mengundang Member group ke voice chat group\
+    "
     }
 )

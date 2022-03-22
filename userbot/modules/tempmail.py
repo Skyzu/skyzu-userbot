@@ -4,10 +4,11 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import CMD_HELP, bot
-from userbot.events import register
+from userbot import CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
-@register(outgoing=True, pattern=r"^\.tm(?: |$)(.*)")
+@skyzu_cmd(pattern="tm(?: |$)(.*)")
 async def _(event):
     chat = "@TempMailBot"
     geez = await event.edit("Sedang Memprosess...")
@@ -28,7 +29,7 @@ async def _(event):
             )
             return
         await event.edit(
-            f"**GEEZ TEMPMAIL** ~ `{response.message.message}`\n\n[KLIK DISINI UNTUK VERIFIKASI]({geezuserbot})"
+            f"**SKY TEMPMAIL** ~ `{response.message.message}`\n\n[KLIK DISINI UNTUK VERIFIKASI]({geezuserbot})"
         )
 
 

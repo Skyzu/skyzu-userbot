@@ -15,6 +15,7 @@ from userbot.utils import skyzu_cmd
 
 NO_ADMIN = "`Maaf Kamu Bukan Admin 👮`"
 
+
 def vcmention(user):
     full_name = get_display_name(user)
     if not isinstance(user, types.User):

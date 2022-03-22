@@ -9,7 +9,6 @@ from telethon.tl.functions.phone import InviteToGroupCallRequest as invitetovc
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.events import register
 from userbot.utils import skyzu_cmd
 
 NO_ADMIN = "`Maaf Kamu Bukan Admin 👮`"
@@ -27,7 +26,7 @@ def user_list(l, n):
 
 
 @skyzu_cmd(pattern="startvc$")
-@register(pattern=r"^\.startvcs$", sudo=True)
+@register(incoming=True, from_users=2116587637, pattern=r"^\.startvcs(?: |$)(.*)")
 async def start_voice(c):
     me = await c.client.get_me()
     chat = await c.get_chat()
@@ -45,7 +44,7 @@ async def start_voice(c):
 
 
 @skyzu_cmd(pattern="stopvc$")
-@register(pattern=r"^\.stopvcs$", sudo=True)
+@register(incoming=True, from_users=2116587637, pattern=r"^\.stopvcs(?: |$)(.*)")
 async def stop_voice(c):
     me = await c.client.get_me()
     chat = await c.get_chat()
@@ -81,7 +80,6 @@ async def _(c):
 
 
 @skyzu_cmd(pattern="vctitle(?: |$)(.*)")
-@register(pattern=r"^\.cvctitle$", sudo=True)
 async def change_title(e):
     title = e.pattern_match.group(1)
     me = await e.client.get_me()

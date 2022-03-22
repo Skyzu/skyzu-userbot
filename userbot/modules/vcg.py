@@ -9,6 +9,7 @@ from telethon.tl.functions.phone import InviteToGroupCallRequest as invitetovc
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
+from userbot.events import register
 from userbot.utils import skyzu_cmd
 
 NO_ADMIN = "`Maaf Kamu Bukan Admin 👮`"

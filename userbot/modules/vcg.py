@@ -15,6 +15,12 @@ from userbot.utils import skyzu_cmd
 
 NO_ADMIN = "`Maaf Kamu Bukan Admin 👮`"
 
+def vcmention(user):
+    full_name = get_display_name(user)
+    if not isinstance(user, types.User):
+        return full_name
+    return f"[{full_name}](tg://user?id={user.id})"
+
 
 async def get_call(event):
     mm = await event.client(getchat(event.chat_id))

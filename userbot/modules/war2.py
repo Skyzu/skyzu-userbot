@@ -1,4 +1,4 @@
-# ReCode by @skyzu
+# ReCode by @xflskyzu
 # FROM skyzu-userbot <https://github.com/Skyzu/skyzu-userbot>
 # KONTOLLLLLL
 

@@ -3,10 +3,11 @@
 from time import sleep
 
 from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
-@register(outgoing=True, pattern="^.wibu2(?: |$)(.*)")
+@skyzu_cmd(pattern="wibu2(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(0.07)
@@ -51,7 +52,7 @@ async def typewriter(typew):
     await typew.edit("**IUHH DEMEN KOK SAMA 2D😖**")
 
 
-@register(outgoing=True, pattern="^.wibbu(?: |$)(.*)")
+@skyzu_cmd(pattern="wibbu(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**WI WIII WIIII WIIII.....**")
@@ -111,10 +112,10 @@ async def typewriter(typew):
 
 CMD_HELP.update(
     {
-        "wibu": "**Modules** - `wibu`\
-        \n\n Cmd : `.wibbu`\
+        "wibu": f"**Modules** - `wibu`\
+        \n\n Cmd : `{cmd}wibbu`\
         \nUsage : ngatain wibu\
-        \n\n Cmd : `.wibu2`\
+        \n\n Cmd : `{cmd}wibu2`\
         \nUsage : ngatain wibu 2\
     "
     }

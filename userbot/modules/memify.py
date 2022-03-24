@@ -5,7 +5,6 @@ import textwrap
 from PIL import Image, ImageDraw, ImageFont
 
 from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
-from userbot import CMD_HANDLER as cmd
 from userbot.utils import skyzu_cmd
 
 THUMB_IMAGE_PATH = "./thumb_image.jpg"

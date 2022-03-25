@@ -5,10 +5,11 @@ import os
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
-from userbot.events import register
+from userbot import CMD_HANDLER as cmd
+from userbot.utils import skyzu_cmd
 
 
-@register(outgoing=True, pattern=r"^\.spotnow(:? |$)(.*)?")
+@skyzu_cmd(pattern="spotnow(:? |$)(.*)?")
 async def _(event):
     if event.fwd_from:
         return

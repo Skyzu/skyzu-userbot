@@ -279,7 +279,7 @@ INLINE_PIC = (
 )
 
 # Default emoji help
-EMOJI_HELP = os.environ.get("EMOJI_HELP") or "⚡"
+EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✗"
 
 # Picture For VCPLUGIN
 PLAY_PIC = (

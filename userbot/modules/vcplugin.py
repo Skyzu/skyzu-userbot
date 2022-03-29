@@ -476,7 +476,7 @@ async def leavevc(event):
             pass
         await xnxx.edit("**{}** `Left the voice in` `{}`".format(owner, str(event.chat_id)))
     else:
-        await edit_delete(event, f"**Maaf {owner} Tidak di VCG
+        await edit_delete(event, f"**Maaf {owner} Tidak di VCG**)
 
 
 @skyzu_cmd(pattern="playlist$")

@@ -430,6 +430,51 @@ async def vc_volume(event):
     else:
         await edit_delete(event, "**Tidak Sedang Memutar Streaming**")
 
+@skyzu_cmd(pattern="joinvc(?: |$)(.*)")
+async def join_(event):
+    geezav = await edit_or_reply(event, f"**Processing**")
+    if len(event.text.split()) > 1:
+        chat = event.chat_id
+        chats = event.pattern_match.group(1)
+        try:
+            chat = await event.client(GetFullUserRequest(chats))
+        except AlreadyJoinedError as e:
+            await call_py.leave_group_call(chat)
+            clear_queue(chat)
+            await asyncio.sleep(3)
+            return await edit_delete(event, f"**ERROR:** `{e}`", 30)
+        except (NodeJSNotInstalled, TooOldNodeJSVersion):
+            return await edit_or_reply(event, "NodeJs is not installed or installed version is too old.")
+    else:
+        chat_id = event.chat_id
+        chats = event.pattern_match.group(1)
+        from_user = vcmention(event.sender)
+    if not call_py.is_connected:
+        await call_py.start()
+    await call_py.join_group_call(
+        chat_id,
+        AudioPiped(
+            'http://duramecho.com/Misc/SilentCd/Silence01s.mp3'
+        ),
+        chats,
+        stream_type=StreamType().pulse_stream,
+    )
+    await geezav.edit(f"**{from_user} Berhasil Naik Ke VCG!**")
+
+@skyzu_cmd(pattern="leavevc(?: |$)(.*)")
+async def leavevc(event):
+    """ leave video chat """
+    geezav = await edit_or_reply(event, "Processing")
+    chat_id = event.chat_id
+    from_user = vcmention(event.sender)
+    if from_user:
+        try:
+            await call_py.leave_group_call(chat_id)
+        except (NotInGroupCallError, NoActiveGroupCall):
+            await edit_or_reply(event, f"{from_user} Tidak Berada Di VC Group.")
+        await geezav.edit(f"**{from_user} Berhasil Turun Dari VC Group.**")
+
+
 
 @skyzu_cmd(pattern="playlist$")
 async def vc_playlist(event):
@@ -499,6 +544,10 @@ CMD_HELP.update(
         \n  •  **Function : **Untuk mengubah volume (Membutuhkan Hak admin)\
         \n\n  •  **Syntax :** `{cmd}playlist`\
         \n  •  **Function : **Untuk menampilkan daftar putar Lagu/Video\
+        \n  •  **Function : **Untuk memberhentikan video/lagu yang sedang diputar\
+        \n\n  •  **Syntax :** `{cmd}joinvc`\
+        \n  •  **Function : **Untuk join ke vcg\
+        \n\n  •  **Syntax :** `{cmd}leavevc` leavevc\
     "
     }
 )

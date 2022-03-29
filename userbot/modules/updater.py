@@ -9,10 +9,11 @@ from os import environ, execle, path, remove
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from userbot import BOTLOG, DEVS, BOTLOG_CHATID
+from userbot import BOTLOG, BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
 from userbot import (
     CMD_HELP,
+    DEVS,
     HEROKU_API_KEY,
     HEROKU_APP_NAME,
     UPSTREAM_REPO_BRANCH,

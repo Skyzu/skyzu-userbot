@@ -549,6 +549,7 @@ CMD_HELP.update(
         \n\n  •  **Syntax :** `{cmd}joinvc`\
         \n  •  **Function : **Untuk join ke vcg\
         \n\n  •  **Syntax :** `{cmd}leavevc` leavevc\
+        \n  •  **Function : **Untuk leave vcg\
     "
     }
 )

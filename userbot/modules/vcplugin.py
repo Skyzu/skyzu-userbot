@@ -456,16 +456,14 @@ async def join_(event):
         stream_type=StreamType().pulse_stream,
     )
     try:
-        await xnxx.edit(
-            "**{}** `Joined VC in` `{}`".format(owner, str(event.chat_id))
-        )
+        await xnxx.edit("**{}** `Joined VC in` `{}`".format(owner, str(event.chat_id)))
     except Exception as ex:
         await edit_delete(event, f"**ERROR:** `{ex}`")
 
 
 @skyzu_cmd(pattern="leavevc(?: |$)(.*)")
 async def leavevc(event):
-    """ leave video chat """
+    """leave video chat"""
     xnxx = await edit_or_reply(event, "Processing")
     chat_id = event.chat_id
     from_user = vcmention(event.sender)
@@ -474,7 +472,9 @@ async def leavevc(event):
             await call_py.leave_group_call(chat_id)
         except (NotInGroupCallError, NoActiveGroupCall):
             pass
-        await xnxx.edit("**{}** `Left the voice in` `{}`".format(owner, str(event.chat_id)))
+        await xnxx.edit(
+            "**{}** `Left the voice in` `{}`".format(owner, str(event.chat_id))
+        )
     else:
         await edit_delete(event, f"**Maaf {owner} Tidak di VCG**")
 

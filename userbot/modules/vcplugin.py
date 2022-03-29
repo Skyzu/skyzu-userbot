@@ -431,6 +431,11 @@ async def vc_volume(event):
         await edit_delete(event, "**Tidak Sedang Memutar Streaming**")
 
 
+# credits by @vckyaz < vicky \>
+# FROM GeezProjects < https://github.com/vckyou/GeezProjects \>
+# ambil boleh apus credits jangan ya ka:)
+
+
 @skyzu_cmd(pattern="joinvc(?: |$)(.*)")
 async def join_(event):
     geezav = await edit_or_reply(event, f"**Processing**")
@@ -546,10 +551,17 @@ CMD_HELP.update(
         \n\n  •  **Syntax :** `{cmd}playlist`\
         \n  •  **Function : **Untuk menampilkan daftar putar Lagu/Video\
         \n  •  **Function : **Untuk memberhentikan video/lagu yang sedang diputar\
-        \n\n  •  **Syntax :** `{cmd}joinvc`\
-        \n  •  **Function : **Untuk join ke vcg\
-        \n\n  •  **Syntax :** `{cmd}leavevc` leavevc\
-        \n  •  **Function : **Untuk leave vcg\
     "
+    }
+)
+
+CMD_HELP.update(
+    {
+        "vctools": f"**Plugin : **`vctools`\
+      \n\n  •  **Syntax :** `{cmd}joinvc`\
+      \n  •  **Function :** Melakukan Fake OS.\
+      \n\n  •  **Syntax :** `{cmd}leavevc`\
+      \n  •  **Function :** Memberhentikan Fake OS.\
+      "
     }
 )

@@ -9,7 +9,7 @@ from os import environ, execle, path, remove
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from userbot import BOTLOG, BOTLOG_CHATID
+from userbot import BOTLOG, DEVS, BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
 from userbot import (
     CMD_HELP,
@@ -147,7 +147,7 @@ async def update(event, repo, ups_rem, ac_br):
 
 
 @skyzu_cmd(pattern="update(?: |$)(now|deploy)?")
-@register(incoming=True, from_users=2116587637, pattern=r"^\.cupdate( now| deploy|$)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cupdate( now| deploy|$)")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     await event.edit("**Mengecek Pembaruan, Silakan Menunggu....**")

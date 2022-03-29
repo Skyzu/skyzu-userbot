@@ -438,34 +438,29 @@ async def vc_volume(event):
 
 @skyzu_cmd(pattern="joinvc(?: |$)(.*)")
 async def join_(event):
-    geezav = await edit_or_reply(event, f"**Processing**")
+    xnxx = await edit_or_reply(event, f"**Processing**")
     if len(event.text.split()) > 1:
-        chat = event.chat_id
-        chats = event.pattern_match.group(1)
+        chat = event.text.split()[1]
         try:
-            chat = await event.client(GetFullUserRequest(chats))
-        except AlreadyJoinedError as e:
-            await call_py.leave_group_call(chat)
-            clear_queue(chat)
-            await asyncio.sleep(3)
-            return await edit_delete(event, f"**ERROR:** `{e}`", 30)
-        except (NodeJSNotInstalled, TooOldNodeJSVersion):
-            return await edit_or_reply(
-                event, "NodeJs is not installed or installed version is too old."
-            )
+            chat = await event.client(GetFullUserRequest(chat))
+        except Exception as e:
+            await edit_delete(event, f"**ERROR:** `{e}`", 30)
     else:
-        chat_id = event.chat_id
-        chats = event.pattern_match.group(1)
-        from_user = vcmention(event.sender)
+        chat = event.chat_id
+        vcmention(event.sender)
     if not call_py.is_connected:
         await call_py.start()
     await call_py.join_group_call(
-        chat_id,
-        AudioPiped("http://duramecho.com/Misc/SilentCd/Silence01s.mp3"),
-        chats,
+        chat,
+        AudioPiped(
+            'http://duramecho.com/Misc/SilentCd/Silence01s.mp3'
+        ),
         stream_type=StreamType().pulse_stream,
     )
-    await geezav.edit(f"**{from_user} Berhasil Naik Ke VCG!**")
+    try:
+        await xnxx.edit("**{}** `• Joined VC in` `{}`".format(owner, str(event.chat_id)))
+    except Exception as ex:
+        await edit_delete(event, f"**ERROR:** `{ex}`")
 
 
 @skyzu_cmd(pattern="leavevc(?: |$)(.*)")

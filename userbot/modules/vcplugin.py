@@ -452,13 +452,13 @@ async def join_(event):
         await call_py.start()
     await call_py.join_group_call(
         chat,
-        AudioPiped(
-            'http://duramecho.com/Misc/SilentCd/Silence01s.mp3'
-        ),
+        AudioPiped("http://duramecho.com/Misc/SilentCd/Silence01s.mp3"),
         stream_type=StreamType().pulse_stream,
     )
     try:
-        await xnxx.edit("**{}** `• Joined VC in` `{}`".format(owner, str(event.chat_id)))
+        await xnxx.edit(
+            "**{}** `• Joined VC in` `{}`".format(owner, str(event.chat_id))
+        )
     except Exception as ex:
         await edit_delete(event, f"**ERROR:** `{ex}`")
 

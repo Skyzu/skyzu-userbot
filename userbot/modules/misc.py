@@ -94,7 +94,7 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "Here's Something for You to Read :\n"
-        "\n[⚡ Skyzu-UserBot Repo](https://github.com/Skyzu/skyzu-userbot/blob/skyzu-userBot/README.md)"
+        "\n[⚡ Skyzu-UserBot Repo](https://github.com/Skyzu/skyzu-userbot/blob/skyzu-userbot/README.md)"
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
         "\n[Special - Note](https://telegra.ph/Special-Note-11-02)"
     )

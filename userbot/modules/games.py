@@ -1,5 +1,5 @@
 from userbot import CMD_HELP, bot
-from userbot. import register
+from userbot.events import register
 
 
 @register(outgoing=True, pattern=r"^\.xogame(?: |$)(.*)")
@@ -28,7 +28,7 @@ async def _(event):
     await event.delete()
 
 
-@skyzu_cmd(pattern="mod(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.mod(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return

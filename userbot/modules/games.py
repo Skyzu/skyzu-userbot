@@ -1,8 +1,8 @@
 from userbot import CMD_HELP, bot
-from userbot.utils import skyzu_cmd
+from userbot. import register
 
 
-@skyzu_cmd(pattern="xogame(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.xogame(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return

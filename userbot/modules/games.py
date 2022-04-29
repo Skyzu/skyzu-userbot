@@ -15,7 +15,7 @@ async def _(event):
     await event.delete()
 
 
-@skyzu_cmd(pattern="whisp(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.whisp(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return

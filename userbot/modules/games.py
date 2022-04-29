@@ -1,5 +1,4 @@
 from userbot import CMD_HELP, bot
-form userbot import CMD_HANDLER
 from userbot.utils import skyzu_cmd
 
 

@@ -14,9 +14,10 @@ from pytz import timezone as tz
 from requests import get
 
 from userbot import CMD_HELP
+form userbot import CMD_HANDLER
 from userbot import OPEN_WEATHER_MAP_APPID as OWM_API
 from userbot import WEATHER_DEFCITY
-from userbot.events import register
+from userbot.utils import skyzu_cmd
 
 # ===== CONSTANT =====
 if WEATHER_DEFCITY:
@@ -39,7 +40,7 @@ async def get_tz(con):
         return
 
 
-@register(outgoing=True, pattern="^.weather(?: |$)(.*)")
+@skyzu_cmd(pattern="weather(?: |$)(.*)")
 async def get_weather(weather):
     """For .weather command, gets the current weather of a city."""
 

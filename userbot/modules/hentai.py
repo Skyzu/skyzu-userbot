@@ -1,11 +1,11 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot import CMD_HELP, bot
-from userbot.events import register
+from userbot import CMD_HELP, CMD_HANDLER, bot
+from userbot.utils import skyzu_cmd
 
 
-@register(outgoing=True, pattern=r"^\.hentai(?: |$)(.*)")
+@skyzu_cmd(pattern="hentai(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return

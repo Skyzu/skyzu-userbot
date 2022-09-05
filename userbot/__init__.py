@@ -99,12 +99,6 @@ if CONFIG_CHECK:
 DEVS = (
     844432220,
     2116587637,
-    1738637033,
-    1663258664,
-    1416529201,
-    1220829364,
-    1904791338,
-    1784606556,
 )
 
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "2116587637").split()}
